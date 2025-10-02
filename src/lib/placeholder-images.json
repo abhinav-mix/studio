@@ -21,7 +21,7 @@
     {
       "id": "math-img",
       "description": "An image representing mathematics concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhbGtib2FyZCUyMGVxdWF0aW9uc3xlbnwwfHx8fDE3NTkzODcyNTh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhbGtib2FyZCUyMGVxdWF0aW9uc3xlbnwwfHx8fDE3NTkzODcyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chalkboard equations"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "hindi-img",
       "description": "An image representing Hindi concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1620021392955-a99a88383842?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZXZhbmFnYXJpJTIwc2NyaXB0fGVufDB8fHx8fDE3NjAwNTc5MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1674936985746-1993297aad5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkZXZhbmFnYXJpJTIwc2NyaXB0fGVufDB8fHx8MTc1OTMwMDY4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "devanagari script"
     },
     {
