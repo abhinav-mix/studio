@@ -79,11 +79,6 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
 
   return (
     <div className="flex flex-col items-center gap-8 py-8">
-       <style jsx>{`
-        .text-shadow {
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        }
-      `}</style>
       <div className="relative w-80 h-80 md:w-96 md:h-96">
         {/* Pointer */}
         <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 z-10" style={{ filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.2))' }}>
@@ -105,15 +100,18 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               className="absolute w-1/2 h-1/2 origin-bottom-right"
               style={{
                 transform: `rotate(${index * segmentAngle}deg)`,
-                clipPath: `polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)`,
+                clipPath: `polygon(0 0, 100% 0, 100% 100%)`,
                 backgroundColor: segment.color,
               }}
             >
               <div
                 className="absolute w-full h-full flex items-start justify-center"
-                style={{ transform: `rotate(${segmentAngle / 2}deg) translate(0, 25%)` }}
+                style={{ 
+                    transform: `rotate(${segmentAngle / 2}deg) translateY(25%)`,
+                    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.4)',
+                }}
               >
-                <span className="text-white font-bold text-lg text-shadow" style={{transform: "rotate(-90deg)", color: segment.textColor}}>{segment.label}</span>
+                <span className="font-bold text-lg" style={{transform: "rotate(-90deg)", color: segment.textColor}}>{segment.label}</span>
               </div>
             </div>
           ))}
@@ -134,4 +132,3 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     </div>
   );
 }
-
