@@ -16,6 +16,14 @@
           "description": "Email address of the user.",
           "format": "email"
         },
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the user."
+        },
+        "userClass": {
+          "type": "string",
+          "description": "The class of the user."
+        },
         "hasPaid": {
           "type": "boolean",
           "description": "Indicates whether the user has completed the payment."
@@ -24,6 +32,8 @@
       "required": [
         "id",
         "email",
+        "displayName",
+        "userClass",
         "hasPaid"
       ]
     },

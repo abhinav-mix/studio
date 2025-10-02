@@ -17,7 +17,7 @@ import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth, useUser, useFirestore } from '@/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
@@ -36,6 +36,8 @@ export default function AdminPage() {
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
+  const [newUserName, setNewUserName] = useState('');
+  const [newUserClass, setNewUserClass] = useState('');
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   
@@ -47,11 +49,11 @@ export default function AdminPage() {
   }, [user, isUserLoading, router]);
 
   const handleAddUser = async () => {
-    if (!newUserEmail || !newUserPassword) {
+    if (!newUserEmail || !newUserPassword || !newUserName || !newUserClass) {
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: 'Please enter both an email and password for the new user.',
+        description: 'Please fill out all fields for the new member.',
       });
       return;
     }
@@ -69,21 +71,28 @@ export default function AdminPage() {
     try {
       // 1. Create the new user with the provided email and password.
       const userCredential = await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
-      const newUserId = userCredential.user.uid;
+      const newUser = userCredential.user;
 
-      // 2. Create the user's document in Firestore and mark them as paid.
-      const userDocRef = doc(firestore, 'users', newUserId);
+      // 2. Update the user's profile with the display name.
+      await updateProfile(newUser, { displayName: newUserName });
+
+      // 3. Create the user's document in Firestore and mark them as paid.
+      const userDocRef = doc(firestore, 'users', newUser.uid);
       await setDoc(userDocRef, {
-        id: newUserId,
+        id: newUser.uid,
         email: newUserEmail,
+        displayName: newUserName,
+        userClass: newUserClass,
         hasPaid: true, // Admin-created users are marked as paid
       });
 
       toast({
         title: 'User Created Successfully!',
-        description: `User with email ${newUserEmail} has been created and marked as paid.`,
+        description: `User ${newUserName} has been created and marked as paid.`,
       });
-
+      
+      setNewUserName('');
+      setNewUserClass('');
       setNewUserEmail('');
       setNewUserPassword('');
 
@@ -213,7 +222,17 @@ export default function AdminPage() {
                   <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="space-y-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="new-user-name">Member Name</Label>
+                      <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
+                    </div>
+                     <div className="space-y-2">
+                      <Label htmlFor="new-user-class">Member Class</Label>
+                      <Input id="new-user-class" type="text" placeholder="e.g., 10th" value={newUserClass} onChange={(e) => setNewUserClass(e.target.value)} />
+                    </div>
+                  </div>
+                   <div className="space-y-2">
                     <Label htmlFor="new-user-email">Member Email</Label>
                     <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
                   </div>
