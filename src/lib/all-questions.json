@@ -900,151 +900,6 @@
       "category": "physics"
     },
     {
-      "id": "phy-111",
-      "questionText": "A circuit has a charge of 2C moving through it in 4s. What is the current?",
-      "options": ["8A", "2A", "0.5A", "1A"],
-      "correctAnswerIndex": 2,
-      "explanation": "Current (I) is the rate of flow of charge (Q). I = Q/t = 2C / 4s = 0.5A.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-112",
-      "questionText": "An object of size 7.0 cm is placed at 27 cm in front of a concave mirror of focal length 18 cm. At what distance from the mirror should a screen be placed, so that a sharp focused image can be obtained?",
-      "options": ["-54 cm", "54 cm", "-27 cm", "27 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "Using mirror formula 1/v + 1/u = 1/f. Here, u = -27 cm, f = -18 cm. 1/v = 1/f - 1/u = 1/(-18) - 1/(-27) = -1/18 + 1/27 = (-3+2)/54 = -1/54. So, v = -54 cm. The screen should be placed 54 cm in front of the mirror.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-113",
-      "questionText": "The persistence of vision for the human eye is about:",
-      "options": ["1/10th of a second", "1/16th of a second", "1 second", "1/25th of a second"],
-      "correctAnswerIndex": 1,
-      "explanation": "Persistence of vision is the phenomenon where the eye retains an image for a fraction of a second after the object is removed. For the human eye, this duration is about 1/16th of a second.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-114",
-      "questionText": "A thick glass tumbler cracks when boiling water is poured into it because of:",
-      "options": ["High thermal conductivity of glass", "Low specific heat of glass", "Unequal expansion of inner and outer surfaces", "High boiling point of water"],
-      "correctAnswerIndex": 2,
-      "explanation": "When hot water is poured, the inner surface of the thick glass expands quickly, while the outer surface remains cool and does not expand as much. This unequal expansion creates stress, causing the glass to crack.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-115",
-      "questionText": "The magnetic field is strongest:",
-      "options": ["inside the magnet", "at the north pole", "at the south pole", "at the poles"],
-      "correctAnswerIndex": 3,
-      "explanation": "The magnetic field of a bar magnet is strongest at its poles (both north and south), where the magnetic field lines are most concentrated.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-116",
-      "questionText": "Name the type of current used in household supply.",
-      "options": ["Direct Current (DC)", "Alternating Current (AC)", "Pulsating DC", "Static Current"],
-      "correctAnswerIndex": 1,
-      "explanation": "The electricity supplied to homes is Alternating Current (AC) because its voltage can be easily changed, making it suitable for long-distance transmission with minimal power loss.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-117",
-      "questionText": "What is the frequency of AC used in India?",
-      "options": ["50 Hz", "60 Hz", "100 Hz", "0 Hz"],
-      "correctAnswerIndex": 0,
-      "explanation": "In India, the standard frequency of the alternating current (AC) supply is 50 Hertz (Hz). This means the current reverses its direction 50 times per second.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-118",
-      "questionText": "The principle of working of a transformer is:",
-      "options": ["Self-induction", "Mutual induction", "Magnetic effect of current", "Heating effect of current"],
-      "correctAnswerIndex": 1,
-      "explanation": "A transformer works on the principle of mutual induction, where a changing current in one coil (the primary) induces a changing magnetic flux, which in turn induces a current in a nearby second coil (the secondary).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-119",
-      "questionText": "What kind of energy is stored in a dam?",
-      "options": ["Kinetic Energy", "Potential Energy", "Chemical Energy", "Electrical Energy"],
-      "correctAnswerIndex": 1,
-      "explanation": "Water stored in a dam has gravitational potential energy because of its height above the ground. This potential energy is converted into kinetic energy when the water is released.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-120",
-      "questionText": "Which material is used for the filament of an electric bulb?",
-      "options": ["Copper", "Aluminum", "Nichrome", "Tungsten"],
-      "correctAnswerIndex": 3,
-      "explanation": "Tungsten is used for the filament of electric bulbs because it has a very high melting point (about 3422 °C) and can glow at high temperatures without melting.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-121",
-      "questionText": "A body is thrown vertically upwards with velocity u, the greatest height h to which it will rise is,",
-      "options": [
-        "u/g",
-        "u²/2g",
-        "u²/g",
-        "u/2g"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Using the equation of motion v² = u² + 2as. Here, v=0 (at max height), a=-g. So, 0 = u² - 2gh, which gives h = u²/2g.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-122",
-      "questionText": "The value of acceleration due to gravity (g) on Earth is:",
-      "options": [
-        "9.8 m/s",
-        "9.8 m/s²",
-        "6.67 x 10⁻¹¹ N m²/kg²",
-        "6.02 x 10²³"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "The standard value of acceleration due to gravity on the surface of the Earth is approximately 9.8 meters per second squared (m/s²).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-123",
-      "questionText": "Sound waves in air are:",
-      "options": [
-        "Transverse",
-        "Longitudinal",
-        "Electromagnetic",
-        "Polarized"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Sound waves are longitudinal waves, meaning the vibrations of the particles of the medium are parallel to the direction of energy transfer.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-124",
-      "questionText": "At what temperature is the density of water maximum?",
-      "options": [
-        "0°C",
-        "100°C",
-        "4°C",
-        "-4°C"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Water has its maximum density at 4° Celsius. Below this temperature, it starts to expand, which is why ice floats on water.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-125",
-      "questionText": "Three resistors 100 Ω, 50 Ω and 500 Ω are connected in parallel in a circuit. What is the resultant resistance?",
-      "options": [
-        "650 Ω",
-        "31.25 Ω",
-        "0.034 Ω",
-        "100 Ω"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "For parallel connection, 1/R_p = 1/100 + 1/50 + 1/500 = (5 + 10 + 1) / 500 = 16/500. So, R_p = 500/16 = 31.25 Ω.",
-      "category": "physics"
-    },
-    {
       "id": "bio-1",
       "questionText": "Which part of the plant is responsible for photosynthesis?",
       "options": ["Root", "Stem", "Flower", "Leaf"],
@@ -1342,6 +1197,266 @@
       ],
       "correctAnswerIndex": 3,
       "explanation": "Alkynes are hydrocarbons that contain a carbon-carbon triple bond. Ethyne (C2H2), also known as acetylene, is the simplest alkyne.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-21",
+      "questionText": "The atomic number of an element is 11. What is its electronic configuration?",
+      "options": [
+        "2, 8, 1",
+        "2, 1, 8",
+        "8, 2, 1",
+        "2, 9"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An element with atomic number 11 is Sodium (Na). Its electrons are distributed in shells as 2 in the K shell, 8 in the L shell, and 1 in the M shell. So the configuration is 2, 8, 1.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-22",
+      "questionText": "Which of the following gives a red precipitate with Fehling's solution?",
+      "options": [
+        "Benzaldehyde",
+        "Acetaldehyde",
+        "Acetone",
+        "Benzoic acid"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Aldehydes, like acetaldehyde, are oxidized by Fehling's solution to give a red precipitate of copper(I) oxide (Cu2O). Ketones and aromatic aldehydes (like benzaldehyde) do not give this test.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-23",
+      "questionText": "What is the IUPAC name for CH3COCH3?",
+      "options": [
+        "Propanal",
+        "Propanone",
+        "Ethanol",
+        "Propanoic acid"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The compound is a ketone with three carbon atoms. The IUPAC name is Propanone. Its common name is acetone.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-24",
+      "questionText": "What is the main component of natural gas?",
+      "options": [
+        "Methane",
+        "Ethane",
+        "Propane",
+        "Butane"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Natural gas is a fossil fuel composed primarily of methane (CH4).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-25",
+      "questionText": "Which element is common to all acids?",
+      "options": [
+        "Oxygen",
+        "Hydrogen",
+        "Chlorine",
+        "Sulfur"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "According to the Arrhenius theory, an acid is a substance that produces hydrogen ions (H+) when dissolved in water. Therefore, hydrogen is the common element in all acids.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-26",
+      "questionText": "The reaction of an acid and a base to form salt and water is known as:",
+      "options": [
+        "Combination",
+        "Decomposition",
+        "Neutralization",
+        "Redox"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A neutralization reaction is a chemical reaction in which an acid and a base react quantitatively with each other to form a salt and water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-27",
+      "questionText": "Which of the following is not an allotrope of carbon?",
+      "options": [
+        "Diamond",
+        "Graphite",
+        "Fullerene",
+        "Silica"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Allotropes are different structural forms of the same element. Diamond, Graphite, and Fullerene are all allotropes of carbon. Silica is a compound of silicon and oxygen (SiO2).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-28",
+      "questionText": "Plaster of Paris is obtained by heating:",
+      "options": [
+        "Gypsum",
+        "Limestone",
+        "Quicklime",
+        "Bauxite"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Plaster of Paris (calcium sulfate hemihydrate) is prepared by heating gypsum (calcium sulfate dihydrate) to a temperature of about 373 K.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-29",
+      "questionText": "The valency of carbon is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Carbon has 4 electrons in its outermost shell. To achieve a stable octet, it can form four covalent bonds. This property is known as tetravalency.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-30",
+      "questionText": "Which of the following metals does not react with cold or hot water?",
+      "options": [
+        "Sodium (Na)",
+        "Calcium (Ca)",
+        "Magnesium (Mg)",
+        "Iron (Fe)"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Sodium and Calcium react with cold water. Magnesium reacts with hot water. Iron does not react with cold or hot water; it reacts with steam.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-31",
+      "questionText": "The property of self-linking of atoms of an element to form long chains is called:",
+      "options": [
+        "Isomerism",
+        "Catenation",
+        "Polymerization",
+        "Allotropy"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Catenation is the ability of an atom to form covalent bonds with other atoms of the same element, forming a chain or ring. Carbon exhibits this property to the maximum extent.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-32",
+      "questionText": "An aqueous solution turns red litmus blue. Its pH is likely to be:",
+      "options": [
+        "1",
+        "4",
+        "5",
+        "10"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Bases turn red litmus paper blue. A solution with a pH greater than 7 is basic. Among the options, only 10 is greater than 7.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-33",
+      "questionText": "What is the formula for washing soda?",
+      "options": [
+        "Na2CO3·10H2O",
+        "NaHCO3",
+        "NaCl",
+        "NaOH"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Washing soda is hydrated sodium carbonate, with the chemical formula Na2CO3·10H2O.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-34",
+      "questionText": "Which of the following metals is stored in kerosene?",
+      "options": [
+        "Magnesium",
+        "Gold",
+        "Sodium",
+        "Mercury"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Sodium is a highly reactive metal that reacts vigorously with oxygen and moisture in the air. To prevent this reaction, it is stored under kerosene oil.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-35",
+      "questionText": "The reaction of ethanol with ethanoic acid in the presence of an acid catalyst gives a sweet-smelling compound. This reaction is called:",
+      "options": [
+        "Saponification",
+        "Hydrogenation",
+        "Esterification",
+        "Dehydration"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Esterification is the reaction between an alcohol (ethanol) and a carboxylic acid (ethanoic acid) to form an ester, which typically has a sweet, fruity smell.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-36",
+      "questionText": "How many covalent bonds are there in a molecule of ethane (C2H6)?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The structure of ethane is H3C-CH3. There is one C-C single bond and six C-H single bonds, making a total of 7 covalent bonds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-37",
+      "questionText": "Which of the following is an ore of mercury?",
+      "options": [
+        "Bauxite",
+        "Hematite",
+        "Cinnabar",
+        "Galena"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Cinnabar (mercuric sulfide, HgS) is the most common source ore for refining elemental mercury. Bauxite is for aluminum, Hematite for iron, and Galena for lead.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-38",
+      "questionText": "The number of electrons in the outermost shell of a halogen is:",
+      "options": [
+        "1",
+        "2",
+        "7",
+        "8"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Halogens are in Group 17 of the periodic table. They have 7 valence electrons in their outermost shell and are highly reactive.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-39",
+      "questionText": "The addition of an oxidizing agent like alkaline KMnO4 to ethanol results in the formation of:",
+      "options": [
+        "Ethanal",
+        "Ethanoic acid",
+        "Ethene",
+        "Ethyne"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The oxidation of ethanol with a strong oxidizing agent like alkaline potassium permanganate (KMnO4) results in the formation of ethanoic acid.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-40",
+      "questionText": "Which type of reaction is represented by the digestion of food in our body?",
+      "options": [
+        "Combination",
+        "Decomposition",
+        "Displacement",
+        "Redox"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Digestion is a process of breaking down complex food substances into simpler ones. This is a form of decomposition reaction (specifically, hydrolysis) and also involves oxidation, making it a complex biochemical process.",
       "category": "chemistry"
     }
   ]
