@@ -15,22 +15,32 @@ const AUTH_KEY = 'boardprep_session';
 
 export default function LoginPage() {
   const router = useRouter();
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [role, setRole] = useState<'member' | 'admin'>('member');
 
   const handleLogin = () => {
+    setError('');
     let isAuthenticated = false;
-    if (role === 'member' && password === MEMBER_PASSWORD) {
-      isAuthenticated = true;
-    } else if (role === 'admin' && password === ADMIN_PASSWORD) {
-      isAuthenticated = true;
+
+    if (role === 'member') {
+      if (!name.trim()) {
+        setError('Please enter your name.');
+        return;
+      }
+      if (password === MEMBER_PASSWORD) {
+        isAuthenticated = true;
+      }
+    } else if (role === 'admin') {
+      if (password === ADMIN_PASSWORD) {
+        isAuthenticated = true;
+      }
     }
 
     if (isAuthenticated) {
-      setError('');
       try {
-        const session = { authenticated: true, role };
+        const session = { authenticated: true, role, name: role === 'member' ? name : 'Admin' };
         localStorage.setItem(AUTH_KEY, JSON.stringify(session));
         if (role === 'admin') {
           router.push('/admin');
@@ -59,29 +69,58 @@ export default function LoginPage() {
             <KeyRound className="h-10 w-10 text-primary" />
           </div>
           <CardTitle className="text-2xl font-headline">Welcome to BoardPrep Pro</CardTitle>
-          <CardDescription>Please select your role and enter the password.</CardDescription>
+          <CardDescription>Please select your role and enter your credentials.</CardDescription>
         </CardHeader>
         <CardContent>
-          <Tabs defaultValue="member" onValueChange={(value) => setRole(value as 'member' | 'admin')}>
+          <Tabs defaultValue="member" onValueChange={(value) => {
+            setRole(value as 'member' | 'admin');
+            setError('');
+            setPassword('');
+            setName('');
+          }}>
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="member"><User className="mr-2 h-4 w-4" /> Member</TabsTrigger>
               <TabsTrigger value="admin"><Shield className="mr-2 h-4 w-4" /> Admin</TabsTrigger>
             </TabsList>
+            <TabsContent value="member" className="pt-6 space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password-member">Password</Label>
+                <Input
+                  id="password-member"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Enter your password"
+                />
+              </div>
+            </TabsContent>
+            <TabsContent value="admin" className="pt-6 space-y-4">
+               <div className="space-y-2">
+                <Label htmlFor="password-admin">Password</Label>
+                <Input
+                  id="password-admin"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Enter admin password"
+                />
+              </div>
+            </TabsContent>
           </Tabs>
-          <div className="space-y-4 pt-6">
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <Input
-                id="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Enter your password"
-              />
-            </div>
-            {error && <p className="text-sm text-destructive">{error}</p>}
-          </div>
+          {error && <p className="text-sm text-destructive pt-2">{error}</p>}
         </CardContent>
         <CardFooter>
           <Button onClick={handleLogin} className="w-full">
