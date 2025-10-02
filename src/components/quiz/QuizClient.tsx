@@ -93,6 +93,12 @@ export default function QuizClient({ category, questions }: { category: QuizCate
     setProgressStats({ correct, incorrect, unanswered });
     setShowProgressDialog(true);
   };
+  
+  const finalReviewStats = useMemo(() => {
+    const answered = userAnswers.filter(a => a.selectedAnswerIndex !== null).length;
+    const unanswered = userAnswers.length - answered;
+    return { answered, unanswered };
+  }, [userAnswers]);
 
 
   const progress = useMemo(() => {
@@ -172,34 +178,6 @@ export default function QuizClient({ category, questions }: { category: QuizCate
               Previous
             </Button>
             <div className="flex gap-2">
-              {currentQuestionIndex >= 19 && (
-                <AlertDialog open={showProgressDialog} onOpenChange={setShowProgressDialog}>
-                  <AlertDialogTrigger asChild>
-                    <Button variant="secondary" onClick={handleCheckProgress}>
-                       <ClipboardCheck className="mr-2 h-4 w-4" />
-                       Check Progress
-                    </Button>
-                  </AlertDialogTrigger>
-                  <AlertDialogContent>
-                    <AlertDialogHeader>
-                      <AlertDialogTitle>Your Progress So Far</AlertDialogTitle>
-                      <AlertDialogDescription>
-                        You have attempted {currentQuestionIndex + 1} questions. Here&apos;s your summary:
-                      </AlertDialogDescription>
-                      <div className="text-sm text-muted-foreground">
-                        <ul className="list-disc pl-5 mt-2 space-y-2">
-                            <li className="text-green-600">Correct Answers: {progressStats.correct}</li>
-                            <li className="text-red-600">Incorrect Answers: {progressStats.incorrect}</li>
-                            {(progressStats.unanswered > 0) && <li className="text-yellow-600">Unanswered: {progressStats.unanswered}</li>}
-                        </ul>
-                      </div>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                      <AlertDialogAction>Continue</AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
-              )}
               {currentQuestionIndex < shuffledQuestions.length - 1 ? (
                 <Button onClick={() => setCurrentQuestionIndex(prev => prev + 1)}>
                   Next
@@ -208,24 +186,33 @@ export default function QuizClient({ category, questions }: { category: QuizCate
               ) : (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="default">
-                      <Check className="mr-2 h-4 w-4" />
-                      Finish Quiz
-                    </Button>
+                    <Button variant="secondary">Review Answers</Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Are you ready to finish?</AlertDialogTitle>
+                      <AlertDialogTitle>Review Your Answers</AlertDialogTitle>
                       <AlertDialogDescription>
-                        You are about to submit your answers. You cannot change them after this.
+                        You are about to finish the quiz. Here is a summary of your attempt:
+                        <ul className="list-disc pl-5 mt-4 space-y-1">
+                           <li><span className="font-semibold">Total Questions:</span> {shuffledQuestions.length}</li>
+                           <li><span className="font-semibold text-green-600">Answered:</span> {finalReviewStats.answered}</li>
+                           <li><span className="font-semibold text-yellow-600">Unanswered:</span> {finalReviewStats.unanswered}</li>
+                        </ul>
+                        <p className="mt-4">Are you sure you want to submit?</p>
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogCancel>Review Answers</AlertDialogCancel>
-                      <AlertDialogAction onClick={handleFinishQuiz}>Submit</AlertDialogAction>
+                      <AlertDialogCancel>Continue Reviewing</AlertDialogCancel>
+                      <AlertDialogAction onClick={handleFinishQuiz}>Submit Quiz</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
+              )}
+              {currentQuestionIndex === shuffledQuestions.length - 1 && (
+                 <Button onClick={handleFinishQuiz} variant="default">
+                   <Check className="mr-2 h-4 w-4" />
+                   Finish Quiz
+                 </Button>
               )}
             </div>
           </CardFooter>
