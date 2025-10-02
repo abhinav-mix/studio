@@ -110,6 +110,7 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               style={{
                 transform: `rotate(${index * segmentAngle}deg) scale(1.05)`, // Scale to hide gaps
                 backgroundColor: segment.color,
+                clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 100%)`, // Creates triangle shape, but we need a sector
               }}
             >
               <div
