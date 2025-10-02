@@ -79,18 +79,12 @@ export default function LoginPage() {
       const loggedInUser = userCredential.user;
 
       const userDocRef = doc(firestore, 'users', loggedInUser.uid);
-      const userDoc = await getDoc(userDocRef);
-
-      if (!userDoc.exists() || userDoc.data()?.hasPaid !== true) {
-        await auth.signOut();
-        setError('Login failed. Please contact admin for payment confirmation.');
-        toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
-        return;
-      }
       
       // Set active device ID
       const deviceId = getOrCreateDeviceId();
-      await setDoc(userDocRef, { activeDeviceId: deviceId }, { merge: true });
+      // We still want to create the user doc if it doesn't exist, and update the device ID
+      // but we will no longer block login based on payment.
+      await setDoc(userDocRef, { activeDeviceId: deviceId, id: loggedInUser.uid, email: loggedInUser.email }, { merge: true });
 
       toast({ title: "Login Successful!", description: "Redirecting..." });
     } catch (e: any) {
