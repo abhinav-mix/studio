@@ -23,10 +23,10 @@ export default function Header() {
   }, [user, isAdmin, firestore]);
 
   const { data: userData } = useDoc<{ points: number }>(userDocRef);
-  const [localPoints, setLocalPoints] = useState(0);
+  const [localPoints, setLocalPoints] = useState<number>(0);
 
   useEffect(() => {
-    if (userData) {
+    if (userData && typeof userData.points === 'number') {
       setLocalPoints(userData.points);
     }
   }, [userData]);
@@ -36,7 +36,7 @@ export default function Header() {
 
     // Increment points locally every 10 seconds
     const pointInterval = setInterval(() => {
-      setLocalPoints(prevPoints => prevPoints + 1);
+      setLocalPoints(prevPoints => (prevPoints || 0) + 1);
     }, 10000); // 10 seconds
 
     // Save points to Firestore every 60 seconds
@@ -116,5 +116,3 @@ export default function Header() {
     </header>
   );
 }
-
-    
