@@ -1,0 +1,151 @@
+/**
+ * @fileoverview Firestore Security Rules for BoardPrep Pro.
+ *
+ * Core Philosophy:
+ * This ruleset enforces a strict user-ownership model for user profiles, quiz attempts, and attempted questions,
+ * while providing public read access to questions and quizzes.
+ *
+ * Data Structure:
+ * - /users/{userId}: Stores user profiles, accessible only to the user themselves.
+ * - /questions/{questionId}: Stores question data, publicly readable.
+ * - /quizzes/{quizId}: Stores quiz definitions, publicly readable.
+ * - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts, accessible only to the user who made them.
+ * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions, accessible only to the user who attempted them.
+ *
+ * Key Security Decisions:
+ * - User data and quiz attempts are secured using path-based ownership, ensuring that only the authenticated user
+ *   can access their own data.
+ * - Questions and quizzes are considered public data and are readable by anyone.
+ * - Listing of quiz attempts and attempted questions is restricted to the owner of the userId.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Controls access to user profile documents.
+     * @path /users/{userId}
+     * @allow (create) User with ID 'user123' can create their own profile.
+     * @allow (get) User with ID 'user123' can read their own profile.
+     * @allow (update) User with ID 'user123' can update their own profile.
+     * @allow (delete) User with ID 'user123' can delete their own profile.
+     * @deny (create) User with ID 'user456' cannot create a profile for user 'user123'.
+     * @deny (get) User with ID 'user456' cannot read the profile for user 'user123'.
+     * @principle Enforces document ownership for writes.
+     */
+    match /users/{userId} {
+      // Helper function to check if the user is signed in and owns the resource.
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+
+      allow get: if isSignedIn() && isOwner(userId);
+      allow list: if false;
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Controls access to question documents.
+     * @path /questions/{questionId}
+     * @allow (get) Any user can read any question.
+     * @deny (create) No one can create question documents without authorization.
+     * @deny (update) No one can update question documents without authorization.
+     * @deny (delete) No one can delete question documents without authorization.
+     * @principle Allows public read access to questions.
+     */
+    match /questions/{questionId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Controls access to quiz documents.
+     * @path /quizzes/{quizId}
+     * @allow (get) Any user can read any quiz.
+     * @deny (create) No one can create quiz documents without authorization.
+     * @deny (update) No one can update quiz documents without authorization.
+     * @deny (delete) No one can delete quiz documents without authorization.
+     * @principle Allows public read access to quizzes.
+     */
+    match /quizzes/{quizId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Controls access to quiz attempt documents for a specific user.
+     * @path /users/{userId}/quizAttempts/{quizAttemptId}
+     * @allow (create) User with ID 'user123' can create a quiz attempt for themselves.
+     * @allow (get) User with ID 'user123' can read their own quiz attempts.
+     * @allow (update) User with ID 'user123' can update their own quiz attempts.
+     * @allow (delete) User with ID 'user123' can delete their own quiz attempts.
+     * @deny (create) User with ID 'user456' cannot create a quiz attempt for user 'user123'.
+     * @deny (get) User with ID 'user456' cannot read quiz attempts for user 'user123'.
+     * @principle Enforces document ownership for writes and reads.
+     */
+    match /users/{userId}/quizAttempts/{quizAttemptId} {
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+      allow get: if isSignedIn() && isOwner(userId);
+      allow list: if isSignedIn() && isOwner(userId);
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Controls access to attempted question documents for a specific user.
+     * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
+     * @allow (create) User with ID 'user123' can create an attempted question for themselves.
+     * @allow (get) User with ID 'user123' can read their own attempted questions.
+     * @allow (update) User with ID 'user123' can update their own attempted questions.
+     * @allow (delete) User with ID 'user123' can delete their own attempted questions.
+     * @deny (create) User with ID 'user456' cannot create an attempted question for user 'user123'.
+     * @deny (get) User with ID 'user456' cannot read attempted questions for user 'user123'.
+     * @principle Enforces document ownership for writes and reads.
+     */
+    match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+      allow get: if isSignedIn() && isOwner(userId);
+      allow list: if isSignedIn() && isOwner(userId);
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
+    }
+  }
+}

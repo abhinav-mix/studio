@@ -1,0 +1,253 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the BoardPrep Pro application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the user.",
+          "format": "email"
+        }
+      },
+      "required": [
+        "id",
+        "email"
+      ]
+    },
+    "Question": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Question",
+      "type": "object",
+      "description": "Represents a question for the board exam.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the question entity."
+        },
+        "text": {
+          "type": "string",
+          "description": "The text of the question."
+        },
+        "correctAnswer": {
+          "type": "string",
+          "description": "The correct answer to the question."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Explanation for the correct answer."
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the question (e.g., Math, Science)."
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "correctAnswer",
+        "explanation",
+        "category"
+      ]
+    },
+    "Quiz": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Quiz",
+      "type": "object",
+      "description": "Represents a quiz consisting of multiple questions.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the quiz entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name or title of the quiz."
+        },
+        "questionIds": {
+          "type": "array",
+          "description": "References to Questions. (Relationship: Quiz 1:N Question)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "questionIds"
+      ]
+    },
+    "QuizAttempt": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuizAttempt",
+      "type": "object",
+      "description": "Represents a user's attempt at a quiz.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the quiz attempt entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N QuizAttempt)"
+        },
+        "quizId": {
+          "type": "string",
+          "description": "Reference to Quiz. (Relationship: Quiz 1:N QuizAttempt)"
+        },
+        "score": {
+          "type": "number",
+          "description": "The user's score on the quiz attempt."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp of when the quiz was attempted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "quizId",
+        "score",
+        "timestamp"
+      ]
+    },
+    "AttemptedQuestion": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "AttemptedQuestion",
+      "type": "object",
+      "description": "Represents questions a user has attempted.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the attempted question."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N AttemptedQuestion)"
+        },
+        "questionId": {
+          "type": "string",
+          "description": "Reference to Question. (Relationship: Question 1:N AttemptedQuestion)"
+        },
+        "isCorrect": {
+          "type": "boolean",
+          "description": "Indicates whether the user answered the question correctly."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "questionId",
+        "isCorrect"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profiles.  Authorization is based on path ownership (request.auth.uid == userId).",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/questions/{questionId}",
+        "definition": {
+          "entityName": "Question",
+          "schema": {
+            "$ref": "#/backend/entities/Question"
+          },
+          "description": "Stores questions for the board exam.  No specific authorization fields are needed as all questions are considered public data.",
+          "params": [
+            {
+              "name": "questionId",
+              "description": "The unique identifier of the question."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/quizzes/{quizId}",
+        "definition": {
+          "entityName": "Quiz",
+          "schema": {
+            "$ref": "#/backend/entities/Quiz"
+          },
+          "description": "Stores quiz definitions, including the name and question IDs.  No specific authorization fields are needed, all quizzes are public.",
+          "params": [
+            {
+              "name": "quizId",
+              "description": "The unique identifier of the quiz."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/quizAttempts/{quizAttemptId}",
+        "definition": {
+          "entityName": "QuizAttempt",
+          "schema": {
+            "$ref": "#/backend/entities/QuizAttempt"
+          },
+          "description": "Stores quiz attempts for each user. Authorization is based on path ownership (request.auth.uid == userId).",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "quizAttemptId",
+              "description": "The unique identifier of the quiz attempt."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/attemptedQuestions/{attemptedQuestionId}",
+        "definition": {
+          "entityName": "AttemptedQuestion",
+          "schema": {
+            "$ref": "#/backend/entities/AttemptedQuestion"
+          },
+          "description": "Stores information about attempted questions for each user. Authorization is based on path ownership (request.auth.uid == userId).",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "attemptedQuestionId",
+              "description": "The unique identifier of the attempted question."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to support the BoardPrep Pro application, focusing on efficient data retrieval and robust security. It leverages path-based ownership for user-specific data and separates data types into different collections to simplify security rules.\n\n*   `/users/{userId}`: Stores user profiles. This path provides a natural way to secure user-specific data, as rules can easily verify that `request.auth.uid == userId`.\n*   `/questions/{questionId}`: Stores all questions. Since questions are global data, they reside in a single collection.\n*   `/quizzes/{quizId}`: Stores quiz definitions, including references to questions.\n*   `/users/{userId}/quizAttempts/{quizAttemptId}`: Stores quiz attempts made by each user, enabling easy retrieval of a user's quiz history. The limit of 10 quiz attempts can be enforced in application code. Path-based ownership ensures only the user can access their own quiz attempts.\n*   `/users/{userId}/attemptedQuestions/{attemptedQuestionId}`: This structure allows tracking of user-attempted questions. Path-based ownership ensures only the user can access their attempt history. This addresses the requirement to avoid repetition of questions.\n\nThis design promotes Authorization Independence by avoiding `get()` calls in security rules. Path-based ownership (`/users/{userId}/...`) inherently provides the authorization context. Segregation of data types (questions, quizzes, users, attempts) into separate collections allows for simpler and more maintainable security rules. The structure efficiently supports the core features of the application."
+  }
+}
