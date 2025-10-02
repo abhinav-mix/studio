@@ -8,32 +8,33 @@ import { useQuizStorage } from '@/hooks/useQuizStorage';
 import { allQuestions } from '@/lib/questions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, Home, RefreshCw, XCircle } from 'lucide-react';
+import { CheckCircle2, Home, ArrowLeft, XCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ResultsClient({ category }: { category: QuizCategory }) {
+export default function ReviewAttemptClient({ category, attemptIndex }: { category: QuizCategory, attemptIndex: number }) {
   const router = useRouter();
-  const { getLatestAttempt, isClient } = useQuizStorage();
-  const [latestAttempt, setLatestAttempt] = useState<QuizAttempt | null>(null);
+  const { getAttempts, isClient } = useQuizStorage();
+  const [attempt, setAttempt] = useState<QuizAttempt | null>(null);
 
   useEffect(() => {
     if (isClient) {
-      const attempt = getLatestAttempt(category.slug);
-      if (!attempt) {
-        // If no attempt is found, maybe they refreshed. Redirect to quiz start.
-        router.replace(`/quiz/${category.slug}`);
+      const allAttempts = getAttempts(category.slug);
+      const specificAttempt = allAttempts[attemptIndex];
+      if (!specificAttempt) {
+        // If no attempt is found, redirect to review page.
+        router.replace('/review');
       } else {
-        setLatestAttempt(attempt);
+        setAttempt(specificAttempt);
       }
     }
-  }, [isClient, category.slug, getLatestAttempt, router]);
+  }, [isClient, category.slug, attemptIndex, getAttempts, router]);
 
-  if (!isClient || !latestAttempt) {
+  if (!isClient || !attempt) {
     return <div className="flex items-center justify-center min-h-screen">Loading results...</div>;
   }
 
-  const { score, totalQuestions, answers, date } = latestAttempt;
+  const { score, totalQuestions, answers, date } = attempt;
   const percentage = Math.round((score / totalQuestions) * 100);
 
   const getQuestionById = (id: string) => allQuestions.find(q => q.id === id);
@@ -42,10 +43,25 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
 
   return (
     <div className="min-h-screen p-4 md:p-8 lg:p-12">
+      <header className="mb-8 flex justify-between items-center max-w-4xl mx-auto">
+        <Button variant="ghost" asChild>
+          <Link href="/review">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Review
+          </Link>
+        </Button>
+        <h1 className="text-2xl font-bold font-headline text-center">Review Details</h1>
+        <Button variant="ghost" asChild>
+          <Link href="/home">
+            <Home className="mr-2 h-4 w-4" />
+            Home
+          </Link>
+        </Button>
+      </header>
       <div className="max-w-4xl mx-auto">
         <Card className="mb-8 text-center shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl font-headline">Quiz Results for {category.name}</CardTitle>
+            <CardTitle className="text-3xl font-headline">Results for {category.name}</CardTitle>
             <CardDescription>Attempt from: {new Date(date).toLocaleString()}</CardDescription>
           </CardHeader>
           <CardContent>
@@ -79,7 +95,7 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 pl-16">
-                  {question.imageUrl && (
+                   {question.imageUrl && (
                     <div className="mb-4 rounded-lg overflow-hidden border">
                       <Image
                         src={question.imageUrl}
@@ -117,21 +133,6 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
               </Card>
             );
           })}
-        </div>
-        
-        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="default" asChild>
-                <Link href={`/quiz/${category.slug}`}>
-                    <RefreshCw className="mr-2 h-4 w-4" />
-                    Try Again
-                </Link>
-            </Button>
-            <Button variant="outline" asChild>
-                <Link href="/home">
-                    <Home className="mr-2 h-4 w-4" />
-                    Back to Home
-                </Link>
-            </Button>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
@@ -32,11 +33,10 @@ export default function QuizClient({ category, questions }: { category: QuizCate
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
   const [isClient, setIsClient] = useState(false);
-  const [progressStats, setProgressStats] = useState({ correct: 0, incorrect: 0, unanswered: 0 });
-  const [showProgressDialog, setShowProgressDialog] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+    // Shuffle only once on component mount
     const questionsToShuffle = shuffleArray([...questions]);
     setShuffledQuestions(questionsToShuffle);
     setUserAnswers(questionsToShuffle.map(q => ({ questionId: q.id, selectedAnswerIndex: null })));
@@ -53,12 +53,12 @@ export default function QuizClient({ category, questions }: { category: QuizCate
   };
 
   const handleFinishQuiz = useCallback(() => {
-    const score = userAnswers.reduce((acc, userAnswer) => {
-      const question = shuffledQuestions.find(q => q.id === userAnswer.questionId);
-      if (question && question.correctAnswerIndex === userAnswer.selectedAnswerIndex) {
-        return acc + 1;
-      }
-      return acc;
+    const score = userAnswers.reduce((acc, userAnswer, index) => {
+        const question = shuffledQuestions[index];
+        if (question && question.id === userAnswer.questionId && question.correctAnswerIndex === userAnswer.selectedAnswerIndex) {
+            return acc + 1;
+        }
+        return acc;
     }, 0);
 
     addAttempt(category.slug, {
@@ -70,29 +70,6 @@ export default function QuizClient({ category, questions }: { category: QuizCate
 
     router.push(`/quiz/${category.slug}/results`);
   }, [userAnswers, shuffledQuestions, addAttempt, category.slug, router]);
-
-  const handleCheckProgress = () => {
-    let correct = 0;
-    let incorrect = 0;
-    let unanswered = 0;
-
-    for (let i = 0; i <= currentQuestionIndex; i++) {
-        const question = shuffledQuestions[i];
-        const userAnswer = userAnswers.find(ua => ua.questionId === question.id);
-
-        if (userAnswer?.selectedAnswerIndex !== null && userAnswer?.selectedAnswerIndex !== undefined) {
-            if (userAnswer.selectedAnswerIndex === question.correctAnswerIndex) {
-                correct++;
-            } else {
-                incorrect++;
-            }
-        } else {
-            unanswered++;
-        }
-    }
-    setProgressStats({ correct, incorrect, unanswered });
-    setShowProgressDialog(true);
-  };
   
   const finalReviewStats = useMemo(() => {
     const answered = userAnswers.filter(a => a.selectedAnswerIndex !== null).length;
@@ -186,7 +163,10 @@ export default function QuizClient({ category, questions }: { category: QuizCate
               ) : (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="secondary">Review Answers</Button>
+                    <Button variant="secondary">
+                       <ClipboardCheck className="mr-2 h-4 w-4" />
+                       Review Answers
+                    </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>

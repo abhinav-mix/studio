@@ -48,6 +48,11 @@ export function useQuizStorage() {
         const newAttempt: QuizAttempt = { ...attempt, date: Date.now() };
         const updatedAttempts = [newAttempt, ...attempts].slice(0, MAX_ATTEMPTS);
         window.localStorage.setItem(key, JSON.stringify(updatedAttempts));
+        
+        // Store latest attempt in a separate key for easy access on results page
+        const latestAttemptKey = `${STORAGE_KEY_PREFIX}${user.uid}_${category}_latest`;
+        window.localStorage.setItem(latestAttemptKey, JSON.stringify(newAttempt));
+
       } catch (error) {
         console.error('Error writing to localStorage', error);
       }
@@ -56,16 +61,27 @@ export function useQuizStorage() {
   );
   
   const getLatestAttempt = useCallback((category: string): QuizAttempt | null => {
-     const allAttempts = getAttempts(category);
-     return allAttempts.length > 0 ? allAttempts[0] : null;
-  }, [getAttempts]);
+     if (!isClient || !user) return null;
+     const latestAttemptKey = `${STORAGE_KEY_PREFIX}${user.uid}_${category}_latest`;
+     try {
+       const item = window.localStorage.getItem(latestAttemptKey);
+       return item ? JSON.parse(item) : null;
+     } catch (error) {
+       console.error('Error reading latest attempt from localStorage', error);
+       // Fallback to old method if latest key fails
+       const allAttempts = getAttempts(category);
+       return allAttempts.length > 0 ? allAttempts[0] : null;
+     }
+  }, [isClient, user, getAttempts]);
 
   const getAllAttemptsForCurrentUser = useCallback((): { category: string, attempts: QuizAttempt[] }[] => {
     if (!isClient || !user) return [];
     const userPrefix = `${STORAGE_KEY_PREFIX}${user.uid}_`;
     
     try {
-        const keys = Object.keys(window.localStorage).filter(key => key.startsWith(userPrefix));
+        const keys = Object.keys(window.localStorage)
+                           .filter(key => key.startsWith(userPrefix) && !key.endsWith('_latest'));
+                           
         return keys.map(key => {
             const category = key.replace(userPrefix, '');
             const item = window.localStorage.getItem(key);

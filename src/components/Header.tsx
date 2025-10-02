@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { BarChart3, LogOut, Shield, User, Star } from 'lucide-react';
+import { BarChart3, LogOut, Shield, User, Star, ClipboardCheck } from 'lucide-react';
 import { useAuth, useUser, useFirestore, useDoc, useCollection, useMemoFirebase } from '@/firebase';
 import { doc, collection, addDoc, serverTimestamp, query, orderBy, getDocs } from 'firebase/firestore';
 
@@ -90,6 +90,14 @@ export default function Header() {
                 <Link href="/admin">
                   <Shield className="h-5 w-5" />
                   <span className="ml-2 hidden sm:inline">Admin</span>
+                </Link>
+              </Button>
+            )}
+            {!isAdmin && (
+               <Button asChild variant="ghost">
+                <Link href="/review">
+                  <ClipboardCheck className="h-5 w-5" />
+                  <span className="ml-2 hidden sm:inline">Review</span>
                 </Link>
               </Button>
             )}
