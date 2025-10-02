@@ -229,7 +229,7 @@ export default function AdminPage() {
             <AccordionContent className="px-6 pb-6 space-y-8">
                <Card className="bg-background/80 w-full max-w-4xl mx-auto" style={{minWidth: '150px'}}>
                 <CardHeader>
-                  <CardTitle>Create New Paid Member</CardTitle>
+                  <CardTitle>Add New Paid Member</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -251,7 +251,7 @@ export default function AdminPage() {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Paid Member</Button>
+                    <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Add New Paid Member</Button>
                   </div>
                 </CardContent>
                </Card>
