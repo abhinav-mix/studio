@@ -6,20 +6,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { KeyRound, Shield, User as UserIcon, Mail } from 'lucide-react';
+import { KeyRound, Shield, User as UserIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth, useUser } from '@/firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 
 
-const ADMIN_PASSWORD = 'abhiabhiabhiabhi';
 const ADMIN_EMAIL = 'admin@boardprep.pro';
-
-// This is a simplified logic. In a real app, you'd have a proper user management system.
-const MEMBER_EMAILS = ['testuser@gmail.com'];
-const MEMBER_PASSWORD = 'abhinavashishclass11';
-
 
 export default function LoginPage() {
   const router = useRouter();
@@ -78,7 +72,10 @@ export default function LoginPage() {
     } catch (e: any) {
         if (e.code === 'auth/user-not-found' && role === 'member') {
              try {
-                await createUserWithEmailAndPassword(auth, loginEmail, password);
+                const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, password);
+                // Ideally, you'd update the user's profile with their name here.
+                // await updateProfile(userCredential.user, { displayName: name });
+                
                 toast({
                     title: "Account Created!",
                     description: "You've been signed up and logged in.",
@@ -109,14 +106,16 @@ export default function LoginPage() {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background">
-      <Card className="w-full max-w-sm">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-primary/10 via-background to-background">
+      <Card className="w-full max-w-sm shadow-2xl">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <KeyRound className="h-10 w-10 text-primary" />
+            <div className="p-3 bg-primary/20 rounded-full">
+              <KeyRound className="h-10 w-10 text-primary" />
+            </div>
           </div>
           <CardTitle className="text-2xl font-headline">Welcome to BoardPrep Pro</CardTitle>
-          <CardDescription>Please select your role and enter your credentials.</CardDescription>
+          <CardDescription>Please select your role and sign in.</CardDescription>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="member" onValueChange={(value) => {
