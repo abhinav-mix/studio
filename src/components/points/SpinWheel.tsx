@@ -62,17 +62,19 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
           });
       } else if (prizePoints > 0) {
         toast({
-            title: `You won ${prizePoints} points!`,
-            description: `Spin again for another chance to win.`,
+            title: `🎉 You won ${prizePoints} points! 🎉`,
+            description: `Your points have been added to your account.`,
+            duration: 8000,
         });
       } else {
          toast({
             title: 'Better luck next time!',
             description: `Spin again for another chance to win.`,
+            duration: 5000,
         });
       }
 
-    }, 5000); // This should match the CSS transition duration
+    }, 6000); // This should match the CSS transition duration
   };
 
   const segmentAngle = 360 / segments.length;
@@ -91,8 +93,11 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
 
         {/* Wheel */}
         <div
-          className="relative w-full h-full rounded-full border-8 border-primary shadow-2xl overflow-hidden transition-transform duration-[5000ms] ease-out"
-          style={{ transform: `rotate(${rotation}deg)` }}
+          className="relative w-full h-full rounded-full border-8 border-primary shadow-2xl overflow-hidden"
+          style={{ 
+            transition: `transform 6000ms cubic-bezier(0.1, 0.5, 0.2, 1)`,
+            transform: `rotate(${rotation}deg)` 
+          }}
         >
           {segments.map((segment, index) => (
             <div
@@ -115,18 +120,20 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               </div>
             </div>
           ))}
+           {/* Center Circle */}
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 bg-white border-4 border-primary rounded-full shadow-inner"/>
         </div>
       </div>
       <Button
         onClick={handleSpin}
         disabled={isSpinning || currentPoints < SPIN_COST}
         size="lg"
-        className={cn("text-xl px-8 py-6", isSpinning && 'cursor-not-allowed animate-pulse')}
+        className={cn("text-xl px-8 py-6 transition-all duration-300 transform hover:scale-105", isSpinning && 'cursor-not-allowed animate-pulse')}
       >
         <Gift className="mr-2 h-6 w-6" />
         {isSpinning ? 'Spinning...' : `Spin for ${SPIN_COST} Points`}
       </Button>
-      {currentPoints < SPIN_COST && (
+      {currentPoints < SPIN_COST && !isSpinning && (
           <p className="text-sm text-destructive">You need {SPIN_COST - currentPoints} more points to spin.</p>
       )}
     </div>
