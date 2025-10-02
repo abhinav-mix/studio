@@ -200,6 +200,136 @@
       "category": "physics"
     },
     {
+      "id": "phy-19",
+      "questionText": "The least distance of distinct vision for a young adult with normal vision is about:",
+      "options": [
+        "2.5 cm",
+        "25 m",
+        "25 cm",
+        "2.5 m"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The near point, or the least distance of distinct vision, for a young adult with normal vision is about 25 cm. It is the minimum distance at which objects can be seen most distinctly without strain.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-20",
+      "questionText": "The change in focal length of an eye lens is caused by the action of the:",
+      "options": [
+        "Pupil",
+        "Retina",
+        "Ciliary muscles",
+        "Iris"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The ciliary muscles in the eye are responsible for changing the shape and focal length of the eye lens, allowing the eye to focus on objects at different distances.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-21",
+      "questionText": "A device used to measure potential difference is known as a:",
+      "options": [
+        "Ammeter",
+        "Galvanometer",
+        "Voltmeter",
+        "Potentiometer"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A voltmeter is an instrument used for measuring the electric potential difference between two points in an electric circuit. It is always connected in parallel across the points.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-22",
+      "questionText": "Which effect of current is utilized in an electric bulb?",
+      "options": [
+        "Heating effect",
+        "Magnetic effect",
+        "Chemical effect",
+        "None of these"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An electric bulb works on the principle of the heating effect of electric current. The filament gets heated to a high temperature and starts glowing.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-23",
+      "questionText": "The magnetic field lines around a straight current-carrying conductor are:",
+      "options": [
+        "Straight lines",
+        "Elliptical",
+        "Concentric circles",
+        "Parabolic"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The magnetic field lines produced by a straight current-carrying wire are in the form of concentric circles with the wire at the center.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-24",
+      "questionText": "Which of the following is not a fossil fuel?",
+      "options": [
+        "Coal",
+        "Petroleum",
+        "Natural Gas",
+        "Biogas"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Biogas is produced from the decomposition of organic matter, such as cow dung, and is a renewable source of energy. Coal, petroleum, and natural gas are non-renewable fossil fuels.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-25",
+      "questionText": "A concave lens always forms an image which is:",
+      "options": [
+        "Virtual and erect",
+        "Real and erect",
+        "Virtual and inverted",
+        "Real and inverted"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "A concave lens is a diverging lens and always forms a virtual, erect, and diminished image, regardless of the object's position.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-26",
+      "questionText": "The blue colour of the sky is due to:",
+      "options": [
+        "Reflection of light",
+        "Dispersion of light",
+        "Refraction of light",
+        "Scattering of light"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The blue colour of the sky is caused by the scattering of sunlight by the molecules and tiny particles in the Earth's atmosphere. Blue light is scattered more than other colors because it travels as shorter, smaller waves.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-27",
+      "questionText": "What happens to the resistance of a conductor when its temperature is increased?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "First increases then decreases"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "For most metallic conductors, the resistance increases with an increase in temperature. This is because the ions in the conductor vibrate more, causing more collisions with the flowing electrons.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-28",
+      "questionText": "A device that converts electrical energy into mechanical energy is a:",
+      "options": [
+        "Generator",
+        "Motor",
+        "Transformer",
+        "Inverter"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "An electric motor is a device that converts electrical energy into mechanical energy. It works on the principle that a current-carrying conductor placed in a magnetic field experiences a force.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
@@ -265,3 +395,5 @@
     }
   ]
 }
+
+    
