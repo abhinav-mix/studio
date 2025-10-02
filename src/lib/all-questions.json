@@ -1458,6 +1458,266 @@
       "correctAnswerIndex": 1,
       "explanation": "Digestion is a process of breaking down complex food substances into simpler ones. This is a form of decomposition reaction (specifically, hydrolysis) and also involves oxidation, making it a complex biochemical process.",
       "category": "chemistry"
+    },
+    {
+      "id": "chem-41",
+      "questionText": "Soaps are sodium or potassium salts of long-chain ____.",
+      "options": [
+        "Aldehydes",
+        "Ketones",
+        "Carboxylic acids",
+        "Alcohols"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Soaps are salts of fatty acids, which are long-chain carboxylic acids. The reaction to form soap is called saponification.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-42",
+      "questionText": "Which element has the electronic configuration 2, 8, 7?",
+      "options": [
+        "Nitrogen (N)",
+        "Oxygen (O)",
+        "Fluorine (F)",
+        "Chlorine (Cl)"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The total number of electrons is 2 + 8 + 7 = 17. The element with atomic number 17 is Chlorine (Cl), which is a halogen.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-43",
+      "questionText": "The functional group in Butanone is a:",
+      "options": [
+        "Carboxylic acid",
+        "Aldehyde",
+        "Ketone",
+        "Alcohol"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The suffix '-one' in Butanone indicates that the functional group is a ketone (>C=O).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-44",
+      "questionText": "In the modern periodic table, elements are arranged in the order of their increasing:",
+      "options": [
+        "Atomic mass",
+        "Number of neutrons",
+        "Atomic number",
+        "Mass number"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The modern periodic table, proposed by Henry Moseley, arranges elements based on their increasing atomic number.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-45",
+      "questionText": "The reaction Zn + CuSO4 -> ZnSO4 + Cu is an example of:",
+      "options": [
+        "Combination reaction",
+        "Decomposition reaction",
+        "Displacement reaction",
+        "Double displacement reaction"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "This is a displacement reaction because a more reactive element (Zinc) displaces a less reactive element (Copper) from its salt solution.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-46",
+      "questionText": "Which of the following is an amphoteric oxide?",
+      "options": [
+        "Na2O",
+        "CaO",
+        "Al2O3",
+        "CO2"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Amphoteric oxides are oxides that can react with both acids and bases to form salt and water. Aluminum oxide (Al2O3) is a common example.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-47",
+      "questionText": "Baking powder is a mixture of baking soda and a mild edible acid such as:",
+      "options": [
+        "Hydrochloric acid",
+        "Sulfuric acid",
+        "Tartaric acid",
+        "Nitric acid"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Baking powder contains baking soda (sodium bicarbonate) and a mild edible acid like tartaric acid. The acid reacts with the baking soda when wet to produce carbon dioxide, which makes cakes and bread rise.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-48",
+      "questionText": "How many electrons are shared in the bond between two nitrogen atoms in an N2 molecule?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A nitrogen molecule (N2) has a triple covalent bond between the two nitrogen atoms. Each bond consists of 2 shared electrons, so a triple bond involves 6 shared electrons in total.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-49",
+      "questionText": "What is the pH of a solution that turns blue litmus red?",
+      "options": [
+        "Greater than 7",
+        "Equal to 7",
+        "Less than 7",
+        "Equal to 14"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Acids turn blue litmus paper red. A solution is acidic if its pH is less than 7.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-50",
+      "questionText": "The property of metals by which they can be beaten into thin sheets is called:",
+      "options": [
+        "Ductility",
+        "Malleability",
+        "Sonority",
+        "Conductivity"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Malleability is the physical property of metals that defines their ability to be hammered, pressed, or rolled into thin sheets without breaking. Ductility is the ability to be drawn into wires.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-51",
+      "questionText": "Isomers have:",
+      "options": [
+        "Same structural formula but different molecular formula",
+        "Same molecular formula but different structural formula",
+        "Same molecular and structural formula",
+        "Different molecular and structural formula"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Isomers are compounds that have the same molecular formula but different arrangements of atoms in space (structural formulas). For example, butane and isobutane are isomers.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-52",
+      "questionText": "The main ore of iron is:",
+      "options": [
+        "Bauxite",
+        "Hematite",
+        "Cinnabar",
+        "Pyrite"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Hematite (Fe2O3) is one of the most important and abundant ores of iron from which metallic iron is extracted.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-53",
+      "questionText": "The reaction CaO + H2O -> Ca(OH)2 is an example of:",
+      "options": [
+        "Endothermic reaction",
+        "Exothermic reaction",
+        "Displacement reaction",
+        "Redox reaction"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "This reaction, the slaking of lime, releases a large amount of heat. Reactions that release heat are called exothermic reactions.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-54",
+      "questionText": "Which gas is produced when carbonates react with acids?",
+      "options": [
+        "Hydrogen",
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Metal carbonates and metal hydrogen carbonates react with acids to give a corresponding salt, carbon dioxide gas, and water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-55",
+      "questionText": "Which of the following is not a noble gas?",
+      "options": [
+        "Helium (He)",
+        "Neon (Ne)",
+        "Argon (Ar)",
+        "Hydrogen (H)"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Noble gases (Group 18) are chemically inert because they have a full outer electron shell. Helium, Neon, and Argon are noble gases. Hydrogen is in Group 1 and is highly reactive.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-56",
+      "questionText": "The cleansing action of soap is due to the formation of:",
+      "options": [
+        "Micelles",
+        "Esters",
+        "Salts",
+        "Acids"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Soap molecules form structures called micelles in water. The oily dirt is collected in the center of the micelle, which can then be washed away by water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-57",
+      "questionText": "What happens to the atomic radius as we move from left to right in a period of the periodic table?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "First increases then decreases"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Moving from left to right across a period, the atomic number increases, meaning more protons are added to the nucleus. This increases the nuclear charge, which pulls the electrons closer to the nucleus, thus decreasing the atomic radius.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-58",
+      "questionText": "Rusting of iron is a chemical process that is a form of:",
+      "options": [
+        "Reduction",
+        "Oxidation",
+        "Decomposition",
+        "Neutralization"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Rusting is the common term for the corrosion of iron and its alloys. It is an oxidation process where iron reacts with oxygen and water to form hydrated iron(III) oxide (rust).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-59",
+      "questionText": "The reaction of quicklime with water is an example of:",
+      "options": [
+        "Combination reaction",
+        "Decomposition reaction",
+        "Displacement reaction",
+        "Double displacement reaction"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "In this reaction, calcium oxide (quicklime) and water combine to form a single product, calcium hydroxide (slaked lime). This is a combination reaction.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-60",
+      "questionText": "Which type of bond is present in an N2 molecule?",
+      "options": [
+        "Single covalent bond",
+        "Double covalent bond",
+        "Triple covalent bond",
+        "Ionic bond"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A molecule of nitrogen (N2) is formed by the sharing of three pairs of electrons between two nitrogen atoms. Therefore, it has a triple covalent bond.",
+      "category": "chemistry"
     }
   ]
 }
