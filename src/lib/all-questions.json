@@ -27,8 +27,7 @@
         "Dispersion"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The law of reflection states that the angle of incidence (the angle between the incoming ray and the normal) is equal to the angle of reflection (the angle between the reflected ray and the normal).",
-      "category": "physics"
+      "explanation": "The law of reflection states that the angle of incidence (the angle between the incoming ray and the normal) is equal to the angle of reflection (the angle between the reflected ray and the normal)."
     },
     {
       "id": "phy-6",
@@ -40,8 +39,7 @@
         "Refraction"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Refraction is the change in direction of a wave passing from one medium to another. This is why a straw in a glass of water appears bent.",
-      "category": "physics"
+      "explanation": "Refraction is the change in direction of a wave passing from one medium to another. This is why a straw in a glass of water appears bent."
     },
     {
       "id": "phy-7",
@@ -53,8 +51,7 @@
         "Parabolic mirror"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Convex mirrors are used as rear-view mirrors in vehicles because they give a wider field of view, allowing the driver to see more of the traffic behind them. They always form virtual, erect, and diminished images.",
-      "category": "physics"
+      "explanation": "Convex mirrors are used as rear-view mirrors in vehicles because they give a wider field of view, allowing the driver to see more of the traffic behind them. They always form virtual, erect, and diminished images."
     },
     {
       "id": "phy-8",
@@ -66,8 +63,7 @@
         "Watt"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The SI unit of electrical resistance is the Ohm (Ω), named after German physicist Georg Simon Ohm. It measures the opposition to the flow of electric current.",
-      "category": "physics"
+      "explanation": "The SI unit of electrical resistance is the Ohm (Ω), named after German physicist Georg Simon Ohm. It measures the opposition to the flow of electric current."
     },
     {
       "id": "phy-9",
@@ -79,8 +75,7 @@
         "Any wire"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "A fuse wire is always connected in the live wire of the circuit. Its purpose is to interrupt the circuit by melting if the current exceeds a safe level, thus protecting the appliance.",
-      "category": "physics"
+      "explanation": "A fuse wire is always connected in the live wire of the circuit. Its purpose is to interrupt the circuit by melting if the current exceeds a safe level, thus protecting the appliance."
     },
     {
       "id": "phy-10",
@@ -92,8 +87,7 @@
         "Is the same at all points"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "For a long, ideal solenoid, the magnetic field inside is uniform and parallel to the axis, meaning it is the same at all points inside, especially away from the ends.",
-      "category": "physics"
+      "explanation": "For a long, ideal solenoid, the magnetic field inside is uniform and parallel to the axis, meaning it is the same at all points inside, especially away from the ends."
     },
     {
       "id": "phy-11",
@@ -105,8 +99,7 @@
         "Scattering"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Dispersion is the phenomenon of splitting of a beam of white light into its constituent colors. This is famously demonstrated by passing light through a prism.",
-      "category": "physics"
+      "explanation": "Dispersion is the phenomenon of splitting of a beam of white light into its constituent colors. This is famously demonstrated by passing light through a prism."
     },
     {
       "id": "phy-12",
@@ -118,8 +111,7 @@
         "v + u = f"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The lens formula relates the focal length (f) of a lens to the object distance (u) and the image distance (v). The formula is 1/v - 1/u = 1/f.",
-      "category": "physics"
+      "explanation": "The lens formula relates the focal length (f) of a lens to the object distance (u) and the image distance (v). The formula is 1/v - 1/u = 1/f."
     },
     {
       "id": "phy-13",
@@ -131,10 +123,9 @@
         "scattering"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The twinkling of stars is due to the atmospheric refraction of starlight. The continuously changing atmosphere refracts the light from the stars by different amounts from one moment to the next.",
-      "category": "physics"
+      "explanation": "The twinkling of stars is due to the atmospheric refraction of starlight. The continuously changing atmosphere refracts the light from the stars by different amounts from one moment to the next."
     },
-     {
+    {
       "id": "phy-14",
       "questionText": "The human eye forms the image of an object at its __________.",
       "options": [
@@ -144,8 +135,7 @@
         "retina"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "The human eye has a convex lens that forms a real and inverted image of an object on the light-sensitive screen called the retina.",
-      "category": "physics"
+      "explanation": "The human eye has a convex lens that forms a real and inverted image of an object on the light-sensitive screen called the retina."
     },
     {
       "id": "phy-15",
@@ -157,8 +147,7 @@
         "1 m"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The far point of a normal human eye is at infinity. This means a person with normal vision can see distant objects clearly. The near point is about 25 cm.",
-      "category": "physics"
+      "explanation": "The far point of a normal human eye is at infinity. This means a person with normal vision can see distant objects clearly. The near point is about 25 cm."
     },
     {
       "id": "phy-16",
@@ -170,8 +159,7 @@
         "All of the above"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Ohm's law states that the potential difference (V) across the ends of a given metallic wire in an electric circuit is directly proportional to the current (I) flowing through it, provided its temperature remains the same. V ∝ I or V = IR.",
-      "category": "physics"
+      "explanation": "Ohm's law states that the potential difference (V) across the ends of a given metallic wire in an electric circuit is directly proportional to the current (I) flowing through it, provided its temperature remains the same. V ∝ I or V = IR."
     },
     {
       "id": "phy-17",
@@ -183,8 +171,7 @@
         "Volt-Ampere"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The commercial unit of electrical energy is the kilowatt-hour (kWh), commonly known as a 'unit'. 1 kWh = 3.6 × 10^6 joules.",
-      "category": "physics"
+      "explanation": "The commercial unit of electrical energy is the kilowatt-hour (kWh), commonly known as a 'unit'. 1 kWh = 3.6 × 10^6 joules."
     },
     {
       "id": "phy-18",
@@ -196,8 +183,7 @@
         "Solar energy"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Solar energy is a renewable source of energy because it is derived from the sun, which is a virtually inexhaustible source. Coal, petroleum, and natural gas are fossil fuels and are non-renewable.",
-      "category": "physics"
+      "explanation": "Solar energy is a renewable source of energy because it is derived from the sun, which is a virtually inexhaustible source. Coal, petroleum, and natural gas are fossil fuels and are non-renewable."
     },
     {
       "id": "phy-19",
@@ -209,8 +195,7 @@
         "2.5 m"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The near point, or the least distance of distinct vision, for a young adult with normal vision is about 25 cm. It is the minimum distance at which objects can be seen most distinctly without strain.",
-      "category": "physics"
+      "explanation": "The near point, or the least distance of distinct vision, for a young adult with normal vision is about 25 cm. It is the minimum distance at which objects can be seen most distinctly without strain."
     },
     {
       "id": "phy-20",
@@ -222,8 +207,7 @@
         "Iris"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The ciliary muscles in the eye are responsible for changing the shape and focal length of the eye lens, allowing the eye to focus on objects at different distances.",
-      "category": "physics"
+      "explanation": "The ciliary muscles in the eye are responsible for changing the shape and focal length of the eye lens, allowing the eye to focus on objects at different distances."
     },
     {
       "id": "phy-21",
@@ -235,8 +219,7 @@
         "Potentiometer"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A voltmeter is an instrument used for measuring the electric potential difference between two points in an electric circuit. It is always connected in parallel across the points.",
-      "category": "physics"
+      "explanation": "A voltmeter is an instrument used for measuring the electric potential difference between two points in an electric circuit. It is always connected in parallel across the points."
     },
     {
       "id": "phy-22",
@@ -248,8 +231,7 @@
         "None of these"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "An electric bulb works on the principle of the heating effect of electric current. The filament gets heated to a high temperature and starts glowing.",
-      "category": "physics"
+      "explanation": "An electric bulb works on the principle of the heating effect of electric current. The filament gets heated to a high temperature and starts glowing."
     },
     {
       "id": "phy-23",
@@ -261,8 +243,7 @@
         "Parabolic"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The magnetic field lines produced by a straight current-carrying wire are in the form of concentric circles with the wire at the center.",
-      "category": "physics"
+      "explanation": "The magnetic field lines produced by a straight current-carrying wire are in the form of concentric circles with the wire at the center."
     },
     {
       "id": "phy-24",
@@ -274,8 +255,7 @@
         "Biogas"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Biogas is produced from the decomposition of organic matter, such as cow dung, and is a renewable source of energy. Coal, petroleum, and natural gas are non-renewable fossil fuels.",
-      "category": "physics"
+      "explanation": "Biogas is produced from the decomposition of organic matter, such as cow dung, and is a renewable source of energy. Coal, petroleum, and natural gas are non-renewable fossil fuels."
     },
     {
       "id": "phy-25",
@@ -287,8 +267,7 @@
         "Real and inverted"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "A concave lens is a diverging lens and always forms a virtual, erect, and diminished image, regardless of the object's position.",
-      "category": "physics"
+      "explanation": "A concave lens is a diverging lens and always forms a virtual, erect, and diminished image, regardless of the object's position."
     },
     {
       "id": "phy-26",
@@ -300,8 +279,7 @@
         "Scattering of light"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "The blue colour of the sky is caused by the scattering of sunlight by the molecules and tiny particles in the Earth's atmosphere. Blue light is scattered more than other colors because it travels as shorter, smaller waves.",
-      "category": "physics"
+      "explanation": "The blue colour of the sky is caused by the scattering of sunlight by the molecules and tiny particles in the Earth's atmosphere. Blue light is scattered more than other colors because it travels as shorter, smaller waves."
     },
     {
       "id": "phy-27",
@@ -313,8 +291,7 @@
         "First increases then decreases"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "For most metallic conductors, the resistance increases with an increase in temperature. This is because the ions in the conductor vibrate more, causing more collisions with the flowing electrons.",
-      "category": "physics"
+      "explanation": "For most metallic conductors, the resistance increases with an increase in temperature. This is because the ions in the conductor vibrate more, causing more collisions with the flowing electrons."
     },
     {
       "id": "phy-28",
@@ -326,8 +303,7 @@
         "Inverter"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "An electric motor is a device that converts electrical energy into mechanical energy. It works on the principle that a current-carrying conductor placed in a magnetic field experiences a force.",
-      "category": "physics"
+      "explanation": "An electric motor is a device that converts electrical energy into mechanical energy. It works on the principle that a current-carrying conductor placed in a magnetic field experiences a force."
     },
     {
       "id": "phy-29",
@@ -339,8 +315,7 @@
         "Joules"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The power of a lens is the reciprocal of its focal length in meters. The SI unit of power of a lens is Dioptre (D).",
-      "category": "physics"
+      "explanation": "The power of a lens is the reciprocal of its focal length in meters. The SI unit of power of a lens is Dioptre (D)."
     },
     {
       "id": "phy-30",
@@ -352,8 +327,7 @@
         "Heat energy into electrical energy"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy. It works on the principle of electromagnetic induction.",
-      "category": "physics"
+      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy. It works on the principle of electromagnetic induction."
     },
     {
       "id": "phy-31",
@@ -365,8 +339,7 @@
         "Left-Hand Thumb Rule"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The Right-Hand Thumb Rule is used to find the direction of the magnetic field associated with a current-carrying conductor. If you point your right thumb in the direction of the current, the direction your fingers curl gives the direction of the magnetic field lines.",
-      "category": "physics"
+      "explanation": "The Right-Hand Thumb Rule is used to find the direction of the magnetic field associated with a current-carrying conductor. If you point your right thumb in the direction of the current, the direction your fingers curl gives the direction of the magnetic field lines."
     },
     {
       "id": "phy-32",
@@ -378,8 +351,7 @@
         "Astigmatism"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Myopia, or near-sightedness, is a common vision condition in which you can see objects near to you clearly, but objects farther away are blurry. It is corrected using a concave lens.",
-      "category": "physics"
+      "explanation": "Myopia, or near-sightedness, is a common vision condition in which you can see objects near to you clearly, but objects farther away are blurry. It is corrected using a concave lens."
     },
     {
       "id": "phy-33",
@@ -391,8 +363,7 @@
         "Nitrogen"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Biogas is an excellent fuel as it contains up to 75% methane (CH4). It burns without smoke and leaves no residue like ash in wood, charcoal, and coal burning.",
-      "category": "physics"
+      "explanation": "Biogas is an excellent fuel as it contains up to 75% methane (CH4). It burns without smoke and leaves no residue like ash in wood, charcoal, and coal burning."
     },
     {
       "id": "phy-34",
@@ -404,8 +375,7 @@
         "Virtual and inverted"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "A plane mirror always forms a virtual, erect image that is of the same size as the object and is located at the same distance behind the mirror as the object is in front of it.",
-      "category": "physics"
+      "explanation": "A plane mirror always forms a virtual, erect image that is of the same size as the object and is located at the same distance behind the mirror as the object is in front of it."
     },
     {
       "id": "phy-35",
@@ -417,8 +387,7 @@
         "Power"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Electric current is expressed by the amount of charge flowing through a particular area in unit time. In other words, it is the rate of flow of electric charges.",
-      "category": "physics"
+      "explanation": "Electric current is expressed by the amount of charge flowing through a particular area in unit time. In other words, it is the rate of flow of electric charges."
     },
     {
       "id": "phy-36",
@@ -430,8 +399,7 @@
         "The process of rotating a coil of an electric motor"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Electromagnetic induction is the production of an electromotive force (i.e., voltage) across an electrical conductor in a changing magnetic field. This is the principle behind electric generators.",
-      "category": "physics"
+      "explanation": "Electromagnetic induction is the production of an electromotive force (i.e., voltage) across an electrical conductor in a changing magnetic field. This is the principle behind electric generators."
     },
     {
       "id": "phy-37",
@@ -443,8 +411,7 @@
         "Plano-convex lens"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Hypermetropia is corrected by using a convex lens of appropriate power. A convex lens converges the incoming light rays so that the image is formed on the retina.",
-      "category": "physics"
+      "explanation": "Hypermetropia is corrected by using a convex lens of appropriate power. A convex lens converges the incoming light rays so that the image is formed on the retina."
     },
     {
       "id": "phy-38",
@@ -456,8 +423,7 @@
         "Momentum"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The kilowatt-hour (kWh) is a unit of energy equal to 3.6 megajoules. It is the commercial unit used for billing electrical energy consumption.",
-      "category": "physics"
+      "explanation": "The kilowatt-hour (kWh) is a unit of energy equal to 3.6 megajoules. It is the commercial unit used for billing electrical energy consumption."
     },
     {
       "id": "phy-39",
@@ -469,8 +435,7 @@
         "Voltage drop"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Short-circuiting occurs when the live wire and the neutral wire come into direct contact. This causes the resistance of the circuit to become very small, leading to an extremely large current flow, which can cause a fire.",
-      "category": "physics"
+      "explanation": "Short-circuiting occurs when the live wire and the neutral wire come into direct contact. This causes the resistance of the circuit to become very small, leading to an extremely large current flow, which can cause a fire."
     },
     {
       "id": "phy-40",
@@ -482,8 +447,7 @@
         "To decrease the current"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The earth wire is a safety measure. It provides a low-resistance path for the current to flow to the earth in case of an insulation failure, preventing the metallic body of the appliance from becoming live and thus preventing electric shocks.",
-      "category": "physics"
+      "explanation": "The earth wire is a safety measure. It provides a low-resistance path for the current to flow to the earth in case of an insulation failure, preventing the metallic body of the appliance from becoming live and thus preventing electric shocks."
     },
     {
       "id": "phy-41",
@@ -495,8 +459,7 @@
         "0 Hz (for DC)"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "In India, the standard frequency for alternating current (AC) supply is 50 Hertz (Hz). This means the current changes its direction 100 times in one second.",
-      "category": "physics"
+      "explanation": "In India, the standard frequency for alternating current (AC) supply is 50 Hertz (Hz). This means the current changes its direction 100 times in one second."
     },
     {
       "id": "phy-42",
@@ -508,8 +471,7 @@
         "Potential difference"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Fleming's left-hand rule helps to find the direction of the force experienced by a current-carrying conductor placed in a magnetic field. It's the principle behind electric motors.",
-      "category": "physics"
+      "explanation": "Fleming's left-hand rule helps to find the direction of the force experienced by a current-carrying conductor placed in a magnetic field. It's the principle behind electric motors."
     },
     {
       "id": "phy-43",
@@ -521,8 +483,7 @@
         "Economical"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A good source of energy should be efficient, safe, easy to handle, and should not cause environmental pollution. High pollution is an undesirable characteristic.",
-      "category": "physics"
+      "explanation": "A good source of energy should be efficient, safe, easy to handle, and should not cause environmental pollution. High pollution is an undesirable characteristic."
     },
     {
       "id": "phy-44",
@@ -534,8 +495,7 @@
         "Ocean thermal energy"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Tidal energy is a form of hydropower that converts the energy obtained from tides into useful forms of power, mainly electricity. It utilizes the rise and fall of sea levels.",
-      "category": "physics"
+      "explanation": "Tidal energy is a form of hydropower that converts the energy obtained from tides into useful forms of power, mainly electricity. It utilizes the rise and fall of sea levels."
     },
     {
       "id": "phy-45",
@@ -547,8 +507,7 @@
         "Plutonium"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A moderator is used in a nuclear reactor to slow down the fast-moving neutrons to sustain the nuclear chain reaction. Heavy water and graphite are common moderators.",
-      "category": "physics"
+      "explanation": "A moderator is used in a nuclear reactor to slow down the fast-moving neutrons to sustain the nuclear chain reaction. Heavy water and graphite are common moderators."
     },
     {
       "id": "phy-46",
@@ -560,8 +519,7 @@
         "Dispersion"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "A mirage is an optical phenomenon caused by the bending of light rays (refraction) through layers of air at different temperatures. On hot days, this can lead to total internal reflection, creating an illusion of water on the ground.",
-      "category": "physics"
+      "explanation": "A mirage is an optical phenomenon caused by the bending of light rays (refraction) through layers of air at different temperatures. On hot days, this can lead to total internal reflection, creating an illusion of water on the ground."
     },
     {
       "id": "phy-47",
@@ -573,8 +531,7 @@
         "Negative"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "A plane mirror can be considered as a spherical mirror of infinite radius of curvature. Since focal length is half the radius of curvature, its focal length is also infinity.",
-      "category": "physics"
+      "explanation": "A plane mirror can be considered as a spherical mirror of infinite radius of curvature. Since focal length is half the radius of curvature, its focal length is also infinity."
     },
     {
       "id": "phy-48",
@@ -586,8 +543,7 @@
         "Area of cross-section"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Resistivity (ρ) is an intrinsic property of a material. While resistance depends on length and area, resistivity itself for a given material mainly depends on temperature.",
-      "category": "physics"
+      "explanation": "Resistivity (ρ) is an intrinsic property of a material. While resistance depends on length and area, resistivity itself for a given material mainly depends on temperature."
     },
     {
       "id": "phy-49",
@@ -600,8 +556,7 @@
         "Switch"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The component 'X' is connected in series in the circuit to measure the current, which is the function of an ammeter. A voltmeter would be connected in parallel.",
-      "category": "physics"
+      "explanation": "The component 'X' is connected in series in the circuit to measure the current, which is the function of an ammeter. A voltmeter would be connected in parallel."
     },
     {
       "id": "phy-50",
@@ -613,8 +568,7 @@
         "None of these"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "When light enters a denser medium, its speed decreases, and it bends towards the normal.",
-      "category": "physics"
+      "explanation": "When light enters a denser medium, its speed decreases, and it bends towards the normal."
     },
     {
       "id": "phy-51",
@@ -627,8 +581,7 @@
         "Cylindrical lens"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The diagram shows myopia (nearsightedness), where the image is formed in front of the retina. A concave lens is used to diverge the light rays before they enter the eye, allowing the image to form correctly on the retina.",
-      "category": "physics"
+      "explanation": "The diagram shows myopia (nearsightedness), where the image is formed in front of the retina. A concave lens is used to diverge the light rays before they enter the eye, allowing the image to form correctly on the retina."
     },
     {
       "id": "phy-52",
@@ -640,8 +593,7 @@
         "R/4"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Resistance R = ρ(L/A). New length L' = 2L. New area A' = A/2. New resistance R' = ρ(L'/A') = ρ(2L / (A/2)) = 4 * ρ(L/A) = 4R.",
-      "category": "physics"
+      "explanation": "Resistance R = ρ(L/A). New length L' = 2L. New area A' = A/2. New resistance R' = ρ(L'/A') = ρ(2L / (A/2)) = 4 * ρ(L/A) = 4R."
     },
     {
       "id": "phy-53",
@@ -653,8 +605,7 @@
         "Far away from the magnetic field"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The force on a current-carrying conductor in a magnetic field is given by F = I * L * B * sin(θ). When the conductor is parallel to the magnetic field, the angle θ is 0, so sin(0) = 0, and the force is zero.",
-      "category": "physics"
+      "explanation": "The force on a current-carrying conductor in a magnetic field is given by F = I * L * B * sin(θ). When the conductor is parallel to the magnetic field, the angle θ is 0, so sin(0) = 0, and the force is zero."
     },
     {
       "id": "phy-54",
@@ -666,8 +617,7 @@
         "X-rays"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Infrared radiation from the sun is primarily responsible for the heating effect. A solar cooker is designed with a black surface to absorb these rays efficiently.",
-      "category": "physics"
+      "explanation": "Infrared radiation from the sun is primarily responsible for the heating effect. A solar cooker is designed with a black surface to absorb these rays efficiently."
     },
     {
       "id": "phy-55",
@@ -679,8 +629,7 @@
         "Virtual, erect, and magnified"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "For a concave mirror, f = -20 cm, u = -30 cm. Using the mirror formula 1/v + 1/u = 1/f, we get 1/v = 1/(-20) - 1/(-30) = -1/60. So v = -60 cm. The image is real and inverted. Magnification m = -v/u = -(-60)/(-30) = -2. The image is magnified.",
-      "category": "physics"
+      "explanation": "For a concave mirror, f = -20 cm, u = -30 cm. Using the mirror formula 1/v + 1/u = 1/f, we get 1/v = 1/(-20) - 1/(-30) = -1/60. So v = -60 cm. The image is real and inverted. Magnification m = -v/u = -(-60)/(-30) = -2. The image is magnified."
     },
     {
       "id": "phy-56",
@@ -692,8 +641,7 @@
         "Motor"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A galvanometer is a sensitive instrument used to detect small electric currents in a circuit. It shows a deflection when current flows through it.",
-      "category": "physics"
+      "explanation": "A galvanometer is a sensitive instrument used to detect small electric currents in a circuit. It shows a deflection when current flows through it."
     },
     {
       "id": "phy-57",
@@ -705,8 +653,7 @@
         "Acceleration"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "The slope of a velocity-time graph represents acceleration, as it is the rate of change of velocity (change in y-axis / change in x-axis).",
-      "category": "physics"
+      "explanation": "The slope of a velocity-time graph represents acceleration, as it is the rate of change of velocity (change in y-axis / change in x-axis)."
     },
     {
       "id": "phy-58",
@@ -719,8 +666,7 @@
         "Yellow"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "When white light passes through a prism, it disperses into a spectrum of colors (VIBGYOR). Violet light has the shortest wavelength and deviates (bends) the most, while red light has the longest wavelength and deviates the least.",
-      "category": "physics"
+      "explanation": "When white light passes through a prism, it disperses into a spectrum of colors (VIBGYOR). Violet light has the shortest wavelength and deviates (bends) the most, while red light has the longest wavelength and deviates the least."
     },
     {
       "id": "phy-59",
@@ -732,8 +678,7 @@
         "6 Ω"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "For parallel combination, 1/R_eq = 1/R1 + 1/R2 + 1/R3. So, 1/R_eq = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1. Therefore, R_eq = 1 Ω.",
-      "category": "physics"
+      "explanation": "For parallel combination, 1/R_eq = 1/R1 + 1/R2 + 1/R3. So, 1/R_eq = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1. Therefore, R_eq = 1 Ω."
     },
     {
       "id": "phy-60",
@@ -746,8 +691,7 @@
         "Normal shift"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The perpendicular distance between the original path of the incident ray and the emergent ray coming out of a glass slab is called lateral displacement or lateral shift.",
-      "category": "physics"
+      "explanation": "The perpendicular distance between the original path of the incident ray and the emergent ray coming out of a glass slab is called lateral displacement or lateral shift."
     },
     {
       "id": "phy-61",
@@ -759,8 +703,7 @@
         "4.82 A, 47.60 Ω and 2.64 A, 124.15 Ω"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Case 1 (Max): P = VI => I = P/V = 840/220 = 3.82 A. R = V/I = 220/3.82 = 57.60 Ω. Case 2 (Min): I = P/V = 360/220 = 1.64 A. R = V/I = 220/1.64 = 134.15 Ω.",
-      "category": "physics"
+      "explanation": "Case 1 (Max): P = VI => I = P/V = 840/220 = 3.82 A. R = V/I = 220/3.82 = 57.60 Ω. Case 2 (Min): I = P/V = 360/220 = 1.64 A. R = V/I = 220/1.64 = 134.15 Ω."
     },
     {
       "id": "phy-62",
@@ -772,8 +715,7 @@
         "Motor"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy, thus producing an electric current.",
-      "category": "physics"
+      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy, thus producing an electric current."
     },
     {
       "id": "phy-63",
@@ -785,8 +727,7 @@
         "It indicates the presence of DC current"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Red light has the longest wavelength and is scattered the least by air molecules. Hence, it can be seen clearly from a distance, making it suitable for danger signals.",
-      "category": "physics"
+      "explanation": "Red light has the longest wavelength and is scattered the least by air molecules. Hence, it can be seen clearly from a distance, making it suitable for danger signals."
     },
     {
       "id": "phy-64",
@@ -798,8 +739,7 @@
         "Beyond C, real and inverted, magnified"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "When an object is placed at the center of curvature (C) of a concave mirror, the image is also formed at C. The image is real, inverted, and of the same size as the object.",
-      "category": "physics"
+      "explanation": "When an object is placed at the center of curvature (C) of a concave mirror, the image is also formed at C. The image is real, inverted, and of the same size as the object."
     },
     {
       "id": "phy-65",
@@ -811,8 +751,7 @@
         "Pascal"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The SI unit of power is the Watt (W), which is defined as one joule per second. It measures the rate of energy transfer.",
-      "category": "physics"
+      "explanation": "The SI unit of power is the Watt (W), which is defined as one joule per second. It measures the rate of energy transfer."
     },
     {
       "id": "phy-66",
@@ -825,8 +764,7 @@
         "D"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The symbol with an arrow passing through the resistor symbol represents a variable resistor or a rheostat (labeled 'B' in a typical diagram). It is used to regulate current without changing the voltage source.",
-      "category": "physics"
+      "explanation": "The symbol with an arrow passing through the resistor symbol represents a variable resistor or a rheostat (labeled 'B' in a typical diagram). It is used to regulate current without changing the voltage source."
     },
     {
       "id": "phy-67",
@@ -838,8 +776,7 @@
         "5 V"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Heat produced per second is Power, P = 100 W. Resistance R = 4 Ω. We know P = V^2 / R. So, V^2 = P * R = 100 * 4 = 400. Therefore, V = sqrt(400) = 20 V.",
-      "category": "physics"
+      "explanation": "Heat produced per second is Power, P = 100 W. Resistance R = 4 Ω. We know P = V^2 / R. So, V^2 = P * R = 100 * 4 = 400. Therefore, V = sqrt(400) = 20 V."
     },
     {
       "id": "phy-68",
@@ -851,8 +788,7 @@
         "Ampere's Swimming Rule"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Fleming's right-hand rule shows the direction of induced current when a conductor moves in a magnetic field. It is used in electric generators.",
-      "category": "physics"
+      "explanation": "Fleming's right-hand rule shows the direction of induced current when a conductor moves in a magnetic field. It is used in electric generators."
     },
     {
       "id": "phy-69",
@@ -864,8 +800,7 @@
         "Coal"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Coal is a fossil fuel and is a non-renewable source of energy because it takes millions of years to form and its reserves are finite. Wind, solar, and tidal energy are renewable.",
-      "category": "physics"
+      "explanation": "Coal is a fossil fuel and is a non-renewable source of energy because it takes millions of years to form and its reserves are finite. Wind, solar, and tidal energy are renewable."
     },
     {
       "id": "phy-70",
@@ -877,8 +812,7 @@
         "18.50 cm, -4.50 cm, Real & Inverted"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Using lens formula 1/v - 1/u = 1/f. Here, u = -25 cm, f = +10 cm. 1/v = 1/10 + 1/(-25) = 3/50. So v = 50/3 = 16.67 cm. Magnification m = v/u = 16.67/(-25) = -0.667. Image size h' = m * h = -0.667 * 5 = -3.33 cm. The image is real, inverted, and diminished.",
-      "category": "physics"
+      "explanation": "Using lens formula 1/v - 1/u = 1/f. Here, u = -25 cm, f = +10 cm. 1/v = 1/10 + 1/(-25) = 3/50. So v = 50/3 = 16.67 cm. Magnification m = v/u = 16.67/(-25) = -0.667. Image size h' = m * h = -0.667 * 5 = -3.33 cm. The image is real, inverted, and diminished."
     },
     {
       "id": "phy-71",
@@ -890,8 +824,7 @@
         "+5.5 cm"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Power P = 1/f (where f is in meters). So, f = 1/P = 1/(-5.5) m = -0.1818 m. Converting to cm, f = -18.18 cm. The negative sign indicates it is a concave lens, used to correct myopia.",
-      "category": "physics"
+      "explanation": "Power P = 1/f (where f is in meters). So, f = 1/P = 1/(-5.5) m = -0.1818 m. Converting to cm, f = -18.18 cm. The negative sign indicates it is a concave lens, used to correct myopia."
     },
     {
       "id": "phy-72",
@@ -903,8 +836,7 @@
         "The spacesuit helmets are tinted black"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The blue color of the sky on Earth is due to the scattering of sunlight by the atmosphere. In space, there is no atmosphere, so the light from the sun is not scattered, and the sky appears black.",
-      "category": "physics"
+      "explanation": "The blue color of the sky on Earth is due to the scattering of sunlight by the atmosphere. In space, there is no atmosphere, so the light from the sun is not scattered, and the sky appears black."
     },
     {
       "id": "phy-73",
@@ -916,8 +848,7 @@
         "A nucleus emits a photon"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Nuclear fission is a nuclear reaction in which the nucleus of an atom splits into smaller parts (lighter nuclei), often producing free neutrons and photons (in the form of gamma rays), and releasing a very large amount of energy.",
-      "category": "physics"
+      "explanation": "Nuclear fission is a nuclear reaction in which the nucleus of an atom splits into smaller parts (lighter nuclei), often producing free neutrons and photons (in the form of gamma rays), and releasing a very large amount of energy."
     },
     {
       "id": "phy-74",
@@ -929,8 +860,7 @@
         "Between the lens and 20 cm"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "A convex lens forms a magnified, virtual, and erect image only when the object is placed between the optical center and the principal focus (f). Since f = 20 cm, the object must be placed at a distance less than 20 cm from the lens.",
-      "category": "physics"
+      "explanation": "A convex lens forms a magnified, virtual, and erect image only when the object is placed between the optical center and the principal focus (f). Since f = 20 cm, the object must be placed at a distance less than 20 cm from the lens."
     },
     {
       "id": "phy-75",
@@ -942,8 +872,7 @@
         "6.0 kWh, 9 A"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Energy consumed = Power × Time = 2.2 kW × 3 h = 6.6 kWh. Power P = 2.2 kW = 2200 W. Voltage V = 220 V. Current I = P/V = 2200/220 = 10 A.",
-      "category": "physics"
+      "explanation": "Energy consumed = Power × Time = 2.2 kW × 3 h = 6.6 kWh. Power P = 2.2 kW = 2200 W. Voltage V = 220 V. Current I = P/V = 2200/220 = 10 A."
     },
     {
       "id": "phy-76",
@@ -956,8 +885,7 @@
         "It is the same at all points"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The strength of a magnetic field is indicated by the closeness of the field lines. Where the field lines are closest together (point A in a typical diagram), the magnetic field is the strongest.",
-      "category": "physics"
+      "explanation": "The strength of a magnetic field is indicated by the closeness of the field lines. Where the field lines are closest together (point A in a typical diagram), the magnetic field is the strongest."
     },
     {
       "id": "phy-77",
@@ -969,8 +897,7 @@
         "Scattering"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "At sunrise and sunset, sunlight travels through a larger part of the atmosphere. Most of the blue light is scattered away, and the less scattered red light reaches our eyes, making the sun appear reddish.",
-      "category": "physics"
+      "explanation": "At sunrise and sunset, sunlight travels through a larger part of the atmosphere. Most of the blue light is scattered away, and the less scattered red light reaches our eyes, making the sun appear reddish."
     },
     {
       "id": "phy-78",
@@ -982,8 +909,7 @@
         "Burning of Hydrogen"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The Sun's energy comes from nuclear fusion, where hydrogen nuclei fuse together to form helium nuclei, releasing an immense amount of energy in the process.",
-      "category": "physics"
+      "explanation": "The Sun's energy comes from nuclear fusion, where hydrogen nuclei fuse together to form helium nuclei, releasing an immense amount of energy in the process."
     },
     {
       "id": "phy-79",
@@ -995,8 +921,7 @@
         "R1 - R2"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "When resistors are connected in series, their total or equivalent resistance is the sum of their individual resistances: Req = R1 + R2 + ...",
-      "category": "physics"
+      "explanation": "When resistors are connected in series, their total or equivalent resistance is the sum of their individual resistances: Req = R1 + R2 + ..."
     },
     {
       "id": "phy-80",
@@ -1008,8 +933,7 @@
         "It does not affect the circuit"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "When a switch is in the OFF position, it creates a break in the circuit, which is known as an open circuit. No current can flow through an open circuit.",
-      "category": "physics"
+      "explanation": "When a switch is in the OFF position, it creates a break in the circuit, which is known as an open circuit. No current can flow through an open circuit."
     },
     {
       "id": "phy-81",
@@ -1021,8 +945,7 @@
         "Between pole (P) and F"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "When an object is placed at the principal focus (F) of a concave mirror, the reflected rays become parallel, forming a real, inverted, and highly enlarged image at infinity.",
-      "category": "physics"
+      "explanation": "When an object is placed at the principal focus (F) of a concave mirror, the reflected rays become parallel, forming a real, inverted, and highly enlarged image at infinity."
     },
     {
       "id": "phy-82",
@@ -1034,8 +957,7 @@
         "R = 3f"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "For spherical mirrors with small apertures, the radius of curvature is found to be equal to twice the focal length. R = 2f.",
-      "category": "physics"
+      "explanation": "For spherical mirrors with small apertures, the radius of curvature is found to be equal to twice the focal length. R = 2f."
     },
     {
       "id": "phy-83",
@@ -1047,8 +969,7 @@
         "parallel, parallel"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "An ammeter has very low resistance and is connected in series to measure the total current flowing. A voltmeter has very high resistance and is connected in parallel to measure the potential difference across a component without drawing significant current.",
-      "category": "physics"
+      "explanation": "An ammeter has very low resistance and is connected in series to measure the total current flowing. A voltmeter has very high resistance and is connected in parallel to measure the potential difference across a component without drawing significant current."
     },
     {
       "id": "phy-84",
@@ -1060,8 +981,7 @@
         "-4 D"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "This is hypermetropia. u = -25 cm (normal near point), v = -50 cm (defected near point). Using lens formula 1/f = 1/v - 1/u = 1/(-50) - 1/(-25) = 1/50. So f = +50 cm = +0.5 m. Power P = 1/f = 1/0.5 = +2 D.",
-      "category": "physics"
+      "explanation": "This is hypermetropia. u = -25 cm (normal near point), v = -50 cm (defected near point). Using lens formula 1/f = 1/v - 1/u = 1/(-50) - 1/(-25) = 1/50. So f = +50 cm = +0.5 m. Power P = 1/f = 1/0.5 = +2 D."
     },
     {
       "id": "phy-85",
@@ -1073,8 +993,7 @@
         "Fleming"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Hans Christian Oersted discovered in 1820 that an electric current produces a magnetic field. This was a major breakthrough in understanding the link between electricity and magnetism.",
-      "category": "physics"
+      "explanation": "Hans Christian Oersted discovered in 1820 that an electric current produces a magnetic field. This was a major breakthrough in understanding the link between electricity and magnetism."
     },
     {
       "id": "phy-86",
@@ -1086,8 +1005,7 @@
         "Gamma rays"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The ozone layer in the stratosphere absorbs most of the Sun's harmful ultraviolet (UV) radiation, protecting life on Earth from its damaging effects.",
-      "category": "physics"
+      "explanation": "The ozone layer in the stratosphere absorbs most of the Sun's harmful ultraviolet (UV) radiation, protecting life on Earth from its damaging effects."
     },
     {
       "id": "phy-87",
@@ -1099,8 +1017,7 @@
         "Between F and the optical center"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "When an object is placed between the principal focus (F) and the optical center of a convex lens, it forms a virtual, erect, and magnified image on the same side as the object. This is the principle of a magnifying glass.",
-      "category": "physics"
+      "explanation": "When an object is placed between the principal focus (F) and the optical center of a convex lens, it forms a virtual, erect, and magnified image on the same side as the object. This is the principle of a magnifying glass."
     },
     {
       "id": "phy-88",
@@ -1112,8 +1029,7 @@
         "25R"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Each part will have a resistance of R/5. When connected in parallel, the equivalent resistance R_p is given by 1/R_p = 1/(R/5) + 1/(R/5) + ... (5 times) = 5/(R/5) = 25/R. So, R_p = R/25.",
-      "category": "physics"
+      "explanation": "Each part will have a resistance of R/5. When connected in parallel, the equivalent resistance R_p is given by 1/R_p = 1/(R/5) + 1/(R/5) + ... (5 times) = 5/(R/5) = 25/R. So, R_p = R/25."
     },
     {
       "id": "phy-89",
@@ -1125,8 +1041,7 @@
         "The field consists of concentric circles centered on the wire."
       ],
       "correctAnswerIndex": 3,
-      "explanation": "The magnetic field lines around a long straight current-carrying wire are concentric circles in a plane perpendicular to the wire, with the wire at the center. The direction is given by the right-hand thumb rule.",
-      "category": "physics"
+      "explanation": "The magnetic field lines around a long straight current-carrying wire are concentric circles in a plane perpendicular to the wire, with the wire at the center. The direction is given by the right-hand thumb rule."
     },
     {
       "id": "phy-90",
@@ -1138,8 +1053,7 @@
         "Mechanical energy"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "According to the 10% law, only about 10% of the energy is stored as biomass (chemical energy) at one trophic level and is available for the next trophic level. The rest is lost as heat during metabolic processes.",
-      "category": "physics"
+      "explanation": "According to the 10% law, only about 10% of the energy is stored as biomass (chemical energy) at one trophic level and is available for the next trophic level. The rest is lost as heat during metabolic processes."
     },
     {
       "id": "phy-91",
@@ -1152,8 +1066,7 @@
         "Both rays will pass through the focus on the other side"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "(i) A ray of light passing through the optical centre of a concave lens emerges without any deviation. (ii) A ray of light parallel to the principal axis of a concave lens appears to diverge from the principal focus located on the same side of the lens.",
-      "category": "physics"
+      "explanation": "(i) A ray of light passing through the optical centre of a concave lens emerges without any deviation. (ii) A ray of light parallel to the principal axis of a concave lens appears to diverge from the principal focus located on the same side of the lens."
     },
     {
       "id": "phy-92",
@@ -1165,8 +1078,7 @@
         "It does not invert the image"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Convex mirrors are preferred because they always give an erect, though diminished, image. Also, they have a wider field of view as they are curved outwards, enabling the driver to view much larger area than would be possible with a plane mirror.",
-      "category": "physics"
+      "explanation": "Convex mirrors are preferred because they always give an erect, though diminished, image. Also, they have a wider field of view as they are curved outwards, enabling the driver to view much larger area than would be possible with a plane mirror."
     },
     {
       "id": "phy-93",
@@ -1178,8 +1090,7 @@
         "The total current drawn from the battery is lower."
       ],
       "correctAnswerIndex": 2,
-      "explanation": "In a parallel connection, each device gets the full voltage of the battery. Also, turning any device on or off does not affect the others, and if one device fails, the rest continue to work.",
-      "category": "physics"
+      "explanation": "In a parallel connection, each device gets the full voltage of the battery. Also, turning any device on or off does not affect the others, and if one device fails, the rest continue to work."
     },
     {
       "id": "phy-94",
@@ -1191,8 +1102,7 @@
         "To act as a switch"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A fuse is a safety device containing a wire with a low melting point. If the current in the circuit exceeds a safe value (due to short-circuiting or overloading), the fuse wire melts and breaks the circuit, thus protecting the appliances.",
-      "category": "physics"
+      "explanation": "A fuse is a safety device containing a wire with a low melting point. If the current in the circuit exceeds a safe value (due to short-circuiting or overloading), the fuse wire melts and breaks the circuit, thus protecting the appliances."
     },
     {
       "id": "phy-95",
@@ -1204,8 +1114,7 @@
         "It is a type of mineral; it is refined to get energy."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Biomass is organic matter derived from living or recently living organisms, such as wood, crop waste, and animal dung. Bio-energy can be obtained by directly burning biomass or by converting it into biogas (like methane) through anaerobic decomposition.",
-      "category": "physics"
+      "explanation": "Biomass is organic matter derived from living or recently living organisms, such as wood, crop waste, and animal dung. Bio-energy can be obtained by directly burning biomass or by converting it into biogas (like methane) through anaerobic decomposition."
     },
     {
       "id": "phy-96",
@@ -1217,8 +1126,7 @@
         "v=40cm, h'=-8cm"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Given: u = -30 cm, f = +20 cm, h = +4 cm. Using the lens formula 1/v - 1/u = 1/f, we get 1/v = 1/20 + 1/(-30) = 1/60. So, v = +60 cm. The image is real and formed 60 cm from the lens. Magnification m = v/u = 60/(-30) = -2. Image height h' = m * h = -2 * 4 = -8 cm. The image is inverted and magnified.",
-      "category": "physics"
+      "explanation": "Given: u = -30 cm, f = +20 cm, h = +4 cm. Using the lens formula 1/v - 1/u = 1/f, we get 1/v = 1/20 + 1/(-30) = 1/60. So, v = +60 cm. The image is real and formed 60 cm from the lens. Magnification m = v/u = 60/(-30) = -2. Image height h' = m * h = -2 * 4 = -8 cm. The image is inverted and magnified."
     },
     {
       "id": "phy-97",
@@ -1230,8 +1138,7 @@
         "It emits colorful light."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Tungsten is used for the filaments of incandescent lamps because it has a very high melting point (about 3422 °C) and high resistivity. This allows it to be heated to a very high temperature without melting, at which point it glows brightly (incandescence).",
-      "category": "physics"
+      "explanation": "Tungsten is used for the filaments of incandescent lamps because it has a very high melting point (about 3422 °C) and high resistivity. This allows it to be heated to a very high temperature without melting, at which point it glows brightly (incandescence)."
     },
     {
       "id": "phy-98",
@@ -1243,8 +1150,7 @@
         "They move from south to north inside the magnet; they intersect at the poles."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Two key properties of magnetic field lines are: 1) They are continuous closed loops (they emerge from the north pole and enter the south pole externally, and move from south to north inside the magnet). 2) Two magnetic field lines can never intersect each other.",
-      "category": "physics"
+      "explanation": "Two key properties of magnetic field lines are: 1) They are continuous closed loops (they emerge from the north pole and enter the south pole externally, and move from south to north inside the magnet). 2) Two magnetic field lines can never intersect each other."
     },
     {
       "id": "phy-99",
@@ -1256,8 +1162,7 @@
         "-8.6 cm"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "h=2cm, h'=-3cm (real image is inverted), u=-16cm. m = h'/h = -3/2 = -1.5. Also m = -v/u. So, -1.5 = -v/(-16). This gives v = -24cm. Using mirror formula 1/f = 1/v + 1/u = 1/(-24) + 1/(-16) = (-2-3)/48 = -5/48. So, f = -48/5 = -9.6 cm.",
-      "category": "physics"
+      "explanation": "h=2cm, h'=-3cm (real image is inverted), u=-16cm. m = h'/h = -3/2 = -1.5. Also m = -v/u. So, -1.5 = -v/(-16). This gives v = -24cm. Using mirror formula 1/f = 1/v + 1/u = 1/(-24) + 1/(-16) = (-2-3)/48 = -5/48. So, f = -48/5 = -9.6 cm."
     },
     {
       "id": "phy-100",
@@ -1269,8 +1174,7 @@
         "1 newton of force is applied on 1 coulomb of charge."
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The potential difference between two points is said to be 1 Volt if 1 Joule of work is done in moving 1 Coulomb of electric charge from one point to the other. V = W/Q.",
-      "category": "physics"
+      "explanation": "The potential difference between two points is said to be 1 Volt if 1 Joule of work is done in moving 1 Coulomb of electric charge from one point to the other. V = W/Q."
     },
     {
       "id": "phy-101",
@@ -1282,8 +1186,7 @@
         "Because they are good insulators."
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Copper and aluminium have very low resistivity. This means they offer very little resistance to the flow of electric current, making them excellent conductors and minimizing energy loss as heat during electricity transmission.",
-      "category": "physics"
+      "explanation": "Copper and aluminium have very low resistivity. This means they offer very little resistance to the flow of electric current, making them excellent conductors and minimizing energy loss as heat during electricity transmission."
     },
     {
       "id": "phy-102",
@@ -1295,8 +1198,7 @@
         "Chemical effect of current"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "An electric motor works on the principle that when a rectangular coil is placed in a magnetic field and current is passed through it, a force acts on the coil which rotates it continuously. This converts electrical energy into mechanical energy.",
-      "category": "physics"
+      "explanation": "An electric motor works on the principle that when a rectangular coil is placed in a magnetic field and current is passed through it, a force acts on the coil which rotates it continuously. This converts electrical energy into mechanical energy."
     },
     {
       "id": "phy-103",
@@ -1308,8 +1210,7 @@
         "Heat energy from the hot rocks inside the earth"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Geothermal energy is the heat from the Earth. It's a renewable energy source that is generated in the Earth's core. The heat from geological formations is used to create steam and run turbines to generate electricity.",
-      "category": "physics"
+      "explanation": "Geothermal energy is the heat from the Earth. It's a renewable energy source that is generated in the Earth's core. The heat from geological formations is used to create steam and run turbines to generate electricity."
     },
     {
       "id": "phy-104",
@@ -1321,8 +1222,7 @@
         "Diamond absorbs 2.42% of light."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The refractive index of a medium is the ratio of the speed of light in vacuum to the speed of light in the medium. So, a refractive index of 2.42 for diamond means that the speed of light in vacuum is 2.42 times the speed of light in diamond, indicating how much light slows down in the material.",
-      "category": "physics"
+      "explanation": "The refractive index of a medium is the ratio of the speed of light in vacuum to the speed of light in the medium. So, a refractive index of 2.42 for diamond means that the speed of light in vacuum is 2.42 times the speed of light in diamond, indicating how much light slows down in the material."
     },
     {
       "id": "phy-105",
@@ -1334,8 +1234,7 @@
         "The power of a lens with a radius of curvature of 1 meter."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "One dioptre is defined as the power of a lens of focal length 1 meter. P = 1/f(m).",
-      "category": "physics"
+      "explanation": "One dioptre is defined as the power of a lens of focal length 1 meter. P = 1/f(m)."
     },
     {
       "id": "phy-106",
@@ -1347,8 +1246,7 @@
         "Length, area of cross-section, temperature, and nature of material"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "The resistance of a conductor depends on four factors: its length (L), its area of cross-section (A), the nature of its material (resistivity ρ), and its temperature.",
-      "category": "physics"
+      "explanation": "The resistance of a conductor depends on four factors: its length (L), its area of cross-section (A), the nature of its material (resistivity ρ), and its temperature."
     },
     {
       "id": "phy-107",
@@ -1360,8 +1258,7 @@
         "To convert AC to DC."
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The commutator is a device that reverses the direction of current flow through the coil every half rotation. This ensures that the torque on the coil continues in the same direction, allowing the coil to rotate continuously.",
-      "category": "physics"
+      "explanation": "The commutator is a device that reverses the direction of current flow through the coil every half rotation. This ensures that the torque on the coil continues in the same direction, allowing the coil to rotate continuously."
     },
     {
       "id": "phy-108",
@@ -1373,8 +1270,7 @@
         "Wood and Biogas, because they are ancient energy sources."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Solar energy (from the sun) and wind energy (from the movement of air) are renewable because they are derived from natural processes that are replenished constantly. Unlike fossil fuels, they will not be depleted by human use.",
-      "category": "physics"
+      "explanation": "Solar energy (from the sun) and wind energy (from the movement of air) are renewable because they are derived from natural processes that are replenished constantly. Unlike fossil fuels, they will not be depleted by human use."
     },
     {
       "id": "phy-109",
@@ -1386,8 +1282,7 @@
         "Towards the normal, because water is denser than air."
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Water is optically denser than air. When a ray of light enters a denser medium from a rarer medium, its speed decreases and it bends towards the normal.",
-      "category": "physics"
+      "explanation": "Water is optically denser than air. When a ray of light enters a denser medium from a rarer medium, its speed decreases and it bends towards the normal."
     },
     {
       "id": "phy-110",
@@ -1399,8 +1294,7 @@
         "Highest 48 Ω, Lowest 4 Ω"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Highest resistance is obtained by connecting in series: R_s = 4+8+12+24 = 48 Ω. Lowest resistance is obtained by connecting in parallel: 1/R_p = 1/4 + 1/8 + 1/12 + 1/24 = (6+3+2+1)/24 = 12/24 = 1/2. So, R_p = 2 Ω.",
-      "category": "physics"
+      "explanation": "Highest resistance is obtained by connecting in series: R_s = 4+8+12+24 = 48 Ω. Lowest resistance is obtained by connecting in parallel: 1/R_p = 1/4 + 1/8 + 1/12 + 1/24 = (6+3+2+1)/24 = 12/24 = 1/2. So, R_p = 2 Ω."
     },
     {
       "id": "phy-111",
@@ -1412,8 +1306,7 @@
         "Due to the heating effect of the magnet."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "A compass needle is itself a small magnet. When brought near a bar magnet, the magnetic field of the bar magnet exerts forces on the poles of the compass needle, causing it to align with the field lines, hence showing deflection.",
-      "category": "physics"
+      "explanation": "A compass needle is itself a small magnet. When brought near a bar magnet, the magnetic field of the bar magnet exerts forces on the poles of the compass needle, causing it to align with the field lines, hence showing deflection."
     },
     {
       "id": "phy-112",
@@ -1425,8 +1318,7 @@
         "Electric fuse"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "An electric generator works on the principle of electromagnetic induction. It produces an induced electric current by rotating a coil in a magnetic field, thus converting mechanical energy into electrical energy.",
-      "category": "physics"
+      "explanation": "An electric generator works on the principle of electromagnetic induction. It produces an induced electric current by rotating a coil in a magnetic field, thus converting mechanical energy into electrical energy."
     },
     {
       "id": "phy-113",
@@ -1438,8 +1330,7 @@
         "The technology is not yet developed."
       ],
       "correctAnswerIndex": 0,
-      "explanation": "The main limitations are that wind speeds are not constant and wind is not available at all locations. Wind farms also require a large area of land and can be a threat to birds.",
-      "category": "physics"
+      "explanation": "The main limitations are that wind speeds are not constant and wind is not available at all locations. Wind farms also require a large area of land and can be a threat to birds."
     },
     {
       "id": "phy-114",
@@ -1451,8 +1342,7 @@
         "Beyond 2F"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "A convex lens produces a virtual, erect, and magnified image when the object is between the lens and the principal focus (F). As the lens is moved up, the distance between paper and lens increases. When the distance becomes greater than F, the lens forms a real and inverted image.",
-      "category": "physics"
+      "explanation": "A convex lens produces a virtual, erect, and magnified image when the object is between the lens and the principal focus (F). As the lens is moved up, the distance between paper and lens increases. When the distance becomes greater than F, the lens forms a real and inverted image."
     },
     {
       "id": "phy-115",
@@ -1464,8 +1354,7 @@
         "All of the above"
       ],
       "correctAnswerIndex": 3,
-      "explanation": "Joule's law of heating states that the heat (H) produced in a resistor is directly proportional to (i) the square of current (I²), (ii) the resistance (R), and (iii) the time (t) for which current flows. H = I²Rt. Using V=IR, this can also be written as H = VIt and H = (V²/R)t.",
-      "category": "physics"
+      "explanation": "Joule's law of heating states that the heat (H) produced in a resistor is directly proportional to (i) the square of current (I²), (ii) the resistance (R), and (iii) the time (t) for which current flows. H = I²Rt. Using V=IR, this can also be written as H = VIt and H = (V²/R)t."
     },
     {
       "id": "phy-116",
@@ -1477,8 +1366,7 @@
         "It increases the efficiency of the appliance."
       ],
       "correctAnswerIndex": 2,
-      "explanation": "The earth wire is a crucial safety feature. If there's an insulation failure, the metallic casing of an appliance can become live. The earth wire provides a low-resistance path for this leakage current to flow to the ground, causing the fuse to blow and preventing a potentially fatal electric shock.",
-      "category": "physics"
+      "explanation": "The earth wire is a crucial safety feature. If there's an insulation failure, the metallic casing of an appliance can become live. The earth wire provides a low-resistance path for this leakage current to flow to the ground, causing the fuse to blow and preventing a potentially fatal electric shock."
     },
     {
       "id": "phy-117",
@@ -1490,8 +1378,7 @@
         "To send signals to the brain."
       ],
       "correctAnswerIndex": 1,
-      "explanation": "The iris is a muscular diaphragm that controls the size of the pupil. It regulates the amount of light entering the eye by contracting in bright light (making the pupil smaller) and expanding in dim light (making the pupil larger).",
-      "category": "physics"
+      "explanation": "The iris is a muscular diaphragm that controls the size of the pupil. It regulates the amount of light entering the eye by contracting in bright light (making the pupil smaller) and expanding in dim light (making the pupil larger)."
     },
     {
       "id": "phy-118",
@@ -1499,12 +1386,251 @@
       "options": [
         "0.45 A",
         "0.27 A",
-        "0.72 A",
+        "0.73 A",
         "1.1 A"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Current for 1st lamp, I1 = P1/V = 100/220 A. Current for 2nd lamp, I2 = P2/V = 60/220 A. Since they are in parallel, the total current drawn from the line is I = I1 + I2 = (100/220) + (60/220) = 160/220 ≈ 0.727 A.",
-      "category": "physics"
+      "explanation": "Current for 1st lamp, I1 = P1/V = 100/220 A. Current for 2nd lamp, I2 = P2/V = 60/220 A. Since they are in parallel, the total current drawn from the line is I = I1 + I2 = (100/220) + (60/220) = 160/220 ≈ 0.73 A."
+    },
+    {
+      "id": "phy-119",
+      "questionText": "What type of image is formed by the eye lens on the retina?",
+      "options": [
+        "Virtual, erect, and diminished",
+        "Real, inverted, and diminished",
+        "Real, erect, and magnified",
+        "Virtual, inverted, and magnified"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The eye lens is a convex lens that forms a real, inverted, and diminished image of the object on the retina. The brain then processes this inverted image and perceives it as erect."
+    },
+    {
+      "id": "phy-120",
+      "questionText": "Calculate the number of electrons constituting one coulomb of charge.",
+      "options": [
+        "6.25 x 10^18",
+        "1.6 x 10^-19",
+        "6.022 x 10^23",
+        "9.1 x 10^-31"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The charge of one electron is 1.6 x 10^-19 C. The number of electrons in one coulomb of charge is n = Q/e = 1 / (1.6 x 10^-19) = 6.25 x 10^18 electrons."
+    },
+    {
+      "id": "phy-121",
+      "questionText": "Name the rule which gives the direction of force on a current carrying conductor placed in a magnetic field.",
+      "options": [
+        "Right-Hand Thumb Rule",
+        "Fleming's Right-Hand Rule",
+        "Fleming's Left-Hand Rule",
+        "Ampere's Circuital Law"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Fleming's Left-Hand Rule gives the direction of the force experienced by a current-carrying conductor when placed in a magnetic field. It is used to determine the direction of force in electric motors."
+    },
+    {
+      "id": "phy-122",
+      "questionText": "What is the S.I. unit of magnetic field strength?",
+      "options": [
+        "Weber",
+        "Tesla",
+        "Henry",
+        "Ohm"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of magnetic field strength (or magnetic flux density) is the Tesla (T)."
+    },
+    {
+      "id": "phy-123",
+      "questionText": "Why is solar energy considered a renewable source of energy?",
+      "options": [
+        "It is derived from fossil fuels.",
+        "It can be replenished in a short period.",
+        "It is derived from the sun, which will last for billions of years.",
+        "It does not cause any pollution."
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Solar energy is considered renewable because it comes from the sun, which is an essentially inexhaustible source of energy on a human timescale. It is expected to continue providing energy for billions of years."
+    },
+    {
+      "id": "phy-124",
+      "questionText": "Find the power of a concave lens of focal length 2 m.",
+      "options": [
+        "-0.5 D",
+        "+0.5 D",
+        "-2 D",
+        "+2 D"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The focal length of a concave lens is taken as negative, so f = -2 m. The power of a lens is P = 1/f(m) = 1/(-2) = -0.5 Dioptres (D)."
+    },
+    {
+      "id": "phy-125",
+      "questionText": "An electric lamp of 100 Ω, a toaster of resistance 50 Ω, and a water filter of resistance 500 Ω are connected in parallel to a 220 V source. What is the total resistance of the combination?",
+      "options": [
+        "650 Ω",
+        "31.25 Ω",
+        "0.032 Ω",
+        "100 Ω"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "For parallel connection, 1/R_p = 1/100 + 1/50 + 1/500. Taking 500 as the common denominator, we get (5 + 10 + 1) / 500 = 16/500. So, R_p = 500/16 = 31.25 Ω."
+    },
+    {
+      "id": "phy-126",
+      "questionText": "What is the pattern of the magnetic field lines inside a solenoid?",
+      "options": [
+        "Curved lines from pole to pole",
+        "Concentric circles",
+        "Nearly parallel straight lines",
+        "Radial lines pointing outwards"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The magnetic field inside a long straight solenoid is uniform and strong. The field lines are nearly parallel straight lines, indicating that the magnetic field is the same at all points inside."
+    },
+    {
+      "id": "phy-127",
+      "questionText": "Out of the following, which is not a biomass energy source?",
+      "options": [
+        "Wood",
+        "Gobar gas (Biogas)",
+        "Nuclear energy",
+        "Agricultural waste"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Nuclear energy is obtained from atomic fission or fusion and is not derived from organic matter (biomass). Wood, gobar gas, and agricultural waste are all forms of biomass energy."
+    },
+    {
+      "id": "phy-128",
+      "questionText": "A student uses a lens of focal length -50 cm. What is the nature of the lens and its power?",
+      "options": [
+        "Concave lens, -2 D",
+        "Convex lens, +2 D",
+        "Concave lens, -0.5 D",
+        "Convex lens, +0.5 D"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "A negative focal length indicates a concave (diverging) lens. Focal length f = -50 cm = -0.5 m. Power P = 1/f = 1/(-0.5) = -2 Dioptres (D)."
+    },
+    {
+      "id": "phy-129",
+      "questionText": "What is an ecosystem?",
+      "options": [
+        "A community of animals and plants only.",
+        "A system of living organisms interacting with each other and their physical environment.",
+        "The physical environment of a region.",
+        "A collection of different species in an area."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "An ecosystem includes all the living things (plants, animals, organisms) in a given area, interacting with each other, and also with their non-living environments (weather, earth, sun, soil, climate, atmosphere)."
+    },
+    {
+      "id": "phy-130",
+      "questionText": "State the difference between AC and DC.",
+      "options": [
+        "AC is constant, DC reverses direction periodically.",
+        "AC reverses direction periodically, DC flows in a single direction.",
+        "AC is used in batteries, DC is used in mains supply.",
+        "There is no difference."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The main difference is in the direction of current flow. Direct Current (DC) flows in one direction only. Alternating Current (AC) reverses its direction periodically. The mains supply in our homes is AC."
+    },
+    {
+      "id": "phy-131",
+      "questionText": "For which position of an object does a convex lens form a real and inverted image of the same size as that of the object?",
+      "options": [
+        "At the principal focus (F)",
+        "At infinity",
+        "At twice the focal length (2F)",
+        "Between F and 2F"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "When an object is placed at the center of curvature, or twice the focal length (2F), of a convex lens, it forms a real, inverted image of the same size at 2F on the other side of the lens."
+    },
+    {
+      "id": "phy-132",
+      "questionText": "Several electric bulbs designed to be used on a 220 V electric supply line are rated 10 W. How many lamps can be connected in parallel with each other across the two wires of 220 V line if the maximum allowable current is 5 A?",
+      "options": [
+        "100",
+        "110",
+        "120",
+        "50"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Current drawn by one bulb, I = P/V = 10 W / 220 V = 1/22 A. Total allowed current is 5 A. Let 'n' be the number of bulbs. Total current = n * (1/22) A. So, n * (1/22) = 5. Therefore, n = 5 * 22 = 110 bulbs."
+    },
+    {
+      "id": "phy-133",
+      "questionText": "What constitutes the field lines of the magnetic field due to a current-carrying circular loop?",
+      "options": [
+        "Straight lines parallel to the loop",
+        "Concentric circles at every point on the loop",
+        "Straight lines at the center and concentric circles near the wire",
+        "Elliptical loops"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "For a current-carrying circular loop, the magnetic field lines are concentric circles near the wire. As we move towards the center of the loop, the arcs of these circles become larger, and at the very center, the field line appears as a straight line."
+    },
+    {
+      "id": "phy-134",
+      "questionText": "Why are the heating elements of electric toasters and electric irons made of an alloy rather than a pure metal?",
+      "options": [
+        "Alloys have lower resistivity and lower melting point.",
+        "Alloys have higher resistivity and higher melting point.",
+        "Alloys are cheaper than pure metals.",
+        "Alloys are better insulators."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Heating elements are made of alloys (like Nichrome) because they have a higher resistivity than their constituent metals, which means they generate more heat. They also have a high melting point and do not oxidize (burn) easily at high temperatures."
+    },
+    {
+      "id": "phy-135",
+      "questionText": "An object 5.0 cm in height is placed 20.0 cm in front of a concave mirror of focal length 15.0 cm. At what distance from the mirror should a screen be placed to obtain a sharp image?",
+      "options": [
+        "-60 cm",
+        "-40 cm",
+        "-30 cm",
+        "-50 cm"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Given: u = -20 cm, f = -15 cm. Using mirror formula 1/v + 1/u = 1/f, we get 1/v = 1/f - 1/u = 1/(-15) - 1/(-20) = -1/15 + 1/20 = (-4+3)/60 = -1/60. So, v = -60 cm. The screen should be placed 60 cm in front of the mirror."
+    },
+    {
+      "id": "phy-136",
+      "questionText": "What is the role of the split ring (commutator) in an electric motor?",
+      "options": [
+        "It increases the magnetic field.",
+        "It reverses the direction of current in the coil every half rotation.",
+        "It acts as a source of energy.",
+        "It reduces friction."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The split ring commutator's function is to reverse the direction of current flowing through the motor's coil every time the coil completes a half rotation. This ensures the torque continues to act in the same direction, allowing for continuous rotation."
+    },
+    {
+      "id": "phy-137",
+      "questionText": "List any two environmental consequences of the increasing demand for energy.",
+      "options": [
+        "Increased green cover and reduced pollution.",
+        "Air pollution from burning fossil fuels and habitat destruction for dams.",
+        "Cooling of the planet and increase in biodiversity.",
+        "Reduced sea levels and cleaner rivers."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Increased energy demand often leads to more burning of fossil fuels, causing air pollution and acid rain. It also leads to the construction of large-scale projects like hydroelectric dams, which can destroy large areas of forest and aquatic ecosystems."
+    },
+    {
+      "id": "phy-138",
+      "questionText": "A student sitting at the back of the classroom cannot read the blackboard clearly. What is the defect he is suffering from and how can it be corrected?",
+      "options": [
+        "Hypermetropia, using a convex lens.",
+        "Myopia, using a concave lens.",
+        "Presbyopia, using a bifocal lens.",
+        "Astigmatism, using a cylindrical lens."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The student is unable to see distant objects (the blackboard) clearly, which is the symptom of Myopia (nearsightedness). This defect is corrected by using a concave lens of appropriate power to diverge the light rays before they enter the eye."
     },
     {
       "id": "chem-1",
