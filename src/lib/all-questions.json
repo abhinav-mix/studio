@@ -980,28 +980,69 @@
       "category": "physics"
     },
     {
-      "id": "chem-1",
-      "questionText": "Which element has the atomic number 1?",
-      "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
-      "correctAnswerIndex": 2,
-      "explanation": "Hydrogen has the atomic number 1, meaning it has one proton in its nucleus. It is the simplest and most abundant element in the universe.",
-      "category": "chemistry"
+      "id": "phy-121",
+      "questionText": "A body is thrown vertically upwards with velocity u, the greatest height h to which it will rise is,",
+      "options": [
+        "u/g",
+        "u²/2g",
+        "u²/g",
+        "u/2g"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Using the equation of motion v² = u² + 2as. Here, v=0 (at max height), a=-g. So, 0 = u² - 2gh, which gives h = u²/2g.",
+      "category": "physics"
     },
     {
-      "id": "chem-2",
-      "questionText": "What is the chemical formula for water? Sample question 2.",
-      "options": ["CO2", "O2", "H2O", "NaCl"],
-      "correctAnswerIndex": 2,
-      "explanation": "The chemical formula for water is H2O, which indicates that each molecule of water contains two hydrogen atoms and one oxygen atom.",
-      "category": "chemistry"
+      "id": "phy-122",
+      "questionText": "The value of acceleration due to gravity (g) on Earth is:",
+      "options": [
+        "9.8 m/s",
+        "9.8 m/s²",
+        "6.67 x 10⁻¹¹ N m²/kg²",
+        "6.02 x 10²³"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The standard value of acceleration due to gravity on the surface of the Earth is approximately 9.8 meters per second squared (m/s²).",
+      "category": "physics"
     },
     {
-      "id": "chem-3",
-      "questionText": "What is the chemical formula for water? Sample question 3.",
-      "options": ["CO2", "O2", "H2O", "NaCl"],
+      "id": "phy-123",
+      "questionText": "Sound waves in air are:",
+      "options": [
+        "Transverse",
+        "Longitudinal",
+        "Electromagnetic",
+        "Polarized"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Sound waves are longitudinal waves, meaning the vibrations of the particles of the medium are parallel to the direction of energy transfer.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-124",
+      "questionText": "At what temperature is the density of water maximum?",
+      "options": [
+        "0°C",
+        "100°C",
+        "4°C",
+        "-4°C"
+      ],
       "correctAnswerIndex": 2,
-      "explanation": "The chemical formula for water is H2O, which indicates that each molecule of water contains two hydrogen atoms and one oxygen atom.",
-      "category": "chemistry"
+      "explanation": "Water has its maximum density at 4° Celsius. Below this temperature, it starts to expand, which is why ice floats on water.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-125",
+      "questionText": "Three resistors 100 Ω, 50 Ω and 500 Ω are connected in parallel in a circuit. What is the resultant resistance?",
+      "options": [
+        "650 Ω",
+        "31.25 Ω",
+        "0.034 Ω",
+        "100 Ω"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "For parallel connection, 1/R_p = 1/100 + 1/50 + 1/500 = (5 + 10 + 1) / 500 = 16/500. So, R_p = 500/16 = 31.25 Ω.",
+      "category": "physics"
     },
     {
       "id": "bio-1",
@@ -1042,6 +1083,266 @@
       "correctAnswerIndex": 2,
       "explanation": "Asia is the largest continent by both land area and population. It covers about 30% of Earth's total land area.",
       "category": "geography"
+    },
+    {
+      "id": "chem-1",
+      "questionText": "What is the chemical formula of quicklime?",
+      "options": [
+        "CaO",
+        "Ca(OH)2",
+        "CaCO3",
+        "CaCl2"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Quicklime is the common name for calcium oxide, which has the chemical formula CaO. It is produced by the thermal decomposition of limestone (CaCO3).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-2",
+      "questionText": "Which gas is generally liberated when a dilute acid reacts with a metal?",
+      "options": [
+        "Carbon Dioxide",
+        "Oxygen",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "When an active metal reacts with a dilute acid, it displaces hydrogen from the acid to form hydrogen gas and a metal salt. For example, Zn + 2HCl -> ZnCl2 + H2.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-3",
+      "questionText": "What is the pH value of a neutral solution?",
+      "options": [
+        "Less than 7",
+        "Equal to 7",
+        "More than 7",
+        "Equal to 0"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The pH scale measures acidity or alkalinity. A pH of 7 is considered neutral. A pH less than 7 is acidic, and a pH greater than 7 is basic or alkaline.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-4",
+      "questionText": "Which of the following is an example of an endothermic reaction?",
+      "options": [
+        "Burning of coal",
+        "Decomposition of vegetable matter into compost",
+        "Respiration",
+        "Decomposition of calcium carbonate to form quicklime and carbon dioxide"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "An endothermic reaction absorbs heat from the surroundings. The decomposition of calcium carbonate (CaCO3 -> CaO + CO2) requires heat energy to proceed.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-5",
+      "questionText": "Which metal is the most abundant in the earth's crust?",
+      "options": [
+        "Iron",
+        "Aluminum",
+        "Calcium",
+        "Sodium"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Aluminum is the most abundant metal in the Earth's crust, making up about 8.1% of the crust by weight. It is found in ores like bauxite.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-6",
+      "questionText": "What is the functional group present in alcohols?",
+      "options": [
+        "-CHO (Aldehyde)",
+        "-COOH (Carboxylic Acid)",
+        "-OH (Hydroxyl)",
+        ">C=O (Ketone)"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The functional group in alcohols is the hydroxyl group, which consists of one oxygen atom bonded to one hydrogen atom (-OH).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-7",
+      "questionText": "Which of the following elements is a metalloid?",
+      "options": [
+        "Sodium (Na)",
+        "Silicon (Si)",
+        "Sulfur (S)",
+        "Chlorine (Cl)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Metalloids have properties intermediate between metals and non-metals. Silicon (Si) is a classic example of a metalloid, used as a semiconductor.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-8",
+      "questionText": "What is the general formula for alkanes?",
+      "options": [
+        "CnH2n",
+        "CnH2n+2",
+        "CnH2n-2",
+        "CnHn"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Alkanes are saturated hydrocarbons containing only single bonds. Their general formula is CnH2n+2, where n is the number of carbon atoms.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-9",
+      "questionText": "The process of coating iron with a layer of zinc to prevent rusting is called:",
+      "options": [
+        "Galvanization",
+        "Electroplating",
+        "Anodizing",
+        "Corrosion"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Galvanization is the process of applying a protective zinc coating to steel or iron to prevent rusting. Zinc is more reactive than iron and corrodes first.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-10",
+      "questionText": "Bleaching powder has the chemical formula:",
+      "options": [
+        "CaO",
+        "Ca(OCl)2",
+        "CaOCl2",
+        "Ca(OH)2"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Bleaching powder is calcium oxychloride, and its chemical formula is CaOCl2. It is used as a bleaching agent and a disinfectant.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-11",
+      "questionText": "Vinegar is a solution of:",
+      "options": [
+        "50%-60% acetic acid in water",
+        "5%-8% acetic acid in water",
+        "5%-8% acetic acid in alcohol",
+        "50%-60% acetic acid in alcohol"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Vinegar is a dilute solution of acetic acid (CH3COOH). Commercially, it contains about 5-8% acetic acid by volume in water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-12",
+      "questionText": "Which non-metal is lustrous (shiny)?",
+      "options": [
+        "Sulfur",
+        "Oxygen",
+        "Nitrogen",
+        "Iodine"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Most non-metals are not lustrous. However, iodine is an exception; it is a non-metal that has a shiny, metallic appearance.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-13",
+      "questionText": "The reaction 2Mg + O2 -> 2MgO is an example of:",
+      "options": [
+        "Decomposition reaction",
+        "Combination reaction",
+        "Displacement reaction",
+        "Double displacement reaction"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A combination reaction is a reaction in which two or more reactants combine to form a single product. Here, magnesium and oxygen combine to form magnesium oxide.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-14",
+      "questionText": "Modern periodic law is based on:",
+      "options": [
+        "Atomic mass",
+        "Atomic number",
+        "Number of neutrons",
+        "Valency"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The Modern Periodic Law states that the physical and chemical properties of the elements are periodic functions of their atomic numbers, not atomic masses.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-15",
+      "questionText": "What is the common name for sodium bicarbonate?",
+      "options": [
+        "Washing soda",
+        "Baking soda",
+        "Bleaching powder",
+        "Caustic soda"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Sodium bicarbonate (NaHCO3) is commonly known as baking soda. It is used in baking as a leavening agent.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-16",
+      "questionText": "An alloy is a:",
+      "options": [
+        "Compound",
+        "Heterogeneous mixture",
+        "Homogeneous mixture",
+        "Element"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "An alloy is a homogeneous mixture of two or more metals, or a metal and a non-metal. For example, brass is an alloy of copper and zinc.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-17",
+      "questionText": "The process of converting a vegetable oil into a solid fat (ghee) is known as:",
+      "options": [
+        "Saponification",
+        "Esterification",
+        "Hydrogenation",
+        "Oxidation"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Hydrogenation is the process of adding hydrogen to unsaturated fats (oils) in the presence of a catalyst like nickel to convert them into saturated fats (solid fats).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-18",
+      "questionText": "Which of the following is a strong acid?",
+      "options": [
+        "Acetic acid (CH3COOH)",
+        "Citric acid",
+        "Nitric acid (HNO3)",
+        "Carbonic acid (H2CO3)"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A strong acid is one that completely ionizes in an aqueous solution. Nitric acid (HNO3) is a strong acid, whereas acetic acid and citric acid are weak acids.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-19",
+      "questionText": "What are the products of the electrolysis of brine (aqueous NaCl)?",
+      "options": [
+        "Na and Cl2",
+        "NaOH, H2, and Cl2",
+        "Na, H2, and O2",
+        "NaOH and H2O"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The electrolysis of an aqueous solution of sodium chloride (brine) produces sodium hydroxide (NaOH), hydrogen gas (H2) at the cathode, and chlorine gas (Cl2) at the anode. This is known as the Chlor-alkali process.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-20",
+      "questionText": "Which hydrocarbon has a triple bond?",
+      "options": [
+        "Ethene (C2H4)",
+        "Methane (CH4)",
+        "Ethane (C2H6)",
+        "Ethyne (C2H2)"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Alkynes are hydrocarbons that contain a carbon-carbon triple bond. Ethyne (C2H2), also known as acetylene, is the simplest alkyne.",
+      "category": "chemistry"
     }
   ]
 }
