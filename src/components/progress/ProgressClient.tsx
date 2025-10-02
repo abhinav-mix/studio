@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useQuizStorage } from '@/hooks/useQuizStorage';
@@ -12,14 +13,14 @@ import type { QuizAttempt } from '@/lib/types';
 import { Smile } from 'lucide-react';
 
 export default function ProgressClient() {
-  const { getAllAttempts, isClient } = useQuizStorage();
+  const { getAllAttemptsForCurrentUser, isClient } = useQuizStorage();
   const [allData, setAllData] = useState<{ category: string, attempts: QuizAttempt[] }[]>([]);
 
   useEffect(() => {
     if (isClient) {
-      setAllData(getAllAttempts());
+      setAllData(getAllAttemptsForCurrentUser());
     }
-  }, [isClient, getAllAttempts]);
+  }, [isClient, getAllAttemptsForCurrentUser]);
 
   if (!isClient) {
     return <div className="container py-12 text-center">Loading Progress...</div>;

@@ -1,8 +1,9 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import type { QuizCategory, QuizAttempt, Question } from '@/lib/types';
+import type { QuizCategory, QuizAttempt } from '@/lib/types';
 import { useQuizStorage } from '@/hooks/useQuizStorage';
 import { allQuestions } from '@/lib/questions';
 import { Button } from '@/components/ui/button';
@@ -27,7 +28,7 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
     }
   }, [isClient, category.slug, getLatestAttempt, router]);
 
-  if (!latestAttempt) {
+  if (!isClient || !latestAttempt) {
     return <div className="flex items-center justify-center min-h-screen">Loading results...</div>;
   }
 
