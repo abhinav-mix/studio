@@ -20,7 +20,7 @@ export default function Header() {
     router.push('/');
   };
 
-  const isAdmin = user && user.email === 'admin@boardprep.pro';
+  const isAdmin = user && user.email === 'bhainew124@gmail.com';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,7 +32,7 @@ export default function Header() {
            {(user?.displayName || user?.email) && (
              <div className="flex items-center gap-2 text-sm font-medium">
                 <User className="h-4 w-4"/>
-                <span>{user.email}</span>
+                <span>{user.displayName || user.email}</span>
              </div>
            )}
           <nav className="flex items-center">

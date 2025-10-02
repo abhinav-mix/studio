@@ -14,7 +14,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { doc, getDoc } from 'firebase/firestore';
 
-const ADMIN_EMAIL = 'admin@boardprep.pro';
+const ADMIN_EMAIL = 'bhainew124@gmail.com';
 
 export default function LoginPage() {
   const router = useRouter();

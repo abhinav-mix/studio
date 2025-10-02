@@ -43,7 +43,7 @@ export default function AdminPage() {
   
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
-    if (!isUserLoading && (!user || user.email !== 'admin@boardprep.pro')) {
+    if (!isUserLoading && (!user || user.email !== 'bhainew124@gmail.com')) {
       router.push('/');
     }
   }, [user, isUserLoading, router]);
@@ -112,7 +112,7 @@ export default function AdminPage() {
         // Sign the admin back in to restore the admin session
         if (auth.currentUser?.email !== currentAdminUser.email) {
             try {
-              await signInWithEmailAndPassword(auth, "admin@boardprep.pro", adminPassword);
+              await signInWithEmailAndPassword(auth, "bhainew124@gmail.com", adminPassword);
             } catch (reauthError: any) {
               toast({
                 variant: "destructive",
@@ -341,5 +341,3 @@ export default function AdminPage() {
     </div>
   );
 }
-
-    
