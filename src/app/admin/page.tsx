@@ -30,6 +30,13 @@ async function updateQuestions(questions: Question[]) {
   alert("This is a demo. Question persistence is not implemented. Changes will be lost on refresh.");
 }
 
+interface Member {
+    id: string;
+    displayName: string;
+    email: string;
+    userClass: string;
+    hasPaid: boolean;
+}
 
 export default function AdminPage() {
   const router = useRouter();
@@ -48,7 +55,7 @@ export default function AdminPage() {
     firestore ? query(collection(firestore, 'users'), orderBy('displayName')) : null, 
     [firestore]
   );
-  const { data: users, isLoading: usersLoading } = useCollection<{displayName: string, email: string, userClass: string, hasPaid: boolean}>(usersQuery);
+  const { data: users, isLoading: usersLoading } = useCollection<Member>(usersQuery);
   
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
