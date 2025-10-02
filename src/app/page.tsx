@@ -48,17 +48,27 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     setError('');
-    if (!email) {
-      setError('Please enter an email.');
-      return;
-    }
-    if (role === 'member' && !name.trim()) {
-      setError('Please enter your name.');
-      return;
+    let loginEmail = email;
+
+    if (role === 'admin') {
+      loginEmail = ADMIN_EMAIL;
+      if (!password) {
+        setError('Please enter the admin password.');
+        return;
+      }
+    } else { // role === 'member'
+      if (!email) {
+        setError('Please enter an email.');
+        return;
+      }
+      if (!name.trim()) {
+        setError('Please enter your name.');
+        return;
+      }
     }
     
     try {
-        await signInWithEmailAndPassword(auth, email, password);
+        await signInWithEmailAndPassword(auth, loginEmail, password);
         // On successful login, the useEffect above will trigger the redirect.
          toast({
             title: "Login Successful!",
@@ -68,7 +78,7 @@ export default function LoginPage() {
     } catch (e: any) {
         if (e.code === 'auth/user-not-found' && role === 'member') {
              try {
-                await createUserWithEmailAndPassword(auth, email, password);
+                await createUserWithEmailAndPassword(auth, loginEmail, password);
                 toast({
                     title: "Account Created!",
                     description: "You've been signed up and logged in.",
@@ -77,9 +87,9 @@ export default function LoginPage() {
                 setError(signUpError.message);
                 toast({ variant: 'destructive', title: 'Sign Up Failed', description: signUpError.message });
              }
-        } else if (e.code === 'auth/wrong-password') {
-            setError('Incorrect password. Please try again.');
-            toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect password.'});
+        } else if (e.code === 'auth/wrong-password' || e.code === 'auth/invalid-credential') {
+            setError('Incorrect email or password. Please try again.');
+            toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect email or password.'});
         } else {
              setError(e.message);
              toast({ variant: 'destructive', title: 'Login Failed', description: e.message });
@@ -159,14 +169,13 @@ export default function LoginPage() {
 
             <TabsContent value="admin" className="pt-6 space-y-4">
                <div className="space-y-2">
-                <Label htmlFor="email-admin">Email</Label>
+                <Label htmlFor="name-admin">Name</Label>
                 <Input
-                  id="email-admin"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Enter admin email"
+                  id="name-admin"
+                  type="text"
+                  value="Abhinav Yadav"
+                  disabled
+                  className="bg-muted"
                 />
               </div>
                <div className="space-y-2">
