@@ -534,6 +534,166 @@
       "category": "biology"
     },
     {
+      "id": "bio-23",
+      "questionText": "Where does the digestion of carbohydrates begin in the human body?",
+      "options": ["Stomach", "Small intestine", "Mouth", "Large intestine"],
+      "correctAnswerIndex": 2,
+      "explanation": "The digestion of carbohydrates begins in the mouth with the action of salivary amylase, an enzyme in saliva that starts breaking down starches into simpler sugars.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-24",
+      "questionText": "Which part of the blood is responsible for clotting?",
+      "options": ["Red Blood Cells", "White Blood Cells", "Plasma", "Platelets"],
+      "correctAnswerIndex": 3,
+      "explanation": "Platelets, or thrombocytes, are small, colorless cell fragments in our blood that form clots and stop or prevent bleeding.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-25",
+      "questionText": "The process of releasing energy from food is called:",
+      "options": ["Photosynthesis", "Respiration", "Digestion", "Transportation"],
+      "correctAnswerIndex": 1,
+      "explanation": "Cellular respiration is the metabolic process by which organisms obtain energy by breaking down glucose and other food molecules in the presence of oxygen.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-26",
+      "questionText": "The growth of pollen tubes towards ovules is an example of:",
+      "options": ["Geotropism", "Hydrotropism", "Chemotropism", "Phototropism"],
+      "correctAnswerIndex": 2,
+      "explanation": "Chemotropism is the growth or movement of a plant or plant part in response to a chemical stimulus. The growth of the pollen tube towards the ovule is guided by chemicals secreted by the ovule.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-27",
+      "questionText": "Which of these is the female reproductive part of a flower?",
+      "options": ["Stamen", "Petal", "Sepal", "Pistil"],
+      "correctAnswerIndex": 3,
+      "explanation": "The pistil (also called the carpel) is the female reproductive part of a flower, which consists of the stigma, style, and ovary.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-28",
+      "questionText": "A food chain always starts with:",
+      "options": ["A producer", "A primary consumer", "A secondary consumer", "A decomposer"],
+      "correctAnswerIndex": 0,
+      "explanation": "Food chains always begin with a producer, an organism that creates its own food, usually through photosynthesis (e.g., plants).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-29",
+      "questionText": "In the human excretory system, which organ filters blood to form urine?",
+      "options": ["Liver", "Lungs", "Kidneys", "Stomach"],
+      "correctAnswerIndex": 2,
+      "explanation": "The kidneys are the primary organs of the excretory system. They filter waste products from the blood and produce urine.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-30",
+      "questionText": "The small pores on the surface of a leaf used for gas exchange are called:",
+      "options": ["Stomata", "Chlorophyll", "Guard cells", "Veins"],
+      "correctAnswerIndex": 0,
+      "explanation": "Stomata are tiny pores, typically on the underside of leaves, that allow for gas exchange (carbon dioxide in, oxygen out) and transpiration.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-31",
+      "questionText": "Which hormone is responsible for the 'fight or flight' response?",
+      "options": ["Insulin", "Adrenaline", "Thyroxine", "Estrogen"],
+      "correctAnswerIndex": 1,
+      "explanation": "Adrenaline (epinephrine) is a hormone released by the adrenal glands in response to stress. It increases heart rate, blood pressure, and glucose levels to prepare the body for a 'fight or flight' situation.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-32",
+      "questionText": "What is the process of fusion of male and female gametes called?",
+      "options": ["Pollination", "Fertilization", "Reproduction", "Germination"],
+      "correctAnswerIndex": 1,
+      "explanation": "Fertilization is the fusion of the male gamete (sperm or pollen) with the female gamete (egg or ovule) to form a zygote.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-33",
+      "questionText": "The genotypic ratio of a monohybrid cross in the F2 generation is:",
+      "options": ["3:1", "1:2:1", "9:3:3:1", "1:1"],
+      "correctAnswerIndex": 1,
+      "explanation": "In a Mendelian monohybrid cross, the F2 generation exhibits a genotypic ratio of 1 (homozygous dominant) : 2 (heterozygous) : 1 (homozygous recessive). The phenotypic ratio is 3:1.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-34",
+      "questionText": "Which of the following is an abiotic component of an ecosystem?",
+      "options": ["Bacteria", "Plants", "Sunlight", "Animals"],
+      "correctAnswerIndex": 2,
+      "explanation": "Abiotic components are the non-living chemical and physical parts of the environment that affect living organisms. Sunlight, water, and soil are examples. Bacteria, plants, and animals are biotic (living) components.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-35",
+      "questionText": "The liquid part of the blood is known as:",
+      "options": ["Plasma", "Serum", "Lymph", "Platelets"],
+      "correctAnswerIndex": 0,
+      "explanation": "Plasma is the yellowish liquid component of blood that holds the blood cells in suspension. It makes up about 55% of the body's total blood volume.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-36",
+      "questionText": "Which part of the brain is the main thinking part?",
+      "options": ["Cerebellum", "Medulla", "Cerebrum", "Pons"],
+      "correctAnswerIndex": 2,
+      "explanation": "The cerebrum is the largest part of the brain and is responsible for higher functions like thought, language, memory, and voluntary movement.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-37",
+      "questionText": "The reproduction method in which an organism breaks up into a number of pieces and each piece grows into a new individual is called:",
+      "options": ["Budding", "Spore formation", "Fragmentation", "Fission"],
+      "correctAnswerIndex": 2,
+      "explanation": "Fragmentation is a method of asexual reproduction where the body of the organism breaks into two or more parts, each of which can grow into a new individual. It is common in organisms like Spirogyra.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-38",
+      "questionText": "According to Mendel, the factors or genes for contrasting traits are called:",
+      "options": ["Alleles", "Loci", "Genotypes", "Phenotypes"],
+      "correctAnswerIndex": 0,
+      "explanation": "Alleles are the different versions of a gene. For example, the gene for flower color in pea plants has two alleles, one for purple flowers and one for white flowers.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-39",
+      "questionText": "Depletion of the ozone layer is mainly due to:",
+      "options": ["Carbon dioxide", "Sulfur dioxide", "Chlorofluorocarbons (CFCs)", "Methane"],
+      "correctAnswerIndex": 2,
+      "explanation": "Chlorofluorocarbons (CFCs), found in refrigerants and aerosol sprays, are the primary cause of ozone layer depletion as they break down ozone molecules in the stratosphere.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-40",
+      "questionText": "The backflow of blood in the heart is prevented by:",
+      "options": ["Atria", "Ventricles", "Valves", "Septum"],
+      "correctAnswerIndex": 2,
+      "explanation": "Valves in the heart are flap-like structures that allow blood to flow in one direction and prevent it from flowing backward.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-41",
+      "questionText": "Which plant hormone is responsible for ripening of fruits?",
+      "options": ["Auxin", "Gibberellin", "Cytokinin", "Ethylene"],
+      "correctAnswerIndex": 3,
+      "explanation": "Ethylene is a gaseous plant hormone that plays a key role in the process of fruit ripening, as well as flowering and leaf abscission.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-42",
+      "questionText": "In human males, the testes are located in the scrotum outside the abdomen because:",
+      "options": ["It protects them from injury", "Sperm formation requires a lower temperature", "It provides more space", "It is the only position possible"],
+      "correctAnswerIndex": 1,
+      "explanation": "Sperm production requires a temperature that is slightly lower than the normal body temperature. The location of the scrotum outside the abdominal cavity provides this optimal temperature.",
+      "category": "biology"
+    },
+    {
       "id": "math-1",
       "questionText": "What is the square root of 144?",
       "options": ["10", "11", "12", "14"],
@@ -2506,6 +2666,166 @@
       "correctAnswerIndex": 0,
       "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
       "category": "chemistry"
+    },
+    {
+      "id": "bio-43",
+      "questionText": "Where does the digestion of protein begin in the human body?",
+      "options": ["Mouth", "Stomach", "Small intestine", "Esophagus"],
+      "correctAnswerIndex": 1,
+      "explanation": "The digestion of proteins begins in the stomach, where the enzyme pepsin breaks down proteins into smaller polypeptides.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-44",
+      "questionText": "What are the tiny, grape-like air sacs in the lungs where gas exchange occurs?",
+      "options": ["Bronchioles", "Trachea", "Alveoli", "Diaphragm"],
+      "correctAnswerIndex": 2,
+      "explanation": "Alveoli are the tiny air sacs at the end of the bronchioles where the lungs and the blood exchange oxygen and carbon dioxide.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-45",
+      "questionText": "Which plant tissue is responsible for transporting water and minerals from the roots to the leaves?",
+      "options": ["Phloem", "Xylem", "Parenchyma", "Sclerenchyma"],
+      "correctAnswerIndex": 1,
+      "explanation": "Xylem is the vascular tissue in plants that conducts water and dissolved nutrients upward from the root and also helps to form the woody element in the stem.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-46",
+      "questionText": "What is the main nitrogenous waste product excreted by humans?",
+      "options": ["Ammonia", "Uric acid", "Creatinine", "Urea"],
+      "correctAnswerIndex": 3,
+      "explanation": "Urea is the main nitrogenous waste product in the urine of mammals. It is formed in the liver from ammonia.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-47",
+      "questionText": "What is the structural and functional unit of the nervous system?",
+      "options": ["Nephron", "Alveolus", "Neuron", "Sarcomere"],
+      "correctAnswerIndex": 2,
+      "explanation": "The neuron, or nerve cell, is the basic structural and functional unit of the nervous system, responsible for transmitting nerve impulses.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-48",
+      "questionText": "Which endocrine gland is often called the 'master gland'?",
+      "options": ["Thyroid gland", "Adrenal gland", "Pancreas", "Pituitary gland"],
+      "correctAnswerIndex": 3,
+      "explanation": "The pituitary gland is called the master gland because it produces hormones that control many functions of other endocrine glands.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-49",
+      "questionText": "Which plant hormone is responsible for the wilting of leaves?",
+      "options": ["Auxin", "Gibberellin", "Abscisic acid", "Cytokinin"],
+      "correctAnswerIndex": 2,
+      "explanation": "Abscisic acid (ABA) is a plant hormone that functions in many plant developmental processes, including stress responses and promoting leaf and fruit abscission (shedding).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-50",
+      "questionText": "Budding is a common method of asexual reproduction in which organism?",
+      "options": ["Amoeba", "Spirogyra", "Hydra", "Plasmodium"],
+      "correctAnswerIndex": 2,
+      "explanation": "Hydra reproduces asexually through budding, where a small outgrowth develops on the parent's body, grows, and then detaches to become a new individual.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-51",
+      "questionText": "The transfer of pollen from the anther to the stigma is called:",
+      "options": ["Fertilization", "Pollination", "Germination", "Dispersal"],
+      "correctAnswerIndex": 1,
+      "explanation": "Pollination is the act of transferring pollen grains from the male anther of a flower to the female stigma.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-52",
+      "questionText": "The site of fertilization in human females is typically the:",
+      "options": ["Uterus", "Ovary", "Vagina", "Fallopian tube (Oviduct)"],
+      "correctAnswerIndex": 3,
+      "explanation": "Fertilization, the fusion of sperm and egg, usually occurs in the ampulla of the fallopian tube.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-53",
+      "questionText": "In a dihybrid cross, the F2 phenotypic ratio is typically:",
+      "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+      "correctAnswerIndex": 2,
+      "explanation": "For a dihybrid cross involving two independent traits, the expected phenotypic ratio in the F2 generation is 9 (dominant, dominant) : 3 (dominant, recessive) : 3 (recessive, dominant) : 1 (recessive, recessive).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-54",
+      "questionText": "An organism that breaks down dead organic matter is called a:",
+      "options": ["Producer", "Primary consumer", "Secondary consumer", "Decomposer"],
+      "correctAnswerIndex": 3,
+      "explanation": "Decomposers, such as bacteria and fungi, break down dead plants and animals, returning essential nutrients to the soil.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-55",
+      "questionText": "The theory of natural selection was proposed by:",
+      "options": ["Gregor Mendel", "Charles Darwin", "Jean-Baptiste Lamarck", "Alfred Russel Wallace"],
+      "correctAnswerIndex": 1,
+      "explanation": "Charles Darwin is credited with the theory of evolution by natural selection, which he detailed in his book 'On the Origin of Species'.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-56",
+      "questionText": "The green pigment in plants that is essential for photosynthesis is:",
+      "options": ["Hemoglobin", "Chlorophyll", "Melanin", "Xanthophyll"],
+      "correctAnswerIndex": 1,
+      "explanation": "Chlorophyll is the green pigment found in the chloroplasts of plants that absorbs light energy for use in photosynthesis.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-57",
+      "questionText": "Reflex actions are controlled by the:",
+      "options": ["Cerebrum", "Cerebellum", "Spinal cord", "Medulla"],
+      "correctAnswerIndex": 2,
+      "explanation": "Reflex actions are rapid, involuntary responses to stimuli. The pathway for these reflexes, known as the reflex arc, primarily involves the spinal cord, allowing for a quick reaction without involving the brain for processing.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-58",
+      "questionText": "Which one of the following is a sexually transmitted disease caused by a virus?",
+      "options": ["Syphilis", "Gonorrhea", "AIDS", "Cholera"],
+      "correctAnswerIndex": 2,
+      "explanation": "AIDS (Acquired Immunodeficiency Syndrome) is caused by the Human Immunodeficiency Virus (HIV). Syphilis and gonorrhea are caused by bacteria.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-59",
+      "questionText": "The remnants or impressions of prehistoric organisms preserved in rock are called:",
+      "options": ["Alleles", "Genes", "Fossils", "Artifacts"],
+      "correctAnswerIndex": 2,
+      "explanation": "Fossils are the preserved remains, or traces of remains, of ancient organisms. They provide critical evidence for evolution.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-60",
+      "questionText": "In a food web, the trophic level with the most energy is the:",
+      "options": ["Producers", "Primary consumers", "Secondary consumers", "Tertiary consumers"],
+      "correctAnswerIndex": 0,
+      "explanation": "The producers (plants) form the first trophic level and have the largest amount of energy. Only about 10% of the energy is transferred from one trophic level to the next.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-61",
+      "questionText": "The enzyme responsible for the digestion of fats in the small intestine is:",
+      "options": ["Amylase", "Trypsin", "Lipase", "Pepsin"],
+      "correctAnswerIndex": 2,
+      "explanation": "Lipase is the enzyme that breaks down fats (lipids) into fatty acids and glycerol. It is primarily active in the small intestine and is secreted by the pancreas.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-62",
+      "questionText": "Which hormone regulates the level of sugar in the blood?",
+      "options": ["Glucagon", "Insulin", "Adrenaline", "Thyroxine"],
+      "correctAnswerIndex": 1,
+      "explanation": "Insulin, a hormone produced by the pancreas, helps regulate blood glucose levels by allowing cells to absorb glucose from the blood for energy.",
+      "category": "biology"
     }
   ]
 }
