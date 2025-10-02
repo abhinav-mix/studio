@@ -97,10 +97,11 @@ export default function AdminPage() {
       });
 
       toast({
-        title: 'User Created Successfully!',
-        description: `User ${newUserEmail} has been created and marked as paid.`,
+        title: 'Member Added!',
+        description: `Member ${newUserEmail} has been created and marked as paid.`,
       });
       
+      // Clear the form to allow adding another member
       setNewUserName('');
       setNewUserEmail('');
       setNewUserPassword('');
@@ -372,3 +373,5 @@ export default function AdminPage() {
     </div>
   );
 }
+
+    
