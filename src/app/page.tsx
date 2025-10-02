@@ -23,6 +23,7 @@ export default function LoginPage() {
   const handleLogin = () => {
     setError('');
     let isAuthenticated = false;
+    const adminName = 'Abhinav Yadav';
 
     if (role === 'member') {
       if (!name.trim()) {
@@ -40,7 +41,7 @@ export default function LoginPage() {
 
     if (isAuthenticated) {
       try {
-        const session = { authenticated: true, role, name: role === 'member' ? name : 'Abhinav Yadav' };
+        const session = { authenticated: true, role, name: role === 'member' ? name : adminName };
         localStorage.setItem(AUTH_KEY, JSON.stringify(session));
         if (role === 'admin') {
           router.push('/admin');
@@ -107,6 +108,16 @@ export default function LoginPage() {
               </div>
             </TabsContent>
             <TabsContent value="admin" className="pt-6 space-y-4">
+               <div className="space-y-2">
+                <Label htmlFor="name-admin">Name</Label>
+                <Input
+                  id="name-admin"
+                  type="text"
+                  value="Abhinav Yadav"
+                  readOnly
+                  className="bg-muted"
+                />
+              </div>
                <div className="space-y-2">
                 <Label htmlFor="password-admin">Password</Label>
                 <Input
