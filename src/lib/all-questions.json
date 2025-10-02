@@ -1877,132 +1877,392 @@
     },
     {
       "id": "chem-111",
-      "questionText": "What is the valency of the elements in Group 2 of the periodic table?",
+      "questionText": "Which of the following is not a physical property of non-metals?",
       "options": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "Dull appearance",
+        "Brittle",
+        "Good conductors of electricity",
+        "Low density"
       ],
-      "correctAnswerIndex": 1,
-      "explanation": "The elements in Group 2 are the alkaline earth metals. They have 2 valence electrons, which they tend to lose to form ions with a +2 charge. Thus, their valency is 2.",
+      "correctAnswerIndex": 2,
+      "explanation": "Non-metals are generally poor conductors of heat and electricity. Graphite (an allotrope of carbon) is a notable exception.",
       "category": "chemistry"
     },
     {
       "id": "chem-112",
-      "questionText": "The process of extraction of metals from their ores is called:",
+      "questionText": "The reaction of ferric oxide with aluminum is used to join railway tracks. This reaction is called:",
       "options": [
-        "Metallurgy",
-        "Corrosion",
+        "Thermite reaction",
+        "Saponification",
         "Galvanization",
-        "Refining"
+        "Combustion"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Metallurgy is the branch of science and technology concerned with the properties of metals and their production and purification from their ores.",
+      "explanation": "The thermite reaction is a highly exothermic redox reaction between a metal oxide (like iron oxide) and a more reactive metal (like aluminum). The molten iron produced is used to weld large pieces of metal.",
       "category": "chemistry"
     },
     {
       "id": "chem-113",
-      "questionText": "The number of structural isomers of butane (C4H10) is:",
+      "questionText": "The IUPAC name of CH3-CH2-CHO is:",
       "options": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "Propanone",
+        "Propanal",
+        "Ethanol",
+        "Propanoic acid"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Butane (C4H10) has two structural isomers: n-butane (a straight chain) and isobutane (2-methylpropane, a branched chain).",
+      "explanation": "This is an aldehyde with three carbon atoms. The IUPAC name is Propanal.",
       "category": "chemistry"
     },
     {
       "id": "chem-114",
-      "questionText": "Which indicator gives a pink color in a basic solution?",
+      "questionText": "An element has atomic number 12. What kind of ion will it form?",
       "options": [
-        "Litmus",
-        "Methyl orange",
-        "Phenolphthalein",
-        "Turmeric"
+        "A cation with charge +1",
+        "A cation with charge +2",
+        "An anion with charge -1",
+        "An anion with charge -2"
       ],
-      "correctAnswerIndex": 2,
-      "explanation": "Phenolphthalein is a synthetic indicator which is colorless in acidic and neutral solutions but turns pink in basic solutions.",
+      "correctAnswerIndex": 1,
+      "explanation": "The element with atomic number 12 is Magnesium (Mg). Its configuration is 2, 8, 2. It will lose its 2 valence electrons to form a stable cation with a +2 charge (Mg2+).",
       "category": "chemistry"
     },
     {
       "id": "chem-115",
-      "questionText": "The reaction AgCl(s) --(Sunlight)--> 2Ag(s) + Cl2(g) is used in:",
+      "questionText": "Which of the following are isomers of butene (C4H8)?",
       "options": [
-        "Photography",
-        "Electroplating",
-        "Galvanization",
-        "Welding"
+        "Butane and Cyclobutane",
+        "But-1-ene and But-2-ene",
+        "Butanol and Butanal",
+        "Propyne and Butyne"
       ],
-      "correctAnswerIndex": 0,
-      "explanation": "This photochemical decomposition reaction of silver chloride (and silver bromide) is the fundamental principle behind black-and-white photography.",
+      "correctAnswerIndex": 1,
+      "explanation": "But-1-ene and But-2-ene both have the molecular formula C4H8, but they differ in the position of the double bond, making them positional isomers.",
       "category": "chemistry"
     },
     {
       "id": "chem-116",
-      "questionText": "What is the IUPAC name for the simplest alkene?",
+      "questionText": "What is the chemical formula for Gypsum?",
       "options": [
-        "Methene",
-        "Ethene",
-        "Propene",
-        "Methane"
+        "CaSO4 · 2H2O",
+        "CaSO4 · 1/2H2O",
+        "CaCO3",
+        "CaCl2"
       ],
-      "correctAnswerIndex": 1,
-      "explanation": "Alkenes must have at least one carbon-carbon double bond, so the simplest alkene must have two carbon atoms. The IUPAC name is Ethene (C2H4).",
+      "correctAnswerIndex": 0,
+      "explanation": "Gypsum is hydrated calcium sulfate with the chemical formula CaSO4 · 2H2O.",
       "category": "chemistry"
     },
     {
       "id": "chem-117",
-      "questionText": "Elements in the same period have the same:",
+      "questionText": "The tendency of an atom to attract a shared pair of electrons towards itself is called:",
       "options": [
-        "Number of valence electrons",
-        "Valency",
-        "Number of electron shells",
-        "Chemical properties"
+        "Ionization energy",
+        "Electron affinity",
+        "Electronegativity",
+        "Metallic character"
       ],
       "correctAnswerIndex": 2,
-      "explanation": "Elements in the same horizontal row (period) of the periodic table have the same number of occupied electron shells.",
+      "explanation": "Electronegativity is a measure of the tendency of an atom to attract a bonding pair of electrons.",
       "category": "chemistry"
     },
     {
       "id": "chem-118",
-      "questionText": "Which of the following is an example of a redox reaction?",
+      "questionText": "The reaction of an ester with a base is known as:",
       "options": [
-        "CaO + H2O -> Ca(OH)2",
-        "CaCO3 -> CaO + CO2",
-        "NaOH + HCl -> NaCl + H2O",
-        "CuO + H2 -> Cu + H2O"
+        "Esterification",
+        "Saponification",
+        "Hydrogenation",
+        "Neutralization"
       ],
-      "correctAnswerIndex": 3,
-      "explanation": "A redox reaction involves both oxidation and reduction. In CuO + H2 -> Cu + H2O, Copper is reduced (loses oxygen) and Hydrogen is oxidized (gains oxygen).",
+      "correctAnswerIndex": 1,
+      "explanation": "Saponification is the hydrolysis of an ester with a base (like NaOH) to produce an alcohol and the salt of the carboxylic acid (which is soap).",
       "category": "chemistry"
     },
     {
       "id": "chem-119",
-      "questionText": "The molecular formula of the third member of the homologous series of alcohols is:",
+      "questionText": "Dobereiner's triads related the properties of elements to their:",
       "options": [
-        "CH3OH",
-        "C2H5OH",
-        "C3H7OH",
-        "C4H9OH"
+        "Atomic numbers",
+        "Atomic masses",
+        "Electronic configurations",
+        "Valencies"
       ],
-      "correctAnswerIndex": 2,
-      "explanation": "The first member is Methanol (CH3OH), the second is Ethanol (C2H5OH), and the third is Propanol (C3H7OH).",
+      "correctAnswerIndex": 1,
+      "explanation": "Dobereiner's triads were an early attempt to classify elements. He grouped elements with similar properties into threes and found that the atomic mass of the middle element was approximately the average of the other two.",
       "category": "chemistry"
     },
     {
       "id": "chem-120",
-      "questionText": "A solution reacts with crushed egg-shells to give a gas that turns lime-water milky. The solution contains:",
+      "questionText": "A solution of which of the following compounds will conduct electricity?",
       "options": [
-        "NaCl",
-        "HCl",
-        "LiCl",
-        "KCl"
+        "Glucose (C6H12O6)",
+        "Alcohol (C2H5OH)",
+        "Sodium Chloride (NaCl)",
+        "Urea (NH2CONH2)"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "For a solution to conduct electricity, it must contain free-moving ions. Sodium chloride (NaCl) is an ionic compound that dissociates into Na+ and Cl- ions in water, allowing the solution to be conductive.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-121",
+      "questionText": "The chemical formula of glucose is:",
+      "options": [
+        "C12H22O11",
+        "C6H12O6",
+        "CH3COOH",
+        "C2H5OH"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Egg-shells are made of calcium carbonate (CaCO3). Calcium carbonate reacts with an acid (like HCl) to produce carbon dioxide gas, which turns lime-water (calcium hydroxide solution) milky.",
+      "explanation": "Glucose is a simple sugar with the molecular formula C6H12O6. C12H22O11 is sucrose.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-122",
+      "questionText": "Which alloy is used for welding electrical wires together?",
+      "options": [
+        "Brass",
+        "Bronze",
+        "Solder",
+        "Steel"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Solder is an alloy of lead and tin which has a low melting point, making it ideal for welding electrical wires.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-123",
+      "questionText": "The non-metal which is liquid at room temperature is:",
+      "options": [
+        "Mercury",
+        "Bromine",
+        "Chlorine",
+        "Carbon"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Bromine is the only non-metal that exists as a liquid at room temperature. Mercury is the only metal that is liquid at room temperature.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-124",
+      "questionText": "What happens to the non-metallic character as we move from left to right across a period?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "First increases then decreases"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "As we move from left to right across a period, the tendency to gain electrons increases due to increased nuclear charge. This increases the non-metallic character.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-125",
+      "questionText": "The process of decomposition of organic matter by microorganisms is called:",
+      "options": [
+        "Combustion",
+        "Fermentation",
+        "Corrosion",
+        "Hydrogenation"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Fermentation is a metabolic process that produces chemical changes in organic substrates through the action of enzymes produced by microorganisms.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-126",
+      "questionText": "Which of the following is not a property of bases?",
+      "options": [
+        "They are soapy to touch",
+        "They turn red litmus blue",
+        "They react with acids to form salt and water",
+        "They have a pH less than 7"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Bases have a pH greater than 7. Solutions with a pH less than 7 are acidic.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-127",
+      "questionText": "The reaction of an oil or fat with a strong base like NaOH is known as:",
+      "options": [
+        "Esterification",
+        "Saponification",
+        "Hydrogenation",
+        "Polymerization"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Saponification is the hydrolysis of fats or oils (which are esters of fatty acids) with a base to form soap and glycerol.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-128",
+      "questionText": "How many periods and groups are present in the modern periodic table?",
+      "options": [
+        "7 periods and 18 groups",
+        "18 periods and 7 groups",
+        "8 periods and 17 groups",
+        "17 periods and 8 groups"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The modern periodic table consists of 7 horizontal rows called periods and 18 vertical columns called groups.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-129",
+      "questionText": "What is the IUPAC name of the compound CH3CH(OH)CH3?",
+      "options": [
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Propanal",
+        "Propanone"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "This is an alcohol with three carbon atoms, and the hydroxyl group is on the second carbon atom. Therefore, its IUPAC name is Propan-2-ol.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-130",
+      "questionText": "Precipitation reactions are a type of:",
+      "options": [
+        "Combination reaction",
+        "Decomposition reaction",
+        "Displacement reaction",
+        "Double displacement reaction"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A precipitation reaction is a type of double displacement reaction in which an insoluble solid (a precipitate) is formed when two solutions containing soluble salts are mixed.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-131",
+      "questionText": "Which of the following will give a displacement reaction?",
+      "options": [
+        "NaCl solution and copper metal",
+        "MgCl2 solution and aluminum metal",
+        "FeSO4 solution and silver metal",
+        "AgNO3 solution and copper metal"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A displacement reaction occurs when a more reactive metal displaces a less reactive metal from its salt solution. Copper is more reactive than silver, so it will displace silver from silver nitrate solution.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-132",
+      "questionText": "The elements of Group 1 are called:",
+      "options": [
+        "Alkali metals",
+        "Alkaline earth metals",
+        "Halogens",
+        "Noble gases"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The elements in Group 1 of the periodic table, except for hydrogen, are known as the alkali metals because they form alkaline solutions when they react with water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-133",
+      "questionText": "Which of the following compounds has a double bond?",
+      "options": [
+        "C2H2 (Ethyne)",
+        "C2H4 (Ethene)",
+        "C2H6 (Ethane)",
+        "CH4 (Methane)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Ethene (C2H4) is an alkene and contains one carbon-carbon double bond. Ethyne has a triple bond, and ethane and methane have only single bonds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-134",
+      "questionText": "Bauxite is an ore of which metal?",
+      "options": [
+        "Iron",
+        "Aluminum",
+        "Copper",
+        "Zinc"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Bauxite is the primary ore from which aluminum is extracted.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-135",
+      "questionText": "An aqueous solution with pH = 1 is:",
+      "options": [
+        "Strongly acidic",
+        "Strongly basic",
+        "Neutral",
+        "Weakly acidic"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The pH scale ranges from 0 to 14. A pH of 1 is very low, indicating a high concentration of H+ ions, which means it is strongly acidic.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-136",
+      "questionText": "Which of the following is a balanced equation for the reaction of barium chloride with aluminum sulfate?",
+      "options": [
+        "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
+        "3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3",
+        "BaCl2 + AlSO4 -> BaSO4 + AlCl",
+        "2BaCl2 + Al2(SO4)3 -> 2BaSO4 + 2AlCl3"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "To balance the equation, you need 3 Ba atoms, 2 Al atoms, 6 Cl atoms, and 3 SO4 groups on both sides. The equation 3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3 is correctly balanced.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-137",
+      "questionText": "The element with electronic configuration 2, 8, 3 belongs to which period?",
+      "options": [
+        "Period 2",
+        "Period 3",
+        "Period 8",
+        "Period 13"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The electronic configuration shows that electrons are filled in three shells (K, L, M). The number of shells determines the period, so this element (Aluminum) is in Period 3.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-138",
+      "questionText": "Which of the following is used to make waterproof fabrics?",
+      "options": [
+        "Polythene",
+        "Polyvinyl chloride (PVC)",
+        "Bakelite",
+        "Polyester"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Polyester is a category of polymers that are widely used in clothing. Its hydrophobic nature (water-repelling) makes it suitable for making waterproof or water-resistant fabrics.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-139",
+      "questionText": "Which metal is used in the thermite process along with iron oxide?",
+      "options": [
+        "Zinc",
+        "Copper",
+        "Aluminum",
+        "Magnesium"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The thermite process uses a highly reactive metal, typically aluminum, to reduce a less reactive metal oxide, like iron(III) oxide, in a very exothermic reaction.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-140",
+      "questionText": "The reaction of an acid with a metal hydrogen carbonate produces:",
+      "options": [
+        "Salt, water and carbon dioxide",
+        "Salt and water only",
+        "Salt and hydrogen gas",
+        "Salt and carbon monoxide"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
       "category": "chemistry"
     }
   ]
