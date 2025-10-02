@@ -33,6 +33,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
   const [isClient, setIsClient] = useState(false);
   const [progressStats, setProgressStats] = useState({ correct: 0, incorrect: 0, unanswered: 0 });
+  const [showProgressDialog, setShowProgressDialog] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -70,7 +71,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
     router.push(`/quiz/${category.slug}/results`);
   }, [userAnswers, shuffledQuestions, addAttempt, category.slug, router]);
 
-  const calculateProgress = () => {
+  const handleCheckProgress = () => {
     let correct = 0;
     let incorrect = 0;
     let unanswered = 0;
@@ -79,7 +80,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
         const question = shuffledQuestions[i];
         const userAnswer = userAnswers.find(ua => ua.questionId === question.id);
 
-        if (userAnswer?.selectedAnswerIndex !== null) {
+        if (userAnswer?.selectedAnswerIndex !== null && userAnswer?.selectedAnswerIndex !== undefined) {
             if (userAnswer.selectedAnswerIndex === question.correctAnswerIndex) {
                 correct++;
             } else {
@@ -90,6 +91,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
         }
     }
     setProgressStats({ correct, incorrect, unanswered });
+    setShowProgressDialog(true);
   };
 
 
@@ -144,7 +146,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
           </CardHeader>
           <CardContent className="flex-1">
             <RadioGroup
-              value={currentAnswer !== null ? currentAnswer?.toString() : undefined}
+              value={currentAnswer !== null && currentAnswer !== undefined ? currentAnswer.toString() : undefined}
               onValueChange={(value) => handleAnswerSelect(currentQuestion.id, parseInt(value))}
               className="space-y-4"
             >
@@ -171,13 +173,11 @@ export default function QuizClient({ category, questions }: { category: QuizCate
             </Button>
             <div className="flex gap-2">
               {currentQuestionIndex >= 19 && (
-                <AlertDialog>
-                  <AlertDialogTrigger asChild>
-                    <Button variant="secondary" onClick={calculateProgress}>
-                       <ClipboardCheck className="mr-2 h-4 w-4" />
-                       Check Progress
-                    </Button>
-                  </AlertDialogTrigger>
+                <AlertDialog open={showProgressDialog} onOpenChange={setShowProgressDialog}>
+                  <Button variant="secondary" onClick={handleCheckProgress}>
+                     <ClipboardCheck className="mr-2 h-4 w-4" />
+                     Check Progress
+                  </Button>
                   <AlertDialogContent>
                     <AlertDialogHeader>
                       <AlertDialogTitle>Your Progress So Far</AlertDialogTitle>
@@ -186,12 +186,12 @@ export default function QuizClient({ category, questions }: { category: QuizCate
                         <ul className="list-disc pl-5 mt-4 space-y-2">
                           <li className="text-green-600">Correct Answers: {progressStats.correct}</li>
                           <li className="text-red-600">Incorrect Answers: {progressStats.incorrect}</li>
-                          {progressStats.unanswered > 0 && <li className="text-yellow-600">Unanswered: {progressStats.unanswered}</li>}
+                          {(progressStats.unanswered > 0) && <li className="text-yellow-600">Unanswered: {progressStats.unanswered}</li>}
                         </ul>
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogAction>Continue</AlertDialogAction>
+                      <AlertDialogAction onClick={() => setShowProgressDialog(false)}>Continue</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
