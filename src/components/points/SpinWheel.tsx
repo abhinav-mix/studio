@@ -104,8 +104,8 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               key={index}
               className="absolute w-1/2 h-1/2 origin-bottom-right"
               style={{
-                transform: `rotate(${index * segmentAngle}deg)`,
-                clipPath: `polygon(0 0, 100% 0, 100% 100%)`,
+                transform: `rotate(${index * segmentAngle}deg) scale(1.05)`, // Scale to hide gaps
+                clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)`,
                 backgroundColor: segment.color,
               }}
             >
