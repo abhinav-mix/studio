@@ -330,6 +330,136 @@
       "category": "physics"
     },
     {
+      "id": "phy-29",
+      "questionText": "The power of a lens is measured in:",
+      "options": [
+        "Meters",
+        "Dioptres",
+        "Watts",
+        "Joules"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The power of a lens is the reciprocal of its focal length in meters. The SI unit of power of a lens is Dioptre (D).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-30",
+      "questionText": "An electric generator converts:",
+      "options": [
+        "Mechanical energy into electrical energy",
+        "Electrical energy into mechanical energy",
+        "Chemical energy into electrical energy",
+        "Heat energy into electrical energy"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy. It works on the principle of electromagnetic induction.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-31",
+      "questionText": "Which rule is used to find the direction of the magnetic field produced by a straight current-carrying conductor?",
+      "options": [
+        "Fleming's Left-Hand Rule",
+        "Fleming's Right-Hand Rule",
+        "Right-Hand Thumb Rule",
+        "Left-Hand Thumb Rule"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The Right-Hand Thumb Rule is used to find the direction of the magnetic field associated with a current-carrying conductor. If you point your right thumb in the direction of the current, the direction your fingers curl gives the direction of the magnetic field lines.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-32",
+      "questionText": "The defect of vision in which a person cannot see distant objects clearly is known as:",
+      "options": [
+        "Myopia (Near-sightedness)",
+        "Hypermetropia (Far-sightedness)",
+        "Presbyopia",
+        "Astigmatism"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Myopia, or near-sightedness, is a common vision condition in which you can see objects near to you clearly, but objects farther away are blurry. It is corrected using a concave lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-33",
+      "questionText": "What is the main constituent of biogas?",
+      "options": [
+        "Carbon dioxide",
+        "Methane",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Biogas is an excellent fuel as it contains up to 75% methane (CH4). It burns without smoke and leaves no residue like ash in wood, charcoal, and coal burning.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-34",
+      "questionText": "The image formed by a plane mirror is always:",
+      "options": [
+        "Real and erect",
+        "Virtual and erect",
+        "Real and inverted",
+        "Virtual and inverted"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A plane mirror always forms a virtual, erect image that is of the same size as the object and is located at the same distance behind the mirror as the object is in front of it.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-35",
+      "questionText": "The rate of flow of electric charge is known as:",
+      "options": [
+        "Potential difference",
+        "Resistance",
+        "Electric current",
+        "Power"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Electric current is expressed by the amount of charge flowing through a particular area in unit time. In other words, it is the rate of flow of electric charges.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-36",
+      "questionText": "The phenomenon of electromagnetic induction is:",
+      "options": [
+        "The process of charging a body",
+        "The process of generating magnetic field due to a current",
+        "Producing induced current in a coil due to relative motion between a magnet and the coil",
+        "The process of rotating a coil of an electric motor"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Electromagnetic induction is the production of an electromotive force (i.e., voltage) across an electrical conductor in a changing magnetic field. This is the principle behind electric generators.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-37",
+      "questionText": "Which type of lens is used to correct hypermetropia (far-sightedness)?",
+      "options": [
+        "Concave lens",
+        "Convex lens",
+        "Bifocal lens",
+        "Plano-convex lens"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Hypermetropia is corrected by using a convex lens of appropriate power. A convex lens converges the incoming light rays so that the image is formed on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-38",
+      "questionText": "A kilowatt-hour (kWh) is the unit of:",
+      "options": [
+        "Power",
+        "Energy",
+        "Force",
+        "Momentum"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The kilowatt-hour (kWh) is a unit of energy equal to 3.6 megajoules. It is the commercial unit used for billing electrical energy consumption.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
@@ -395,5 +525,3 @@
     }
   ]
 }
-
-    
