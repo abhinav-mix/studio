@@ -2,7 +2,7 @@
 'use client';
 
 import { useUser, useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, query, orderBy, addDoc, serverTimestamp, where } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { useMemo } from 'react';
@@ -30,7 +30,8 @@ export default function PointsClient() {
   const pointsHistoryQuery = useMemoFirebase(() => {
     if (!user) return null;
     const historyRef = collection(firestore, 'users', user.uid, 'pointHistory');
-    return query(historyRef, orderBy('timestamp', 'desc'));
+    const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    return query(historyRef, where('timestamp', '>=', twentyFourHoursAgo), orderBy('timestamp', 'desc'));
   }, [user, firestore]);
 
   const { data: pointsHistory, isLoading: isPointsLoading } = useCollection<PointEntry>(pointsHistoryQuery);
@@ -82,7 +83,7 @@ export default function PointsClient() {
        <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">My Points</CardTitle>
-          <CardDescription>You have earned a total of <span className="font-bold text-primary">{totalPoints}</span> points.</CardDescription>
+          <CardDescription>You have earned a total of <span className="font-bold text-primary">{totalPoints}</span> points in the last 24 hours.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-8 lg:grid-cols-2">
             <SpinWheel currentPoints={totalPoints} onSpinComplete={(prize, label, isItem) => handleSpinResult(prize, label, isItem, 500)} />
@@ -92,7 +93,7 @@ export default function PointsClient() {
 
       <Card>
         <CardHeader>
-          <h3 className="text-xl font-bold">Points History</h3>
+          <h3 className="text-xl font-bold">Points History (Last 24 Hours)</h3>
         </CardHeader>
         <CardContent>
           <div className="border rounded-lg">
@@ -118,7 +119,7 @@ export default function PointsClient() {
                 ) : (
                   <TableRow>
                     <TableCell colSpan={3} className="text-center">
-                      You haven't earned any points yet.
+                      You haven't earned any points in the last 24 hours.
                     </TableCell>
                   </TableRow>
                 )}
