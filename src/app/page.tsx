@@ -32,7 +32,27 @@ export default function LoginPage() {
   const [otpSent, setOtpSent] = useState(false);
   
   const recaptchaContainerRef = useRef<HTMLDivElement>(null);
-  const recaptchaVerifierRef = useRef<RecaptchaVerifier | null>(null);
+
+  // This function sets up the reCAPTCHA verifier.
+  const setupRecaptcha = () => {
+    if (!auth) return;
+    // Clear any existing verifier to prevent conflicts
+    if ((window as any).recaptchaVerifier) {
+      (window as any).recaptchaVerifier.clear();
+    }
+    
+    const verifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+      'size': 'invisible',
+      'callback': (response: any) => {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+        // This callback is usually used for auto-solving.
+      },
+      'expired-callback': () => {
+        // Response expired. Ask user to solve reCAPTCHA again.
+      }
+    });
+    (window as any).recaptchaVerifier = verifier;
+  };
 
   useEffect(() => {
     if (!isUserLoading && user) {
@@ -45,15 +65,12 @@ export default function LoginPage() {
   }, [user, isUserLoading, router]);
 
   useEffect(() => {
-    if (role === 'member' && auth && recaptchaContainerRef.current && !recaptchaVerifierRef.current) {
-        recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
-            'size': 'invisible',
-            'callback': (response: any) => {
-              // reCAPTCHA solved, allow signInWithPhoneNumber.
-            }
-        });
+    // We set up reCAPTCHA as soon as the component loads and auth is available.
+    // This ensures it's ready whenever the user decides to log in.
+    if (auth) {
+      setupRecaptcha();
     }
-  }, [auth, role]);
+  }, [auth]);
 
 
   const handleAdminLogin = async () => {
@@ -79,9 +96,9 @@ export default function LoginPage() {
       return;
     }
     
-    const verifier = recaptchaVerifierRef.current;
+    const verifier = (window as any).recaptchaVerifier;
     if (!verifier) {
-      setError('Recaptcha not initialized.');
+      setError('Recaptcha not initialized. Please refresh the page.');
       return;
     }
 
@@ -94,6 +111,8 @@ export default function LoginPage() {
       console.error(e);
       setError('Failed to send OTP. Please check the phone number or try again.');
       toast({ variant: 'destructive', title: 'OTP Error', description: 'Could not send OTP.' });
+      // Reset reCAPTCHA on failure
+      setupRecaptcha();
     }
   };
 
@@ -218,7 +237,7 @@ export default function LoginPage() {
                 </div>
               </TabsContent>
             </Tabs>
-            <div ref={recaptchaContainerRef}></div>
+            <div id="recaptcha-container"></div>
             {error && <p className="text-sm text-center text-destructive pt-4">{error}</p>}
           </CardContent>
           <CardFooter>
@@ -235,5 +254,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
-    
