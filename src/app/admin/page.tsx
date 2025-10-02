@@ -15,8 +15,9 @@ import allQuestionsData from '@/lib/all-questions.json';
 import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { useAuth, useUser } from '@/firebase';
+import { useAuth, useUser, useFirestore } from '@/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
 async function updateQuestions(questions: Question[]) {
@@ -30,6 +31,7 @@ async function updateQuestions(questions: Question[]) {
 export default function AdminPage() {
   const router = useRouter();
   const auth = useAuth();
+  const firestore = useFirestore();
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
@@ -51,22 +53,29 @@ export default function AdminPage() {
       });
       return;
     }
-    
-    // This is a workaround for client-side user creation by an admin.
-    // In a real production app, this should be handled by a secure backend function.
-    const currentAdminUser = user;
+
+    const currentAdminUser = auth.currentUser;
     if (!currentAdminUser) {
-        toast({ variant: 'destructive', title: 'Error', description: 'Admin user not found.' });
-        return;
+      toast({ variant: 'destructive', title: 'Error', description: 'Admin user not found.' });
+      return;
     }
 
     try {
-      // Create the new user. This will sign the admin out and sign the new user in.
-      await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
-      
+      // 1. Create the user in Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
+      const newUserId = userCredential.user.uid;
+
+      // 2. Create a document for the user in Firestore with hasPaid status
+      const userDocRef = doc(firestore, 'users', newUserId);
+      await setDoc(userDocRef, {
+        email: newUserEmail,
+        id: newUserId,
+        hasPaid: true, // Admin-created users are marked as paid
+      });
+
       toast({
         title: 'User Created Successfully!',
-        description: `User ${newUserEmail} has been created. You can share the credentials.`,
+        description: `User ${newUserEmail} has been created and marked as paid.`,
       });
 
       setNewUserEmail('');
@@ -79,12 +88,21 @@ export default function AdminPage() {
         description: error.message,
       });
     } finally {
-        // IMPORTANT: Sign the admin back in.
-        // We need to re-authenticate the admin as createUser... signs them out.
-        if (auth.currentUser?.email !== currentAdminUser.email) {
-            // Use a stored password or prompt for it securely. For this demo, we use a constant.
-             await signInWithEmailAndPassword(auth, "admin@boardprep.pro", "abhiabhiabhiabhi");
+      // IMPORTANT: Sign the admin back in if they were signed out.
+      // createUserWithEmailAndPassword signs out the current user.
+      if (auth.currentUser?.email !== currentAdminUser.email) {
+        try {
+          // You must store your admin password securely, this is just for the demo.
+          await signInWithEmailAndPassword(auth, "admin@boardprep.pro", "abhiabhiabhiabhi");
+        } catch (reauthError: any) {
+          toast({
+            variant: "destructive",
+            title: "Admin Re-authentication Failed",
+            description: "Please log out and log back in.",
+          });
+          router.push('/'); // Force logout if re-auth fails
         }
+      }
     }
   };
 
@@ -139,7 +157,9 @@ export default function AdminPage() {
   };
 
   const handleLogout = async () => {
-    await auth.signOut();
+    if (auth) {
+      await auth.signOut();
+    }
     router.push('/');
   };
   
@@ -177,7 +197,7 @@ export default function AdminPage() {
             <AccordionContent className="px-6 pb-6">
                <Card className="bg-background/80">
                 <CardHeader>
-                  <CardTitle>Create New Member</CardTitle>
+                  <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
@@ -188,7 +208,7 @@ export default function AdminPage() {
                     <Label htmlFor="new-user-password">Member Password</Label>
                     <Input id="new-user-password" type="text" placeholder="Enter a strong password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
                   </div>
-                   <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Member</Button>
+                   <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Paid Member</Button>
                 </CardContent>
                </Card>
             </AccordionContent>

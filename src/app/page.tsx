@@ -8,17 +8,18 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { BookOpenCheck, Shield, User as UserIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useAuth, useUser } from '@/firebase';
+import { useAuth, useUser, useFirestore } from '@/firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { updateProfile } from 'firebase/auth';
-
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const ADMIN_EMAIL = 'admin@boardprep.pro';
 
 export default function LoginPage() {
   const router = useRouter();
   const auth = useAuth();
+  const firestore = useFirestore();
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   
@@ -38,7 +39,6 @@ export default function LoginPage() {
         }
     }
   }, [user, isUserLoading, router]);
-
 
   const handleLogin = async () => {
     setError('');
@@ -66,26 +66,33 @@ export default function LoginPage() {
     }
     
     try {
-        await signInWithEmailAndPassword(auth, loginEmail, password);
-         toast({
-            title: "Login Successful!",
-            description: "Redirecting...",
-        });
+      const userCredential = await signInWithEmailAndPassword(auth, loginEmail, password);
+      const loggedInUser = userCredential.user;
+
+      if (loggedInUser.email !== ADMIN_EMAIL) {
+        const userDocRef = doc(firestore, 'users', loggedInUser.uid);
+        const userDoc = await getDoc(userDocRef);
+
+        if (!userDoc.exists() || !userDoc.data()?.hasPaid) {
+          await auth.signOut();
+          setError('Login failed. Please contact admin for payment confirmation.');
+          toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
+          return;
+        }
+      }
+
+      toast({
+        title: "Login Successful!",
+        description: "Redirecting...",
+      });
+      // Redirect will be handled by the useEffect hook
 
     } catch (e: any) {
         if (e.code === 'auth/user-not-found' && role === 'member') {
-             try {
-                const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, password);
-                await updateProfile(userCredential.user, { displayName: name });
-                
-                toast({
-                    title: "Account Created!",
-                    description: "You've been signed up and logged in.",
-                });
-             } catch (signUpError: any) {
-                setError(signUpError.message);
-                toast({ variant: 'destructive', title: 'Sign Up Failed', description: signUpError.message });
-             }
+          // User doesn't exist, so we prevent them from signing up here.
+          // They must be created by an admin.
+          setError('Account not found. Please contact an administrator to create an account.');
+          toast({ variant: 'destructive', title: 'Sign Up Failed', description: 'Please ask an admin to create an account for you.' });
         } else if (e.code === 'auth/wrong-password' || e.code === 'auth/invalid-credential') {
             setError('Incorrect email or password. Please try again.');
             toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect email or password.'});
@@ -138,7 +145,7 @@ export default function LoginPage() {
               
               <TabsContent value="member" className="pt-6 space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name">Name (for display)</Label>
                   <Input
                     id="name"
                     type="text"
@@ -171,7 +178,7 @@ export default function LoginPage() {
                   />
                 </div>
                  <p className="text-xs text-center text-muted-foreground pt-2">
-                  If you don't have an account, one will be created for you automatically.
+                  An admin must create your account before you can log in.
                 </p>
               </TabsContent>
 
@@ -203,7 +210,7 @@ export default function LoginPage() {
           </CardContent>
           <CardFooter>
             <Button onClick={handleLogin} className="w-full text-lg">
-              Login / Sign Up
+              Login
             </Button>
           </CardFooter>
         </Card>
@@ -211,3 +218,5 @@ export default function LoginPage() {
     </div>
   );
 }
+
+    
