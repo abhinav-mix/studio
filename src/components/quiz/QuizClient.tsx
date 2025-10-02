@@ -174,10 +174,12 @@ export default function QuizClient({ category, questions }: { category: QuizCate
             <div className="flex gap-2">
               {currentQuestionIndex >= 19 && (
                 <AlertDialog open={showProgressDialog} onOpenChange={setShowProgressDialog}>
-                  <Button variant="secondary" onClick={handleCheckProgress}>
-                     <ClipboardCheck className="mr-2 h-4 w-4" />
-                     Check Progress
-                  </Button>
+                  <AlertDialogTrigger asChild>
+                    <Button variant="secondary" onClick={handleCheckProgress}>
+                       <ClipboardCheck className="mr-2 h-4 w-4" />
+                       Check Progress
+                    </Button>
+                  </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
                       <AlertDialogTitle>Your Progress So Far</AlertDialogTitle>
@@ -191,7 +193,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                      <AlertDialogAction onClick={() => setShowProgressDialog(false)}>Continue</AlertDialogAction>
+                      <AlertDialogAction>Continue</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
