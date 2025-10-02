@@ -35,13 +35,14 @@ export default function LoginPage() {
 
   // This function sets up the reCAPTCHA verifier.
   const setupRecaptcha = () => {
-    if (!auth) return;
+    if (!auth || !recaptchaContainerRef.current) return;
+    
     // Clear any existing verifier to prevent conflicts
     if ((window as any).recaptchaVerifier) {
       (window as any).recaptchaVerifier.clear();
     }
     
-    const verifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+    const verifier = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
       'size': 'invisible',
       'callback': (response: any) => {
         // reCAPTCHA solved, allow signInWithPhoneNumber.
@@ -68,9 +69,12 @@ export default function LoginPage() {
     // We set up reCAPTCHA as soon as the component loads and auth is available.
     // This ensures it's ready whenever the user decides to log in.
     if (auth) {
-      setupRecaptcha();
+      // The setup needs the container to be rendered.
+      // A small timeout ensures the DOM is ready.
+      const timeoutId = setTimeout(() => setupRecaptcha(), 100);
+      return () => clearTimeout(timeoutId);
     }
-  }, [auth]);
+  }, [auth, role]);
 
 
   const handleAdminLogin = async () => {
@@ -96,9 +100,14 @@ export default function LoginPage() {
       return;
     }
     
+    // Ensure verifier is set up if it's missing.
+    if (!(window as any).recaptchaVerifier) {
+        setupRecaptcha();
+    }
     const verifier = (window as any).recaptchaVerifier;
+
     if (!verifier) {
-      setError('Recaptcha not initialized. Please refresh the page.');
+      setError('Recaptcha not initialized. Please try again in a moment.');
       return;
     }
 
@@ -107,10 +116,11 @@ export default function LoginPage() {
       setConfirmationResult(result);
       setOtpSent(true);
       toast({ title: "OTP Sent!", description: `An OTP has been sent to ${phone}` });
-    } catch (e: any) {
+    } catch (e: any)
+      {
       console.error(e);
       setError('Failed to send OTP. Please check the phone number or try again.');
-      toast({ variant: 'destructive', title: 'OTP Error', description: 'Could not send OTP.' });
+      toast({ variant: 'destructive', title: 'OTP Error', description: 'Could not send OTP. You may need to refresh.' });
       // Reset reCAPTCHA on failure
       setupRecaptcha();
     }
@@ -237,7 +247,7 @@ export default function LoginPage() {
                 </div>
               </TabsContent>
             </Tabs>
-            <div id="recaptcha-container"></div>
+            <div ref={recaptchaContainerRef}></div>
             {error && <p className="text-sm text-center text-destructive pt-4">{error}</p>}
           </CardContent>
           <CardFooter>
