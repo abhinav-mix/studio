@@ -1,40 +1,36 @@
 /**
- * @fileoverview Firestore Security Rules for BoardPrep Pro.
+ * @file Firestore Security Rules for BoardPrep Pro
  *
- * Core Philosophy:
- * This ruleset enforces a strict user-ownership model for user profiles, quiz attempts, and attempted questions,
- * while providing public read access to questions and quizzes.
+ * @core_philosophy This ruleset enforces a strict user-ownership model for user-specific data
+ * and allows public read access to global data like questions and quizzes.
  *
- * Data Structure:
- * - /users/{userId}: Stores user profiles, accessible only to the user themselves.
- * - /questions/{questionId}: Stores question data, publicly readable.
- * - /quizzes/{quizId}: Stores quiz definitions, publicly readable.
- * - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts, accessible only to the user who made them.
- * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions, accessible only to the user who attempted them.
+ * @data_structure
+ * - /users/{userId}: Stores user profiles.
+ * - /questions/{questionId}: Stores question data.
+ * - /quizzes/{quizId}: Stores quiz definitions.
+ * - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts for each user.
+ * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions for each user.
  *
- * Key Security Decisions:
- * - User data and quiz attempts are secured using path-based ownership, ensuring that only the authenticated user
- *   can access their own data.
- * - Questions and quizzes are considered public data and are readable by anyone.
- * - Listing of quiz attempts and attempted questions is restricted to the owner of the userId.
+ * @key_security_decisions
+ * - Users can only access their own data under /users/{userId}.
+ * - Questions and Quizzes are publicly readable.
+ * - User listing is explicitly denied for privacy.
+ *
+ * @denormalization_for_authorization None needed as path-based ownership is used.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Controls access to user profile documents.
+     * @description Protects user profiles.
      * @path /users/{userId}
-     * @allow (create) User with ID 'user123' can create their own profile.
-     * @allow (get) User with ID 'user123' can read their own profile.
-     * @allow (update) User with ID 'user123' can update their own profile.
-     * @allow (delete) User with ID 'user123' can delete their own profile.
-     * @deny (create) User with ID 'user456' cannot create a profile for user 'user123'.
-     * @deny (get) User with ID 'user456' cannot read the profile for user 'user123'.
+     * @allow (create) Signed-in user creates their own profile (userId matches auth.uid).
+     * @allow (get, update, delete) Signed-in user accesses their own profile (userId matches auth.uid).
+     * @deny (create, update, delete) Another user attempts to access or modify this user's profile.
      * @principle Enforces document ownership for writes.
      */
     match /users/{userId} {
-      // Helper function to check if the user is signed in and owns the resource.
       function isSignedIn() {
         return request.auth != null;
       }
@@ -44,60 +40,46 @@ service cloud.firestore {
       }
 
       function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
+        return isOwner(userId) && resource != null;
       }
 
       allow get: if isSignedIn() && isOwner(userId);
       allow list: if false;
       allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isExistingOwner(userId);
-      allow delete: if isExistingOwner(userId);
+      allow update: if isSignedIn() && isExistingOwner(userId);
+      allow delete: if isSignedIn() && isExistingOwner(userId);
     }
 
     /**
-     * @description Controls access to question documents.
+     * @description Allows public access to questions.
      * @path /questions/{questionId}
-     * @allow (get) Any user can read any question.
-     * @deny (create) No one can create question documents without authorization.
-     * @deny (update) No one can update question documents without authorization.
-     * @deny (delete) No one can delete question documents without authorization.
-     * @principle Allows public read access to questions.
+     * @allow (get, list) Any user can read questions.
+     * @deny (create, update, delete) Only authorized users can modify questions. // TODO: Add owner validation once the schema is updated with an ownership field.
+     * @principle Public read access with owner-only writes (currently disabled).
      */
     match /questions/{questionId} {
-      allow get: if true;
-      allow list: if true;
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow get, list: if true;
+      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
     }
 
     /**
-     * @description Controls access to quiz documents.
+     * @description Allows public access to quizzes.
      * @path /quizzes/{quizId}
-     * @allow (get) Any user can read any quiz.
-     * @deny (create) No one can create quiz documents without authorization.
-     * @deny (update) No one can update quiz documents without authorization.
-     * @deny (delete) No one can delete quiz documents without authorization.
-     * @principle Allows public read access to quizzes.
+     * @allow (get, list) Any user can read quizzes.
+     * @deny (create, update, delete) Only authorized users can modify quizzes. // TODO: Add owner validation once the schema is updated with an ownership field.
+     * @principle Public read access with owner-only writes (currently disabled).
      */
     match /quizzes/{quizId} {
-      allow get: if true;
-      allow list: if true;
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow get, list: if true;
+      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
     }
 
     /**
-     * @description Controls access to quiz attempt documents for a specific user.
+     * @description Protects quiz attempts for each user.
      * @path /users/{userId}/quizAttempts/{quizAttemptId}
-     * @allow (create) User with ID 'user123' can create a quiz attempt for themselves.
-     * @allow (get) User with ID 'user123' can read their own quiz attempts.
-     * @allow (update) User with ID 'user123' can update their own quiz attempts.
-     * @allow (delete) User with ID 'user123' can delete their own quiz attempts.
-     * @deny (create) User with ID 'user456' cannot create a quiz attempt for user 'user123'.
-     * @deny (get) User with ID 'user456' cannot read quiz attempts for user 'user123'.
-     * @principle Enforces document ownership for writes and reads.
+     * @allow (create, get, update, delete, list) Signed-in user accesses their own quiz attempts (userId matches auth.uid).
+     * @deny Another user attempts to access or modify this user's quiz attempts.
+     * @principle Enforces document ownership for writes.
      */
     match /users/{userId}/quizAttempts/{quizAttemptId} {
       function isSignedIn() {
@@ -108,26 +90,23 @@ service cloud.firestore {
         return request.auth.uid == userId;
       }
 
-      function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
+       function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
       }
+
       allow get: if isSignedIn() && isOwner(userId);
       allow list: if isSignedIn() && isOwner(userId);
       allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isExistingOwner(userId);
-      allow delete: if isExistingOwner(userId);
+      allow update: if isSignedIn() && isExistingOwner(userId);
+      allow delete: if isSignedIn() && isExistingOwner(userId);
     }
 
     /**
-     * @description Controls access to attempted question documents for a specific user.
+     * @description Protects attempted questions for each user.
      * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
-     * @allow (create) User with ID 'user123' can create an attempted question for themselves.
-     * @allow (get) User with ID 'user123' can read their own attempted questions.
-     * @allow (update) User with ID 'user123' can update their own attempted questions.
-     * @allow (delete) User with ID 'user123' can delete their own attempted questions.
-     * @deny (create) User with ID 'user456' cannot create an attempted question for user 'user123'.
-     * @deny (get) User with ID 'user456' cannot read attempted questions for user 'user123'.
-     * @principle Enforces document ownership for writes and reads.
+     * @allow (create, get, update, delete, list) Signed-in user accesses their own attempted questions (userId matches auth.uid).
+     * @deny Another user attempts to access or modify this user's attempted questions.
+     * @principle Enforces document ownership for writes.
      */
     match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
       function isSignedIn() {
@@ -138,14 +117,15 @@ service cloud.firestore {
         return request.auth.uid == userId;
       }
 
-      function isExistingOwner(userId) {
-          return isOwner(userId) && resource != null;
+       function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
       }
+
       allow get: if isSignedIn() && isOwner(userId);
       allow list: if isSignedIn() && isOwner(userId);
       allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isExistingOwner(userId);
-      allow delete: if isExistingOwner(userId);
+      allow update: if isSignedIn() && isExistingOwner(userId);
+      allow delete: if isSignedIn() && isExistingOwner(userId);
     }
   }
 }
