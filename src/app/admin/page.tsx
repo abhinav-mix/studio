@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Label } from '@/componentsui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
@@ -74,6 +74,7 @@ export default function AdminPage() {
         displayName: newUserName,
         userClass: newUserClass,
         hasPaid: true, // Admin-created users are marked as paid
+        points: 0, // Initialize points to 0
       });
 
       toast({
@@ -210,7 +211,7 @@ export default function AdminPage() {
                     </div>
                      <div className="space-y-2">
                       <Label htmlFor="new-user-email">Member Email</Label>
-                      <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.targe.value)} />
+                      <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="new-user-password">Member Password</Label>
