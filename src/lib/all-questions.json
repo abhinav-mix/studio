@@ -460,6 +460,136 @@
       "category": "physics"
     },
     {
+      "id": "phy-39",
+      "questionText": "Short circuit in a circuit can lead to:",
+      "options": [
+        "No current flow",
+        "A very large current flow",
+        "A very small current flow",
+        "Voltage drop"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Short-circuiting occurs when the live wire and the neutral wire come into direct contact. This causes the resistance of the circuit to become very small, leading to an extremely large current flow, which can cause a fire.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-40",
+      "questionText": "What is the function of an earth wire?",
+      "options": [
+        "To complete the circuit",
+        "To prevent shocks",
+        "To increase the voltage",
+        "To decrease the current"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The earth wire is a safety measure. It provides a low-resistance path for the current to flow to the earth in case of an insulation failure, preventing the metallic body of the appliance from becoming live and thus preventing electric shocks.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-41",
+      "questionText": "The frequency of AC (Alternating Current) in India is:",
+      "options": [
+        "60 Hz",
+        "50 Hz",
+        "100 Hz",
+        "0 Hz (for DC)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "In India, the standard frequency for alternating current (AC) supply is 50 Hertz (Hz). This means the current changes its direction 100 times in one second.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-42",
+      "questionText": "Fleming's left-hand rule is used to determine the direction of:",
+      "options": [
+        "Induced current",
+        "Magnetic field",
+        "Force on a current-carrying conductor",
+        "Potential difference"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Fleming's left-hand rule helps to find the direction of the force experienced by a current-carrying conductor placed in a magnetic field. It's the principle behind electric motors.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-43",
+      "questionText": "Which of the following is not a characteristic of a good source of energy?",
+      "options": [
+        "High calorific value",
+        "Easy to store and transport",
+        "Causes high pollution",
+        "Economical"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A good source of energy should be efficient, safe, easy to handle, and should not cause environmental pollution. High pollution is an undesirable characteristic.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-44",
+      "questionText": "Tidal energy is a type of:",
+      "options": [
+        "Geothermal energy",
+        "Solar energy",
+        "Hydropower",
+        "Ocean thermal energy"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Tidal energy is a form of hydropower that converts the energy obtained from tides into useful forms of power, mainly electricity. It utilizes the rise and fall of sea levels.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-45",
+      "questionText": "In a nuclear reactor, which material is used as a moderator?",
+      "options": [
+        "Uranium",
+        "Cadmium",
+        "Graphite",
+        "Plutonium"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A moderator is used in a nuclear reactor to slow down the fast-moving neutrons to sustain the nuclear chain reaction. Heavy water and graphite are common moderators.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-46",
+      "questionText": "Mirage is an example of:",
+      "options": [
+        "Reflection",
+        "Total Internal Reflection",
+        "Scattering",
+        "Dispersion"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A mirage is an optical phenomenon caused by the bending of light rays (refraction) through layers of air at different temperatures. On hot days, this can lead to total internal reflection, creating an illusion of water on the ground.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-47",
+      "questionText": "What is the focal length of a plane mirror?",
+      "options": [
+        "Zero",
+        "Infinity",
+        "25 cm",
+        "Negative"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A plane mirror can be considered as a spherical mirror of infinite radius of curvature. Since focal length is half the radius of curvature, its focal length is also infinity.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-48",
+      "questionText": "The resistivity of a conductor depends on its:",
+      "options": [
+        "Length",
+        "Thickness",
+        "Temperature",
+        "Area of cross-section"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Resistivity (ρ) is an intrinsic property of a material. While resistance depends on length and area, resistivity itself for a given material mainly depends on temperature.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
