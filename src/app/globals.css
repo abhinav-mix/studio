@@ -67,3 +67,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .bg-gradient-primary-to-accent {
+    @apply bg-gradient-to-br from-primary via-purple-500 to-accent;
+  }
+}
