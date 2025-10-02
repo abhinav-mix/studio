@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 0, label: '💰 Real Money 💰', color: '#4CAF50', isItem: true, textColor: '#fff' }, // Green
+  { value: 10000, label: '10000 Points', color: '#4CAF50', isItem: false, textColor: '#fff' }, // Green
   { value: 0, label: 'Next Time', color: '#F44336', isItem: false, textColor: '#fff' }, // Red
 ];
 
@@ -65,18 +65,18 @@ export default function RealMoneySpinWheel({ currentPoints, onSpinComplete }: { 
 
   return (
     <div className="flex flex-col items-center gap-8 py-8 relative border-2 border-yellow-400 rounded-xl bg-secondary/50">
-      <h2 className="text-2xl font-bold font-headline text-yellow-500">High Stakes: Real Money Wheel!</h2>
+      <h2 className="text-2xl font-bold font-headline text-yellow-500">High Stakes Wheel!</h2>
        {prizeResult && (
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-20 animate-in fade-in duration-500">
             <div className="relative bg-gradient-to-br from-yellow-400 to-amber-600 p-8 rounded-2xl shadow-2xl text-white text-center transform scale-100 animate-in zoom-in-75 duration-500">
                 <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-white hover:bg-white/20" onClick={() => setPrizeResult(null)}>
                     <X />
                 </Button>
-                {prizeResult.isItem ? (
+                {prizeResult.prizePoints > 0 ? (
                      <>
                         <h2 className="text-2xl font-bold mb-2">Congratulations!</h2>
-                        <p className="text-4xl font-headline">You won {prizeResult.prizeLabel}!</p>
-                        <p className="mt-4 text-sm">We will contact you shortly regarding your prize.</p>
+                        <p className="text-4xl font-headline">You won {prizeResult.prizePoints} points!</p>
+                        <p className="mt-4 text-sm">Your points have been added to your account.</p>
                      </>
                 ) : (
                     <>

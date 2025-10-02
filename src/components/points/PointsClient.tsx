@@ -48,7 +48,7 @@ export default function PointsClient() {
     // Deduct points for spinning
     await addDoc(historyRef, {
         pointsAdded: -cost,
-        reason: prizeLabel === 'Real Money' || prizeLabel === 'Next Time' ? 'Real Money Spin Cost' : 'Spin Wheel Cost',
+        reason: prizeLabel.includes('Points') || prizeLabel === 'Next Time' ? 'High Stakes Spin Cost' : 'Spin Wheel Cost',
         timestamp: serverTimestamp(),
     });
 
