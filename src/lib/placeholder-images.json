@@ -9,13 +9,13 @@
     {
       "id": "chemistry-img",
       "description": "An image representing chemistry concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1617155092918-480ef0b17330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWFrZXJzJTIwbGFifGVufDB8fHx8MTc1OTM4NzI1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617155092918-480ef0b17330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWFrZXJzJTIwbGFifGVufDB8fHx8fDE3NTkzODcyNTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "beakers lab"
     },
     {
       "id": "biology-img",
       "description": "An image representing biology concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1588665306984-d5c6f62224aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1OTM4NzI1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588665306984-d5c6f62224aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBtaWNyb3Njb3BlfGVufDB8fHx8fDE3NTkzODcyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dna microscope"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "history-img",
       "description": "An image representing history concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1467688695332-6b486449d78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwc2Nyb2xsfGVufDB8fHx8MTc1OTMzODA2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1467688695332-6b486449d78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwc2Nyb2xsfGVufDB8fHx8fDE3NTkzMzgwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ancient scroll"
     },
     {
@@ -39,14 +39,14 @@
     {
       "id": "hindi-img",
       "description": "An image representing Hindi concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1551493693-13175b41d1e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzE5ODR8MHwxfGFsbHx8fHx8fHx8fDE2NTg0MjU3NjA&ixlib=rb-1.2.1&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1620021319239-8494f6f3933c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoJUMzJUFDbGQlC3xlbnwwfHx8fDE3NTk5NjU5NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hindi script"
     },
     {
       "id": "english-img",
       "description": "An image representing English concepts.",
-      "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNzE5ODR8MHwxfGFsbHx8fHx8fHx8fDE2NTg0MjU4MjA&ixlib=rb-1.2.1&q=80&w=1080",
-      "imageHint": "english book"
+      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d3JpdGluZyUyMGJvb2t8ZW58MHx8fHwxNzU5OTY1OTQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "writing book"
     }
   ]
 }
