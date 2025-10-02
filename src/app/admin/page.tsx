@@ -17,7 +17,7 @@ import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth, useUser, useFirestore } from '@/firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
@@ -39,6 +39,7 @@ export default function AdminPage() {
   const [newUserName, setNewUserName] = useState('');
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
+  const [newUserClass, setNewUserClass] = useState('');
   
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
@@ -48,7 +49,7 @@ export default function AdminPage() {
   }, [user, isUserLoading, router]);
 
   const handleAddUser = async () => {
-    if (!newUserEmail || !newUserPassword || !newUserName) {
+    if (!newUserEmail || !newUserPassword || !newUserName || !newUserClass) {
       toast({
         variant: 'destructive',
         title: 'Error',
@@ -72,26 +73,25 @@ export default function AdminPage() {
       const userCredential = await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
       const newUser = userCredential.user;
 
-      // 2. Update the user's profile with the display name.
-      await updateProfile(newUser, { displayName: newUserName });
-
-      // 3. Create the user's document in Firestore and mark them as paid.
+      // 2. Create the user's document in Firestore and mark them as paid.
       const userDocRef = doc(firestore, 'users', newUser.uid);
       await setDoc(userDocRef, {
         id: newUser.uid,
         email: newUserEmail,
         displayName: newUserName,
+        userClass: newUserClass,
         hasPaid: true, // Admin-created users are marked as paid
       });
 
       toast({
         title: 'User Created Successfully!',
-        description: `User ${newUserName} has been created and marked as paid.`,
+        description: `User ${newUserEmail} has been created and marked as paid.`,
       });
       
       setNewUserName('');
       setNewUserEmail('');
       setNewUserPassword('');
+      setNewUserClass('');
 
     } catch (error: any) {
       console.error(error);
@@ -219,9 +219,13 @@ export default function AdminPage() {
                   <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="space-y-2">
+                   <div className="space-y-2">
                     <Label htmlFor="new-user-name">Member Name</Label>
                     <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
+                  </div>
+                   <div className="space-y-2">
+                    <Label htmlFor="new-user-class">Member Class</Label>
+                    <Input id="new-user-class" type="text" placeholder="10th" value={newUserClass} onChange={(e) => setNewUserClass(e.target.value)} />
                   </div>
                    <div className="space-y-2">
                     <Label htmlFor="new-user-email">Member Email</Label>

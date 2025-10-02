@@ -32,7 +32,7 @@ export default function Header() {
            {(user?.displayName || user?.email) && (
              <div className="flex items-center gap-2 text-sm font-medium">
                 <User className="h-4 w-4"/>
-                <span>{user.displayName}</span>
+                <span>{user.email}</span>
              </div>
            )}
           <nav className="flex items-center">
