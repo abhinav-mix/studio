@@ -1,131 +1,137 @@
-/**
- * @file Firestore Security Rules for BoardPrep Pro
- *
- * @core_philosophy This ruleset enforces a strict user-ownership model for user-specific data
- * and allows public read access to global data like questions and quizzes.
- *
- * @data_structure
- * - /users/{userId}: Stores user profiles.
- * - /questions/{questionId}: Stores question data.
- * - /quizzes/{quizId}: Stores quiz definitions.
- * - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts for each user.
- * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions for each user.
- *
- * @key_security_decisions
- * - Users can only access their own data under /users/{userId}.
- * - Questions and Quizzes are publicly readable.
- * - User listing is explicitly denied for privacy.
- *
- * @denormalization_for_authorization None needed as path-based ownership is used.
- */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Protects user profiles.
+     * @description Ensures the user is signed in.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Authentication required for all user-specific data access.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the requesting user is the owner of the resource based on the provided userId.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Path-based authorization.
+     */
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+
+    /**
+     * @description Checks if the requesting user is the owner of the resource and if the resource exists.
+     * @path N/A
+     * @allow N/A
+     * @deny N/A
+     * @principle Authorization and existence check for updates/deletes.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && exists(resource);
+    }
+
+    /******************** Users Collection ********************/
+
+    /**
+     * @description Manages user profiles, allowing users to read/write their own data.
      * @path /users/{userId}
-     * @allow (create) Signed-in user creates their own profile (userId matches auth.uid).
-     * @allow (get, update, delete) Signed-in user accesses their own profile (userId matches auth.uid).
-     * @deny (create, update, delete) Another user attempts to access or modify this user's profile.
-     * @principle Enforces document ownership for writes.
+     * @allow (get, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, update, or delete their own profile.
+     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create their own profile.
+     * @deny (get, update, delete) User anotherUser can't read, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's profile.
+     * @principle Enforces document ownership for writes and path consistency for user-specific data.
      */
     match /users/{userId} {
-      function isSignedIn() {
-        return request.auth != null;
-      }
+      // Read rules: Only the user can get their own profile.
+      allow get: if isOwner(userId);
 
-      function isOwner(userId) {
-        return request.auth.uid == userId;
-      }
-
-      function isExistingOwner(userId) {
-        return isOwner(userId) && resource != null;
-      }
-
-      allow get: if isSignedIn() && isOwner(userId);
+      // List rule: No one can list all users.
       allow list: if false;
-      allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isSignedIn() && isExistingOwner(userId);
-      allow delete: if isSignedIn() && isExistingOwner(userId);
+
+      // Write rules: Only the user can create, update, or delete their own profile.
+      allow create: if isSignedIn() && request.auth.uid == userId;
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
     }
 
+    /******************** Questions Collection ********************/
+
     /**
-     * @description Allows public access to questions.
+     * @description Allows anyone to read questions.  No write access.
      * @path /questions/{questionId}
-     * @allow (get, list) Any user can read questions.
-     * @deny (create, update, delete) Only authorized users can modify questions. // TODO: Add owner validation once the schema is updated with an ownership field.
-     * @principle Public read access with owner-only writes (currently disabled).
+     * @allow (get, list) Any user can read any question.
+     * @deny (create, update, delete) No one can create, update, or delete questions via the rules.
+     * @principle Public read access for question data.
      */
     match /questions/{questionId} {
+      // Read rules: Anyone can read questions.
       allow get, list: if true;
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+
+      // Write rules: No one can create, update, or delete questions.
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
     }
 
+    /******************** Quizzes Collection ********************/
+
     /**
-     * @description Allows public access to quizzes.
+     * @description Allows anyone to read quizzes.  No write access.
      * @path /quizzes/{quizId}
-     * @allow (get, list) Any user can read quizzes.
-     * @deny (create, update, delete) Only authorized users can modify quizzes. // TODO: Add owner validation once the schema is updated with an ownership field.
-     * @principle Public read access with owner-only writes (currently disabled).
+     * @allow (get, list) Any user can read any quiz.
+     * @deny (create, update, delete) No one can create, update, or delete quizzes.
+     * @principle Public read access for quiz data.
      */
     match /quizzes/{quizId} {
+      // Read rules: Anyone can read quizzes.
       allow get, list: if true;
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+
+      // Write rules: No one can create, update, or delete quizzes.
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
     }
 
+    /******************** QuizAttempts Collection ********************/
+
     /**
-     * @description Protects quiz attempts for each user.
+     * @description Manages quiz attempts for each user, allowing only the user to read/write their own attempts.
      * @path /users/{userId}/quizAttempts/{quizAttemptId}
-     * @allow (create, get, update, delete, list) Signed-in user accesses their own quiz attempts (userId matches auth.uid).
-     * @deny Another user attempts to access or modify this user's quiz attempts.
-     * @principle Enforces document ownership for writes.
+     * @allow (get, list, create, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, list, create, update, and delete their own quiz attempts.
+     * @deny (get, list, create, update, delete) User anotherUser can't read, list, create, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's quiz attempts.
+     * @principle Enforces document ownership for writes and path consistency for user-specific data.
      */
     match /users/{userId}/quizAttempts/{quizAttemptId} {
-      function isSignedIn() {
-        return request.auth != null;
-      }
+      // Read rules: Only the user can get or list their own quiz attempts.
+      allow get, list: if isOwner(userId);
 
-      function isOwner(userId) {
-        return request.auth.uid == userId;
-      }
-
-       function isExistingOwner(userId) {
-        return isOwner(userId) && resource != null;
-      }
-
-      allow get: if isSignedIn() && isOwner(userId);
-      allow list: if isSignedIn() && isOwner(userId);
-      allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isSignedIn() && isExistingOwner(userId);
-      allow delete: if isSignedIn() && isExistingOwner(userId);
+      // Write rules: Only the user can create, update, or delete their own quiz attempts.
+      allow create: if isOwner(userId);
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
     }
 
+    /******************** AttemptedQuestions Collection ********************/
+
     /**
-     * @description Protects attempted questions for each user.
+     * @description Manages attempted questions for each user, allowing only the user to read/write their own attempted questions.
      * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
-     * @allow (create, get, update, delete, list) Signed-in user accesses their own attempted questions (userId matches auth.uid).
-     * @deny Another user attempts to access or modify this user's attempted questions.
-     * @principle Enforces document ownership for writes.
+     * @allow (get, list, create, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, list, create, update, and delete their own attempted questions.
+     * @deny (get, list, create, update, delete) User anotherUser can't read, list, create, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's attempted questions.
+     * @principle Enforces document ownership for writes and path consistency for user-specific data.
      */
     match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
-      function isSignedIn() {
-        return request.auth != null;
-      }
+      // Read rules: Only the user can get or list their own attempted questions.
+      allow get, list: if isOwner(userId);
 
-      function isOwner(userId) {
-        return request.auth.uid == userId;
-      }
-
-       function isExistingOwner(userId) {
-        return isOwner(userId) && resource != null;
-      }
-
-      allow get: if isSignedIn() && isOwner(userId);
-      allow list: if isSignedIn() && isOwner(userId);
-      allow create: if isSignedIn() && isOwner(userId);
-      allow update: if isSignedIn() && isExistingOwner(userId);
-      allow delete: if isSignedIn() && isExistingOwner(userId);
+      // Write rules: Only the user can create, update, or delete their own attempted questions.
+      allow create: if isOwner(userId);
+      allow update: if isExistingOwner(userId);
+      allow delete: if isExistingOwner(userId);
     }
   }
 }
