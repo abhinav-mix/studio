@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Gift } from 'lucide-react';
+import { Gift, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
@@ -19,9 +19,16 @@ const segments = [
 
 const SPIN_COST = 500;
 
+type PrizeResult = {
+    prizeLabel: string;
+    isItem: boolean;
+    prizePoints: number;
+} | null;
+
 export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPoints: number; onSpinComplete: (prize: number, prizeLabel: string, isItem: boolean) => void; }) {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
+  const [prizeResult, setPrizeResult] = useState<PrizeResult>(null);
   const { toast } = useToast();
 
   const handleSpin = () => {
@@ -35,6 +42,7 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     }
     if (isSpinning) return;
 
+    setPrizeResult(null);
     setIsSpinning(true);
     
     // Only allow results for index 0 (500 points) or index 1 (100 points)
@@ -55,28 +63,36 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     setTimeout(() => {
       setIsSpinning(false);
       onSpinComplete(prizePoints, prizeLabel, isItem);
-      
-      if (isItem) {
-          toast({
-            title: `Congratulations! You won a ${prizeLabel}!`,
-            description: 'We will contact you shortly regarding your prize.',
-            duration: 10000,
-          });
-      } else if (prizePoints > 0) {
-        toast({
-            title: `🎉 You won ${prizePoints} points! 🎉`,
-            description: `Your points have been added to your account.`,
-            duration: 8000,
-        });
-      }
-
+      setPrizeResult({ prizeLabel, isItem, prizePoints });
     }, 6000); // This should match the CSS transition duration
   };
 
   const segmentAngle = 360 / segments.length;
 
   return (
-    <div className="flex flex-col items-center gap-8 py-8">
+    <div className="flex flex-col items-center gap-8 py-8 relative">
+       {prizeResult && (
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-20 animate-in fade-in duration-500">
+            <div className="relative bg-gradient-to-br from-primary to-accent p-8 rounded-2xl shadow-2xl text-white text-center transform scale-100 animate-in zoom-in-75 duration-500">
+                <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-white hover:bg-white/20" onClick={() => setPrizeResult(null)}>
+                    <X />
+                </Button>
+                {prizeResult.isItem ? (
+                     <>
+                        <h2 className="text-2xl font-bold mb-2">Congratulations!</h2>
+                        <p className="text-4xl font-headline">You won a {prizeResult.prizeLabel}!</p>
+                        <p className="mt-4 text-sm">We will contact you shortly regarding your prize.</p>
+                     </>
+                ) : (
+                    <>
+                        <h2 className="text-2xl font-bold mb-2">🎉 You won! 🎉</h2>
+                        <p className="text-5xl font-headline">{prizeResult.prizePoints} points</p>
+                        <p className="mt-4 text-sm">Your points have been added to your account.</p>
+                    </>
+                )}
+            </div>
+        </div>
+      )}
       <div className="relative w-80 h-80 md:w-96 md:h-96">
         {/* Pointer */}
         <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 z-10" style={{ filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.2))' }}>
