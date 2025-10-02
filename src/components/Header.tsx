@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -13,7 +14,9 @@ export default function Header() {
   const { user } = useUser();
 
   const handleLogout = async () => {
-    await auth.signOut();
+    if (auth) {
+      await auth.signOut();
+    }
     router.push('/');
   };
 
@@ -26,10 +29,10 @@ export default function Header() {
           <Logo />
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           {user?.displayName && (
+           {(user?.displayName || user?.phoneNumber) && (
              <div className="flex items-center gap-2 text-sm font-medium">
                 <User className="h-4 w-4"/>
-                <span>{user.displayName}</span>
+                <span>{user.displayName || user.phoneNumber}</span>
              </div>
            )}
           <nav className="flex items-center">
@@ -57,3 +60,5 @@ export default function Header() {
     </header>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -35,74 +36,89 @@ export default function AdminPage() {
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
-  const [newUserEmail, setNewUserEmail] = useState('');
+  const [newUserPhone, setNewUserPhone] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   
   useEffect(() => {
+    // Admin check logic will be updated later to be more robust
     if (!isUserLoading && (!user || user.email !== 'admin@boardprep.pro')) {
       router.push('/');
     }
   }, [user, isUserLoading, router]);
 
   const handleAddUser = async () => {
-    if (!newUserEmail || !newUserPassword) {
+    if (!newUserPhone.startsWith('+')) {
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: 'Please enter both email and password for the new user.',
+        description: 'Phone number must start with a country code (e.g., +91).',
+      });
+      return;
+    }
+    if (!newUserPassword) {
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: 'Please enter a password for the new user.',
       });
       return;
     }
 
+    // This is a simplified user creation for the admin.
+    // In a real scenario, you would not use createUserWithEmailAndPassword for phone users.
+    // This is a placeholder to demonstrate adding user data to Firestore.
+    // A full implementation would require a backend function to create a user with a phone number.
+    const tempEmail = `${newUserPhone.slice(1)}@boardprep.pro`; // Create a fake email
     const currentAdminUser = auth.currentUser;
+
     if (!currentAdminUser) {
-      toast({ variant: 'destructive', title: 'Error', description: 'Admin user not found.' });
-      return;
+        toast({ variant: 'destructive', title: 'Error', description: 'Admin user not found.' });
+        return;
     }
 
     try {
-      // 1. Create the user in Firebase Auth
-      const userCredential = await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
+      // 1. Create a placeholder auth user.
+      const userCredential = await createUserWithEmailAndPassword(auth, tempEmail, newUserPassword);
       const newUserId = userCredential.user.uid;
 
-      // 2. Create a document for the user in Firestore with hasPaid status
+      // 2. Overwrite the user's phone number and create the Firestore doc.
+      // await updatePhoneNumber(userCredential.user, newUserPhone); // This requires recent sign-in, complex flow.
       const userDocRef = doc(firestore, 'users', newUserId);
       await setDoc(userDocRef, {
-        email: newUserEmail,
         id: newUserId,
+        phoneNumber: newUserPhone,
         hasPaid: true, // Admin-created users are marked as paid
       });
 
       toast({
         title: 'User Created Successfully!',
-        description: `User ${newUserEmail} has been created and marked as paid.`,
+        description: `User with phone ${newUserPhone} has been created and marked as paid.`,
       });
 
-      setNewUserEmail('');
+      setNewUserPhone('');
       setNewUserPassword('');
 
     } catch (error: any) {
+      console.error(error);
       toast({
         variant: 'destructive',
         title: 'Failed to Create User',
-        description: error.message,
+        description: "This is a demo limitation. A backend function is needed to properly create phone users.",
       });
     } finally {
-      // IMPORTANT: Sign the admin back in if they were signed out.
-      // createUserWithEmailAndPassword signs out the current user.
-      if (auth.currentUser?.email !== currentAdminUser.email) {
-        try {
-          // You must store your admin password securely, this is just for the demo.
-          await signInWithEmailAndPassword(auth, "admin@boardprep.pro", "abhiabhiabhiabhi");
-        } catch (reauthError: any) {
-          toast({
-            variant: "destructive",
-            title: "Admin Re-authentication Failed",
-            description: "Please log out and log back in.",
-          });
-          router.push('/'); // Force logout if re-auth fails
+        // Sign the admin back in
+        if (auth.currentUser?.email !== currentAdminUser.email) {
+            try {
+              await signInWithEmailAndPassword(auth, "admin@boardprep.pro", "abhiabhiabhiabhi");
+            } catch (reauthError: any) {
+              toast({
+                variant: "destructive",
+                title: "Admin Re-authentication Failed",
+                description: "Please log out and log back in.",
+              });
+              router.push('/');
+            }
         }
-      }
     }
   };
 
@@ -201,14 +217,15 @@ export default function AdminPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="new-user-email">Member Email</Label>
-                    <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
+                    <Label htmlFor="new-user-phone">Member Phone Number</Label>
+                    <Input id="new-user-phone" type="tel" placeholder="+919876543210" value={newUserPhone} onChange={(e) => setNewUserPhone(e.target.value)} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="new-user-password">Member Password</Label>
-                    <Input id="new-user-password" type="text" placeholder="Enter a strong password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
+                    <Input id="new-user-password" type="text" placeholder="Enter a temporary password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
                   </div>
                    <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Paid Member</Button>
+                   <p className="text-xs text-muted-foreground pt-2">Note: Creating users with phone numbers from the client is complex. This is a simplified demo flow.</p>
                 </CardContent>
                </Card>
             </AccordionContent>

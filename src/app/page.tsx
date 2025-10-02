@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,10 +10,9 @@ import { Label } from '@/components/ui/label';
 import { BookOpenCheck, Shield, User as UserIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth, useUser, useFirestore } from '@/firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, RecaptchaVerifier, signInWithPhoneNumber, ConfirmationResult } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
-import { updateProfile } from 'firebase/auth';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 
 const ADMIN_EMAIL = 'admin@boardprep.pro';
 
@@ -23,13 +23,17 @@ export default function LoginPage() {
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   
-  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [otp, setOtp] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [role, setRole] = useState<'member' | 'admin'>('member');
-  const [name, setName] = useState('');
+  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
+  const [otpSent, setOtpSent] = useState(false);
+  
+  const recaptchaContainerRef = useRef<HTMLDivElement>(null);
+  const recaptchaVerifierRef = useRef<RecaptchaVerifier | null>(null);
 
-  // Redirect if user is already logged in
   useEffect(() => {
     if (!isUserLoading && user) {
         if (user.email === ADMIN_EMAIL) {
@@ -40,72 +44,89 @@ export default function LoginPage() {
     }
   }, [user, isUserLoading, router]);
 
-  const handleLogin = async () => {
-    setError('');
-    let loginEmail = email;
+  useEffect(() => {
+    if (role === 'member' && auth && recaptchaContainerRef.current && !recaptchaVerifierRef.current) {
+        recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
+            'size': 'invisible',
+            'callback': (response: any) => {
+              // reCAPTCHA solved, allow signInWithPhoneNumber.
+            }
+        });
+    }
+  }, [auth, role]);
 
-    if (role === 'admin') {
-      loginEmail = ADMIN_EMAIL;
-      if (!password) {
-        setError('Please enter the admin password.');
-        return;
-      }
-    } else { // role === 'member'
-      if (!email) {
-        setError('Please enter an email.');
-        return;
-      }
-      if (!password) {
-        setError('Please enter a password.');
-        return;
-      }
-      if (!name.trim()) {
-        setError('Please enter your name.');
-        return;
-      }
+
+  const handleAdminLogin = async () => {
+    setError('');
+    if (!password) {
+      setError('Please enter the admin password.');
+      return;
     }
     
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, loginEmail, password);
-      const loggedInUser = userCredential.user;
-
-      if (loggedInUser.email !== ADMIN_EMAIL) {
-        const userDocRef = doc(firestore, 'users', loggedInUser.uid);
-        const userDoc = await getDoc(userDocRef);
-
-        if (!userDoc.exists() || !userDoc.data()?.hasPaid) {
-          await auth.signOut();
-          setError('Login failed. Please contact admin for payment confirmation.');
-          toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
-          return;
-        }
-      }
-
-      toast({
-        title: "Login Successful!",
-        description: "Redirecting...",
-      });
-      // Redirect will be handled by the useEffect hook
-
+      await signInWithEmailAndPassword(auth, ADMIN_EMAIL, password);
+      toast({ title: "Admin Login Successful!", description: "Redirecting..." });
     } catch (e: any) {
-        if (e.code === 'auth/user-not-found' && role === 'member') {
-          // User doesn't exist, so we prevent them from signing up here.
-          // They must be created by an admin.
-          setError('Account not found. Please contact an administrator to create an account.');
-          toast({ variant: 'destructive', title: 'Sign Up Failed', description: 'Please ask an admin to create an account for you.' });
-        } else if (e.code === 'auth/wrong-password' || e.code === 'auth/invalid-credential') {
-            setError('Incorrect email or password. Please try again.');
-            toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect email or password.'});
-        } else {
-             setError(e.message);
-             toast({ variant: 'destructive', title: 'Login Failed', description: e.message });
-        }
+      setError('Incorrect admin password.');
+      toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect password.' });
     }
   };
-  
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      handleLogin();
+
+  const handlePhoneLogin = async () => {
+    setError('');
+    if (!phone.startsWith('+')) {
+      setError('Phone number must include country code (e.g., +91).');
+      return;
+    }
+    
+    const verifier = recaptchaVerifierRef.current;
+    if (!verifier) {
+      setError('Recaptcha not initialized.');
+      return;
+    }
+
+    try {
+      const result = await signInWithPhoneNumber(auth, phone, verifier);
+      setConfirmationResult(result);
+      setOtpSent(true);
+      toast({ title: "OTP Sent!", description: `An OTP has been sent to ${phone}` });
+    } catch (e: any) {
+      console.error(e);
+      setError('Failed to send OTP. Please check the phone number or try again.');
+      toast({ variant: 'destructive', title: 'OTP Error', description: 'Could not send OTP.' });
+    }
+  };
+
+  const handleOtpConfirm = async () => {
+    setError('');
+    if (!otp || otp.length !== 6) {
+      setError('Please enter a valid 6-digit OTP.');
+      return;
+    }
+    if (!confirmationResult) {
+      setError('Something went wrong. Please try sending the OTP again.');
+      return;
+    }
+
+    try {
+      const result = await confirmationResult.confirm(otp);
+      const loggedInUser = result.user;
+
+      const userDocRef = doc(firestore, 'users', loggedInUser.uid);
+      const userDoc = await getDoc(userDocRef);
+
+      if (!userDoc.exists() || !userDoc.data()?.hasPaid) {
+        await auth.signOut();
+        setError('Login failed. Please contact admin for payment confirmation.');
+        toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
+        return;
+      }
+
+      toast({ title: "Login Successful!", description: "Redirecting..." });
+    } catch (e: any) {
+      console.error(e);
+      setError('Invalid OTP or login failed.');
+      toast({ variant: 'destructive', title: 'Login Failed', description: 'The OTP is incorrect.' });
     }
   };
 
@@ -135,8 +156,9 @@ export default function LoginPage() {
               setRole(value as 'member' | 'admin');
               setError('');
               setPassword('');
-              setEmail('');
-              setName('');
+              setPhone('');
+              setOtp('');
+              setOtpSent(false);
             }}>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="member"><UserIcon className="mr-2 h-4 w-4" /> Member</TabsTrigger>
@@ -144,39 +166,30 @@ export default function LoginPage() {
               </TabsList>
               
               <TabsContent value="member" className="pt-6 space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name (for display)</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email-member">Email</Label>
-                  <Input
-                    id="email-member"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="name@example.com"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="password-member">Password</Label>
-                  <Input
-                    id="password-member"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Enter your password"
-                  />
-                </div>
+                {!otpSent ? (
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      placeholder="+919876543210"
+                    />
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    <Label htmlFor="otp">OTP</Label>
+                    <Input
+                      id="otp"
+                      type="text"
+                      value={otp}
+                      onChange={(e) => setOtp(e.target.value)}
+                      placeholder="Enter the 6-digit OTP"
+                      maxLength={6}
+                    />
+                  </div>
+                )}
                  <p className="text-xs text-center text-muted-foreground pt-2">
                   An admin must create your account before you can log in.
                 </p>
@@ -200,18 +213,22 @@ export default function LoginPage() {
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    onKeyPress={handleKeyPress}
                     placeholder="Enter admin password"
                   />
                 </div>
               </TabsContent>
             </Tabs>
+            <div ref={recaptchaContainerRef}></div>
             {error && <p className="text-sm text-center text-destructive pt-4">{error}</p>}
           </CardContent>
           <CardFooter>
-            <Button onClick={handleLogin} className="w-full text-lg">
-              Login
-            </Button>
+            {role === 'admin' ? (
+              <Button onClick={handleAdminLogin} className="w-full text-lg">Login</Button>
+            ) : !otpSent ? (
+              <Button onClick={handlePhoneLogin} className="w-full text-lg">Send OTP</Button>
+            ) : (
+              <Button onClick={handleOtpConfirm} className="w-full text-lg">Confirm OTP & Login</Button>
+            )}
           </CardFooter>
         </Card>
       </div>
