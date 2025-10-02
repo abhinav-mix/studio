@@ -1718,6 +1718,266 @@
       "correctAnswerIndex": 2,
       "explanation": "A molecule of nitrogen (N2) is formed by the sharing of three pairs of electrons between two nitrogen atoms. Therefore, it has a triple covalent bond.",
       "category": "chemistry"
+    },
+    {
+      "id": "chem-61",
+      "questionText": "What is the IUPAC name of the first member of the homologous series of ketones?",
+      "options": [
+        "Methanone",
+        "Ethanone",
+        "Propanone",
+        "Butanone"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A ketone must have the carbonyl group (>C=O) bonded to two carbon atoms. Therefore, the simplest ketone must have at least three carbon atoms. The IUPAC name is Propanone (common name: acetone).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-62",
+      "questionText": "The vertical columns in the periodic table are called:",
+      "options": [
+        "Periods",
+        "Groups",
+        "Series",
+        "Rows"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The vertical columns in the periodic table are known as groups. Elements in the same group have similar chemical properties because they have the same number of valence electrons.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-63",
+      "questionText": "Which of the following metals is found in its native state in nature?",
+      "options": [
+        "Copper (Cu)",
+        "Gold (Au)",
+        "Zinc (Zn)",
+        "Iron (Fe)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Less reactive metals like gold, silver, and platinum are found in their native or free state because they do not readily react with other elements.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-64",
+      "questionText": "The chemical formula of ethanoic acid is:",
+      "options": [
+        "HCOOH",
+        "CH3COOH",
+        "C2H5COOH",
+        "CH3OH"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Ethanoic acid, commonly known as acetic acid, has two carbon atoms. Its chemical formula is CH3COOH.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-65",
+      "questionText": "The reaction 2H2O(l) --(electrolysis)--> 2H2(g) + O2(g) is a:",
+      "options": [
+        "Combination reaction",
+        "Decomposition reaction",
+        "Displacement reaction",
+        "Redox reaction"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "This reaction shows a single compound (water) breaking down into simpler substances (hydrogen and oxygen) upon the passage of electricity. This is a type of decomposition reaction (specifically, electrolytic decomposition).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-66",
+      "questionText": "Tooth enamel is made up of:",
+      "options": [
+        "Calcium phosphate",
+        "Calcium carbonate",
+        "Calcium oxide",
+        "Potassium"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Tooth enamel, the hardest substance in the human body, is primarily composed of calcium phosphate, a crystalline form known as hydroxyapatite.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-67",
+      "questionText": "Which of the following is a saturated hydrocarbon?",
+      "options": [
+        "Ethene (C2H4)",
+        "Ethyne (C2H2)",
+        "Ethane (C2H6)",
+        "Benzene (C6H6)"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Saturated hydrocarbons (alkanes) contain only carbon-carbon single bonds. Ethane (C2H6) fits this description. Ethene and Ethyne are unsaturated hydrocarbons.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-68",
+      "questionText": "An element has atomic number 19. What is its group and period?",
+      "options": [
+        "Group 1, Period 4",
+        "Group 19, Period 4",
+        "Group 4, Period 1",
+        "Group 2, Period 4"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The element with atomic number 19 is Potassium (K). Its electronic configuration is 2, 8, 8, 1. Since it has 4 shells, it is in Period 4. With 1 valence electron, it is in Group 1.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-69",
+      "questionText": "Bronze is an alloy of:",
+      "options": [
+        "Copper and Tin",
+        "Copper and Zinc",
+        "Lead and Tin",
+        "Aluminum and Copper"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Bronze is an alloy traditionally composed of copper and tin. Brass is an alloy of copper and zinc.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-70",
+      "questionText": "The reaction in which there is an exchange of ions between the reactants is called:",
+      "options": [
+        "Combination reaction",
+        "Decomposition reaction",
+        "Displacement reaction",
+        "Double displacement reaction"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A double displacement reaction is a type of reaction where two reactant compounds exchange ions to form two new product compounds with the same ions.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-71",
+      "questionText": "Which acid is present in an ant sting?",
+      "options": [
+        "Acetic acid",
+        "Citric acid",
+        "Formic acid (Methanoic acid)",
+        "Lactic acid"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Ant stings contain formic acid (IUPAC name: methanoic acid), which causes the burning pain and irritation.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-72",
+      "questionText": "Which of the following elements has the largest atomic size?",
+      "options": [
+        "Na",
+        "Mg",
+        "K",
+        "Ca"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Atomic size decreases across a period and increases down a group. K and Ca are in a lower period than Na and Mg, so they are larger. Between K and Ca, K is to the left, so it is larger. Therefore, Potassium (K) has the largest atomic size.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-73",
+      "questionText": "The ability of metals to be drawn into thin wires is known as:",
+      "options": [
+        "Ductility",
+        "Malleability",
+        "Sonority",
+        "Conductivity"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Ductility is the property of a material that allows it to be stretched into a wire. Malleability is the ability to be beaten into sheets.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-74",
+      "questionText": "The number of periods in the modern periodic table is:",
+      "options": [
+        "18",
+        "8",
+        "7",
+        "10"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The modern periodic table has 7 horizontal rows, which are known as periods.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-75",
+      "questionText": "Butane is a four-carbon compound with the functional group:",
+      "options": [
+        "Carboxylic acid",
+        "Aldehyde",
+        "Ketone",
+        "None of the above"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Butane (C4H10) is an alkane. It does not have a functional group like an aldehyde, ketone, or carboxylic acid. It is a simple saturated hydrocarbon.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-76",
+      "questionText": "The green coating on copper vessels is due to the formation of:",
+      "options": [
+        "Copper oxide",
+        "Copper sulfide",
+        "Basic copper carbonate",
+        "Copper nitrate"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Copper reacts with moist carbon dioxide in the air to form basic copper carbonate (CuCO3·Cu(OH)2), which is green in color. This is a form of corrosion.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-77",
+      "questionText": "In the reaction CuO + H2 -> Cu + H2O, which substance is oxidized?",
+      "options": [
+        "CuO",
+        "H2",
+        "Cu",
+        "H2O"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Oxidation is the gain of oxygen or loss of hydrogen. In this reaction, Hydrogen (H2) gains oxygen to form water (H2O), so H2 is oxidized. CuO is reduced.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-78",
+      "questionText": "What is the molecular formula of benzene?",
+      "options": [
+        "C6H12",
+        "C6H10",
+        "C6H6",
+        "C2H2"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Benzene is an aromatic hydrocarbon with the molecular formula C6H6. Its structure consists of a ring of six carbon atoms with alternating single and double bonds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-79",
+      "questionText": "Which of the following is not a physical property of metals?",
+      "options": [
+        "Lustre",
+        "Malleability",
+        "High density",
+        "Low melting point"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Metals generally have high melting and boiling points due to strong metallic bonds. Low melting point is typically a property of non-metals (with some exceptions).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-80",
+      "questionText": "The law of octaves was proposed by:",
+      "options": [
+        "Mendeleev",
+        "Newlands",
+        "Dobereiner",
+        "Moseley"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "John Newlands proposed the Law of Octaves in 1864. He arranged the elements in order of increasing atomic weight and noted that every eighth element had properties similar to the first.",
+      "category": "chemistry"
     }
   ]
 }
