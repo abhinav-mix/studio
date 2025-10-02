@@ -10,34 +10,26 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
-const AUTH_KEY = 'boardprep_session';
+import { useUser } from '@/firebase';
 
 export default function HomePage() {
   const router = useRouter();
+  const { user, isUserLoading } = useUser();
 
   useEffect(() => {
-    try {
-      const session = localStorage.getItem(AUTH_KEY);
-      if (!session) {
-        router.push('/');
-        return;
-      }
-      const { authenticated, role } = JSON.parse(session);
-      if (!authenticated) {
-        router.push('/');
-      } else if (role === 'admin') {
-        router.push('/admin');
-      }
-    } catch (e) {
+    if (!isUserLoading && !user) {
       router.push('/');
     }
-  }, [router]);
+  }, [user, isUserLoading, router]);
 
   const categoryImages = PlaceHolderImages.reduce((acc, img) => {
     acc[img.id] = img;
     return acc;
   }, {} as Record<string, (typeof PlaceHolderImages)[0]>);
+  
+  if (isUserLoading || !user) {
+      return <div className="flex items-center justify-center min-h-screen">Loading...</div>
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background">

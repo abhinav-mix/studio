@@ -5,29 +5,19 @@ import { useRouter } from 'next/navigation';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { BarChart3, LogOut, Shield, User } from 'lucide-react';
-import { useEffect, useState } from 'react';
-
-const AUTH_KEY = 'boardprep_session';
+import { useAuth, useUser } from '@/firebase';
 
 export default function Header() {
   const router = useRouter();
-  const [session, setSession] = useState<{role: string, name: string} | null>(null);
+  const auth = useAuth();
+  const { user } = useUser();
 
-  useEffect(() => {
-    try {
-      const storedSession = localStorage.getItem(AUTH_KEY);
-      if (storedSession) {
-        setSession(JSON.parse(storedSession));
-      }
-    } catch (e) {
-      // ignore
-    }
-  }, []);
-
-  const handleLogout = () => {
-    localStorage.removeItem(AUTH_KEY);
+  const handleLogout = async () => {
+    await auth.signOut();
     router.push('/');
   };
+
+  const isAdmin = user && user.email === 'admin@boardprep.pro';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,14 +26,14 @@ export default function Header() {
           <Logo />
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           {session?.name && (
+           {user?.displayName && (
              <div className="flex items-center gap-2 text-sm font-medium">
                 <User className="h-4 w-4"/>
-                <span>{session.name}</span>
+                <span>{user.displayName}</span>
              </div>
            )}
           <nav className="flex items-center">
-            {session?.role === 'admin' && (
+            {isAdmin && (
               <Button asChild variant="ghost">
                 <Link href="/admin">
                   <Shield className="h-5 w-5" />

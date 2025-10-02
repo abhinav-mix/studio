@@ -15,8 +15,7 @@ import allQuestionsData from '@/lib/all-questions.json';
 import { PlusCircle, Trash2, LogOut, Home } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-
-const AUTH_KEY = 'boardprep_session';
+import { useAuth, useUser } from '@/firebase';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
 async function updateQuestions(questions: Question[]) {
@@ -29,29 +28,16 @@ async function updateQuestions(questions: Question[]) {
 
 export default function AdminPage() {
   const router = useRouter();
+  const auth = useAuth();
+  const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
-  const [isClient, setIsClient] = useState(false);
-  const [adminName, setAdminName] = useState('Admin');
-
+  
   useEffect(() => {
-    setIsClient(true);
-    try {
-      const session = localStorage.getItem(AUTH_KEY);
-      if (!session) {
-        router.push('/');
-        return;
-      }
-      const { authenticated, role, name } = JSON.parse(session);
-      if (!authenticated || role !== 'admin') {
-        router.push('/');
-      } else {
-        setAdminName(name);
-      }
-    } catch (e) {
+    if (!isUserLoading && (!user || user.email !== 'admin@boardprep.pro')) {
       router.push('/');
     }
-  }, [router]);
+  }, [user, isUserLoading, router]);
 
   const handleAddQuestion = (category: string) => {
     const newQuestion: Question = {
@@ -102,12 +88,12 @@ export default function AdminPage() {
     }
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem(AUTH_KEY);
+  const handleLogout = async () => {
+    await auth.signOut();
     router.push('/');
   };
   
-  if (!isClient) {
+  if (isUserLoading || !user) {
     return <div className="flex items-center justify-center min-h-screen">Loading Admin Panel...</div>;
   }
 
@@ -116,7 +102,7 @@ export default function AdminPage() {
       <header className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-3xl font-bold font-headline">Admin Panel</h1>
-          <p className="text-muted-foreground">Welcome, {adminName}</p>
+          <p className="text-muted-foreground">Welcome, {user.displayName || 'Admin'}</p>
         </div>
         <div>
            <Button variant="ghost" asChild className="mr-4">

@@ -1,66 +1,102 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { KeyRound, Shield, User } from 'lucide-react';
+import { KeyRound, Shield, User as UserIcon, Mail } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useAuth, useUser } from '@/firebase';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { useToast } from '@/hooks/use-toast';
 
-const MEMBER_PASSWORD = 'abhinavashishclass11';
+
 const ADMIN_PASSWORD = 'abhiabhiabhiabhi';
-const AUTH_KEY = 'boardprep_session';
+const ADMIN_EMAIL = 'admin@boardprep.pro';
+
+// This is a simplified logic. In a real app, you'd have a proper user management system.
+const MEMBER_EMAILS = ['testuser@gmail.com'];
+const MEMBER_PASSWORD = 'abhinavashishclass11';
+
 
 export default function LoginPage() {
   const router = useRouter();
-  const [name, setName] = useState('');
+  const auth = useAuth();
+  const { user, isUserLoading } = useUser();
+  const { toast } = useToast();
+  
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [role, setRole] = useState<'member' | 'admin'>('member');
+  const [name, setName] = useState('');
 
-  const handleLogin = () => {
-    setError('');
-    let isAuthenticated = false;
-    const adminName = 'Abhinav Yadav';
-
-    if (role === 'member') {
-      if (!name.trim()) {
-        setError('Please enter your name.');
-        return;
-      }
-      if (password === MEMBER_PASSWORD) {
-        isAuthenticated = true;
-      }
-    } else if (role === 'admin') {
-      if (password === ADMIN_PASSWORD) {
-        isAuthenticated = true;
-      }
-    }
-
-    if (isAuthenticated) {
-      try {
-        const session = { authenticated: true, role, name: role === 'member' ? name : adminName };
-        localStorage.setItem(AUTH_KEY, JSON.stringify(session));
-        if (role === 'admin') {
-          router.push('/admin');
+  // Redirect if user is already logged in
+  useEffect(() => {
+    if (!isUserLoading && user) {
+        // Simple role check, can be improved with custom claims
+        if (user.email === ADMIN_EMAIL) {
+             router.push('/admin');
         } else {
-          router.push('/home');
+             router.push('/home');
         }
-      } catch (e) {
-        setError('Could not save session. Please enable cookies/localStorage.');
-      }
-    } else {
-      setError('Incorrect password. Please try again.');
+    }
+  }, [user, isUserLoading, router]);
+
+
+  const handleLogin = async () => {
+    setError('');
+    if (!email) {
+      setError('Please enter an email.');
+      return;
+    }
+    if (role === 'member' && !name.trim()) {
+      setError('Please enter your name.');
+      return;
+    }
+    
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        // On successful login, the useEffect above will trigger the redirect.
+         toast({
+            title: "Login Successful!",
+            description: "Redirecting...",
+        });
+
+    } catch (e: any) {
+        if (e.code === 'auth/user-not-found' && role === 'member') {
+             try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                toast({
+                    title: "Account Created!",
+                    description: "You've been signed up and logged in.",
+                });
+             } catch (signUpError: any) {
+                setError(signUpError.message);
+                toast({ variant: 'destructive', title: 'Sign Up Failed', description: signUpError.message });
+             }
+        } else if (e.code === 'auth/wrong-password') {
+            setError('Incorrect password. Please try again.');
+            toast({ variant: 'destructive', title: 'Login Failed', description: 'Incorrect password.'});
+        } else {
+             setError(e.message);
+             toast({ variant: 'destructive', title: 'Login Failed', description: e.message });
+        }
     }
   };
-
+  
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       handleLogin();
     }
   };
+
+  if (isUserLoading || (!isUserLoading && user)) {
+      return <div className="flex items-center justify-center min-h-screen">Loading...</div>
+  }
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-background">
@@ -77,12 +113,14 @@ export default function LoginPage() {
             setRole(value as 'member' | 'admin');
             setError('');
             setPassword('');
+            setEmail('');
             setName('');
           }}>
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="member"><User className="mr-2 h-4 w-4" /> Member</TabsTrigger>
+              <TabsTrigger value="member"><UserIcon className="mr-2 h-4 w-4" /> Member</TabsTrigger>
               <TabsTrigger value="admin"><Shield className="mr-2 h-4 w-4" /> Admin</TabsTrigger>
             </TabsList>
+            
             <TabsContent value="member" className="pt-6 space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -93,6 +131,17 @@ export default function LoginPage() {
                   onChange={(e) => setName(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Enter your name"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email-member">Email</Label>
+                <Input
+                  id="email-member"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Enter your email"
                 />
               </div>
               <div className="space-y-2">
@@ -107,15 +156,17 @@ export default function LoginPage() {
                 />
               </div>
             </TabsContent>
+
             <TabsContent value="admin" className="pt-6 space-y-4">
                <div className="space-y-2">
-                <Label htmlFor="name-admin">Name</Label>
+                <Label htmlFor="email-admin">Email</Label>
                 <Input
-                  id="name-admin"
-                  type="text"
-                  value="Abhinav Yadav"
-                  readOnly
-                  className="bg-muted"
+                  id="email-admin"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Enter admin email"
                 />
               </div>
                <div className="space-y-2">

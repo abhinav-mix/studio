@@ -3,42 +3,29 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import type { QuizAttempt } from '@/lib/types';
+import { useUser } from '@/firebase';
 
 const STORAGE_KEY_PREFIX = 'boardPrepPro_';
-const AUTH_KEY = 'boardprep_session';
 const MAX_ATTEMPTS = 10;
 
 // This custom hook centralizes all localStorage logic.
 // It ensures that we only interact with localStorage on the client side.
 export function useQuizStorage() {
   const [isClient, setIsClient] = useState(false);
-  const [currentUserName, setCurrentUserName] = useState<string | null>(null);
+  const { user } = useUser(); // Get user from Firebase
 
   useEffect(() => {
     setIsClient(true);
-    try {
-      const session = window.localStorage.getItem(AUTH_KEY);
-      if (session) {
-        const { name, role } = JSON.parse(session);
-        // Only store progress for members, not admin
-        if (role === 'member') {
-          setCurrentUserName(name);
-        }
-      }
-    } catch (error) {
-      console.error('Error reading session from localStorage', error);
-    }
   }, []);
 
   const getUserCategoryKey = useCallback((category: string) => {
-    if (!currentUserName) return null;
-    // Sanitize user name for key: replace spaces and make lowercase
-    const sanitizedName = currentUserName.trim().toLowerCase().replace(/\s+/g, '_');
-    return `${STORAGE_KEY_PREFIX}${sanitizedName}_${category}`;
-  }, [currentUserName]);
+    if (!user) return null;
+    // Use Firebase user's UID for a unique, stable key.
+    return `${STORAGE_KEY_PREFIX}${user.uid}_${category}`;
+  }, [user]);
 
   const getAttempts = useCallback((category: string): QuizAttempt[] => {
-    if (!isClient || !currentUserName) return [];
+    if (!isClient || !user) return [];
     const key = getUserCategoryKey(category);
     if (!key) return [];
     try {
@@ -48,11 +35,11 @@ export function useQuizStorage() {
       console.error('Error reading from localStorage', error);
       return [];
     }
-  }, [isClient, currentUserName, getUserCategoryKey]);
+  }, [isClient, user, getUserCategoryKey]);
 
   const addAttempt = useCallback(
     (category: string, attempt: Omit<QuizAttempt, 'date'>) => {
-      if (!isClient || !currentUserName) return;
+      if (!isClient || !user) return;
       const key = getUserCategoryKey(category);
       if (!key) return;
 
@@ -65,7 +52,7 @@ export function useQuizStorage() {
         console.error('Error writing to localStorage', error);
       }
     },
-    [isClient, currentUserName, getAttempts, getUserCategoryKey]
+    [isClient, user, getAttempts, getUserCategoryKey]
   );
   
   const getLatestAttempt = useCallback((category: string): QuizAttempt | null => {
@@ -74,9 +61,8 @@ export function useQuizStorage() {
   }, [getAttempts]);
 
   const getAllAttemptsForCurrentUser = useCallback((): { category: string, attempts: QuizAttempt[] }[] => {
-    if (!isClient || !currentUserName) return [];
-    const sanitizedName = currentUserName.trim().toLowerCase().replace(/\s+/g, '_');
-    const userPrefix = `${STORAGE_KEY_PREFIX}${sanitizedName}_`;
+    if (!isClient || !user) return [];
+    const userPrefix = `${STORAGE_KEY_PREFIX}${user.uid}_`;
     
     try {
         const keys = Object.keys(window.localStorage).filter(key => key.startsWith(userPrefix));
@@ -90,7 +76,7 @@ export function useQuizStorage() {
         console.error('Error reading all attempts for user from localStorage', error);
         return [];
     }
-  }, [isClient, currentUserName]);
+  }, [isClient, user]);
 
   return { getAttempts, addAttempt, getLatestAttempt, getAllAttemptsForCurrentUser, isClient };
 }
