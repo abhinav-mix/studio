@@ -184,15 +184,15 @@ export default function QuizClient({ category, questions }: { category: QuizCate
                     <AlertDialogHeader>
                       <AlertDialogTitle>Your Progress So Far</AlertDialogTitle>
                       <AlertDialogDescription>
-                        <div>
-                          You have attempted {currentQuestionIndex + 1} questions. Here's your summary:
-                          <ul className="list-disc pl-5 mt-4 space-y-2">
+                        You have attempted {currentQuestionIndex + 1} questions. Here&apos;s your summary:
+                      </AlertDialogDescription>
+                      <div className="text-sm text-muted-foreground">
+                        <ul className="list-disc pl-5 mt-2 space-y-2">
                             <li className="text-green-600">Correct Answers: {progressStats.correct}</li>
                             <li className="text-red-600">Incorrect Answers: {progressStats.incorrect}</li>
                             {(progressStats.unanswered > 0) && <li className="text-yellow-600">Unanswered: {progressStats.unanswered}</li>}
-                          </ul>
-                        </div>
-                      </AlertDialogDescription>
+                        </ul>
+                      </div>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogAction>Continue</AlertDialogAction>
