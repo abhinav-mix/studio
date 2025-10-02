@@ -980,59 +980,6 @@
       "category": "physics"
     },
     {
-      "id": "phy-121",
-      "questionText": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. What is the focal length of the lens?",
-      "options": ["-18.18 cm", "+18.18 cm", "-5.5 cm", "+5.5 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "Power P = 1/f. So, f = 1/P = 1/(-5.5) m ≈ -0.1818 m. In cm, f = -0.1818 * 100 = -18.18 cm.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-122",
-      "questionText": "A convex lens forms a real and inverted image of a needle at a distance of 50 cm from it. Where is the needle placed in front of the convex lens if the image is equal to the size of the object?",
-      "options": ["25 cm", "50 cm", "100 cm", "0 cm"],
-      "correctAnswerIndex": 1,
-      "explanation": "A convex lens forms a real, inverted image of the same size as the object when the object is placed at 2F (twice the focal length). In this case, the image is also formed at 2F on the other side. Since image distance v = 50 cm, we have 2f = 50 cm. Therefore, the object distance u is also 50 cm.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-123",
-      "questionText": "What is the far point of a normal human eye?",
-      "options": ["25 cm", "100 cm", "Infinity", "0 cm"],
-      "correctAnswerIndex": 2,
-      "explanation": "The far point of the eye is the maximum distance at which the eye can see objects clearly. For a normal human eye, the far point is at infinity.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-124",
-      "questionText": "Which type of reaction produces energy in the sun?",
-      "options": ["Nuclear Fission", "Chemical Reaction", "Nuclear Fusion", "Combustion"],
-      "correctAnswerIndex": 2,
-      "explanation": "The energy of the sun is produced by nuclear fusion. In this process, light nuclei (like hydrogen) fuse together to form a heavier nucleus (like helium), releasing an enormous amount of energy.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-125",
-      "questionText": "Three resistors of 100 Ω, 50 Ω, and 500 Ω are connected in parallel in a circuit. What is the equivalent resistance?",
-      "options": [
-        "650 Ω",
-        "31.25 Ω",
-        "0.034 Ω",
-        "100 Ω"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "For parallel connection, 1/R_p = 1/R1 + 1/R2 + 1/R3 = 1/100 + 1/50 + 1/500. To add these, find a common denominator, which is 500. 1/R_p = (5/500) + (10/500) + (1/500) = 16/500. Therefore, R_p = 500 / 16 = 31.25 Ω.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-126",
-      "questionText": "The refractive indices of four media A, B, C and D are 1.44, 1.52, 1.65 and 1.36 respectively. When light travelling in air enters these media at equal angles, in which medium will the velocity of light be minimum?",
-      "options": ["A", "B", "C", "D"],
-      "correctAnswerIndex": 2,
-      "explanation": "The speed of light in a medium is inversely proportional to its refractive index (v = c/n). The medium with the highest refractive index will have the minimum speed of light. Here, medium C has the highest refractive index (1.65).",
-      "category": "physics"
-    },
-    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
