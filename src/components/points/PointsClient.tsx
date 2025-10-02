@@ -2,12 +2,13 @@
 'use client';
 
 import { useUser, useFirestore, useCollection, useMemoFirebase } from '@/firebase';
-import { collection, query, orderBy } from 'firebase/firestore';
+import { collection, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import type { PointEntry } from '@/lib/types';
 import { format } from 'date-fns';
+import SpinWheel from './SpinWheel'; // Import the new component
 
 function formatTimestamp(timestamp: { seconds: number; nanoseconds: number; } | Date): string {
   let date: Date;
@@ -38,6 +39,28 @@ export default function PointsClient() {
     return pointsHistory.reduce((sum, entry) => sum + entry.pointsAdded, 0);
   }, [pointsHistory]);
 
+  const handleSpinResult = async (prizePoints: number) => {
+    if (!user) return;
+    const historyRef = collection(firestore, 'users', user.uid, 'pointHistory');
+
+    // Deduct 500 points for spinning
+    await addDoc(historyRef, {
+        pointsAdded: -500,
+        reason: 'Spin Wheel Cost',
+        timestamp: serverTimestamp(),
+    });
+
+    if (prizePoints > 0) {
+        // Add prize points
+        await addDoc(historyRef, {
+            pointsAdded: prizePoints,
+            reason: `Spin Wheel Prize: ${prizePoints} points`,
+            timestamp: serverTimestamp(),
+        });
+    }
+  };
+
+
   if (isUserLoading || isPointsLoading) {
     return <div className="container py-12 text-center">Loading Points History...</div>;
   }
@@ -48,20 +71,28 @@ export default function PointsClient() {
 
   return (
     <div className="container py-8 md:py-12">
-      <Card>
+       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">My Points</CardTitle>
           <CardDescription>You have earned a total of <span className="font-bold text-primary">{totalPoints}</span> points.</CardDescription>
         </CardHeader>
         <CardContent>
-          <h3 className="text-xl font-bold mb-4">Points History</h3>
+            <SpinWheel currentPoints={totalPoints} onSpinComplete={handleSpinResult} />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <h3 className="text-xl font-bold">Points History</h3>
+        </CardHeader>
+        <CardContent>
           <div className="border rounded-lg">
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>Date & Time</TableHead>
                   <TableHead>Reason</TableHead>
-                  <TableHead className="text-right">Points Added</TableHead>
+                  <TableHead className="text-right">Points</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -70,7 +101,9 @@ export default function PointsClient() {
                     <TableRow key={entry.id}>
                       <TableCell>{formatTimestamp(entry.timestamp)}</TableCell>
                       <TableCell>{entry.reason}</TableCell>
-                      <TableCell className="text-right font-medium text-green-500">+{entry.pointsAdded}</TableCell>
+                      <TableCell className={`text-right font-medium ${entry.pointsAdded >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                        {entry.pointsAdded > 0 ? `+${entry.pointsAdded}` : entry.pointsAdded}
+                      </TableCell>
                     </TableRow>
                   ))
                 ) : (
