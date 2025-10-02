@@ -12,10 +12,11 @@ import { useToast } from '@/hooks/use-toast';
 import { quizCategories } from '@/lib/questions';
 import type { Question } from '@/lib/types';
 import allQuestionsData from '@/lib/all-questions.json';
-import { PlusCircle, Trash2, LogOut, Home } from 'lucide-react';
+import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth, useUser } from '@/firebase';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
 async function updateQuestions(questions: Question[]) {
@@ -32,12 +33,61 @@ export default function AdminPage() {
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
+  const [newUserEmail, setNewUserEmail] = useState('');
+  const [newUserPassword, setNewUserPassword] = useState('');
   
   useEffect(() => {
     if (!isUserLoading && (!user || user.email !== 'admin@boardprep.pro')) {
       router.push('/');
     }
   }, [user, isUserLoading, router]);
+
+  const handleAddUser = async () => {
+    if (!newUserEmail || !newUserPassword) {
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: 'Please enter both email and password for the new user.',
+      });
+      return;
+    }
+    
+    // This is a workaround for client-side user creation by an admin.
+    // In a real production app, this should be handled by a secure backend function.
+    const currentAdminUser = user;
+    if (!currentAdminUser) {
+        toast({ variant: 'destructive', title: 'Error', description: 'Admin user not found.' });
+        return;
+    }
+
+    try {
+      // Create the new user. This will sign the admin out and sign the new user in.
+      await createUserWithEmailAndPassword(auth, newUserEmail, newUserPassword);
+      
+      toast({
+        title: 'User Created Successfully!',
+        description: `User ${newUserEmail} has been created. You can share the credentials.`,
+      });
+
+      setNewUserEmail('');
+      setNewUserPassword('');
+
+    } catch (error: any) {
+      toast({
+        variant: 'destructive',
+        title: 'Failed to Create User',
+        description: error.message,
+      });
+    } finally {
+        // IMPORTANT: Sign the admin back in.
+        // We need to re-authenticate the admin as createUser... signs them out.
+        if (auth.currentUser?.email !== currentAdminUser.email) {
+            // Use a stored password or prompt for it securely. For this demo, we use a constant.
+             await signInWithEmailAndPassword(auth, "admin@boardprep.pro", "abhiabhiabhiabhi");
+        }
+    }
+  };
+
 
   const handleAddQuestion = (category: string) => {
     const newQuestion: Question = {
@@ -116,7 +166,34 @@ export default function AdminPage() {
         <Button onClick={handleSaveChanges} variant="default">Save All Changes</Button>
       </div>
 
-      <Accordion type="multiple" className="w-full space-y-4">
+      <Accordion type="multiple" defaultValue={['user-management']} className="w-full space-y-4">
+        <AccordionItem value="user-management" className="border-none">
+          <Card className="bg-secondary/30">
+            <AccordionTrigger className="p-6 text-xl font-headline hover:no-underline">
+              <div className="flex justify-between w-full items-center">
+                <span>User Management</span>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-6">
+               <Card className="bg-background/80">
+                <CardHeader>
+                  <CardTitle>Create New Member</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="new-user-email">Member Email</Label>
+                    <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="new-user-password">Member Password</Label>
+                    <Input id="new-user-password" type="text" placeholder="Enter a strong password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
+                  </div>
+                   <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Member</Button>
+                </CardContent>
+               </Card>
+            </AccordionContent>
+          </Card>
+        </AccordionItem>
         {quizCategories.map(category => {
           const categoryQuestions = questions.filter(q => q.category === category.slug);
           return (
@@ -217,3 +294,5 @@ export default function AdminPage() {
     </div>
   );
 }
+
+    
