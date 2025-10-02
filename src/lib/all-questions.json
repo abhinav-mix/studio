@@ -109,6 +109,97 @@
       "category": "physics"
     },
     {
+      "id": "phy-12",
+      "questionText": "What is the lens formula?",
+      "options": [
+        "1/v - 1/u = 1/f",
+        "1/v + 1/u = 1/f",
+        "v - u = f",
+        "v + u = f"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The lens formula relates the focal length (f) of a lens to the object distance (u) and the image distance (v). The formula is 1/v - 1/u = 1/f.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-13",
+      "questionText": "Twinkling of stars is due to atmospheric __________.",
+      "options": [
+        "dispersion",
+        "reflection",
+        "refraction",
+        "scattering"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The twinkling of stars is due to the atmospheric refraction of starlight. The continuously changing atmosphere refracts the light from the stars by different amounts from one moment to the next.",
+      "category": "physics"
+    },
+     {
+      "id": "phy-14",
+      "questionText": "The human eye forms the image of an object at its __________.",
+      "options": [
+        "cornea",
+        "iris",
+        "pupil",
+        "retina"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The human eye has a convex lens that forms a real and inverted image of an object on the light-sensitive screen called the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-15",
+      "questionText": "The far point of a normal human eye is at __________.",
+      "options": [
+        "25 cm",
+        "100 cm",
+        "infinity",
+        "1 m"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The far point of a normal human eye is at infinity. This means a person with normal vision can see distant objects clearly. The near point is about 25 cm.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-16",
+      "questionText": "Ohm's law gives a relationship between:",
+      "options": [
+        "Current and resistance",
+        "Resistance and potential difference",
+        "Potential difference and current",
+        "All of the above"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Ohm's law states that the potential difference (V) across the ends of a given metallic wire in an electric circuit is directly proportional to the current (I) flowing through it, provided its temperature remains the same. V ∝ I or V = IR.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-17",
+      "questionText": "The commercial unit of electrical energy is:",
+      "options": [
+        "Joule",
+        "Watt-hour",
+        "Kilowatt-hour (kWh)",
+        "Volt-Ampere"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The commercial unit of electrical energy is the kilowatt-hour (kWh), commonly known as a 'unit'. 1 kWh = 3.6 × 10^6 joules.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-18",
+      "questionText": "Which of the following is a renewable source of energy?",
+      "options": [
+        "Coal",
+        "Petroleum",
+        "Natural Gas",
+        "Solar energy"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Solar energy is a renewable source of energy because it is derived from the sun, which is a virtually inexhaustible source. Coal, petroleum, and natural gas are fossil fuels and are non-renewable.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
