@@ -32,27 +32,33 @@ export default function LoginPage() {
   const [otpSent, setOtpSent] = useState(false);
   
   const recaptchaContainerRef = useRef<HTMLDivElement>(null);
+  // Store the verifier instance in a ref to persist across re-renders
+  const recaptchaVerifierRef = useRef<RecaptchaVerifier | null>(null);
 
   // This function sets up the reCAPTCHA verifier.
   const setupRecaptcha = () => {
     if (!auth || !recaptchaContainerRef.current) return;
     
     // Clear any existing verifier to prevent conflicts
-    if ((window as any).recaptchaVerifier) {
-      (window as any).recaptchaVerifier.clear();
+    if (recaptchaVerifierRef.current) {
+      recaptchaVerifierRef.current.clear();
     }
     
-    const verifier = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
+    // Create a new verifier and store it in the ref
+    recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
       'size': 'invisible',
       'callback': (response: any) => {
         // reCAPTCHA solved, allow signInWithPhoneNumber.
-        // This callback is usually used for auto-solving.
       },
       'expired-callback': () => {
         // Response expired. Ask user to solve reCAPTCHA again.
+        toast({
+          variant: 'destructive',
+          title: 'reCAPTCHA Expired',
+          description: 'Please try sending the OTP again.',
+        });
       }
     });
-    (window as any).recaptchaVerifier = verifier;
   };
 
   useEffect(() => {
@@ -66,13 +72,15 @@ export default function LoginPage() {
   }, [user, isUserLoading, router]);
 
   useEffect(() => {
-    // We set up reCAPTCHA as soon as the component loads and auth is available.
-    // This ensures it's ready whenever the user decides to log in.
-    if (auth) {
-      // The setup needs the container to be rendered.
-      // A small timeout ensures the DOM is ready.
-      const timeoutId = setTimeout(() => setupRecaptcha(), 100);
-      return () => clearTimeout(timeoutId);
+    // Setup reCAPTCHA when auth is ready and the container is rendered
+    if (auth && recaptchaContainerRef.current) {
+        // Delay slightly to ensure the container is fully available
+        const timeoutId = setTimeout(() => {
+            if (!recaptchaVerifierRef.current) {
+                setupRecaptcha();
+            }
+        }, 100);
+        return () => clearTimeout(timeoutId);
     }
   }, [auth, role]);
 
@@ -100,27 +108,32 @@ export default function LoginPage() {
       return;
     }
     
-    // Ensure verifier is set up if it's missing.
-    if (!(window as any).recaptchaVerifier) {
+    // Ensure verifier is set up. If not, try to set it up again.
+    if (!recaptchaVerifierRef.current) {
         setupRecaptcha();
+        if (!recaptchaVerifierRef.current) {
+             setError('Recaptcha not initialized. Please refresh the page and try again.');
+             return;
+        }
     }
-    const verifier = (window as any).recaptchaVerifier;
-
-    if (!verifier) {
-      setError('Recaptcha not initialized. Please try again in a moment.');
-      return;
-    }
+    
+    const verifier = recaptchaVerifierRef.current;
 
     try {
       const result = await signInWithPhoneNumber(auth, phone, verifier);
       setConfirmationResult(result);
       setOtpSent(true);
       toast({ title: "OTP Sent!", description: `An OTP has been sent to ${phone}` });
-    } catch (e: any)
-      {
+    } catch (e: any) {
       console.error(e);
-      setError('Failed to send OTP. Please check the phone number or try again.');
-      toast({ variant: 'destructive', title: 'OTP Error', description: 'Could not send OTP. You may need to refresh.' });
+      let userMessage = 'Failed to send OTP. Please check the phone number or try again.';
+      if (e.code === 'auth/invalid-phone-number') {
+        userMessage = 'The phone number is not valid.';
+      } else if (e.code === 'auth/too-many-requests') {
+        userMessage = 'Too many requests. Please try again later.';
+      }
+      setError(userMessage);
+      toast({ variant: 'destructive', title: 'OTP Error', description: userMessage });
       // Reset reCAPTCHA on failure
       setupRecaptcha();
     }
@@ -247,7 +260,8 @@ export default function LoginPage() {
                 </div>
               </TabsContent>
             </Tabs>
-            <div ref={recaptchaContainerRef}></div>
+            {/* This div is the anchor for the invisible reCAPTCHA */}
+            <div ref={recaptchaContainerRef} className="my-2"></div>
             {error && <p className="text-sm text-center text-destructive pt-4">{error}</p>}
           </CardContent>
           <CardFooter>
@@ -264,3 +278,5 @@ export default function LoginPage() {
     </div>
   );
 }
+
+    
