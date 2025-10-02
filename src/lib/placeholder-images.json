@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "physics-img",
+      "description": "An image representing physics concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhdG9tJTIwc2NpZW5jZXxlbnwwfHx8fDE3NTkzODE0Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "atom science"
+    },
+    {
+      "id": "chemistry-img",
+      "description": "An image representing chemistry concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1617155092918-480ef0b17330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWFrZXJzJTIwbGFifGVufDB8fHx8MTc1OTM4NzI1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beakers lab"
+    },
+    {
+      "id": "biology-img",
+      "description": "An image representing biology concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1588665306984-d5c6f62224aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkbmElMjBtaWNyb3Njb3BlfGVufDB8fHx8MTc1OTM4NzI1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dna microscope"
+    },
+    {
+      "id": "math-img",
+      "description": "An image representing mathematics concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhbGtib2FyZCUyMGVxdWF0aW9uc3xlbnwwfHx8fDE3NTkzODcyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chalkboard equations"
+    },
+    {
+      "id": "history-img",
+      "description": "An image representing history concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1467688695332-6b486449d78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwc2Nyb2xsfGVufDB8fHx8MTc1OTMzODA2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient scroll"
+    },
+    {
+      "id": "geography-img",
+      "description": "An image representing geography concepts.",
+      "imageUrl": "https://images.unsplash.com/photo-1650526087824-163941841b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b3JsZCUyMG1hcHxlbnwwfHx8fDE3NTkzNDA4Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "world map"
+    }
+  ]
 }
