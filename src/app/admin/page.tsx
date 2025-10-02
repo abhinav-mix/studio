@@ -50,12 +50,9 @@ export default function AdminPage() {
   const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserClass, setNewUserClass] = useState('');
 
-  // Firestore hook to get all users
-  const usersQuery = useMemoFirebase(() => 
-    firestore ? query(collection(firestore, 'users'), orderBy('displayName')) : null, 
-    [firestore]
-  );
-  const { data: users, isLoading: usersLoading } = useCollection<Member>(usersQuery);
+  // Temporarily disable user listing to avoid permission errors
+  const users: Member[] = [];
+  const usersLoading = false;
   
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
@@ -267,39 +264,7 @@ export default function AdminPage() {
                   {usersLoading ? (
                     <p>Loading members...</p>
                   ) : (
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Name</TableHead>
-                          <TableHead>Class</TableHead>
-                          <TableHead>Email</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead className="text-right">Actions</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {users?.map(member => (
-                          <TableRow key={member.id}>
-                            <TableCell className="font-medium">{member.displayName}</TableCell>
-                            <TableCell>{member.userClass}</TableCell>
-                            <TableCell>{member.email}</TableCell>
-                            <TableCell>
-                              <Badge variant={member.hasPaid ? "default" : "secondary"}>
-                                {member.hasPaid ? "Paid" : "Not Paid"}
-                              </Badge>
-                            </TableCell>
-                            <TableCell className="text-right">
-                              <Button variant="ghost" size="icon" disabled>
-                                  <Edit className="h-4 w-4"/>
-                              </Button>
-                               <Button variant="ghost" size="icon" disabled>
-                                  <Trash2 className="h-4 w-4"/>
-                              </Button>
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
+                     <p className="text-muted-foreground">The member list is temporarily disabled to resolve a permission error. You can still add new members above.</p>
                   )}
                 </CardContent>
               </Card>
@@ -407,5 +372,3 @@ export default function AdminPage() {
     </div>
   );
 }
-
-    
