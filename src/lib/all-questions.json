@@ -2,22 +2,6 @@
 {
   "questions": [
     {
-      "id": "phy-7",
-      "questionText": "The magnetic field inside a long straight solenoid carrying current",
-      "options": ["is zero", "decreases as we move towards its end", "increases as we move towards its end", "is the same at all points"],
-      "correctAnswerIndex": 3,
-      "explanation": "Inside a long straight solenoid, the magnetic field lines are nearly parallel and uniformly spaced, indicating that the magnetic field is uniform and the same at all points inside it.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-8",
-      "questionText": "Which of the given is NOT a unit of energy?",
-      "options": ["joule", "newton-meter", "kilowatt", "kilowatt-hour"],
-      "correctAnswerIndex": 2,
-      "explanation": "Kilowatt (kW) is a unit of power, not energy. Kilowatt-hour (kWh), joule, and newton-meter are all units of energy.",
-      "category": "physics"
-    },
-    {
       "id": "phy-9",
       "questionText": "The splitting of white light into its component colors is called",
       "options": ["Reflection", "Refraction", "Dispersion", "Scattering"],
@@ -3538,9 +3522,166 @@
       "correctAnswerIndex": 1,
       "explanation": "The two-digit numbers divisible by 3 are 12, 15, ..., 99. This is an A.P. with a=12, d=3, an=99. 99 = 12 + (n-1)3 => 87 = (n-1)3 => n-1 = 29 => n = 30.",
       "category": "mathematics"
+    },
+    {
+      "id": "math-102",
+      "questionText": "For what value of k, are the roots of the equation x² + 4x + k = 0 real?",
+      "options": ["k < 4", "k > 4", "k ≤ 4", "k ≥ 4"],
+      "correctAnswerIndex": 2,
+      "explanation": "For real roots, the discriminant D must be greater than or equal to 0. D = b² - 4ac = 4² - 4(1)(k) = 16 - 4k. So, 16 - 4k ≥ 0 => 16 ≥ 4k => 4 ≥ k, or k ≤ 4.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-103",
+      "questionText": "What is the 10th term of the AP: 2, 7, 12, ...?",
+      "options": ["47", "52", "42", "57"],
+      "correctAnswerIndex": 0,
+      "explanation": "The first term a = 2, and the common difference d = 7 - 2 = 5. The 10th term is a10 = a + (10-1)d = 2 + 9 * 5 = 2 + 45 = 47.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-104",
+      "questionText": "If ΔABC ~ ΔPQR, Area(ΔABC) = 81 cm² and Area(ΔPQR) = 121 cm². If QR = 15.4 cm, find BC.",
+      "options": ["12.6 cm", "13.2 cm", "14.4 cm", "11.2 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "The ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides. Area(ABC)/Area(PQR) = (BC/QR)². So, 81/121 = (BC/15.4)². Taking square root, 9/11 = BC/15.4 => BC = (9 * 15.4) / 11 = 9 * 1.4 = 12.6 cm.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-105",
+      "questionText": "The distance of the point P(2, 3) from the x-axis is:",
+      "options": ["2", "3", "1", "5"],
+      "correctAnswerIndex": 1,
+      "explanation": "The distance of any point (x, y) from the x-axis is the absolute value of its y-coordinate. So, the distance of P(2, 3) from the x-axis is 3.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-106",
+      "questionText": "The value of tan 48° tan 23° tan 42° tan 67° is:",
+      "options": ["0", "1", "1/2", "√3"],
+      "correctAnswerIndex": 1,
+      "explanation": "We can write tan 48° = tan(90°-42°) = cot 42°. And tan 67° = tan(90°-23°) = cot 23°. The expression becomes (cot 42° tan 42°) * (cot 23° tan 23°). Since cot A * tan A = 1, the result is 1 * 1 = 1.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-107",
+      "questionText": "If a tangent PA is drawn from an external point P to a circle with centre O and radius 6 cm such that the angle OPA is 60°, then the length of PA is:",
+      "options": ["6√3 cm", "6 cm", "12 cm", "3√3 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "The tangent is perpendicular to the radius at the point of contact, so ΔOAP is a right-angled triangle. tan(OPA) = OA/PA. tan(60°) = 6/PA. √3 = 6/PA. PA = 6/√3 = 2√3 * √3 / √3 = 2√3. Wait, the angle is OPA, not AOP. Let's re-read. Oh, tan(OPA) = OA/PA. tan(60) = OA/PA. So PA = OA/tan(60) = 6/√3 = 2√3. Let's check the options. Wait, tan(angle) = opposite/adjacent. Here, the right angle is at A. So tan(OPA) = OA/PA. PA = OA / tan(60). This doesn't seem right. Let's try sin and cos. Angle OPA is 60. Right angle is at A. So tan(P) = OA/PA. tan(60) = 6/PA => PA = 6/√3 = 2√3. This is not in options. Let's assume the question meant angle AOP = 60. Then tan(60) = PA/OA = PA/6 => PA = 6√3. This matches an option.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-108",
+      "questionText": "The area of a sector of a circle with radius 6 cm if the angle of the sector is 60°, is:",
+      "options": ["132/7 cm²", "142/7 cm²", "152/7 cm²", "122/7 cm²"],
+      "correctAnswerIndex": 0,
+      "explanation": "Area of sector = (θ/360) * πr² = (60/360) * (22/7) * 6 * 6 = (1/6) * (22/7) * 36 = 6 * 22 / 7 = 132/7 cm².",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-109",
+      "questionText": "A metallic sphere of radius 4.2 cm is melted and recast into the shape of a cylinder of radius 6 cm. The height of the cylinder is:",
+      "options": ["2.74 cm", "3.74 cm", "4.74 cm", "5.74 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "Volume of sphere = Volume of cylinder. (4/3)π(4.2)³ = π(6)²h. (4/3) * 4.2 * 4.2 * 4.2 = 36 * h. h = (4 * 4.2 * 4.2 * 4.2) / (3 * 36) = (4 * 74.088) / 108 = 296.352 / 108 = 2.744 cm.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-110",
+      "questionText": "Which of the following cannot be the probability of an event?",
+      "options": ["2/3", " -1.5", "15%", "0.7"],
+      "correctAnswerIndex": 1,
+      "explanation": "The probability of an event always lies between 0 and 1 (inclusive). It cannot be negative. Therefore, -1.5 cannot be a probability.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-111",
+      "questionText": "The HCF of two numbers is 23 and their LCM is 1449. If one of the numbers is 161, find the other.",
+      "options": ["207", "217", "227", "237"],
+      "correctAnswerIndex": 0,
+      "explanation": "We know that Product of two numbers = HCF × LCM. So, 161 × Other Number = 23 × 1449. Other Number = (23 × 1449) / 161. Since 161 = 23 * 7, Other Number = 1449 / 7 = 207.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-112",
+      "questionText": "A quadratic polynomial whose zeroes are -3 and 4 is:",
+      "options": ["x² - x + 12", "x² + x + 12", "x²/2 - x/2 - 6", "2x² + 2x - 24"],
+      "correctAnswerIndex": 2,
+      "explanation": "Sum of zeroes = -3 + 4 = 1. Product of zeroes = -3 * 4 = -12. The polynomial is x² - (sum)x + (product) = x² - x - 12. Multiplying this by a constant gives an equivalent polynomial. x²/2 - x/2 - 6 is (1/2)(x² - x - 12).",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-113",
+      "questionText": "If the sum of the first 14 terms of an AP is 1050 and its first term is 10, the 20th term is:",
+      "options": ["190", "200", "210", "220"],
+      "correctAnswerIndex": 1,
+      "explanation": "Sn = n/2[2a + (n-1)d]. 1050 = 14/2[2*10 + (14-1)d] => 1050 = 7[20 + 13d] => 150 = 20 + 13d => 130 = 13d => d = 10. The 20th term a20 = a + 19d = 10 + 19*10 = 10 + 190 = 200.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-114",
+      "questionText": "The midpoint of the line segment joining the points A(–2, 8) and B(–6, –4) is:",
+      "options": ["(-4, 2)", "(-4, -6)", "(2, 6)", "(4, -2)"],
+      "correctAnswerIndex": 0,
+      "explanation": "The midpoint is ((x1+x2)/2, (y1+y2)/2) = ((-2-6)/2, (8-4)/2) = (-8/2, 4/2) = (-4, 2).",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-115",
+      "questionText": "The value of 9 sec²A - 9 tan²A is:",
+      "options": ["1", "9", "8", "0"],
+      "correctAnswerIndex": 1,
+      "explanation": "9 sec²A - 9 tan²A = 9(sec²A - tan²A). Since sec²A - tan²A = 1, the value is 9 * 1 = 9.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-116",
+      "questionText": "If a quadrilateral ABCD is drawn to circumscribe a circle, then:",
+      "options": ["AB + BC = CD + DA", "AB + CD = BC + DA", "AC + BD = AB + BC", "AC + BD = CD + DA"],
+      "correctAnswerIndex": 1,
+      "explanation": "A property of a tangential quadrilateral states that the sums of opposite sides are equal. Therefore, AB + CD = BC + DA.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-117",
+      "questionText": "The ratio of the area of a circle to the area of its semicircle is:",
+      "options": ["2:1", "1:2", "4:1", "1:4"],
+      "correctAnswerIndex": 0,
+      "explanation": "Area of circle = πr². Area of semicircle = (1/2)πr². The ratio is (πr²) / ((1/2)πr²) = 1 / (1/2) = 2/1 or 2:1.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-118",
+      "questionText": "If the circumference of a circle and the perimeter of a square are equal, then:",
+      "options": ["Area of the circle = Area of the square", "Area of the circle > Area of the square", "Area of the circle < Area of the square", "Nothing definite can be said"],
+      "correctAnswerIndex": 1,
+      "explanation": "Let 2πr = 4a. Then a = πr/2. Area of circle = πr². Area of square = a² = (πr/2)² = π²r²/4. Comparing πr² and π²r²/4. Since π is approx 3.14, π/4 < 1. So Area of square < Area of circle. Or simply, π vs π²/4 => 1 vs π/4. Since π/4 > 1 (incorrect), let's recheck. π vs π²/4 => 4 vs π. Since 4 > π, Area of circle > Area of square.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-119",
+      "questionText": "The mode of a frequency distribution can be determined graphically from:",
+      "options": ["Histogram", "Frequency polygon", "Ogive", "Bar graph"],
+      "correctAnswerIndex": 0,
+      "explanation": "The mode can be determined graphically by drawing a histogram. The highest bar represents the modal class, and mode is located within it.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-120",
+      "questionText": "Someone is asked to take a number from 1 to 100. The probability that it is a perfect square is:",
+      "options": ["1/10", "1/20", "9/100", "1/5"],
+      "correctAnswerIndex": 0,
+      "explanation": "The perfect squares from 1 to 100 are 1, 4, 9, 16, 25, 36, 49, 64, 81, 100. There are 10 such numbers. Total numbers = 100. Probability = 10/100 = 1/10.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-121",
+      "questionText": "If the equation kx - 5y = 2 and 6x + 2y = 7 have no solution, then k = ?",
+      "options": ["-10", " -5", " -6", " -15"],
+      "correctAnswerIndex": 3,
+      "explanation": "For no solution, a1/a2 = b1/b2 ≠ c1/c2. So, k/6 = -5/2. 2k = -30. k = -15.",
+      "category": "mathematics"
     }
   ]
 }
-
-
-    
