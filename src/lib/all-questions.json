@@ -590,6 +590,20 @@
       "category": "physics"
     },
     {
+      "id": "phy-49",
+      "questionText": "Identify the component labeled 'X' in the circuit diagram shown in the image.",
+      "imageUrl": "https://picsum.photos/seed/circuit/400/200",
+      "options": [
+        "Resistor",
+        "Voltmeter",
+        "Ammeter",
+        "Switch"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The component 'X' is connected in series in the circuit to measure the current, which is the function of an ammeter. A voltmeter would be connected in parallel.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],

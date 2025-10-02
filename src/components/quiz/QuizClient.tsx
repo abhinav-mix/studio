@@ -12,6 +12,7 @@ import { Label } from '@/components/ui/label';
 import { ArrowLeft, ArrowRight, Check, Home } from 'lucide-react';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = (array: any[]) => {
@@ -102,6 +103,18 @@ export default function QuizClient({ category, questions }: { category: QuizCate
 
         <Card className="w-full flex-1 flex flex-col animate-fade-in" key={currentQuestion.id}>
           <CardHeader>
+            {currentQuestion.imageUrl && (
+              <div className="mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={currentQuestion.imageUrl}
+                  alt="Question image"
+                  width={400}
+                  height={200}
+                  className="w-full h-auto object-contain"
+                  data-ai-hint="circuit diagram"
+                />
+              </div>
+            )}
             <CardTitle className="text-xl md:text-2xl leading-relaxed">{currentQuestion.questionText}</CardTitle>
           </CardHeader>
           <CardContent className="flex-1">

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -10,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Home, RefreshCw, XCircle } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ResultsClient({ category }: { category: QuizCategory }) {
   const router = useRouter();
@@ -78,6 +78,18 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 pl-16">
+                  {question.imageUrl && (
+                    <div className="mb-4 rounded-lg overflow-hidden border">
+                      <Image
+                        src={question.imageUrl}
+                        alt="Question image"
+                        width={300}
+                        height={150}
+                        className="w-full h-auto object-contain"
+                        data-ai-hint="circuit diagram"
+                      />
+                    </div>
+                  )}
                   <div className="space-y-2">
                     {question.options.map((option, optionIndex) => {
                       const isUserAnswer = userAnswer.selectedAnswerIndex === optionIndex;
