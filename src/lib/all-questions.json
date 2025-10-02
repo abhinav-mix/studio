@@ -736,6 +736,269 @@
       "category": "physics"
     },
     {
+      "id": "phy-60",
+      "questionText": "The image shows a ray of light passing through a glass slab. The emergent ray is parallel to the incident ray but is shifted sideways. What is this shift called?",
+      "imageUrl": "https://picsum.photos/seed/glass-slab/400/200",
+      "options": [
+        "Lateral displacement",
+        "Angular dispersion",
+        "Linear deviation",
+        "Normal shift"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The perpendicular distance between the original path of the incident ray and the emergent ray coming out of a glass slab is called lateral displacement or lateral shift.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-61",
+      "questionText": "An electric iron consumes energy at a rate of 840 W when heating is at the maximum rate and 360 W when the heating is at the minimum. The voltage is 220 V. What are the current and the resistance in each case?",
+      "options": [
+        "3.82 A, 57.60 Ω and 1.64 A, 134.15 Ω",
+        "2.82 A, 67.60 Ω and 2.64 A, 144.15 Ω",
+        "3.00 A, 50.00 Ω and 1.00 A, 100.00 Ω",
+        "4.82 A, 47.60 Ω and 2.64 A, 124.15 Ω"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Case 1 (Max): P = VI => I = P/V = 840/220 = 3.82 A. R = V/I = 220/3.82 = 57.60 Ω. Case 2 (Min): I = P/V = 360/220 = 1.64 A. R = V/I = 220/1.64 = 134.15 Ω.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-62",
+      "questionText": "The device used for producing electric current is called a:",
+      "options": [
+        "Generator",
+        "Galvanometer",
+        "Ammeter",
+        "Motor"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An electric generator is a device that converts mechanical energy into electrical energy, thus producing an electric current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-63",
+      "questionText": "The danger signs on electric poles and substations are red and have a skull and crossbones. This is because:",
+      "options": [
+        "It's an international standard for decoration",
+        "Red colour is scattered the least and is visible from a distance",
+        "It indicates the presence of AC current",
+        "It indicates the presence of DC current"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Red light has the longest wavelength and is scattered the least by air molecules. Hence, it can be seen clearly from a distance, making it suitable for danger signals.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-64",
+      "questionText": "An object is placed at the center of curvature of a concave mirror. The image formed will be:",
+      "options": [
+        "At focus, real and inverted, highly diminished",
+        "At the center of curvature, real and inverted, same size",
+        "Between C and F, real and inverted, diminished",
+        "Beyond C, real and inverted, magnified"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "When an object is placed at the center of curvature (C) of a concave mirror, the image is also formed at C. The image is real, inverted, and of the same size as the object.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-65",
+      "questionText": "What is the SI unit of power?",
+      "options": [
+        "Joule",
+        "Watt",
+        "Newton",
+        "Pascal"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of power is the Watt (W), which is defined as one joule per second. It measures the rate of energy transfer.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-66",
+      "questionText": "Which component in this circuit diagram is the variable resistor (rheostat)?",
+      "imageUrl": "https://picsum.photos/seed/rheostat-circuit/400/200",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The symbol with an arrow passing through the resistor symbol represents a variable resistor or a rheostat (labeled 'B' in a typical diagram). It is used to regulate current without changing the voltage source.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-67",
+      "questionText": "100 J of heat are produced each second in a 4 Ω resistor. Find the potential difference across the resistor.",
+      "options": [
+        "10 V",
+        "20 V",
+        "25 V",
+        "5 V"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Heat produced per second is Power, P = 100 W. Resistance R = 4 Ω. We know P = V^2 / R. So, V^2 = P * R = 100 * 4 = 400. Therefore, V = sqrt(400) = 20 V.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-68",
+      "questionText": "The direction of induced current is given by:",
+      "options": [
+        "Fleming's Left-Hand Rule",
+        "Fleming's Right-Hand Rule",
+        "Right-Hand Thumb Rule",
+        "Ampere's Swimming Rule"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Fleming's right-hand rule shows the direction of induced current when a conductor moves in a magnetic field. It is used in electric generators.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-69",
+      "questionText": "Which of the following is a non-renewable source of energy?",
+      "options": [
+        "Wind energy",
+        "Solar energy",
+        "Tidal energy",
+        "Coal"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Coal is a fossil fuel and is a non-renewable source of energy because it takes millions of years to form and its reserves are finite. Wind, solar, and tidal energy are renewable.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-70",
+      "questionText": "An object 5 cm in length is held 25 cm away from a converging lens of focal length 10 cm. Find the position, size, and nature of the image.",
+      "options": [
+        "16.67 cm, -3.33 cm, Real & Inverted",
+        "20.00 cm, -5.00 cm, Real & Inverted",
+        "14.28 cm, -2.85 cm, Real & Inverted",
+        "18.50 cm, -4.50 cm, Real & Inverted"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Using lens formula 1/v - 1/u = 1/f. Here, u = -25 cm, f = +10 cm. 1/v = 1/10 + 1/(-25) = 3/50. So v = 50/3 = 16.67 cm. Magnification m = v/u = 16.67/(-25) = -0.667. Image size h' = m * h = -0.667 * 5 = -3.33 cm. The image is real, inverted, and diminished.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-71",
+      "questionText": "The sky appears dark to astronauts in space because:",
+      "options": [
+        "There is no light in space",
+        "The stars are too far away",
+        "There is no atmosphere to scatter the sunlight",
+        "The spacesuit helmets are tinted black"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The blue color of the sky on Earth is due to the scattering of sunlight by the atmosphere. In space, there is no atmosphere, so the light from the sun is not scattered, and the sky appears black.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-72",
+      "questionText": "In the process of nuclear fission:",
+      "options": [
+        "A heavy nucleus splits into lighter nuclei",
+        "Two light nuclei combine to form a heavy nucleus",
+        "A nucleus emits an electron",
+        "A nucleus emits a photon"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Nuclear fission is a nuclear reaction in which the nucleus of an atom splits into smaller parts (lighter nuclei), often producing free neutrons and photons (in the form of gamma rays), and releasing a very large amount of energy.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-73",
+      "questionText": "A convex lens of focal length 20 cm can form a magnified virtual image if the object is placed:",
+      "options": [
+        "At 20 cm",
+        "Between 20 cm and 40 cm",
+        "At 40 cm",
+        "Between the lens and 20 cm"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A convex lens forms a magnified, virtual, and erect image only when the object is placed between the optical center and the principal focus (f). Since f = 20 cm, the object must be placed at a distance less than 20 cm from the lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-74",
+      "questionText": "An electric kettle rated at 220V, 2.2kW works for 3 hours. Find the energy consumed and the current drawn.",
+      "options": [
+        "6.6 kWh, 10 A",
+        "5.5 kWh, 12 A",
+        "7.2 kWh, 8 A",
+        "6.0 kWh, 9 A"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Energy consumed = Power × Time = 2.2 kW × 3 h = 6.6 kWh. Power P = 2.2 kW = 2200 W. Voltage V = 220 V. Current I = P/V = 2200/220 = 10 A.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-75",
+      "questionText": "The image shows magnetic field lines. At which point (A, B, or C) is the magnetic field strongest?",
+      "imageUrl": "https://picsum.photos/seed/field-lines/400/200",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "It is the same at all points"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The strength of a magnetic field is indicated by the closeness of the field lines. Where the field lines are closest together (point A in a typical diagram), the magnetic field is the strongest.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-76",
+      "questionText": "Which phenomenon is responsible for the reddish appearance of the sun at sunrise and sunset?",
+      "options": [
+        "Reflection",
+        "Refraction",
+        "Dispersion",
+        "Scattering"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "At sunrise and sunset, sunlight travels through a larger part of the atmosphere. Most of the blue light is scattered away, and the less scattered red light reaches our eyes, making the sun appear reddish.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-77",
+      "questionText": "The energy source of the Sun is:",
+      "options": [
+        "Nuclear Fission",
+        "Chemical Reaction",
+        "Nuclear Fusion",
+        "Burning of Hydrogen"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The Sun's energy comes from nuclear fusion, where hydrogen nuclei fuse together to form helium nuclei, releasing an immense amount of energy in the process.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-78",
+      "questionText": "If two resistors R1 and R2 are connected in series, the equivalent resistance is:",
+      "options": [
+        "R1 + R2",
+        "(R1 * R2) / (R1 + R2)",
+        "1/R1 + 1/R2",
+        "R1 - R2"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "When resistors are connected in series, their total or equivalent resistance is the sum of their individual resistances: Req = R1 + R2 + ...",
+      "category": "physics"
+    },
+    {
+      "id": "phy-79",
+      "questionText": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. What is the focal length of the lens required?",
+      "options": [
+        "-18.18 cm",
+        "-5.5 cm",
+        "+18.18 cm",
+        "+5.5 cm"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Power P = 1/f (where f is in meters). So, f = 1/P = 1/(-5.5) m = -0.1818 m. Converting to cm, f = -18.18 cm. The negative sign indicates it is a concave lens, used to correct myopia.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
