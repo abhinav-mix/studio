@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 0, label: 'Try Again', color: '#E0E0E0', textColor: '#333' },
+  { value: 500, label: '500', color: '#9C27B0', textColor: '#fff' }, // Replaced 'Try Again'
   { value: 100, label: '100', color: '#FFC107', textColor: '#fff' },
   { value: 1000, label: '1000', color: '#8BC34A', textColor: '#fff' },
   { value: 0, label: 'iPhone', color: '#F44336', isItem: true, textColor: '#fff' },
