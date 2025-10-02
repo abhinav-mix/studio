@@ -38,6 +38,18 @@ export const quizCategories: QuizCategory[] = [
     description: 'Discover the Earth\'s landscapes, environments, and the relationship between people and their planet.',
     imageId: 'geography-img',
   },
+  {
+    slug: 'hindi',
+    name: 'Hindi',
+    description: 'Test your knowledge of Hindi grammar, vocabulary, and literature.',
+    imageId: 'hindi-img',
+  },
+  {
+    slug: 'english',
+    name: 'English',
+    description: 'Challenge your command of English grammar, vocabulary, and comprehension.',
+    imageId: 'english-img',
+  },
 ];
 
 // Note: In a real application, these would be fetched from a database.
