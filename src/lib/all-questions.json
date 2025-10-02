@@ -2264,6 +2264,136 @@
       "correctAnswerIndex": 0,
       "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
       "category": "chemistry"
+    },
+    {
+      "id": "chem-141",
+      "questionText": "Which of the following will give a displacement reaction?",
+      "options": [
+        "NaCl solution and copper metal",
+        "MgCl2 solution and aluminum metal",
+        "FeSO4 solution and silver metal",
+        "AgNO3 solution and copper metal"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A displacement reaction occurs when a more reactive metal displaces a less reactive metal from its salt solution. Copper is more reactive than silver, so it will displace silver from silver nitrate solution.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-142",
+      "questionText": "The elements of Group 1 are called:",
+      "options": [
+        "Alkali metals",
+        "Alkaline earth metals",
+        "Halogens",
+        "Noble gases"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The elements in Group 1 of the periodic table, except for hydrogen, are known as the alkali metals because they form alkaline solutions when they react with water.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-143",
+      "questionText": "Which of the following compounds has a double bond?",
+      "options": [
+        "C2H2 (Ethyne)",
+        "C2H4 (Ethene)",
+        "C2H6 (Ethane)",
+        "CH4 (Methane)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Ethene (C2H4) is an alkene and contains one carbon-carbon double bond. Ethyne has a triple bond, and ethane and methane have only single bonds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-144",
+      "questionText": "Bauxite is an ore of which metal?",
+      "options": [
+        "Iron",
+        "Aluminum",
+        "Copper",
+        "Zinc"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Bauxite is the primary ore from which aluminum is extracted.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-145",
+      "questionText": "An aqueous solution with pH = 1 is:",
+      "options": [
+        "Strongly acidic",
+        "Strongly basic",
+        "Neutral",
+        "Weakly acidic"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The pH scale ranges from 0 to 14. A pH of 1 is very low, indicating a high concentration of H+ ions, which means it is strongly acidic.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-146",
+      "questionText": "Which of the following is a balanced equation for the reaction of barium chloride with aluminum sulfate?",
+      "options": [
+        "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
+        "3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3",
+        "BaCl2 + AlSO4 -> BaSO4 + AlCl",
+        "2BaCl2 + Al2(SO4)3 -> 2BaSO4 + 2AlCl3"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "To balance the equation, you need 3 Ba atoms, 2 Al atoms, 6 Cl atoms, and 3 SO4 groups on both sides. The equation 3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3 is correctly balanced.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-147",
+      "questionText": "The element with electronic configuration 2, 8, 3 belongs to which period?",
+      "options": [
+        "Period 2",
+        "Period 3",
+        "Period 8",
+        "Period 13"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The electronic configuration shows that electrons are filled in three shells (K, L, M). The number of shells determines the period, so this element (Aluminum) is in Period 3.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-148",
+      "questionText": "Which of the following is used to make waterproof fabrics?",
+      "options": [
+        "Polythene",
+        "Polyvinyl chloride (PVC)",
+        "Bakelite",
+        "Polyester"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Polyester is a category of polymers that are widely used in clothing. Its hydrophobic nature (water-repelling) makes it suitable for making waterproof or water-resistant fabrics.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-149",
+      "questionText": "Which metal is used in the thermite process along with iron oxide?",
+      "options": [
+        "Zinc",
+        "Copper",
+        "Aluminum",
+        "Magnesium"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The thermite process uses a highly reactive metal, typically aluminum, to reduce a less reactive metal oxide, like iron(III) oxide, in a very exothermic reaction.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-150",
+      "questionText": "The reaction of an acid with a metal hydrogen carbonate produces:",
+      "options": [
+        "Salt, water and carbon dioxide",
+        "Salt and water only",
+        "Salt and hydrogen gas",
+        "Salt and carbon monoxide"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
+      "category": "chemistry"
     }
   ]
 }
