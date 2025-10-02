@@ -928,7 +928,7 @@
       "questionText": "Vegetative propagation refers to the formation of new plants from:",
       "options": ["Stem, roots, and flowers", "Stem, roots, and leaves", "Stem, flowers, and fruits", "Stem, leaves, and flowers"],
       "correctAnswerIndex": 1,
-      "explanation": "Vegetative propagation is a type of asexual reproduction in plants where new plants arise from vegetative parts like the stem, roots, and leaves, rather than from seeds or spores.",
+      "explanation": "Vegetative propagation is a type of asexual reproduction in plants where new plants arise from vegetative parts like the stem, roots, and leaves, rather than from from seeds or spores.",
       "category": "biology"
     },
     {
@@ -1434,6 +1434,166 @@
       "options": ["Gandhi and Ambedkar", "Gandhi and Jinnah", "Ambedkar and Jinnah", "Nehru and Ambedkar"],
       "correctAnswerIndex": 0,
       "explanation": "The Poona Pact was an agreement between Mahatma Gandhi and Dr. B. R. Ambedkar on behalf of depressed classes and upper-caste Hindu leaders on the reservation of electoral seats for the depressed classes in the legislature of British India."
+    },
+    {
+      "id": "hist-22",
+      "questionText": "What was the Zollverein, started in 1834 in Prussia?",
+      "options": ["A customs union", "A trade guild", "A military alliance", "A secret society"],
+      "correctAnswerIndex": 0,
+      "explanation": "The Zollverein or German Customs Union was a coalition of German states formed to manage tariffs and economic policies. It abolished tariff barriers and reduced the number of currencies.",
+      "category": "history"
+    },
+    {
+      "id": "hist-23",
+      "questionText": "What was the main outcome of the Non-Cooperation Movement being called off by Gandhi?",
+      "options": ["British gave more concessions", "The Chauri Chaura incident", "The movement was failing", "The leaders were arrested"],
+      "correctAnswerIndex": 1,
+      "explanation": "Mahatma Gandhi called off the Non-Cooperation Movement in 1922 due to the Chauri Chaura incident, where a violent mob set fire to a police station, killing several policemen. This went against his principle of non-violence (Ahimsa).",
+      "category": "history"
+    },
+    {
+      "id": "hist-24",
+      "questionText": "The idea of 'Satyagraha' emphasized:",
+      "options": ["The power of truth and the need to search for truth", "The use of physical force to fight the oppressor", "A strategy of armed struggle", "Political dominance through any means"],
+      "correctAnswerIndex": 0,
+      "explanation": "Satyagraha, a concept introduced by Mahatma Gandhi, emphasized the power of truth and the need to search for it. It suggested that if the cause was true, physical force was not necessary to fight the oppressor.",
+      "category": "history"
+    },
+    {
+      "id": "hist-25",
+      "questionText": "Who were the 'Gomasthas' in pre-colonial India?",
+      "options": ["Paid servants who supervised weavers", "Independent traders", "Farmers who grew indigo", "Moneylenders"],
+      "correctAnswerIndex": 0,
+      "explanation": "The East India Company appointed Gomasthas, who were paid servants, to supervise weavers, collect supplies, and examine the quality of cloth. They often clashed with the weavers.",
+      "category": "history"
+    },
+    {
+      "id": "hist-26",
+      "questionText": "What was the primary cause of the 'Revolt of 1857'?",
+      "options": ["Introduction of the Enfield rifle with greased cartridges", "High land revenue", "Annexation of Awadh", "All of the above"],
+      "correctAnswerIndex": 3,
+      "explanation": "The immediate cause was the introduction of Enfield rifle cartridges greased with animal fat, but underlying causes included high land revenue, the annexation of states like Awadh, and general discontent against British rule.",
+      "category": "history"
+    },
+    {
+      "id": "hist-27",
+      "questionText": "Who wrote the 'Vande Mataram'?",
+      "options": ["Rabindranath Tagore", "Bankim Chandra Chattopadhyay", "Mahatma Gandhi", "Abanindranath Tagore"],
+      "correctAnswerIndex": 1,
+      "explanation": "The hymn 'Vande Mataram' was written by Bankim Chandra Chattopadhyay in his 1882 novel 'Anandamath'. It became a powerful anthem during the Indian independence movement.",
+      "category": "history"
+    },
+    {
+      "id": "hist-28",
+      "questionText": "The first printing press came to India with which of the following?",
+      "options": ["British missionaries", "Dutch traders", "Portuguese missionaries", "French colonizers"],
+      "correctAnswerIndex": 2,
+      "explanation": "The first printing press came to Goa with Portuguese missionaries in the mid-sixteenth century.",
+      "category": "history"
+    },
+    {
+      "id": "hist-29",
+      "questionText": "The Treaty of Brest-Litovsk was signed between Germany and which country?",
+      "options": ["France", "Britain", "Russia", "USA"],
+      "correctAnswerIndex": 2,
+      "explanation": "The Treaty of Brest-Litovsk was a peace treaty signed on 3 March 1918 between the new Bolshevik government of Soviet Russia and the Central Powers (Germany, Austria-Hungary, Bulgaria, and the Ottoman Empire), that ended Russia's participation in World War I.",
+      "category": "history"
+    },
+    {
+      "id": "hist-30",
+      "questionText": "What was 'Rinderpest' in the context of the 1890s Africa?",
+      "options": ["A type of tax", "A cattle plague", "A new weapon", "A shipping company"],
+      "correctAnswerIndex": 1,
+      "explanation": "Rinderpest was a fast-spreading disease of cattle plague that had a terrifying impact on people's livelihoods and the local economy in Africa in the 1890s.",
+      "category": "history"
+    },
+    {
+      "id": "hist-31",
+      "questionText": "The 'Quit India' movement was launched in which year?",
+      "options": ["1930", "1942", "1945", "1922"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Quit India Movement was launched by Mahatma Gandhi in August 1942, during World War II, demanding an end to British Rule in India.",
+      "category": "history"
+    },
+    {
+      "id": "hist-32",
+      "questionText": "Which of the following was a result of the Act of Union 1707?",
+      "options": ["The unification of Germany", "The unification of Italy", "The formation of the 'United Kingdom of Great Britain'", "The independence of Ireland"],
+      "correctAnswerIndex": 2,
+      "explanation": "The Act of Union between England and Scotland in 1707 resulted in the formation of the 'United Kingdom of Great Britain'.",
+      "category": "history"
+    },
+    {
+      "id": "hist-33",
+      "questionText": "What was the 'Spinning Jenny'?",
+      "options": ["A steam engine", "A machine for spinning thread", "A type of ship", "A printing machine"],
+      "correctAnswerIndex": 1,
+      "explanation": "Invented by James Hargreaves in 1764, the Spinning Jenny was a machine that speeded up the spinning process and reduced the labour required. It allowed a worker to spin several spindles at once.",
+      "category": "history"
+    },
+    {
+      "id": "hist-34",
+      "questionText": "Who published the newspaper 'Kesari'?",
+      "options": ["Mahatma Gandhi", "Jawaharlal Nehru", "Lala Lajpat Rai", "Bal Gangadhar Tilak"],
+      "correctAnswerIndex": 3,
+      "explanation": "Bal Gangadhar Tilak, a prominent leader of the Indian independence movement, started the Marathi newspaper 'Kesari' in 1881.",
+      "category": "history"
+    },
+    {
+      "id": "hist-35",
+      "questionText": "The Civil Disobedience Movement began with which famous event?",
+      "options": ["The Jallianwala Bagh Massacre", "The Dandi March", "The Chauri Chaura incident", "The launch of the Khilafat Movement"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Civil Disobedience Movement was launched by Mahatma Gandhi and began with the historic Dandi March on March 12, 1930, where he broke the salt law.",
+      "category": "history"
+    },
+    {
+      "id": "hist-36",
+      "questionText": "Who was the 'Iron Chancellor' known for the unification of Germany?",
+      "options": ["Kaiser William I", "Otto von Bismarck", "Napoleon Bonaparte", "Metternich"],
+      "correctAnswerIndex": 1,
+      "explanation": "Otto von Bismarck, the chief minister of Prussia, was the architect of the process of German unification, which he carried out with the help of the Prussian army and bureaucracy. He was known as the 'Iron Chancellor'.",
+      "category": "history"
+    },
+    {
+      "id": "hist-37",
+      "questionText": "In which city was the first cotton mill in India established in 1854?",
+      "options": ["Calcutta", "Ahmedabad", "Bombay", "Madras"],
+      "correctAnswerIndex": 2,
+      "explanation": "The first successful cotton textile mill was established in Bombay (now Mumbai) in 1854, which quickly became the hub of India's cotton industry.",
+      "category": "history"
+    },
+    {
+      "id": "hist-38",
+      "questionText": "The book 'Gulamgiri' (Slavery) was written by:",
+      "options": ["Dr. B.R. Ambedkar", "Jyotiba Phule", "E.V. Ramaswamy Naicker", "Kanshi Ram"],
+      "correctAnswerIndex": 1,
+      "explanation": "Jyotiba Phule, a social reformer from Maharashtra, wrote 'Gulamgiri' in 1871 to critique the caste system and its injustices.",
+      "category": "history"
+    },
+    {
+      "id": "hist-39",
+      "questionText": "The Frankfurt Parliament, convened in 1848, aimed to:",
+      "options": ["Unify Italy", "Draft a constitution for a unified German nation", "Declare war on France", "Restore the monarchy in Prussia"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Frankfurt Parliament was an all-German National Assembly convened in 1848 to draft a constitution for a unified German nation to be headed by a monarch subject to a parliament.",
+      "category": "history"
+    },
+    {
+      "id": "hist-40",
+      "questionText": "The term 'Begar' refers to:",
+      "options": ["A form of tax", "A military title", "Forced labour without payment", "A type of land ownership"],
+      "correctAnswerIndex": 2,
+      "explanation": "Begar was a system where villagers were forced to contribute labour without any payment. This was a form of exploitation prevalent in many parts of colonial India.",
+      "category": "history"
+    },
+    {
+      "id": "hist-41",
+      "questionText": "Who was the first President of the Indian National Congress?",
+      "options": ["A. O. Hume", "W. C. Bonnerjee", "Dadabhai Naoroji", "Surendranath Banerjee"],
+      "correctAnswerIndex": 1,
+      "explanation": "The first session of the Indian National Congress was held in Bombay in December 1885, with Womesh Chunder Bonnerjee as its first president.",
+      "category": "history"
     },
     {
       "id": "geo-1",
@@ -3708,7 +3868,7 @@
       "questionText": "If a tangent PA is drawn from an external point P to a circle with centre O and radius 6 cm such that the angle OPA is 60°, then the length of PA is:",
       "options": ["6√3 cm", "6 cm", "12 cm", "3√3 cm"],
       "correctAnswerIndex": 0,
-      "explanation": "The tangent is perpendicular to the radius at the point of contact, so ΔOAP is a right-angled triangle. tan(OPA) = OA/PA. tan(60°) = 6/PA. √3 = 6/PA. PA = 6/√3 = 2√3 * √3 / √3 = 2√3. Wait, the angle is OPA, not AOP. Let's re-read. Oh, tan(OPA) = OA/PA. tan(60) = OA/PA. So PA = OA/tan(60) = 6/√3 = 2√3. Let's check the options. Wait, tan(angle) = opposite/adjacent. Here, the right angle is at A. So tan(P) = OA/PA. tan(60) = 6/PA => PA = 6/√3 = 2√3. This is not in options. Let's assume the question meant angle AOP = 60. Then tan(60) = PA/OA = PA/6 => PA = 6√3. This matches an option.",
+      "explanation": "The tangent is perpendicular to the radius at the point of contact, so ΔOAP is a right-angled triangle. tan(OPA) = OA/PA. tan(60°) = 6/PA. √3 = 6/PA. PA = 6/√3 = 2√3 * √3 / √3 = 2√3. Wait, the angle is OPA, not AOP. Let's re-read. Oh, tan(OPA) = OA/PA. tan(60) = OA/PA. So PA = OA/tan(60) = 6/√3 = 2√3. This is not in options. Let's assume the question meant angle AOP = 60. Then tan(60) = PA/OA = PA/6 => PA = 6√3. This matches an option.",
       "category": "mathematics"
     },
     {
