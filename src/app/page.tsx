@@ -6,22 +6,37 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { KeyRound } from 'lucide-react';
+import { KeyRound, Shield, User } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-const CORRECT_PASSWORD = 'abhinavashishclass11';
-const AUTH_KEY = 'boardprep_authenticated';
+const MEMBER_PASSWORD = 'abhinavashishclass11';
+const ADMIN_PASSWORD = 'abhiabhiabhiabhi';
+const AUTH_KEY = 'boardprep_session';
 
 export default function LoginPage() {
   const router = useRouter();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [role, setRole] = useState<'member' | 'admin'>('member');
 
   const handleLogin = () => {
-    if (password === CORRECT_PASSWORD) {
+    let isAuthenticated = false;
+    if (role === 'member' && password === MEMBER_PASSWORD) {
+      isAuthenticated = true;
+    } else if (role === 'admin' && password === ADMIN_PASSWORD) {
+      isAuthenticated = true;
+    }
+
+    if (isAuthenticated) {
       setError('');
       try {
-        localStorage.setItem(AUTH_KEY, 'true');
-        router.push('/home');
+        const session = { authenticated: true, role };
+        localStorage.setItem(AUTH_KEY, JSON.stringify(session));
+        if (role === 'admin') {
+          router.push('/admin');
+        } else {
+          router.push('/home');
+        }
       } catch (e) {
         setError('Could not save session. Please enable cookies/localStorage.');
       }
@@ -44,10 +59,16 @@ export default function LoginPage() {
             <KeyRound className="h-10 w-10 text-primary" />
           </div>
           <CardTitle className="text-2xl font-headline">Welcome to BoardPrep Pro</CardTitle>
-          <CardDescription>Please enter the password to continue.</CardDescription>
+          <CardDescription>Please select your role and enter the password.</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
+          <Tabs defaultValue="member" onValueChange={(value) => setRole(value as 'member' | 'admin')}>
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="member"><User className="mr-2 h-4 w-4" /> Member</TabsTrigger>
+              <TabsTrigger value="admin"><Shield className="mr-2 h-4 w-4" /> Admin</TabsTrigger>
+            </TabsList>
+          </Tabs>
+          <div className="space-y-4 pt-6">
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input

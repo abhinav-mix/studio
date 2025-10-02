@@ -11,16 +11,23 @@ import { ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const AUTH_KEY = 'boardprep_authenticated';
+const AUTH_KEY = 'boardprep_session';
 
 export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
     try {
-      const isAuthenticated = localStorage.getItem(AUTH_KEY) === 'true';
-      if (!isAuthenticated) {
+      const session = localStorage.getItem(AUTH_KEY);
+      if (!session) {
         router.push('/');
+        return;
+      }
+      const { authenticated, role } = JSON.parse(session);
+      if (!authenticated) {
+        router.push('/');
+      } else if (role === 'admin') {
+        router.push('/admin');
       }
     } catch (e) {
       router.push('/');

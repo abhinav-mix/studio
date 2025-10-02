@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "id": "phy-1",
+      "questionText": "What is the SI unit of force?",
+      "options": ["Joule", "Watt", "Newton", "Pascal"],
+      "correctAnswerIndex": 2,
+      "explanation": "The SI unit of force is the Newton (N), named after Sir Isaac Newton. It's defined as the force needed to accelerate one kilogram of mass at the rate of one meter per second squared.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-2",
+      "questionText": "What is the SI unit of electric current? Sample question 2.",
+      "options": ["Volt", "Ampere", "Ohm", "Watt"],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-3",
+      "questionText": "What is the SI unit of electric current? Sample question 3.",
+      "options": ["Volt", "Ampere", "Ohm", "Watt"],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-4",
+      "questionText": "What is the SI unit of electric current? Sample question 4.",
+      "options": ["Volt", "Ampere", "Ohm", "Watt"],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
+      "category": "physics"
+    },
+    {
+      "id": "chem-1",
+      "questionText": "Which element has the atomic number 1?",
+      "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
+      "correctAnswerIndex": 2,
+      "explanation": "Hydrogen has the atomic number 1, meaning it has one proton in its nucleus. It is the simplest and most abundant element in the universe.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-2",
+      "questionText": "What is the chemical formula for water? Sample question 2.",
+      "options": ["CO2", "O2", "H2O", "NaCl"],
+      "correctAnswerIndex": 2,
+      "explanation": "The chemical formula for water is H2O, which indicates that each molecule of water contains two hydrogen atoms and one oxygen atom.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-3",
+      "questionText": "What is the chemical formula for water? Sample question 3.",
+      "options": ["CO2", "O2", "H2O", "NaCl"],
+      "correctAnswerIndex": 2,
+      "explanation": "The chemical formula for water is H2O, which indicates that each molecule of water contains two hydrogen atoms and one oxygen atom.",
+      "category": "chemistry"
+    },
+    {
+      "id": "bio-1",
+      "questionText": "Which part of the plant is responsible for photosynthesis?",
+      "options": ["Root", "Stem", "Flower", "Leaf"],
+      "correctAnswerIndex": 3,
+      "explanation": "Leaves are the primary sites for photosynthesis in most plants. They contain chlorophyll, the pigment that captures light energy.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-2",
+      "questionText": "What is the powerhouse of the cell? Sample question 2.",
+      "options": ["Nucleus", "Ribosome", "Mitochondrion", "Chloroplast"],
+      "correctAnswerIndex": 2,
+      "explanation": "Mitochondria are known as the powerhouses of the cell. They are organelles that act like a digestive system which takes in nutrients, breaks them down, and creates energy rich molecules for the cell.",
+      "category": "biology"
+    },
+    {
+      "id": "math-1",
+      "questionText": "What is the square root of 144?",
+      "options": ["10", "11", "12", "14"],
+      "correctAnswerIndex": 2,
+      "explanation": "The square root of 144 is 12, because 12 multiplied by 12 equals 144.",
+      "category": "mathematics"
+    },
+    {
+      "id": "hist-1",
+      "questionText": "In which year did the World War I begin?",
+      "options": ["1914", "1918", "1939", "1945"],
+      "correctAnswerIndex": 0,
+      "explanation": "World War I began in 1914 after the assassination of Archduke Franz Ferdinand of Austria.",
+      "category": "history"
+    },
+    {
+      "id": "geo-1",
+      "questionText": "Which is the largest continent by land area?",
+      "options": ["Africa", "North America", "Asia", "Europe"],
+      "correctAnswerIndex": 2,
+      "explanation": "Asia is the largest continent by both land area and population. It covers about 30% of Earth's total land area.",
+      "category": "geography"
+    }
+  ]
+}
