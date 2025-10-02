@@ -214,28 +214,32 @@ export default function AdminPage() {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-6">
-               <Card className="bg-background/80">
+               <Card className="bg-background/80 w-full max-w-3xl mx-auto">
                 <CardHeader>
                   <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                   <div className="space-y-2">
-                    <Label htmlFor="new-user-name">Member Name</Label>
-                    <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div className="space-y-2">
+                      <Label htmlFor="new-user-name">Member Name</Label>
+                      <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
+                    </div>
+                     <div className="space-y-2">
+                      <Label htmlFor="new-user-class">Member Class</Label>
+                      <Input id="new-user-class" type="text" placeholder="10th" value={newUserClass} onChange={(e) => setNewUserClass(e.target.value)} />
+                    </div>
+                     <div className="space-y-2">
+                      <Label htmlFor="new-user-email">Member Email</Label>
+                      <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="new-user-password">Member Password</Label>
+                      <Input id="new-user-password" type="text" placeholder="Enter a temporary password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
+                    </div>
                   </div>
-                   <div className="space-y-2">
-                    <Label htmlFor="new-user-class">Member Class</Label>
-                    <Input id="new-user-class" type="text" placeholder="10th" value={newUserClass} onChange={(e) => setNewUserClass(e.target.value)} />
+                  <div className="mt-6">
+                    <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Paid Member</Button>
                   </div>
-                   <div className="space-y-2">
-                    <Label htmlFor="new-user-email">Member Email</Label>
-                    <Input id="new-user-email" type="email" placeholder="member@example.com" value={newUserEmail} onChange={(e) => setNewUserEmail(e.target.value)} />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="new-user-password">Member Password</Label>
-                    <Input id="new-user-password" type="text" placeholder="Enter a temporary password" value={newUserPassword} onChange={(e) => setNewUserPassword(e.target.value)} />
-                  </div>
-                   <Button onClick={handleAddUser}><UserPlus className="mr-2"/> Create Paid Member</Button>
                 </CardContent>
                </Card>
             </AccordionContent>
