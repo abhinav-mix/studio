@@ -406,411 +406,6 @@
       "category": "physics"
     },
     {
-      "id": "phy-51",
-      "questionText": "What is the function of a split-ring commutator in a DC motor?",
-      "options": ["To reverse the direction of current in the coil", "To increase the speed of the motor", "To reduce friction", "To reverse the direction of the magnetic field"],
-      "correctAnswerIndex": 0,
-      "explanation": "The split-ring commutator reverses the direction of current in the armature coil every half rotation. This ensures that the torque on the coil is always in the same direction, causing continuous rotation.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-52",
-      "questionText": "No matter how far you stand from a mirror, your image appears erect. The mirror is likely to be:",
-      "options": ["Plane only", "Concave only", "Convex only", "Either plane or convex"],
-      "correctAnswerIndex": 3,
-      "explanation": "Both plane mirrors and convex mirrors always produce an erect image. A plane mirror produces an erect image of the same size, while a convex mirror produces an erect and diminished image.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-53",
-      "questionText": "What is the main constituent of Biogas?",
-      "options": ["Methane", "Ethane", "Propane", "Butane"],
-      "correctAnswerIndex": 0,
-      "explanation": "Biogas is primarily composed of methane (CH4), typically 50-75%, along with carbon dioxide (CO2) and small amounts of other gases.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-54",
-      "questionText": "Lenz's Law is a consequence of the law of conservation of:",
-      "options": ["Charge", "Momentum", "Mass", "Energy"],
-      "correctAnswerIndex": 3,
-      "explanation": "Lenz's law states that the direction of the induced current is such that it opposes the change that produced it. This opposition is necessary to satisfy the law of conservation of energy.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-55",
-      "questionText": "What happens to the resistance of a wire if its length is doubled?",
-      "options": ["It becomes half", "It is doubled", "It becomes four times", "It remains the same"],
-      "correctAnswerIndex": 1,
-      "explanation": "Resistance (R) is directly proportional to the length (L) of the wire (R ∝ L). Therefore, if the length is doubled, the resistance will also be doubled.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-56",
-      "questionText": "The image shows the magnetic field lines around a bar magnet. At which point is the magnetic field strongest?",
-      "imageUrl": "https://i.imgur.com/9C0D3aG.png",
-      "options": ["A", "B", "C", "D"],
-      "correctAnswerIndex": 0,
-      "explanation": "The magnetic field is strongest where the magnetic field lines are closest together. In a bar magnet, this occurs at the poles. Point A is at the pole.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-57",
-      "questionText": "Which type of lens is shown in the diagram, and what is its effect on parallel light rays?",
-      "imageUrl": "https://i.imgur.com/kS9wT3O.png",
-      "options": ["Concave, converges rays", "Concave, diverges rays", "Convex, converges rays", "Convex, diverges rays"],
-      "correctAnswerIndex": 2,
-      "explanation": "The diagram shows a convex lens (thicker in the middle). It is also known as a converging lens because it brings parallel rays of light to a single point (the focus).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-58",
-      "questionText": "In the given diagram of the human eye, what is the part labeled 'X'?",
-      "imageUrl": "https://i.imgur.com/iR3yJ3b.png",
-      "options": ["Retina", "Optic Nerve", "Cornea", "Lens"],
-      "correctAnswerIndex": 1,
-      "explanation": "The part labeled 'X' is the optic nerve. It is responsible for transmitting visual information from the retina to the brain.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-59",
-      "questionText": "The equivalent resistance of the given circuit between points A and B is:",
-      "imageUrl": "https://i.imgur.com/tFvXm8W.png",
-      "options": ["10 Ω", "2.5 Ω", "20 Ω", "5 Ω"],
-      "correctAnswerIndex": 1,
-      "explanation": "The two 5Ω resistors are in parallel. The equivalent resistance is calculated as 1/R = 1/5 + 1/5 = 2/5. So, R = 5/2 = 2.5 Ω.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-60",
-      "questionText": "The instrument used to measure electric potential difference is:",
-      "options": ["Ammeter", "Galvanometer", "Voltmeter", "Potentiometer"],
-      "correctAnswerIndex": 2,
-      "explanation": "A voltmeter is used to measure the electric potential difference (voltage) between two points in a circuit. It is always connected in parallel across the points.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-61",
-      "questionText": "A wire of resistance R is cut into five equal parts. These parts are then connected in parallel. What is the equivalent resistance of this combination?",
-      "options": ["R/25", "R/5", "5R", "25R"],
-      "correctAnswerIndex": 0,
-      "explanation": "When the wire is cut into 5 parts, each part has a resistance of R/5. When these are connected in parallel, the equivalent resistance R' is given by 1/R' = 1/(R/5) + 1/(R/5) + 1/(R/5) + 1/(R/5) + 1/(R/5) = 5/(R/5) = 25/R. So, R' = R/25.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-62",
-      "questionText": "Which of the following is not a property of magnetic field lines?",
-      "options": ["They originate from the north pole and end at the south pole outside the magnet.", "They form closed continuous loops.", "They can intersect each other.", "The tangent at any point gives the direction of the magnetic field."],
-      "correctAnswerIndex": 2,
-      "explanation": "Magnetic field lines never intersect each other. If they did, it would mean that at the point of intersection, the compass needle would point in two different directions, which is not possible.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-63",
-      "questionText": "A student obtains a sharp image of a distant object on a screen using a concave mirror. To find the focal length, he should measure the distance between:",
-      "options": ["the mirror and the object", "the mirror and the screen", "the object and the screen", "the pole and the center of curvature"],
-      "correctAnswerIndex": 1,
-      "explanation": "For a distant object (at infinity), a concave mirror forms a sharp image at its principal focus. Therefore, the distance between the mirror and the screen (where the image is formed) is the focal length.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-64",
-      "questionText": "The phenomenon of electromagnetic induction is:",
-      "options": ["the process of charging a body.", "the process of generating magnetic field due to a current passing through a coil.", "producing induced current in a coil due to relative motion between a magnet and the coil.", "the process of rotating a coil of an electric motor."],
-      "correctAnswerIndex": 2,
-      "explanation": "Electromagnetic induction is the production of an electromotive force (voltage) across an electrical conductor in a changing magnetic field. This is typically achieved by relative motion between a magnet and a coil.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-65",
-      "questionText": "The defect of vision in which a person can see distant objects clearly but cannot see nearby objects clearly is called:",
-      "options": ["Myopia", "Hypermetropia", "Presbyopia", "Cataract"],
-      "correctAnswerIndex": 1,
-      "explanation": "Hypermetropia, or farsightedness, is the condition where a person can see distant objects clearly but has difficulty focusing on nearby objects. It is corrected with a convex lens.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-66",
-      "questionText": "The refractive index of a medium is the ratio of the speed of light in vacuum to the speed of light in that medium. If the refractive index of glass is 1.5, what is the speed of light in glass? (Speed of light in vacuum = 3 x 10^8 m/s)",
-      "options": ["1.5 x 10^8 m/s", "2 x 10^8 m/s", "3 x 10^8 m/s", "4.5 x 10^8 m/s"],
-      "correctAnswerIndex": 1,
-      "explanation": "Refractive index (n) = Speed of light in vacuum (c) / Speed of light in medium (v). So, v = c / n = (3 x 10^8 m/s) / 1.5 = 2 x 10^8 m/s.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-67",
-      "questionText": "In an electrical circuit, two resistors of 2 Ω and 4 Ω respectively are connected in series to a 6 V battery. The heat dissipated by the 4 Ω resistor in 5 s will be:",
-      "options": ["5 J", "10 J", "20 J", "30 J"],
-      "correctAnswerIndex": 2,
-      "explanation": "Total resistance R = 2 Ω + 4 Ω = 6 Ω. Current I = V/R = 6V / 6Ω = 1 A. Heat dissipated H = I^2 * R * t = (1 A)^2 * 4 Ω * 5 s = 20 J.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-68",
-      "questionText": "The device used to change the resistance in a circuit is called a:",
-      "options": ["Resistor", "Rheostat", "Capacitor", "Inductor"],
-      "correctAnswerIndex": 1,
-      "explanation": "A rheostat is a variable resistor which is used to control current by changing the resistance in a circuit.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-69",
-      "questionText": "Which part of the solar cooker is responsible for the greenhouse effect?",
-      "options": ["Mirror", "Black coating", "Glass sheet", "Outer box"],
-      "correctAnswerIndex": 2,
-      "explanation": "The glass sheet in a solar cooker allows infrared radiation from the sun to pass through but does not allow the heat radiated by the black inner surface to escape, thus trapping the heat. This is an application of the greenhouse effect.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-70",
-      "questionText": "Under what condition does a concave mirror produce a virtual, erect, and magnified image?",
-      "options": ["When the object is at infinity", "When the object is at the center of curvature", "When the object is between the focus and the center of curvature", "When the object is between the pole and the focus"],
-      "correctAnswerIndex": 3,
-      "explanation": "A concave mirror forms a virtual, erect, and magnified image only when the object is placed between the pole (P) and the principal focus (F). This is the principle used in shaving mirrors.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-71",
-      "questionText": "A light ray enters from medium A to medium B as shown in the figure. The refractive index of medium B relative to medium A will be:",
-      "imageUrl": "https://i.imgur.com/5J3m1bY.png",
-      "options": ["greater than unity", "less than unity", "equal to unity", "zero"],
-      "correctAnswerIndex": 0,
-      "explanation": "The ray of light bends towards the normal when it enters medium B from medium A. This indicates that medium B is optically denser than medium A. Therefore, the refractive index of medium B relative to medium A is greater than unity.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-72",
-      "questionText": "The magnification produced by a plane mirror is:",
-      "options": ["-1", "+1", "0", "Less than 1"],
-      "correctAnswerIndex": 1,
-      "explanation": "Magnification (m) is the ratio of image height to object height. For a plane mirror, the image is virtual, erect, and of the same size as the object. Therefore, the magnification is +1. The '+' sign indicates an erect image.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-73",
-      "questionText": "What is the nature of the image formed by a camera?",
-      "options": ["Real, inverted, and diminished", "Virtual, erect, and diminished", "Real, erect, and magnified", "Virtual, inverted, and magnified"],
-      "correctAnswerIndex": 0,
-      "explanation": "A camera uses a convex lens to form a real, inverted, and diminished image of an object on the sensor (or film).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-74",
-      "questionText": "An electric iron consumes energy at a rate of 840 W when heating is at the maximum rate and 360 W when the heating is at the minimum. The voltage is 220 V. What are the current and the resistance in each case?",
-      "options": ["3.82 A, 57.6 Ω and 1.64 A, 134.1 Ω", "1.64 A, 134.1 Ω and 3.82 A, 57.6 Ω", "3.82 A, 134.1 Ω and 1.64 A, 57.6 Ω", "1.64 A, 57.6 Ω and 3.82 A, 134.1 Ω"],
-      "correctAnswerIndex": 0,
-      "explanation": "Case 1 (Max): P = 840W, V=220V. I = P/V = 840/220 ≈ 3.82 A. R = V/I = 220/3.82 ≈ 57.6 Ω. Case 2 (Min): P = 360W, V=220V. I = P/V = 360/220 ≈ 1.64 A. R = V/I = 220/1.64 ≈ 134.1 Ω.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-75",
-      "questionText": "Which of the following materials has the lowest resistivity?",
-      "options": ["Silver", "Copper", "Aluminum", "Glass"],
-      "correctAnswerIndex": 0,
-      "explanation": "Resistivity is a measure of how strongly a material opposes the flow of electric current. Metals are good conductors and have low resistivity. Among the given options, silver has the lowest resistivity, making it the best electrical conductor.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-76",
-      "questionText": "Short-circuiting occurs when:",
-      "options": ["Current in the circuit is very low", "Live wire and neutral wire come in direct contact", "The appliance is switched off", "There is no voltage in the circuit"],
-      "correctAnswerIndex": 1,
-      "explanation": "A short circuit is an abnormal connection between two nodes of an electric circuit intended to be at different voltages. This results when the live wire and the neutral wire come into direct contact, causing the resistance to become very small and a very large current to flow.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-77",
-      "questionText": "Myopia can be corrected by using a:",
-      "options": ["Convex lens", "Concave lens", "Bifocal lens", "Plano-convex lens"],
-      "correctAnswerIndex": 1,
-      "explanation": "Myopia or near-sightedness is a condition where the eye focuses images in front of the retina instead of on the retina. A concave lens is used to diverge the light rays before they enter the eye, allowing the image to be focused correctly on the retina.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-78",
-      "questionText": "What is the main advantage of using AC over DC for long-distance power transmission?",
-      "options": ["AC is safer than DC", "AC voltage can be easily stepped up or down", "AC generators are cheaper", "AC causes less pollution"],
-      "correctAnswerIndex": 1,
-      "explanation": "The main advantage of AC for long-distance transmission is that its voltage can be easily and efficiently changed using transformers. Power is transmitted at very high voltages and low currents to minimize power loss (P = I^2*R), and then stepped down for domestic use.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-79",
-      "questionText": "Which of the following is a major component of wind?",
-      "options": ["The uneven heating of the Earth's surface by the sun", "The rotation of the Earth", "The gravitational pull of the moon", "Volcanic activity"],
-      "correctAnswerIndex": 0,
-      "explanation": "Wind is primarily caused by the uneven heating of the Earth's surface by the sun. This creates differences in air pressure, and air moves from areas of high pressure to areas of low pressure, resulting in wind.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-80",
-      "questionText": "The image formed by a concave lens is always:",
-      "options": ["Real and magnified", "Virtual and magnified", "Virtual, erect, and diminished", "Real, inverted, and diminished"],
-      "correctAnswerIndex": 2,
-      "explanation": "A concave lens is a diverging lens. It always forms a virtual, erect, and diminished image, regardless of the object's position.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-81",
-      "questionText": "An object 5 cm in length is held 25 cm away from a converging lens of focal length 10 cm. Find the position, size and the nature of the image formed.",
-      "options": ["16.7 cm, -3.33 cm, Real & Inverted", "20.5 cm, -4.1 cm, Real & Inverted", "15.2 cm, -2.5 cm, Real & Inverted", "18.9 cm, -3.9 cm, Real & Inverted"],
-      "correctAnswerIndex": 0,
-      "explanation": "Using lens formula 1/v - 1/u = 1/f. Given, u = -25 cm, f = +10 cm. 1/v = 1/10 + 1/(-25) = (5-2)/50 = 3/50. v = 50/3 ≈ 16.7 cm. Magnification m = v/u = (16.7)/(-25) ≈ -0.67. Image size = m * object size = -0.67 * 5 cm ≈ -3.33 cm. The image is real and inverted.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-82",
-      "questionText": "Which of the following are primary colours of light?",
-      "options": ["Red, Green, Blue", "Red, Yellow, Blue", "Red, Green, Yellow", "Blue, Green, Yellow"],
-      "correctAnswerIndex": 0,
-      "explanation": "The primary colours of light are Red, Green, and Blue (RGB). They can be mixed in various proportions to produce other colours. This is the additive colour model.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-83",
-      "questionText": "The process of splitting heavy nucleus into two lighter nuclei is called:",
-      "options": ["Nuclear fusion", "Nuclear fission", "Chain reaction", "Radioactive decay"],
-      "correctAnswerIndex": 1,
-      "explanation": "Nuclear fission is a nuclear reaction in which the nucleus of an atom splits into smaller parts (lighter nuclei), often producing free neutrons and photons (in the form of gamma rays), and releasing a very large amount of energy.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-84",
-      "questionText": "Which statement is true for the reflection of light?",
-      "options": ["The angle of incidence is greater than the angle of reflection", "The angle of incidence is smaller than the angle of reflection", "The angle of incidence is equal to the angle of reflection", "The angle of reflection is 90 degrees"],
-      "correctAnswerIndex": 2,
-      "explanation": "According to the laws of reflection, the angle of incidence is always equal to the angle of reflection.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-85",
-      "questionText": "The unit of power is:",
-      "options": ["Joule", "Watt", "Newton", "Pascal"],
-      "correctAnswerIndex": 1,
-      "explanation": "The SI unit of power is the Watt (W), which is defined as one joule per second. Power is the rate at which work is done or energy is transferred.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-86",
-      "questionText": "A concave lens has a focal length of 15 cm. At what distance should an object be placed from the lens so that it forms an image at 10 cm from the lens?",
-      "options": ["-30 cm", "-15 cm", "-10 cm", "-20 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "For a concave lens, f = -15 cm, v = -10 cm. Using the lens formula 1/v - 1/u = 1/f. 1/(-10) - 1/u = 1/(-15). -1/u = -1/15 + 1/10 = (-2+3)/30 = 1/30. So, u = -30 cm.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-87",
-      "questionText": "Find the power of a concave lens of focal length 2 m.",
-      "options": ["-0.5 D", "+0.5 D", "-2 D", "+2 D"],
-      "correctAnswerIndex": 0,
-      "explanation": "Power P = 1/f(in meters). For a concave lens, the focal length is negative, so f = -2 m. P = 1/(-2) = -0.5 Dioptre (D).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-88",
-      "questionText": "Which phenomenon is observed when a beam of sunlight enters a dusty room through a small hole?",
-      "options": ["Dispersion", "Tyndall effect", "Reflection", "Refraction"],
-      "correctAnswerIndex": 1,
-      "explanation": "This is an example of the Tyndall effect, which is the scattering of light by particles in a colloid or a very fine suspension. The dust particles scatter the sunlight, making its path visible.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-89",
-      "questionText": "What is the function of the iris in the human eye?",
-      "options": ["To focus light on the retina", "To control the size of the pupil", "To convert light into electrical signals", "To change the focal length of the lens"],
-      "correctAnswerIndex": 1,
-      "explanation": "The iris is the colored part of the eye. It is a muscular diaphragm that controls the size of the pupil and thus regulates the amount of light entering the eye.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-90",
-      "questionText": "A current of 0.5 A is drawn by a filament of an electric bulb for 10 minutes. Find the amount of electric charge that flows through the circuit.",
-      "options": ["5 C", "50 C", "300 C", "3000 C"],
-      "correctAnswerIndex": 2,
-      "explanation": "Charge (Q) = Current (I) × Time (t). Time t = 10 minutes = 10 * 60 = 600 seconds. Q = 0.5 A * 600 s = 300 Coulombs (C).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-91",
-      "questionText": "How much work is done in moving a charge of 2 C across two points having a potential difference of 12 V?",
-      "options": ["6 J", "14 J", "24 J", "0.16 J"],
-      "correctAnswerIndex": 2,
-      "explanation": "Work Done (W) = Charge (Q) × Potential Difference (V). W = 2 C × 12 V = 24 Joules (J).",
-      "category": "physics"
-    },
-    {
-      "id": "phy-92",
-      "questionText": "An electric heater is rated at 2 kW. Electrical energy costs ₹4 per kWh. What is the cost of using the heater for 3 hours?",
-      "options": ["₹12", "₹24", "₹6", "₹8"],
-      "correctAnswerIndex": 1,
-      "explanation": "Energy consumed = Power × Time = 2 kW × 3 h = 6 kWh. Cost = Energy consumed × Rate = 6 kWh × ₹4/kWh = ₹24.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-93",
-      "questionText": "Which of the following is a property of a virtual image?",
-      "options": ["It can be formed on a screen.", "It is always inverted.", "It cannot be formed on a screen.", "It is always real."],
-      "correctAnswerIndex": 2,
-      "explanation": "A virtual image is an image that cannot be projected or formed on a screen. It is formed where the light rays appear to diverge from.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-94",
-      "questionText": "The danger signals installed at the top of tall buildings are red in colour. These can be easily seen from a distance because among all other colours, the red light:",
-      "options": ["is scattered the most by smoke or fog.", "is scattered the least by smoke or fog.", "is absorbed the most by smoke or fog.", "moves fastest in air."],
-      "correctAnswerIndex": 1,
-      "explanation": "Red light has the longest wavelength among all visible colors. Due to its long wavelength, it is scattered the least by particles like smoke and fog. Therefore, it can travel the longest distance and can be seen clearly from far away.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-95",
-      "questionText": "When a straight conductor is carrying current:",
-      "options": ["There are circular magnetic field lines around it.", "There are magnetic field lines parallel to the conductor.", "There are no magnetic field lines.", "The magnetic field is zero."],
-      "correctAnswerIndex": 0,
-      "explanation": "A current-carrying straight conductor produces a magnetic field around it. The magnetic field lines are in the form of concentric circles with the conductor at the center.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-96",
-      "questionText": "What happens to the current in a circuit if the resistance is doubled?",
-      "options": ["It is doubled.", "It is halved.", "It remains the same.", "It becomes four times."],
-      "correctAnswerIndex": 1,
-      "explanation": "According to Ohm's Law (I = V/R), current is inversely proportional to resistance. If the resistance is doubled, the current will be halved, assuming the voltage remains constant.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-97",
-      "questionText": "The process in which AC voltage is converted to DC voltage is called:",
-      "options": ["Amplification", "Rectification", "Inversion", "Modulation"],
-      "correctAnswerIndex": 1,
-      "explanation": "Rectification is the process of converting an alternating current (AC) into a direct current (DC). A device that does this is called a rectifier.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-98",
-      "questionText": "The focal length of a convex lens is 20 cm. What is its power?",
-      "options": ["+5 D", "+0.05 D", "-5 D", "-0.05 D"],
-      "correctAnswerIndex": 0,
-      "explanation": "Focal length f = 20 cm = 0.2 m. Power P = 1/f = 1/0.2 = +5 Dioptre (D). The power is positive for a convex (converging) lens.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-99",
-      "questionText": "In a nuclear reactor, which of the following is used as a moderator?",
-      "options": ["Uranium", "Graphite", "Cadmium", "Plutonium"],
-      "correctAnswerIndex": 1,
-      "explanation": "A moderator is a material used in a nuclear reactor to slow down the fast neutrons produced during fission, making them more likely to cause further fission. Heavy water and graphite are common moderators.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-100",
-      "questionText": "A ray of light is incident on a plane mirror at an angle of 30°. What will be the angle of reflection?",
-      "options": ["30°", "60°", "90°", "0°"],
-      "correctAnswerIndex": 0,
-      "explanation": "According to the first law of reflection, the angle of incidence is equal to the angle of reflection. Therefore, the angle of reflection will also be 30°.",
-      "category": "physics"
-    },
-    {
       "id": "bio-1",
       "questionText": "Which part of the plant is responsible for photosynthesis?",
       "options": ["Root", "Stem", "Flower", "Leaf"],
@@ -2148,6 +1743,266 @@
       ],
       "correctAnswerIndex": 0,
       "explanation": "The neutralization reaction between an acid and a base is an exothermic reaction, which means it releases heat. This causes the temperature of the resulting solution to increase. Salt formation also takes place.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-101",
+      "questionText": "Which of the following is used as an antiseptic?",
+      "options": [
+        "Iodine",
+        "Chlorine",
+        "Bromine",
+        "Sulfur"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Tincture of iodine, which is a solution of iodine in alcohol, is used as an antiseptic to clean wounds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-102",
+      "questionText": "The process of soap making is called:",
+      "options": [
+        "Esterification",
+        "Saponification",
+        "Hydrogenation",
+        "Polymerization"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Saponification is the process that involves the conversion of fat, oil, or lipid into soap and alcohol by the action of aqueous alkali.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-103",
+      "questionText": "Which of the following does not belong to the same homologous series?",
+      "options": [
+        "CH4",
+        "C2H6",
+        "C3H8",
+        "C4H8"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "CH4, C2H6, and C3H8 are all alkanes (CnH2n+2). C4H8 is an alkene (CnH2n), so it belongs to a different homologous series.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-104",
+      "questionText": "Which of the following is the most reactive metal?",
+      "options": [
+        "Iron (Fe)",
+        "Zinc (Zn)",
+        "Copper (Cu)",
+        "Potassium (K)"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Based on the reactivity series, Potassium (K) is one of the most reactive metals, much more reactive than Iron, Zinc, or Copper.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-105",
+      "questionText": "Hard water does not form lather readily with soap because it contains:",
+      "options": [
+        "Sodium and potassium salts",
+        "Calcium and magnesium salts",
+        "Chlorides and sulfates of sodium",
+        "Free fatty acids"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Hard water contains dissolved salts of calcium and magnesium. These ions react with soap to form an insoluble precipitate called scum, preventing the formation of lather.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-106",
+      "questionText": "What is the number of single bonds in a molecule of Methane (CH4)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Methane (CH4) has a central carbon atom bonded to four hydrogen atoms through four single covalent bonds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-107",
+      "questionText": "The atomic number of an element is 20. It will be placed in which period of the periodic table?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The element with atomic number 20 is Calcium (Ca). Its electronic configuration is 2, 8, 8, 2. Since the electrons are filled in 4 shells (K, L, M, N), it belongs to the 4th period.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-108",
+      "questionText": "Which of the following is not a use of washing soda (sodium carbonate)?",
+      "options": [
+        "In glass, soap and paper industries.",
+        "For removing permanent hardness of water.",
+        "As a cleaning agent for domestic purposes.",
+        "As an antacid to relieve indigestion."
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Sodium bicarbonate (baking soda), not washing soda, is used as an antacid. Washing soda is used in manufacturing, water softening, and cleaning.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-109",
+      "questionText": "The reaction of burning carbon in air to form carbon dioxide is a type of:",
+      "options": [
+        "Oxidation reaction",
+        "Combination reaction",
+        "Exothermic reaction",
+        "All of the above"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The reaction C + O2 -> CO2 is a combination reaction (two substances form one), an oxidation reaction (carbon is oxidized), and it is exothermic (releases heat). Therefore, all options are correct.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-110",
+      "questionText": "Which functional group is present in CH3CHO?",
+      "options": [
+        "Alcohol (-OH)",
+        "Aldehyde (-CHO)",
+        "Ketone (>C=O)",
+        "Carboxylic acid (-COOH)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The compound CH3CHO is Ethanal. It contains the aldehyde functional group (-CHO).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-111",
+      "questionText": "What is the valency of the elements in Group 2 of the periodic table?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The elements in Group 2 are the alkaline earth metals. They have 2 valence electrons, which they tend to lose to form ions with a +2 charge. Thus, their valency is 2.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-112",
+      "questionText": "The process of extraction of metals from their ores is called:",
+      "options": [
+        "Metallurgy",
+        "Corrosion",
+        "Galvanization",
+        "Refining"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Metallurgy is the branch of science and technology concerned with the properties of metals and their production and purification from their ores.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-113",
+      "questionText": "The number of structural isomers of butane (C4H10) is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Butane (C4H10) has two structural isomers: n-butane (a straight chain) and isobutane (2-methylpropane, a branched chain).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-114",
+      "questionText": "Which indicator gives a pink color in a basic solution?",
+      "options": [
+        "Litmus",
+        "Methyl orange",
+        "Phenolphthalein",
+        "Turmeric"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Phenolphthalein is a synthetic indicator which is colorless in acidic and neutral solutions but turns pink in basic solutions.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-115",
+      "questionText": "The reaction AgCl(s) --(Sunlight)--> 2Ag(s) + Cl2(g) is used in:",
+      "options": [
+        "Photography",
+        "Electroplating",
+        "Galvanization",
+        "Welding"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "This photochemical decomposition reaction of silver chloride (and silver bromide) is the fundamental principle behind black-and-white photography.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-116",
+      "questionText": "What is the IUPAC name for the simplest alkene?",
+      "options": [
+        "Methene",
+        "Ethene",
+        "Propene",
+        "Methane"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Alkenes must have at least one carbon-carbon double bond, so the simplest alkene must have two carbon atoms. The IUPAC name is Ethene (C2H4).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-117",
+      "questionText": "Elements in the same period have the same:",
+      "options": [
+        "Number of valence electrons",
+        "Valency",
+        "Number of electron shells",
+        "Chemical properties"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Elements in the same horizontal row (period) of the periodic table have the same number of occupied electron shells.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-118",
+      "questionText": "Which of the following is an example of a redox reaction?",
+      "options": [
+        "CaO + H2O -> Ca(OH)2",
+        "CaCO3 -> CaO + CO2",
+        "NaOH + HCl -> NaCl + H2O",
+        "CuO + H2 -> Cu + H2O"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A redox reaction involves both oxidation and reduction. In CuO + H2 -> Cu + H2O, Copper is reduced (loses oxygen) and Hydrogen is oxidized (gains oxygen).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-119",
+      "questionText": "The molecular formula of the third member of the homologous series of alcohols is:",
+      "options": [
+        "CH3OH",
+        "C2H5OH",
+        "C3H7OH",
+        "C4H9OH"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The first member is Methanol (CH3OH), the second is Ethanol (C2H5OH), and the third is Propanol (C3H7OH).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-120",
+      "questionText": "A solution reacts with crushed egg-shells to give a gas that turns lime-water milky. The solution contains:",
+      "options": [
+        "NaCl",
+        "HCl",
+        "LiCl",
+        "KCl"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Egg-shells are made of calcium carbonate (CaCO3). Calcium carbonate reacts with an acid (like HCl) to produce carbon dioxide gas, which turns lime-water (calcium hydroxide solution) milky.",
       "category": "chemistry"
     }
   ]
