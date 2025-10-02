@@ -110,7 +110,7 @@ export default function ResultsClient({ category }: { category: QuizCategory }) 
                 </Link>
             </Button>
             <Button variant="outline" asChild>
-                <Link href="/">
+                <Link href="/home">
                     <Home className="mr-2 h-4 w-4" />
                     Back to Home
                 </Link>

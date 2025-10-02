@@ -83,7 +83,7 @@ export default function QuizClient({ category, questions }: { category: QuizCate
     <div className="flex flex-col min-h-screen p-4 md:p-8 lg:p-12">
       <header className="mb-8 flex justify-between items-center">
         <Button variant="ghost" asChild>
-          <Link href="/">
+          <Link href="/home">
             <Home className="mr-2 h-4 w-4" />
             Home
           </Link>

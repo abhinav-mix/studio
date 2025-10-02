@@ -38,7 +38,7 @@ export default function ProgressClient() {
         <h2 className="text-2xl font-bold font-headline">No attempts yet!</h2>
         <p className="text-muted-foreground">Start a quiz to see your progress here.</p>
         <Button asChild>
-          <Link href="/">Go to Quizzes</Link>
+          <Link href="/home">Go to Quizzes</Link>
         </Button>
       </div>
     );
