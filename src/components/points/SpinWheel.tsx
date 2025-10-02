@@ -9,12 +9,12 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 0, label: 'Try Again', color: '#E0E0E0' },
-  { value: 100, label: '100', color: '#FFC107' },
-  { value: 1000, label: '1000', color: '#8BC34A' },
-  { value: 0, label: 'iPhone', color: '#F44336', isItem: true },
-  { value: 10000, label: '10k', color: '#4CAF50' },
-  { value: 0, label: 'Samsung S25', color: '#2196F3', isItem: true },
+  { value: 0, label: 'Try Again', color: '#E0E0E0', textColor: '#333' },
+  { value: 100, label: '100', color: '#FFC107', textColor: '#fff' },
+  { value: 1000, label: '1000', color: '#8BC34A', textColor: '#fff' },
+  { value: 0, label: 'iPhone', color: '#F44336', isItem: true, textColor: '#fff' },
+  { value: 10000, label: '10k', color: '#4CAF50', textColor: '#fff' },
+  { value: 0, label: 'Samsung S25', color: '#2196F3', isItem: true, textColor: '#fff' },
 ];
 
 const SPIN_COST = 500;
@@ -79,6 +79,11 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
 
   return (
     <div className="flex flex-col items-center gap-8 py-8">
+       <style jsx>{`
+        .text-shadow {
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+      `}</style>
       <div className="relative w-80 h-80 md:w-96 md:h-96">
         {/* Pointer */}
         <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 z-10" style={{ filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.2))' }}>
@@ -100,15 +105,15 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               className="absolute w-1/2 h-1/2 origin-bottom-right"
               style={{
                 transform: `rotate(${index * segmentAngle}deg)`,
-                clipPath: `polygon(0 0, 100% 0, 100% 100%, 0 0)`, // Creates a triangle
+                clipPath: `polygon(0% 0%, 100% 0%, 50% 100%, 0% 0%)`,
                 backgroundColor: segment.color,
               }}
             >
               <div
-                className="absolute w-full h-full flex items-center justify-center -rotate-90"
-                style={{ transform: `rotate(${(segmentAngle / 2)}deg) translate(50%, 25%)` }}
+                className="absolute w-full h-full flex items-start justify-center"
+                style={{ transform: `rotate(${segmentAngle / 2}deg) translate(0, 25%)` }}
               >
-                <span className="text-white font-bold text-lg -rotate-90 origin-center text-shadow-sm shadow-black">{segment.label}</span>
+                <span className="text-white font-bold text-lg text-shadow" style={{transform: "rotate(-90deg)", color: segment.textColor}}>{segment.label}</span>
               </div>
             </div>
           ))}
@@ -129,3 +134,4 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     </div>
   );
 }
+
