@@ -14,6 +14,7 @@ import type { Question } from '@/lib/types';
 import allQuestionsData from '@/lib/all-questions.json';
 import { PlusCircle, Trash2, LogOut, Home } from 'lucide-react';
 import Link from 'next/link';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const AUTH_KEY = 'boardprep_session';
 
@@ -49,14 +50,14 @@ export default function AdminPage() {
     }
   }, [router]);
 
-  const handleAddQuestion = () => {
+  const handleAddQuestion = (category: string) => {
     const newQuestion: Question = {
       id: `new-${Date.now()}`,
       questionText: 'New Question',
       options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
       correctAnswerIndex: 0,
       explanation: 'Explanation for the new question.',
-      category: 'physics',
+      category,
     };
     setQuestions([newQuestion, ...questions]);
   };
@@ -119,88 +120,108 @@ export default function AdminPage() {
         </div>
       </header>
       
-      <div className="mb-6 flex justify-between items-center">
-        <Button onClick={handleAddQuestion}><PlusCircle className="mr-2"/> Add Question</Button>
+      <div className="mb-6 flex justify-end">
         <Button onClick={handleSaveChanges} variant="default">Save All Changes</Button>
       </div>
 
-      <div className="space-y-6">
-        {questions.map((q) => (
-          <Card key={q.id} className="bg-secondary/50">
-            <CardHeader>
-              <CardTitle className="flex justify-between items-start">
-                <Textarea
-                  value={q.questionText}
-                  onChange={(e) => handleQuestionChange(q.id, 'questionText', e.target.value)}
-                  className="text-lg font-semibold flex-grow mr-4 bg-background"
-                  rows={2}
-                />
-                <Button variant="destructive" size="icon" onClick={() => handleDeleteQuestion(q.id)}>
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {q.options.map((opt, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <Label htmlFor={`${q.id}-opt-${index}`} className="w-20">Option {index + 1}</Label>
-                    <Input
-                      id={`${q.id}-opt-${index}`}
-                      value={opt}
-                      onChange={(e) => handleOptionChange(q.id, index, e.target.value)}
-                      className={q.correctAnswerIndex === index ? 'border-green-500 bg-green-50' : 'bg-background'}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                 <div>
-                    <Label htmlFor={`${q.id}-category`}>Category</Label>
-                    <Select
-                      value={q.category}
-                      onValueChange={(value) => handleQuestionChange(q.id, 'category', value)}
-                    >
-                      <SelectTrigger id={`${q.id}-category`} className="bg-background">
-                        <SelectValue placeholder="Select category" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {quizCategories.map(cat => (
-                           <SelectItem key={cat.slug} value={cat.slug}>{cat.name}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                 </div>
-                 <div>
-                    <Label htmlFor={`${q.id}-correct`}>Correct Answer</Label>
-                    <Select
-                      value={q.correctAnswerIndex.toString()}
-                      onValueChange={(value) => handleQuestionChange(q.id, 'correctAnswerIndex', parseInt(value))}
-                    >
-                      <SelectTrigger id={`${q.id}-correct`} className="bg-background">
-                        <SelectValue placeholder="Select correct answer" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {q.options.map((_, index) => (
-                          <SelectItem key={index} value={index.toString()}>Option {index + 1}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                 </div>
-              </div>
-              <div>
-                <Label htmlFor={`${q.id}-explanation`}>Explanation</Label>
-                <Textarea
-                  id={`${q.id}-explanation`}
-                  value={q.explanation}
-                  onChange={(e) => handleQuestionChange(q.id, 'explanation', e.target.value)}
-                  className="bg-background"
-                />
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <Accordion type="multiple" className="w-full space-y-4">
+        {quizCategories.map(category => {
+          const categoryQuestions = questions.filter(q => q.category === category.slug);
+          return (
+            <AccordionItem value={category.slug} key={category.slug} className="border-none">
+                <Card className="bg-secondary/30">
+                   <AccordionTrigger className="p-6 text-xl font-headline hover:no-underline">
+                        <div className="flex justify-between w-full items-center">
+                           <span>{category.name} ({categoryQuestions.length} questions)</span>
+                        </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                        <div className="space-y-6">
+                            {categoryQuestions.map((q) => (
+                              <Card key={q.id} className="bg-background/80">
+                                <CardHeader>
+                                  <CardTitle className="flex justify-between items-start">
+                                    <Textarea
+                                      value={q.questionText}
+                                      onChange={(e) => handleQuestionChange(q.id, 'questionText', e.target.value)}
+                                      className="text-lg font-semibold flex-grow mr-4 bg-background"
+                                      rows={2}
+                                    />
+                                    <Button variant="destructive" size="icon" onClick={() => handleDeleteQuestion(q.id)}>
+                                      <Trash2 className="h-4 w-4" />
+                                    </Button>
+                                  </CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-4">
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {q.options.map((opt, index) => (
+                                      <div key={index} className="flex items-center gap-2">
+                                        <Label htmlFor={`${q.id}-opt-${index}`} className="w-20">Option {index + 1}</Label>
+                                        <Input
+                                          id={`${q.id}-opt-${index}`}
+                                          value={opt}
+                                          onChange={(e) => handleOptionChange(q.id, index, e.target.value)}
+                                          className={q.correctAnswerIndex === index ? 'border-green-500 bg-green-50' : 'bg-background'}
+                                        />
+                                      </div>
+                                    ))}
+                                  </div>
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                                     <div>
+                                        <Label htmlFor={`${q.id}-category`}>Category</Label>
+                                        <Select
+                                          value={q.category}
+                                          onValueChange={(value) => handleQuestionChange(q.id, 'category', value)}
+                                        >
+                                          <SelectTrigger id={`${q.id}-category`} className="bg-background">
+                                            <SelectValue placeholder="Select category" />
+                                          </SelectTrigger>
+                                          <SelectContent>
+                                            {quizCategories.map(cat => (
+                                               <SelectItem key={cat.slug} value={cat.slug}>{cat.name}</SelectItem>
+                                            ))}
+                                          </SelectContent>
+                                        </Select>
+                                     </div>
+                                     <div>
+                                        <Label htmlFor={`${q.id}-correct`}>Correct Answer</Label>
+                                        <Select
+                                          value={q.correctAnswerIndex.toString()}
+                                          onValueChange={(value) => handleQuestionChange(q.id, 'correctAnswerIndex', parseInt(value))}
+                                        >
+                                          <SelectTrigger id={`${q.id}-correct`} className="bg-background">
+                                            <SelectValue placeholder="Select correct answer" />
+                                          </SelectTrigger>
+                                          <SelectContent>
+                                            {q.options.map((_, index) => (
+                                              <SelectItem key={index} value={index.toString()}>Option {index + 1}</SelectItem>
+                                            ))}
+                                          </SelectContent>
+                                        </Select>
+                                     </div>
+                                  </div>
+                                  <div>
+                                    <Label htmlFor={`${q.id}-explanation`}>Explanation</Label>
+                                    <Textarea
+                                      id={`${q.id}-explanation`}
+                                      value={q.explanation}
+                                      onChange={(e) => handleQuestionChange(q.id, 'explanation', e.target.value)}
+                                      className="bg-background"
+                                    />
+                                  </div>
+                                </CardContent>
+                              </Card>
+                            ))}
+                             <div className="mt-6 flex justify-start">
+                                <Button onClick={() => handleAddQuestion(category.slug)}><PlusCircle className="mr-2"/> Add Question to {category.name}</Button>
+                            </div>
+                        </div>
+                    </AccordionContent>
+                </Card>
+            </AccordionItem>
+          )
+        })}
+      </Accordion>
     </div>
   );
 }
