@@ -8,7 +8,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { useMemo } from 'react';
 import type { PointEntry } from '@/lib/types';
 import { format } from 'date-fns';
-import SpinWheel from './SpinWheel'; // Import the new component
+import SpinWheel from './SpinWheel';
+import RealMoneySpinWheel from './RealMoneySpinWheel'; // Import the new component
 
 function formatTimestamp(timestamp: { seconds: number; nanoseconds: number; } | Date): string {
   let date: Date;
@@ -39,14 +40,14 @@ export default function PointsClient() {
     return pointsHistory.reduce((sum, entry) => sum + entry.pointsAdded, 0);
   }, [pointsHistory]);
 
-  const handleSpinResult = async (prizePoints: number, prizeLabel: string, isItem: boolean) => {
+  const handleSpinResult = async (prizePoints: number, prizeLabel: string, isItem: boolean, cost: number) => {
     if (!user) return;
     const historyRef = collection(firestore, 'users', user.uid, 'pointHistory');
 
-    // Deduct 500 points for spinning
+    // Deduct points for spinning
     await addDoc(historyRef, {
-        pointsAdded: -500,
-        reason: 'Spin Wheel Cost',
+        pointsAdded: -cost,
+        reason: prizeLabel === 'Real Money' || prizeLabel === 'Next Time' ? 'Real Money Spin Cost' : 'Spin Wheel Cost',
         timestamp: serverTimestamp(),
     });
 
@@ -83,8 +84,9 @@ export default function PointsClient() {
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">My Points</CardTitle>
           <CardDescription>You have earned a total of <span className="font-bold text-primary">{totalPoints}</span> points.</CardDescription>
         </CardHeader>
-        <CardContent>
-            <SpinWheel currentPoints={totalPoints} onSpinComplete={handleSpinResult} />
+        <CardContent className="grid gap-8 lg:grid-cols-2">
+            <SpinWheel currentPoints={totalPoints} onSpinComplete={(prize, label, isItem) => handleSpinResult(prize, label, isItem, 500)} />
+            <RealMoneySpinWheel currentPoints={totalPoints} onSpinComplete={(prize, label, isItem) => handleSpinResult(prize, label, isItem, 10000)} />
         </CardContent>
       </Card>
 
