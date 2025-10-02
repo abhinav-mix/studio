@@ -108,19 +108,20 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               key={index}
               className="absolute w-1/2 h-1/2 origin-bottom-right"
               style={{
-                transform: `rotate(${index * segmentAngle}deg) scale(1.05)`, // Scale to hide gaps
+                transform: `rotate(${index * segmentAngle}deg)`,
                 backgroundColor: segment.color,
-                clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 100%)`, // Creates triangle shape, but we need a sector
+                clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%)',
               }}
             >
               <div
                 className="absolute w-full h-full flex items-start justify-center"
                 style={{ 
-                    transform: `rotate(${segmentAngle / 2}deg) translateY(25%)`,
+                    transform: `rotate(${segmentAngle / 2}deg) translateY(25%) rotate(-90deg)`,
+                    color: segment.textColor,
                     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.4)',
                 }}
               >
-                <span className="font-bold text-lg" style={{transform: "rotate(-90deg)", color: segment.textColor}}>{segment.label}</span>
+                <span className="font-bold text-lg">{segment.label}</span>
               </div>
             </div>
           ))}
