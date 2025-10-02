@@ -358,54 +358,6 @@
       "category": "physics"
     },
     {
-      "id": "phy-45",
-      "questionText": "What does the slope of a distance-time graph represent?",
-      "options": ["Acceleration", "Distance", "Speed", "Time"],
-      "correctAnswerIndex": 2,
-      "explanation": "The slope of a distance-time graph is calculated as (change in distance) / (change in time), which is the definition of speed.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-46",
-      "questionText": "1 Horsepower (hp) is equal to approximately:",
-      "options": ["746 Watts", "1000 Watts", "550 Watts", "764 Watts"],
-      "correctAnswerIndex": 0,
-      "explanation": "Horsepower is a unit of power. One mechanical horsepower is standardized as approximately 746 watts.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-47",
-      "questionText": "Which mirror is used as a rear-view mirror in vehicles?",
-      "options": ["Concave mirror", "Plane mirror", "Convex mirror", "Parabolic mirror"],
-      "correctAnswerIndex": 2,
-      "explanation": "Convex mirrors are used as rear-view mirrors because they give an erect, virtual, and diminished image of the objects, providing a wider field of view.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-48",
-      "questionText": "What is the SI unit of magnetic flux?",
-      "options": ["Tesla", "Gauss", "Weber", "Henry"],
-      "correctAnswerIndex": 2,
-      "explanation": "The SI unit of magnetic flux (Φ) is the Weber (Wb). One Weber is the magnetic flux that, linking a circuit of one turn, would produce in it an electromotive force of one volt if it were reduced to zero at a uniform rate in one second.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-49",
-      "questionText": "A fuse wire should have:",
-      "options": ["High resistance and high melting point", "High resistance and low melting point", "Low resistance and high melting point", "Low resistance and low melting point"],
-      "correctAnswerIndex": 1,
-      "explanation": "A fuse wire is designed to protect circuits. It should have high resistance to generate heat (P = I^2*R) and a low melting point so it can melt and break the circuit when an excessive current flows.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-50",
-      "questionText": "The refractive index of diamond is approximately:",
-      "options": ["1.00", "1.33", "1.52", "2.42"],
-      "correctAnswerIndex": 3,
-      "explanation": "Diamond has a very high refractive index of about 2.42. This high value is responsible for its brilliance and sparkle due to total internal reflection.",
-      "category": "physics"
-    },
-    {
       "id": "bio-1",
       "questionText": "Which part of the plant is responsible for photosynthesis?",
       "options": ["Root", "Stem", "Flower", "Leaf"],
@@ -415,10 +367,170 @@
     },
     {
       "id": "bio-2",
-      "questionText": "What is the powerhouse of the cell? Sample question 2.",
+      "questionText": "What is the powerhouse of the cell?",
       "options": ["Nucleus", "Ribosome", "Mitochondrion", "Chloroplast"],
       "correctAnswerIndex": 2,
       "explanation": "Mitochondria are known as the powerhouses of the cell. They are organelles that act like a digestive system which takes in nutrients, breaks them down, and creates energy rich molecules for the cell.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-3",
+      "questionText": "The breakdown of pyruvate to give carbon dioxide, water and energy takes place in",
+      "options": ["cytoplasm", "mitochondria", "chloroplast", "nucleus"],
+      "correctAnswerIndex": 1,
+      "explanation": "In aerobic respiration, the breakdown of pyruvate occurs in the mitochondria, releasing a significant amount of energy in the form of ATP.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-4",
+      "questionText": "The autotrophic mode of nutrition requires:",
+      "options": ["Carbon dioxide and water", "Chlorophyll", "Sunlight", "All of the above"],
+      "correctAnswerIndex": 3,
+      "explanation": "Autotrophic nutrition (like photosynthesis) requires carbon dioxide, water, chlorophyll to trap sunlight, and sunlight as the energy source.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-5",
+      "questionText": "Which plant hormone promotes cell division?",
+      "options": ["Auxin", "Gibberellin", "Cytokinin", "Abscisic acid"],
+      "correctAnswerIndex": 2,
+      "explanation": "Cytokinins are a class of plant hormones that promote cell division, or cytokinesis, in plant roots and shoots. They are involved in cell growth and differentiation.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-6",
+      "questionText": "The gap between two neurons is called a",
+      "options": ["dendrite", "synapse", "axon", "impulse"],
+      "correctAnswerIndex": 1,
+      "explanation": "A synapse is a small gap at the end of a neuron that allows a signal to pass from one neuron to the next. It ensures that nerve impulses travel in one direction only.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-7",
+      "questionText": "In a flower, the parts that produce male and female gametes are respectively:",
+      "options": ["stamen and anther", "filament and stigma", "anther and ovary", "stamen and style"],
+      "correctAnswerIndex": 2,
+      "explanation": "The anther, part of the stamen (male reproductive part), produces pollen grains which contain male gametes. The ovary, part of the pistil/carpel (female reproductive part), contains ovules which house the female gamete (egg).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-8",
+      "questionText": "Which of the following is a plant hormone?",
+      "options": ["Insulin", "Thyroxin", "Oestrogen", "Cytokinin"],
+      "correctAnswerIndex": 3,
+      "explanation": "Cytokinin is a plant hormone that promotes cell division. Insulin, thyroxin, and oestrogen are animal hormones.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-9",
+      "questionText": "The embryo in humans gets nutrition from the mother's blood with the help of a special tissue called",
+      "options": ["Placenta", "Villi", "Uterus", "Fallopian tube"],
+      "correctAnswerIndex": 0,
+      "explanation": "The placenta is a specialized organ that connects the developing fetus to the uterine wall to allow nutrient uptake, waste elimination, and gas exchange via the mother's blood supply.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-10",
+      "questionText": "Which of the following is not a part of the female reproductive system in human beings?",
+      "options": ["Ovary", "Uterus", "Vas deferens", "Fallopian tube"],
+      "correctAnswerIndex": 2,
+      "explanation": "The vas deferens is part of the male reproductive system that transports sperm from the epididymis. The ovary, uterus, and fallopian tube are all parts of the female reproductive system.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-11",
+      "questionText": "An example of a homologous organ is:",
+      "options": ["Our arm and a dog’s fore-leg.", "Our teeth and an elephant’s tusks.", "Potato and runners of grass.", "All of the above"],
+      "correctAnswerIndex": 3,
+      "explanation": "Homologous organs are those that have a similar basic structure and origin but perform different functions. All the given examples (arm/fore-leg, teeth/tusks, potato/runners) fit this description.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-12",
+      "questionText": "What are the products of anaerobic respiration in yeast?",
+      "options": ["Lactic acid + Energy", "Carbon dioxide + Water + Energy", "Ethanol + Carbon dioxide + Energy", "Pyruvate"],
+      "correctAnswerIndex": 2,
+      "explanation": "In anaerobic conditions, yeast undergoes fermentation to break down pyruvate into ethanol, carbon dioxide, and energy.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-13",
+      "questionText": "Blood from the superior vena cava flows into which chamber of the heart?",
+      "options": ["Right atrium", "Left atrium", "Right ventricle", "Left ventricle"],
+      "correctAnswerIndex": 0,
+      "explanation": "Deoxygenated blood from the upper parts of the body enters the heart through the superior vena cava and flows into the right atrium.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-14",
+      "questionText": "Which part of the brain maintains posture and equilibrium of the body?",
+      "options": ["Cerebrum", "Cerebellum", "Pons", "Medulla"],
+      "correctAnswerIndex": 1,
+      "explanation": "The cerebellum, located at the back of the brain, is responsible for coordinating voluntary movements, as well as maintaining posture, balance, and equilibrium.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-15",
+      "questionText": "The mode of reproduction in which an individual produces offspring without the help of another individual is called:",
+      "options": ["Sexual reproduction", "Asexual reproduction", "Fertilization", "Pollination"],
+      "correctAnswerIndex": 1,
+      "explanation": "Asexual reproduction is a type of reproduction that does not involve the fusion of gametes or change in the number of chromosomes. The offspring that arise by asexual reproduction from a single cell or from a multicellular organism inherit the genes of that single parent.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-16",
+      "questionText": "A cross between a tall plant (TT) and a short plant (tt) resulted in progeny that were all tall because:",
+      "options": ["Tallness is a recessive trait", "Shortness is a dominant trait", "Tallness is a dominant trait", "Height of the plant is not governed by gene T or t"],
+      "correctAnswerIndex": 2,
+      "explanation": "In this Mendelian cross, the allele for tallness (T) is dominant over the allele for shortness (t). Therefore, all heterozygous offspring (Tt) will express the dominant trait, which is tallness.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-17",
+      "questionText": "Which of the following is a non-biodegradable substance?",
+      "options": ["Paper", "Cotton cloth", "Plastic", "Wood"],
+      "correctAnswerIndex": 2,
+      "explanation": "Non-biodegradable substances cannot be broken down by natural organisms. Plastic is a synthetic polymer that persists in the environment for a very long time.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-18",
+      "questionText": "The functional units of the kidneys are called:",
+      "options": ["Neurons", "Nephrons", "Alveoli", "Villi"],
+      "correctAnswerIndex": 1,
+      "explanation": "Nephrons are the microscopic structural and functional units of the kidney responsible for filtering blood and forming urine.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-19",
+      "questionText": "Which blood cells are responsible for fighting infection?",
+      "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+      "correctAnswerIndex": 1,
+      "explanation": "White blood cells (leukocytes) are a key component of the body's immune system, helping to fight off infections and other diseases.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-20",
+      "questionText": "The movement of a plant part in response to light is called:",
+      "options": ["Geotropism", "Hydrotropism", "Phototropism", "Chemotropism"],
+      "correctAnswerIndex": 2,
+      "explanation": "Phototropism is the directional growth of a plant in response to a light stimulus. Shoots typically show positive phototropism (growing towards light).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-21",
+      "questionText": "Which of the following methods of contraception protects a person from acquiring a sexually transmitted disease?",
+      "options": ["Oral pills", "Condom", "Copper-T", "Surgery"],
+      "correctAnswerIndex": 1,
+      "explanation": "Barrier methods like condoms are effective in preventing the transmission of sexually transmitted diseases (STDs) by preventing the exchange of bodily fluids.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-22",
+      "questionText": "The wings of a bird and the wings of an insect are:",
+      "options": ["Homologous organs", "Analogous organs", "Vestigial organs", "Fossilized organs"],
+      "correctAnswerIndex": 1,
+      "explanation": "Analogous organs have different structures and origins but perform the same function. The wings of a bird (bone and feathers) and an insect (chitin) are structurally different but are both used for flying.",
       "category": "biology"
     },
     {
