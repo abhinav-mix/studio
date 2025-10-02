@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 import { BookOpenCheck, Shield, User as UserIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth, useUser, useFirestore } from '@/firebase';
-import { signInWithEmailAndPassword, RecaptchaVerifier, signInWithPhoneNumber, ConfirmationResult } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
 import { doc, getDoc } from 'firebase/firestore';
 
@@ -23,43 +23,12 @@ export default function LoginPage() {
   const { user, isUserLoading } = useUser();
   const { toast } = useToast();
   
-  const [phone, setPhone] = useState('');
-  const [otp, setOtp] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [memberPassword, setMemberPassword] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
   const [error, setError] = useState('');
   const [role, setRole] = useState<'member' | 'admin'>('member');
-  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
-  const [otpSent, setOtpSent] = useState(false);
   
-  const recaptchaContainerRef = useRef<HTMLDivElement>(null);
-  // Store the verifier instance in a ref to persist across re-renders
-  const recaptchaVerifierRef = useRef<RecaptchaVerifier | null>(null);
-
-  // This function sets up the reCAPTCHA verifier.
-  const setupRecaptcha = () => {
-    if (!auth || !recaptchaContainerRef.current) return;
-    
-    // Clear any existing verifier to prevent conflicts
-    if (recaptchaVerifierRef.current) {
-      recaptchaVerifierRef.current.clear();
-    }
-    
-    // Create a new verifier and store it in the ref
-    recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaContainerRef.current, {
-      'size': 'invisible',
-      'callback': (response: any) => {
-        // reCAPTCHA solved, allow signInWithPhoneNumber.
-      },
-      'expired-callback': () => {
-        // Response expired. Ask user to solve reCAPTCHA again.
-        toast({
-          variant: 'destructive',
-          title: 'reCAPTCHA Expired',
-          description: 'Please try sending the OTP again.',
-        });
-      }
-    });
-  };
 
   useEffect(() => {
     if (!isUserLoading && user) {
@@ -71,29 +40,16 @@ export default function LoginPage() {
     }
   }, [user, isUserLoading, router]);
 
-  useEffect(() => {
-    // Setup reCAPTCHA when auth is ready and the container is rendered
-    if (auth && recaptchaContainerRef.current) {
-        // Delay slightly to ensure the container is fully available
-        const timeoutId = setTimeout(() => {
-            if (!recaptchaVerifierRef.current) {
-                setupRecaptcha();
-            }
-        }, 100);
-        return () => clearTimeout(timeoutId);
-    }
-  }, [auth, role]);
-
 
   const handleAdminLogin = async () => {
     setError('');
-    if (!password) {
+    if (!adminPassword) {
       setError('Please enter the admin password.');
       return;
     }
     
     try {
-      await signInWithEmailAndPassword(auth, ADMIN_EMAIL, password);
+      await signInWithEmailAndPassword(auth, ADMIN_EMAIL, adminPassword);
       toast({ title: "Admin Login Successful!", description: "Redirecting..." });
     } catch (e: any) {
       setError('Incorrect admin password.');
@@ -101,58 +57,16 @@ export default function LoginPage() {
     }
   };
 
-  const handlePhoneLogin = async () => {
+  const handleMemberLogin = async () => {
     setError('');
-    if (!phone.startsWith('+')) {
-      setError('Phone number must include country code (e.g., +91).');
-      return;
-    }
-    
-    // Ensure verifier is set up. If not, try to set it up again.
-    if (!recaptchaVerifierRef.current) {
-        setupRecaptcha();
-        if (!recaptchaVerifierRef.current) {
-             setError('Recaptcha not initialized. Please refresh the page and try again.');
-             return;
-        }
-    }
-    
-    const verifier = recaptchaVerifierRef.current;
-
-    try {
-      const result = await signInWithPhoneNumber(auth, phone, verifier);
-      setConfirmationResult(result);
-      setOtpSent(true);
-      toast({ title: "OTP Sent!", description: `An OTP has been sent to ${phone}` });
-    } catch (e: any) {
-      console.error(e);
-      let userMessage = 'Failed to send OTP. Please check the phone number or try again.';
-      if (e.code === 'auth/invalid-phone-number') {
-        userMessage = 'The phone number is not valid.';
-      } else if (e.code === 'auth/too-many-requests') {
-        userMessage = 'Too many requests. Please try again later.';
-      }
-      setError(userMessage);
-      toast({ variant: 'destructive', title: 'OTP Error', description: userMessage });
-      // Reset reCAPTCHA on failure
-      setupRecaptcha();
-    }
-  };
-
-  const handleOtpConfirm = async () => {
-    setError('');
-    if (!otp || otp.length !== 6) {
-      setError('Please enter a valid 6-digit OTP.');
-      return;
-    }
-    if (!confirmationResult) {
-      setError('Something went wrong. Please try sending the OTP again.');
+    if (!email || !memberPassword) {
+      setError('Please enter both email and password.');
       return;
     }
 
     try {
-      const result = await confirmationResult.confirm(otp);
-      const loggedInUser = result.user;
+      const userCredential = await signInWithEmailAndPassword(auth, email, memberPassword);
+      const loggedInUser = userCredential.user;
 
       const userDocRef = doc(firestore, 'users', loggedInUser.uid);
       const userDoc = await getDoc(userDocRef);
@@ -167,10 +81,15 @@ export default function LoginPage() {
       toast({ title: "Login Successful!", description: "Redirecting..." });
     } catch (e: any) {
       console.error(e);
-      setError('Invalid OTP or login failed.');
-      toast({ variant: 'destructive', title: 'Login Failed', description: 'The OTP is incorrect.' });
+      let errorMessage = 'Invalid credentials or login failed.';
+      if (e.code === 'auth/user-not-found' || e.code === 'auth/wrong-password' || e.code === 'auth/invalid-credential') {
+        errorMessage = 'Invalid email or password.';
+      }
+      setError(errorMessage);
+      toast({ variant: 'destructive', title: 'Login Failed', description: errorMessage });
     }
   };
+
 
   if (isUserLoading || (!isUserLoading && user)) {
       return <div className="flex items-center justify-center min-h-screen bg-background">Loading...</div>
@@ -197,10 +116,9 @@ export default function LoginPage() {
             <Tabs defaultValue="member" onValueChange={(value) => {
               setRole(value as 'member' | 'admin');
               setError('');
-              setPassword('');
-              setPhone('');
-              setOtp('');
-              setOtpSent(false);
+              setAdminPassword('');
+              setEmail('');
+              setMemberPassword('');
             }}>
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="member"><UserIcon className="mr-2 h-4 w-4" /> Member</TabsTrigger>
@@ -208,30 +126,26 @@ export default function LoginPage() {
               </TabsList>
               
               <TabsContent value="member" className="pt-6 space-y-4">
-                {!otpSent ? (
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
+                 <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
                     <Input
-                      id="phone"
-                      type="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+919876543210"
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="member@example.com"
                     />
                   </div>
-                ) : (
                   <div className="space-y-2">
-                    <Label htmlFor="otp">OTP</Label>
+                    <Label htmlFor="password-member">Password</Label>
                     <Input
-                      id="otp"
-                      type="text"
-                      value={otp}
-                      onChange={(e) => setOtp(e.target.value)}
-                      placeholder="Enter the 6-digit OTP"
-                      maxLength={6}
+                      id="password-member"
+                      type="password"
+                      value={memberPassword}
+                      onChange={(e) => setMemberPassword(e.target.value)}
+                      placeholder="Enter your password"
                     />
                   </div>
-                )}
                  <p className="text-xs text-center text-muted-foreground pt-2">
                   An admin must create your account before you can log in.
                 </p>
@@ -253,24 +167,20 @@ export default function LoginPage() {
                   <Input
                     id="password-admin"
                     type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={adminPassword}
+                    onChange={(e) => setAdminPassword(e.target.value)}
                     placeholder="Enter admin password"
                   />
                 </div>
               </TabsContent>
             </Tabs>
-            {/* This div is the anchor for the invisible reCAPTCHA */}
-            <div ref={recaptchaContainerRef} className="my-2"></div>
             {error && <p className="text-sm text-center text-destructive pt-4">{error}</p>}
           </CardContent>
           <CardFooter>
             {role === 'admin' ? (
               <Button onClick={handleAdminLogin} className="w-full text-lg">Login</Button>
-            ) : !otpSent ? (
-              <Button onClick={handlePhoneLogin} className="w-full text-lg">Send OTP</Button>
             ) : (
-              <Button onClick={handleOtpConfirm} className="w-full text-lg">Confirm OTP & Login</Button>
+              <Button onClick={handleMemberLogin} className="w-full text-lg">Login</Button>
             )}
           </CardFooter>
         </Card>
@@ -278,5 +188,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
-    
