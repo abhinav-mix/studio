@@ -39,7 +39,7 @@ export default function PointsClient() {
     return pointsHistory.reduce((sum, entry) => sum + entry.pointsAdded, 0);
   }, [pointsHistory]);
 
-  const handleSpinResult = async (prizePoints: number) => {
+  const handleSpinResult = async (prizePoints: number, prizeLabel: string, isItem: boolean) => {
     if (!user) return;
     const historyRef = collection(firestore, 'users', user.uid, 'pointHistory');
 
@@ -50,7 +50,14 @@ export default function PointsClient() {
         timestamp: serverTimestamp(),
     });
 
-    if (prizePoints > 0) {
+    if (isItem) {
+        // Log the item win
+        await addDoc(historyRef, {
+            pointsAdded: 0,
+            reason: `Spin Wheel Prize: Won a ${prizeLabel}!`,
+            timestamp: serverTimestamp(),
+        });
+    } else if (prizePoints > 0) {
         // Add prize points
         await addDoc(historyRef, {
             pointsAdded: prizePoints,
@@ -101,7 +108,7 @@ export default function PointsClient() {
                     <TableRow key={entry.id}>
                       <TableCell>{formatTimestamp(entry.timestamp)}</TableCell>
                       <TableCell>{entry.reason}</TableCell>
-                      <TableCell className={`text-right font-medium ${entry.pointsAdded >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                      <TableCell className={`text-right font-medium ${entry.pointsAdded > 0 ? 'text-green-500' : (entry.pointsAdded < 0 ? 'text-red-500' : 'text-muted-foreground')}`}>
                         {entry.pointsAdded > 0 ? `+${entry.pointsAdded}` : entry.pointsAdded}
                       </TableCell>
                     </TableRow>

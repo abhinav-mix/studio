@@ -9,19 +9,17 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
+  { value: 0, label: 'Try Again', color: '#E0E0E0' },
   { value: 100, label: '100', color: '#FFC107' },
-  { value: 0, label: 'Try Again', color: '#E0E0E0' },
-  { value: 200, label: '200', color: '#8BC34A' },
-  { value: 50, label: '50', color: '#FF9800' },
-  { value: 500, label: '500', color: '#4CAF50' },
-  { value: 0, label: 'Try Again', color: '#E0E0E0' },
-  { value: 1000, label: '1000', color: '#F44336' },
-  { value: 250, label: '250', color: '#2196F3' },
+  { value: 1000, label: '1000', color: '#8BC34A' },
+  { value: 0, label: 'iPhone', color: '#F44336', isItem: true },
+  { value: 10000, label: '10k', color: '#4CAF50' },
+  { value: 0, label: 'Samsung S25', color: '#2196F3', isItem: true },
 ];
 
 const SPIN_COST = 500;
 
-export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPoints: number; onSpinComplete: (prize: number) => void; }) {
+export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPoints: number; onSpinComplete: (prize: number, prizeLabel: string, isItem: boolean) => void; }) {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const { toast } = useToast();
@@ -41,7 +39,8 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     
     // Calculate the random spin result
     const randomIndex = Math.floor(Math.random() * segments.length);
-    const prize = segments[randomIndex].value;
+    const resultSegment = segments[randomIndex];
+    const { value: prizePoints, label: prizeLabel, isItem = false } = resultSegment;
     const prizeAngle = (360 / segments.length) * randomIndex;
 
     // Add multiple full rotations for effect + center the pointer on the segment
@@ -53,11 +52,26 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     // After the spin animation
     setTimeout(() => {
       setIsSpinning(false);
-      onSpinComplete(prize);
-      toast({
-        title: prize > 0 ? `You won ${prize} points!` : 'Better luck next time!',
-        description: `Spin again for another chance to win.`,
-      });
+      onSpinComplete(prizePoints, prizeLabel, isItem);
+      
+      if (isItem) {
+          toast({
+            title: `Congratulations! You won a ${prizeLabel}!`,
+            description: 'We will contact you shortly regarding your prize.',
+            duration: 10000,
+          });
+      } else if (prizePoints > 0) {
+        toast({
+            title: `You won ${prizePoints} points!`,
+            description: `Spin again for another chance to win.`,
+        });
+      } else {
+         toast({
+            title: 'Better luck next time!',
+            description: `Spin again for another chance to win.`,
+        });
+      }
+
     }, 5000); // This should match the CSS transition duration
   };
 
@@ -94,7 +108,7 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
                 className="absolute w-full h-full flex items-center justify-center -rotate-90"
                 style={{ transform: `rotate(${(segmentAngle / 2)}deg) translate(50%, 25%)` }}
               >
-                <span className="text-white font-bold text-lg -rotate-90 origin-center">{segment.label}</span>
+                <span className="text-white font-bold text-lg -rotate-90 origin-center text-shadow-sm shadow-black">{segment.label}</span>
               </div>
             </div>
           ))}
@@ -115,4 +129,3 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
     </div>
   );
 }
-
