@@ -9,12 +9,12 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 500, label: '500', color: '#9C27B0', textColor: '#fff' }, // index 0
-  { value: 100, label: '100', color: '#FFC107', textColor: '#fff' }, // index 1
-  { value: 1000, label: '1000', color: '#8BC34A', textColor: '#fff' },
-  { value: 0, label: 'iPhone', color: '#F44336', isItem: true, textColor: '#fff' },
-  { value: 10000, label: '10k', color: '#4CAF50', textColor: '#fff' },
-  { value: 0, label: 'Samsung S25', color: '#2196F3', isItem: true, textColor: '#fff' },
+  { value: 500, label: '500', color: '#9C27B0', textColor: '#fff' }, // Purple
+  { value: 100, label: '100', color: '#FFC107', textColor: '#fff' }, // Amber
+  { value: 1000, label: '1000', color: '#8BC34A', textColor: '#fff' }, // Light Green
+  { value: 0, label: 'iPhone', color: '#F44336', isItem: true, textColor: '#fff' }, // Red
+  { value: 10000, label: '10k', color: '#4CAF50', textColor: '#fff' }, // Green
+  { value: 0, label: 'Samsung S25', color: '#2196F3', isItem: true, textColor: '#fff' }, // Blue
 ];
 
 const SPIN_COST = 500;
@@ -37,11 +37,9 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
 
     setIsSpinning(true);
     
-    // --- Modified Logic ---
     // Only allow results for index 0 (500 points) or index 1 (100 points)
     const allowedIndices = [0, 1];
     const randomIndex = allowedIndices[Math.floor(Math.random() * allowedIndices.length)];
-    // --- End of Modified Logic ---
 
     const resultSegment = segments[randomIndex];
     const { value: prizePoints, label: prizeLabel, isItem = false } = resultSegment;
@@ -69,12 +67,6 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
             title: `🎉 You won ${prizePoints} points! 🎉`,
             description: `Your points have been added to your account.`,
             duration: 8000,
-        });
-      } else {
-         toast({
-            title: 'Better luck next time!',
-            description: `Spin again for another chance to win.`,
-            duration: 5000,
         });
       }
 
@@ -112,18 +104,29 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
                 backgroundColor: segment.color,
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%)',
               }}
-            >
+            />
+          ))}
+          {/* Text Labels */}
+          {segments.map((segment, index) => (
               <div
+                key={`label-${index}`}
                 className="absolute w-full h-full flex items-start justify-center"
-                style={{ 
-                    transform: `rotate(${segmentAngle / 2}deg) translateY(25%) rotate(-90deg)`,
-                    color: segment.textColor,
-                    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.4)',
+                style={{
+                  transform: `rotate(${index * segmentAngle + segmentAngle / 2}deg)`,
                 }}
               >
-                <span className="font-bold text-lg">{segment.label}</span>
+                <span 
+                  className="font-bold text-lg md:text-xl"
+                  style={{
+                    color: segment.textColor,
+                    transform: 'translateY(35px) rotate(-90deg)',
+                    display: 'inline-block',
+                    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.4)',
+                  }}
+                >
+                  {segment.label}
+                </span>
               </div>
-            </div>
           ))}
            {/* Center Circle */}
           <div className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 bg-white border-4 border-primary rounded-full shadow-inner"/>
