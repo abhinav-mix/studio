@@ -1596,11 +1596,431 @@
       "category": "history"
     },
     {
+      "id": "hist-42",
+      "questionText": "The French Revolution began in which year?",
+      "options": ["1789", "1799", "1804", "1776"],
+      "correctAnswerIndex": 0,
+      "explanation": "The French Revolution began in 1789 with the storming of the Bastille, leading to major social and political changes in France and Europe.",
+      "category": "history"
+    },
+    {
+      "id": "hist-43",
+      "questionText": "Who among the following was the leader of the Bolshevik party in Russia?",
+      "options": ["Karl Marx", "Joseph Stalin", "Vladimir Lenin", "Leon Trotsky"],
+      "correctAnswerIndex": 2,
+      "explanation": "Vladimir Lenin was the founder and leader of the Bolshevik party, which seized power in Russia during the October Revolution of 1917.",
+      "category": "history"
+    },
+    {
+      "id": "hist-44",
+      "questionText": "The 'Purna Swaraj' resolution was adopted by the Indian National Congress in which session?",
+      "options": ["Karachi Session, 1931", "Lahore Session, 1929", "Calcutta Session, 1928", "Nagpur Session, 1920"],
+      "correctAnswerIndex": 1,
+      "explanation": "The resolution for 'Purna Swaraj' or complete independence was adopted by the Indian National Congress at its Lahore session in December 1929, with Jawaharlal Nehru as the president.",
+      "category": "history"
+    },
+    {
+      "id": "hist-45",
+      "questionText": "What does the term 'laissez-faire' refer to?",
+      "options": ["A policy of strict government control", "A military strategy", "An economic system with minimal government interference", "A form of monarchy"],
+      "correctAnswerIndex": 2,
+      "explanation": "Laissez-faire is an economic doctrine that opposes governmental interference in economic affairs beyond the minimum necessary for the maintenance of peace and property rights.",
+      "category": "history"
+    },
+    {
+      "id": "hist-46",
+      "questionText": "The Industrial Revolution first began in which country?",
+      "options": ["USA", "Germany", "France", "Great Britain"],
+      "correctAnswerIndex": 3,
+      "explanation": "The Industrial Revolution was the transition to new manufacturing processes in the period from about 1760 to sometime between 1820 and 1840. It began in Great Britain.",
+      "category": "history"
+    },
+    {
+      "id": "hist-47",
+      "questionText": "Who started the newspaper 'Sambad Kaumudi'?",
+      "options": ["Raja Ram Mohan Roy", "Ishwar Chandra Vidyasagar", "Dayanand Saraswati", "Keshab Chandra Sen"],
+      "correctAnswerIndex": 0,
+      "explanation": "Raja Ram Mohan Roy, a prominent social reformer, started the Bengali weekly newspaper 'Sambad Kaumudi' in 1821 to express his views against social evils like Sati.",
+      "category": "history"
+    },
+    {
+      "id": "hist-48",
+      "questionText": "The Balkan region was a source of intense conflict primarily due to:",
+      "options": ["Its geographical location", "The spread of romantic nationalism and disintegration of the Ottoman Empire", "Its rich mineral resources", "Religious differences alone"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Balkan region became an area of intense conflict as the different Slavic nationalities struggled for independence from the declining Ottoman Empire, fueled by the ideas of romantic nationalism.",
+      "category": "history"
+    },
+    {
+      "id": "hist-49",
+      "questionText": "The Non-Cooperation Movement was called off by Mahatma Gandhi due to:",
+      "options": ["The Jallianwala Bagh massacre", "The Chauri Chaura incident", "The signing of the Gandhi-Irwin Pact", "The failure of the movement"],
+      "correctAnswerIndex": 1,
+      "explanation": "Mahatma Gandhi withdrew the Non-Cooperation Movement in 1922 after the Chauri Chaura incident, where a crowd of protestors clashed with police and set fire to a police station.",
+      "category": "history"
+    },
+    {
+      "id": "hist-50",
+      "questionText": "From which country did the concept of 'liberty, equality, and fraternity' originate?",
+      "options": ["Russia", "USA", "Germany", "France"],
+      "correctAnswerIndex": 3,
+      "explanation": "The slogan 'liberty, equality, and fraternity' is the national motto of France and has its origins in the French Revolution.",
+      "category": "history"
+    },
+    {
+      "id": "hist-51",
+      "questionText": "Who was the first woman President of the Indian National Congress?",
+      "options": ["Sarojini Naidu", "Annie Besant", "Indira Gandhi", "Sonia Gandhi"],
+      "correctAnswerIndex": 1,
+      "explanation": "Annie Besant, a prominent Theosophist, was the first woman to be elected as the President of the Indian National Congress in 1917. Sarojini Naidu was the first Indian woman president.",
+      "category": "history"
+    },
+    {
+      "id": "hist-52",
+      "questionText": "The system of 'dyarchy' was introduced in the Indian provinces by the:",
+      "options": ["Indian Councils Act of 1909", "Government of India Act of 1919", "Government of India Act of 1935", "Indian Independence Act of 1947"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Government of India Act of 1919, also known as the Montagu-Chelmsford Reforms, introduced the system of dyarchy, which divided provincial subjects into 'transferred' and 'reserved' categories.",
+      "category": "history"
+    },
+    {
+      "id": "hist-53",
+      "questionText": "The first successful cotton textile mill was established in India in 1854 in:",
+      "options": ["Calcutta", "Madras", "Ahmedabad", "Bombay"],
+      "correctAnswerIndex": 3,
+      "explanation": "The first successful mechanized cotton textile mill was established in Bombay in 1854, which laid the foundation for the growth of the modern cotton industry in India.",
+      "category": "history"
+    },
+    {
+      "id": "hist-54",
+      "questionText": "What did the 'Rowlatt Act' of 1919 authorize the British government to do?",
+      "options": ["Introduce separate electorates for Muslims", "Imprison any person without trial for up to two years", "Increase taxes on agricultural land", "Impose censorship on the press"],
+      "correctAnswerIndex": 1,
+      "explanation": "The infamous Rowlatt Act of 1919 gave the British government the power to arrest and imprison any person suspected of terrorist activities for up to two years without a trial.",
+      "category": "history"
+    },
+    {
+      "id": "hist-55",
+      "questionText": "The idea of a 'nation-state' first emerged in:",
+      "options": ["Ancient Greece", "The Roman Empire", "Medieval Europe", "Modern Europe after the French Revolution"],
+      "correctAnswerIndex": 3,
+      "explanation": "The concept of the modern nation-state, defined by a centralized authority, a specific territory, and a sense of common identity among its people, developed in Europe following the French Revolution.",
+      "category": "history"
+    },
+    {
+      "id": "hist-56",
+      "questionText": "Who founded the 'All India Forward Bloc' political party?",
+      "options": ["Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Subhas Chandra Bose", "Mahatma Gandhi"],
+      "correctAnswerIndex": 2,
+      "explanation": "After resigning from the presidency of the Indian National Congress, Subhas Chandra Bose formed the All India Forward Bloc in 1939 as a faction within the Congress.",
+      "category": "history"
+    },
+    {
+      "id": "hist-57",
+      "questionText": "The process of unification of Italy was completed in which year?",
+      "options": ["1861", "1871", "1848", "1859"],
+      "correctAnswerIndex": 1,
+      "explanation": "Although the Kingdom of Italy was proclaimed in 1861, the unification process, known as the Risorgimento, was completed in 1871 when Rome was captured and became the capital of Italy.",
+      "category": "history"
+    },
+    {
+      "id": "hist-58",
+      "questionText": "The 'Bretton Woods Conference' led to the establishment of which two institutions?",
+      "options": ["United Nations and World Bank", "International Monetary Fund (IMF) and World Bank", "World Trade Organization and UNESCO", "IMF and United Nations"],
+      "correctAnswerIndex": 1,
+      "explanation": "The Bretton Woods Conference of 1944 established a new international economic order, leading to the creation of the International Monetary Fund (IMF) and the World Bank.",
+      "category": "history"
+    },
+    {
+      "id": "hist-59",
+      "questionText": "Who was the editor of the journal 'Harijan'?",
+      "options": ["Dr. B.R. Ambedkar", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel"],
+      "correctAnswerIndex": 2,
+      "explanation": "Mahatma Gandhi started the weekly journal 'Harijan' in 1933 to propagate his ideas against untouchability and for social reform.",
+      "category": "history"
+    },
+    {
+      "id": "hist-60",
+      "questionText": "The 'Boston Tea Party' is associated with the revolution of which country?",
+      "options": ["France", "Russia", "America", "China"],
+      "correctAnswerIndex": 2,
+      "explanation": "The Boston Tea Party was a political protest in 1773 by American colonists against British taxation policies, and it was a key event leading to the American Revolution.",
+      "category": "history"
+    },
+    {
+      "id": "hist-61",
+      "questionText": "Who was the main architect of the unification of Germany?",
+      "options": ["Kaiser William I", "Napoleon", "Giuseppe Mazzini", "Otto von Bismarck"],
+      "correctAnswerIndex": 3,
+      "explanation": "Otto von Bismarck, the Minister-President of Prussia, was the primary architect of German unification, which he achieved through a series of wars and skillful diplomacy.",
+      "category": "history"
+    },
+    {
       "id": "geo-1",
       "questionText": "Which is the largest continent by land area?",
       "options": ["Africa", "North America", "Asia", "Europe"],
       "correctAnswerIndex": 2,
       "explanation": "Asia is the largest continent by both land area and population. It covers about 30% of Earth's total land area.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-2",
+      "questionText": "Which of the following is a non-renewable resource?",
+      "options": [
+        "Solar energy",
+        "Wind energy",
+        "Coal",
+        "Water"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Coal is a fossil fuel that takes millions of years to form and cannot be replenished on a human timescale, making it a non-renewable resource.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-3",
+      "questionText": "Black soil is ideal for growing which crop?",
+      "options": [
+        "Rice",
+        "Wheat",
+        "Cotton",
+        "Jute"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Black soil, also known as Regur soil, is ideal for growing cotton and is famously called 'black cotton soil'.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-4",
+      "questionText": "Which of the following is a Rabi crop?",
+      "options": [
+        "Rice",
+        "Maize",
+        "Wheat",
+        "Cotton"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Rabi crops are sown in winter and harvested in spring. Wheat is a major Rabi crop in India.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-5",
+      "questionText": "The Hirakud Dam is built on which river?",
+      "options": [
+        "Ganga",
+        "Mahanadi",
+        "Yamuna",
+        "Godavari"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The Hirakud Dam, one of the longest dams in the world, is built across the Mahanadi River in Odisha.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-6",
+      "questionText": "Which state is the largest producer of bauxite in India?",
+      "options": [
+        "Jharkhand",
+        "Odisha",
+        "Gujarat",
+        "Maharashtra"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Odisha is the largest bauxite producing state in India, accounting for over half of the country's total production.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-7",
+      "questionText": "The 'Chipko Movement' is associated with:",
+      "options": [
+        "Water conservation",
+        "Forest conservation",
+        "Soil conservation",
+        "Wildlife protection"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The Chipko Movement was a forest conservation movement in India where villagers, especially women, hugged trees to prevent them from being cut down.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-8",
+      "questionText": "Which type of farming is also known as 'slash-and-burn' agriculture?",
+      "options": [
+        "Intensive subsistence farming",
+        "Commercial farming",
+        "Plantation agriculture",
+        "Shifting cultivation"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Shifting cultivation, also known as 'jhum' or 'slash-and-burn' agriculture, involves clearing a patch of forest land by cutting and burning, and then cultivating it for a few years.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-9",
+      "questionText": "The most important non-conventional source of energy in India is:",
+      "options": [
+        "Solar Energy",
+        "Wind Energy",
+        "Tidal Energy",
+        "Geothermal Energy"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "With its tropical location, India has immense potential for solar energy, making it the most important non-conventional source of energy being developed.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-10",
+      "questionText": "Which port is known as the 'Jewel of all ports' on the west coast of India?",
+      "options": [
+        "Kandla",
+        "Mumbai",
+        "Marmagao",
+        "Kochi"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Marmagao port in Goa is a premier iron ore exporting port of India and is often referred to with distinction.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-11",
+      "questionText": "Which of the following soils is formed by the process of leaching?",
+      "options": [
+        "Alluvial soil",
+        "Black soil",
+        "Laterite soil",
+        "Red soil"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Laterite soil develops in areas with high temperature and heavy rainfall. This results in intense leaching, where soluble minerals are washed away from the topsoil.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-12",
+      "questionText": "The Green Revolution was most successful in which states?",
+      "options": [
+        "Punjab, Haryana, and Uttar Pradesh",
+        "Kerala, Tamil Nadu, and Andhra Pradesh",
+        "West Bengal, Odisha, and Bihar",
+        "Maharashtra, Gujarat, and Rajasthan"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The Green Revolution in India primarily benefited the states of Punjab, Haryana, and western Uttar Pradesh, leading to a massive increase in the production of wheat and rice.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-13",
+      "questionText": "Which mineral is also known as 'black gold'?",
+      "options": [
+        "Coal",
+        "Petroleum",
+        "Iron ore",
+        "Manganese"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Petroleum is often referred to as 'black gold' due to its dark color and high economic value.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-14",
+      "questionText": "The headquarters of the Northern Railway zone in India is located at:",
+      "options": [
+        "Mumbai",
+        "Kolkata",
+        "Chennai",
+        "New Delhi"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The headquarters of the Northern Railway, one of the largest railway zones in India, is located in New Delhi.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-15",
+      "questionText": "Which of the following is not a cause of land degradation?",
+      "options": [
+        "Mining",
+        "Overgrazing",
+        "Afforestation",
+        "Deforestation"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Afforestation, which is the planting of trees, helps in conserving soil and prevents land degradation. The other options are major causes of it.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-16",
+      "questionText": "Which is the main food crop of the eastern and southern part of India?",
+      "options": [
+        "Rice",
+        "Wheat",
+        "Maize",
+        "Bajra"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Rice is the staple food crop for the majority of the population in the eastern and southern states of India, which have high temperature and high humidity.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-17",
+      "questionText": "The largest lignite coalfield in India is located at:",
+      "options": [
+        "Singareni",
+        "Talcher",
+        "Neyveli",
+        "Korba"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Neyveli in Tamil Nadu has the largest lignite coal reserves in India and is a major center for thermal power generation from this coal.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-18",
+      "questionText": "The Golden Quadrilateral Super Highways connect which four major cities?",
+      "options": [
+        "Delhi, Mumbai, Bengaluru, Kolkata",
+        "Delhi, Mumbai, Chennai, Kolkata",
+        "Delhi, Nagpur, Chennai, Kolkata",
+        "Delhi, Mumbai, Hyderabad, Kolkata"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The Golden Quadrilateral is a national highway network connecting most of the major industrial, agricultural and cultural centres of India. It connects the four major metro cities of Delhi, Mumbai, Chennai, and Kolkata.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-19",
+      "questionText": "Which type of resource is iron ore?",
+      "options": [
+        "Renewable",
+        "Biotic",
+        "Flow",
+        "Non-renewable"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Iron ore is a mineral resource that is found in finite quantities and cannot be replenished within a human lifespan, making it a non-renewable resource.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-20",
+      "questionText": "Which of these is a beverage crop?",
+      "options": [
+        "Sugarcane",
+        "Cotton",
+        "Tea",
+        "Groundnut"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Tea is a beverage crop grown on plantations. It is a major export item for India. Sugarcane is a cash crop, cotton is a fiber crop, and groundnut is an oilseed.",
+      "category": "geography"
+    },
+    {
+      "id": "geo-21",
+      "questionText": "Which is the oldest oil-producing state in India?",
+      "options": [
+        "Gujarat",
+        "Maharashtra",
+        "Assam",
+        "Andhra Pradesh"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Assam is the oldest oil-producing state in India, with the Digboi oil field being the first to be discovered in the late 19th century.",
       "category": "geography"
     },
     {
