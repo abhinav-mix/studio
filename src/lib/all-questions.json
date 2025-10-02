@@ -2,22 +2,6 @@
 {
   "questions": [
     {
-      "id": "phy-1",
-      "questionText": "What is the SI unit of force?",
-      "options": ["Joule", "Watt", "Newton", "Pascal"],
-      "correctAnswerIndex": 2,
-      "explanation": "The SI unit of force is the Newton (N), named after Sir Isaac Newton. It's defined as the force needed to accelerate one kilogram of mass at the rate of one meter per second squared.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-2",
-      "questionText": "What is the SI unit of electric current?",
-      "options": ["Volt", "Ampere", "Ohm", "Watt"],
-      "correctAnswerIndex": 1,
-      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
-      "category": "physics"
-    },
-    {
       "id": "phy-3",
       "questionText": "A concave mirror gives real, inverted and same size image if the object is placed at?",
       "options": ["Focus", "Infinity", "Center of curvature", "Beyond C"],
@@ -3116,6 +3100,630 @@
       "correctAnswerIndex": 0,
       "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
       "category": "chemistry"
+    },
+    {
+      "id": "bio-103",
+      "questionText": "Which of the following is not a function of the blood?",
+      "options": [
+        "Transport of oxygen",
+        "Transport of hormones",
+        "Digestion of food",
+        "Regulation of body temperature"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Blood transports oxygen, hormones, and helps regulate body temperature, but the digestion of food occurs in the digestive system, not in the blood.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-104",
+      "questionText": "The part of the human eye that contains cells sensitive to light is the:",
+      "options": [
+        "Cornea",
+        "Iris",
+        "Pupil",
+        "Retina"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The retina is the light-sensitive layer at the back of the eye that contains photoreceptor cells (rods and cones) which detect light and initiate neural signals.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-105",
+      "questionText": "Which process is used by unicellular organisms like Amoeba for reproduction?",
+      "options": [
+        "Budding",
+        "Fragmentation",
+        "Binary fission",
+        "Spore formation"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Amoeba reproduces by binary fission, a method of asexual reproduction where the parent cell divides into two identical daughter cells.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-106",
+      "questionText": "If a round, green seeded pea plant (RRyy) is crossed with a wrinkled, yellow seeded pea plant (rrYY), the seeds produced in the F1 generation will be:",
+      "options": [
+        "Round and yellow",
+        "Round and green",
+        "Wrinkled and yellow",
+        "Wrinkled and green"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "This is a dihybrid cross. Round (R) is dominant over wrinkled (r), and yellow (Y) is dominant over green (y). The F1 generation will have the genotype RrYy and will express both dominant phenotypes: round and yellow.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-107",
+      "questionText": "Which of the following is an example of a decomposer?",
+      "options": [
+        "Grass",
+        "Goat",
+        "Lion",
+        "Fungi"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Decomposers break down dead organic matter. Fungi and bacteria are the primary decomposers in most ecosystems.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-108",
+      "questionText": "Which of the following blood vessels carries deoxygenated blood?",
+      "options": [
+        "Aorta",
+        "Pulmonary artery",
+        "Pulmonary vein",
+        "Coronary artery"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The pulmonary artery is the only artery that carries deoxygenated blood. It transports it from the right ventricle of the heart to the lungs.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-109",
+      "questionText": "Which of these is not an endocrine gland?",
+      "options": [
+        "Thyroid",
+        "Pancreas",
+        "Adrenal",
+        "Salivary gland"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Endocrine glands secrete hormones directly into the bloodstream. The salivary gland is an exocrine gland, as it secretes saliva through a duct into the mouth.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-110",
+      "questionText": "The potato is a modified form of:",
+      "options": [
+        "Root",
+        "Stem",
+        "Leaf",
+        "Fruit"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A potato is a tuber, which is a modified, swollen underground stem that stores food for the plant. The 'eyes' of the potato are buds.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-111",
+      "questionText": "The phenomenon where an organism is capable of regrowing lost body parts is called:",
+      "options": [
+        "Regeneration",
+        "Budding",
+        "Fragmentation",
+        "Fission"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Regeneration is the natural process of replacing or restoring damaged or missing cells, tissues, organs, and even entire body parts. Organisms like Planaria and starfish show high regenerative capacity.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-112",
+      "questionText": "A man with blood group A marries a woman with blood group O. What are the possible blood groups of their offspring?",
+      "options": [
+        "A or B",
+        "A or O",
+        "B or O",
+        "Only A"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The woman (blood group O) has genotype ii. The man (blood group A) can have genotype IAIA or IAi. If he is IAIA, all children will be group A (IAi). If he is IAi, children can be group A (IAi) or group O (ii). So the possible groups are A or O.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-113",
+      "questionText": "Which of the following is a greenhouse gas?",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Methane",
+        "Argon"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Greenhouse gases trap heat in the atmosphere. Methane (CH4), carbon dioxide (CO2), and water vapor are major greenhouse gases.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-114",
+      "questionText": "The tiny finger-like projections in the small intestine that help in absorption of food are called:",
+      "options": [
+        "Villi",
+        "Alveoli",
+        "Nephrons",
+        "Bronchi"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Villi are small, finger-like projections that line the inner wall of the small intestine. They vastly increase the surface area for the absorption of digested nutrients.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-115",
+      "questionText": "The movement of water molecules from a region of higher concentration to a region of lower concentration through a semipermeable membrane is called:",
+      "options": [
+        "Diffusion",
+        "Osmosis",
+        "Transpiration",
+        "Active transport"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Osmosis is the specific term for the movement of water across a semipermeable membrane down its concentration gradient.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-116",
+      "questionText": "The part of the flower that contains pollen grains is:",
+      "options": [
+        "Sepal",
+        "Petal",
+        "Stigma",
+        "Anther"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The anther is part of the stamen (male reproductive organ) and is responsible for producing and containing pollen grains.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-117",
+      "questionText": "Which type of reproduction leads to greater variation in the offspring?",
+      "options": [
+        "Asexual reproduction",
+        "Sexual reproduction",
+        "Binary fission",
+        "Budding"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Sexual reproduction involves the combination of genetic material from two different parents, leading to new combinations of genes and thus greater genetic variation in the offspring.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-118",
+      "questionText": "What does a food web represent?",
+      "options": [
+        "A single food chain",
+        "A network of interconnected food chains",
+        "The flow of water in an ecosystem",
+        "The pyramid of numbers"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A food web is a more realistic representation of feeding relationships in an ecosystem, showing how multiple food chains are interconnected.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-119",
+      "questionText": "The oxygen-carrying pigment in red blood cells is:",
+      "options": [
+        "Chlorophyll",
+        "Melanin",
+        "Hemoglobin",
+        "Fibrinogen"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Hemoglobin is a protein in red blood cells that binds with oxygen in the lungs and transports it to tissues throughout the body.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-120",
+      "questionText": "The main thinking part of the human brain is the:",
+      "options": [
+        "Cerebellum",
+        "Medulla oblongata",
+        "Cerebrum",
+        "Hypothalamus"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The cerebrum is the largest part of the brain and is the center for higher-order functions like thinking, reasoning, memory, and language.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-121",
+      "questionText": "In which mode of reproduction does an organism split into two identical halves?",
+      "options": [
+        "Budding",
+        "Spore formation",
+        "Binary fission",
+        "Fragmentation"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Binary fission is an asexual reproduction method where a parent cell divides into two genetically identical daughter cells. It is common in prokaryotes like bacteria and protists like Amoeba.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-122",
+      "questionText": "The presence of which of the following is essential for photosynthesis?",
+      "options": [
+        "Nitrogen",
+        "Oxygen",
+        "Sunlight",
+        "Hydrogen"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to create their own food. Sunlight provides the necessary energy for this process.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-123",
+      "questionText": "Which part of the digestive system produces bile?",
+      "options": [
+        "Pancreas",
+        "Stomach",
+        "Liver",
+        "Small intestine"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The liver produces bile, which is then stored in the gallbladder. Bile helps in the digestion and emulsification of fats in the small intestine.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-124",
+      "questionText": "The junction between two neurons is called a:",
+      "options": [
+        "Synapse",
+        "Axon",
+        "Dendrite",
+        "Cell body"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "A synapse is the specialized junction where a nerve impulse is transmitted from one neuron to another neuron, muscle cell, or gland cell.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-125",
+      "questionText": "Which hormone is secreted by the thyroid gland?",
+      "options": [
+        "Insulin",
+        "Adrenaline",
+        "Thyroxine",
+        "Growth hormone"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The thyroid gland produces thyroxine, a hormone that regulates metabolism, growth, and development.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-126",
+      "questionText": "A feature that helps an organism to survive in its habitat is known as:",
+      "options": [
+        "A variation",
+        "An adaptation",
+        "An evolution",
+        "A mutation"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "An adaptation is a physical or behavioral characteristic that has developed to allow an organism to better survive in its environment.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-127",
+      "questionText": "Which of the following is a biotic component of an ecosystem?",
+      "options": [
+        "Soil",
+        "Water",
+        "Bacteria",
+        "Temperature"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Biotic components are the living parts of an ecosystem. Bacteria, plants, and animals are biotic. Soil, water, and temperature are abiotic (non-living) components.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-128",
+      "questionText": "Which blood vessel has valves?",
+      "options": [
+        "Artery",
+        "Vein",
+        "Capillary",
+        "Aorta"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Veins have valves to ensure that blood flows in one direction, towards the heart, and to prevent backflow, especially in the limbs.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-129",
+      "questionText": "The plant hormone that promotes stem elongation and germination is:",
+      "options": [
+        "Auxin",
+        "Gibberellin",
+        "Cytokinin",
+        "Abscisic acid"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Gibberellins are plant hormones that regulate various developmental processes, including stem elongation, germination, dormancy, flowering, and leaf and fruit senescence.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-130",
+      "questionText": "Which part of the flower becomes the seed after fertilization?",
+      "options": [
+        "Ovary",
+        "Ovule",
+        "Petal",
+        "Stigma"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "After fertilization, the ovule develops into a seed, and the ovary develops into a fruit that encloses the seed(s).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-131",
+      "questionText": "Who is known as the father of genetics?",
+      "options": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Robert Hooke"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Gregor Mendel, through his work on pea plants, discovered the fundamental laws of inheritance. He is widely considered the father of modern genetics.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-132",
+      "questionText": "In the food chain: Grass -> Grasshopper -> Frog -> Snake, which organism is the secondary consumer?",
+      "options": [
+        "Grass",
+        "Grasshopper",
+        "Frog",
+        "Snake"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The grass is the producer. The grasshopper is the primary consumer (eats the producer). The frog is the secondary consumer (eats the primary consumer).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-133",
+      "questionText": "The filtration of blood in the kidneys occurs in the:",
+      "options": [
+        "Ureters",
+        "Bladder",
+        "Nephrons",
+        "Urethra"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Nephrons are the microscopic filtering units of the kidneys, where blood is filtered to remove waste products and form urine.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-134",
+      "questionText": "Which part of a neuron receives information?",
+      "options": [
+        "Axon",
+        "Dendrite",
+        "Cell body",
+        "Nucleus"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Dendrites are branched protoplasmic extensions of a nerve cell that propagate the electrochemical stimulation received from other neural cells to the cell body, or soma, from which the dendrites project.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-135",
+      "questionText": "Which part of the flower is brightly colored to attract insects?",
+      "options": [
+        "Sepals",
+        "Petals",
+        "Stamens",
+        "Pistil"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Petals are often the most conspicuous part of a flower, and their bright colors and scents serve to attract pollinators like insects.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-136",
+      "questionText": "The anther contains:",
+      "options": [
+        "Ovules",
+        "Pollen grains",
+        "Sepals",
+        "Stigma"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The anther is the part of the stamen where pollen is produced. Pollen grains contain the male gametes of the plant.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-137",
+      "questionText": "The alternate forms of a gene are called:",
+      "options": [
+        "Alleles",
+        "Genotypes",
+        "Phenotypes",
+        "Chromosomes"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An allele is one of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-138",
+      "questionText": "Which of these is responsible for the depletion of the ozone layer?",
+      "options": [
+        "Carbon dioxide",
+        "Chlorofluorocarbons (CFCs)",
+        "Methane",
+        "Sulfur dioxide"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Chlorofluorocarbons (CFCs), which were widely used in refrigerants and aerosols, are the primary cause of ozone layer depletion in the stratosphere.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-139",
+      "questionText": "Which of these is a function of the stomata?",
+      "options": [
+        "Photosynthesis",
+        "Transpiration",
+        "Absorption of water",
+        "Transport of food"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Transpiration, the process of water movement through a plant and its evaporation from aerial parts, such as leaves, stems and flowers, occurs chiefly at the stomata.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-140",
+      "questionText": "Which organ secretes a hormone when the blood sugar level rises?",
+      "options": [
+        "Pancreas",
+        "Liver",
+        "Kidney",
+        "Stomach"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The pancreas secretes insulin in response to high blood sugar levels. Insulin helps cells absorb glucose from the blood, thus lowering the blood sugar level.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-141",
+      "questionText": "Which of these is an example of vegetative propagation?",
+      "options": [
+        "Growing a plant from a seed",
+        "Growing a potato from a tuber",
+        "Fertilization of a flower",
+        "Pollination"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Vegetative propagation is a form of asexual reproduction. Growing a new potato plant from a tuber (the potato itself) is a classic example.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-142",
+      "questionText": "In a pea plant, a pure tall plant (TT) is crossed with a pure short plant (tt). The ratio of pure tall plants to pure short plants in the F2 generation is:",
+      "options": [
+        "1:1",
+        "3:1",
+        "1:2:1",
+        "2:1"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The F2 generation will have genotypes TT, Tt, and tt in the ratio 1:2:1. The ratio of pure tall (TT) to pure short (tt) is 1:1.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-143",
+      "questionText": "The organisms at the top of a food chain are called:",
+      "options": [
+        "Producers",
+        "Herbivores",
+        "Apex predators",
+        "Decomposers"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Apex predators are at the top of the food chain and have no natural predators.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-144",
+      "questionText": "Where does the process of aerobic respiration primarily occur in a cell?",
+      "options": [
+        "Nucleus",
+        "Cytoplasm",
+        "Mitochondria",
+        "Ribosome"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "While glycolysis occurs in the cytoplasm, the Krebs cycle and oxidative phosphorylation, which are the main stages of aerobic respiration, take place in the mitochondria.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-145",
+      "questionText": "Which part of the human brain is associated with memory and intelligence?",
+      "options": [
+        "Cerebellum",
+        "Medulla",
+        "Cerebrum",
+        "Pons"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The cerebrum is the largest part of the brain and is responsible for higher cognitive functions such as memory, language, and intelligence.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-146",
+      "questionText": "The unisexual flower contains:",
+      "options": [
+        "Both stamen and pistil",
+        "Only stamen or only pistil",
+        "Only petals",
+        "Only sepals"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A unisexual flower is one that has either the male reproductive part (stamen) or the female reproductive part (pistil), but not both.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-147",
+      "questionText": "Which of the following is not an inherited trait?",
+      "options": [
+        "Eye color",
+        "Hair texture",
+        "Body size",
+        "Attached earlobe"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "While genetics can influence potential body size, it is heavily influenced by environmental factors like diet and exercise, making it an acquired characteristic to a large extent. Eye color, hair texture, and earlobe attachment are primarily inherited traits.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-148",
+      "questionText": "What is the role of decomposers in the environment?",
+      "options": [
+        "To produce food",
+        "To consume plants",
+        "To break down dead organic matter",
+        "To eat other animals"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Decomposers play a crucial role by breaking down dead organisms and waste products, recycling nutrients back into the ecosystem for producers to use.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-149",
+      "questionText": "Which enzyme helps in the digestion of proteins in the stomach?",
+      "options": [
+        "Amylase",
+        "Lipase",
+        "Trypsin",
+        "Pepsin"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Pepsin is the primary enzyme in the stomach that begins the digestion of proteins by breaking them down into smaller peptides.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-150",
+      "questionText": "The movement of sunflower towards the sun is an example of:",
+      "options": [
+        "Geotropism",
+        "Hydrotropism",
+        "Phototropism",
+        "Thigmotropism"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Phototropism is the directional growth of a plant in response to light. The sunflower tracking the sun across the sky is a well-known example of this phenomenon.",
+      "category": "biology"
     },
     {
       "id": "chem-141",
