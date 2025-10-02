@@ -27,3 +27,13 @@ export interface QuizAttempt {
   answers: UserAnswer[];
   category: string;
 }
+
+export interface PointEntry {
+  id: string;
+  pointsAdded: number;
+  timestamp: {
+    seconds: number;
+    nanoseconds: number;
+  } | Date;
+  reason: string;
+}

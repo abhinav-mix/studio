@@ -34,7 +34,7 @@
         },
         "points": {
           "type": "number",
-          "description": "Points earned by the user for being active."
+          "description": "Total points earned by the user."
         }
       },
       "required": [
@@ -43,6 +43,32 @@
         "hasPaid",
         "points"
       ]
+    },
+    "PointEntry": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Point Entry",
+      "type": "object",
+      "description": "Represents a log of points earned by a user at a specific time.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the point entry."
+        },
+        "pointsAdded": {
+          "type": "number",
+          "description": "Number of points added in this entry."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp of when the points were earned.",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Reason for earning the points (e.g., 'Active Time')."
+        }
+      },
+      "required": ["id", "pointsAdded", "timestamp"]
     },
     "Question": {
       "$schema": "http://json-schema.org/draft-07/schema#",
@@ -188,11 +214,31 @@
           "schema": {
             "$ref": "#/backend/entities/User"
           },
-          "description": "Stores user profiles, including payment status. Authorization is based on path ownership (request.auth.uid == userId) for reads/writes by the user. Admins have broader access.",
+          "description": "Stores user profiles, including payment status and total points.",
           "params": [
             {
               "name": "userId",
               "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/pointHistory/{pointEntryId}",
+        "definition": {
+          "entityName": "PointEntry",
+          "schema": {
+            "$ref": "#/backend/entities/PointEntry"
+          },
+          "description": "Stores a chronological log of points earned by a user.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "pointEntryId",
+              "description": "The unique identifier of the point entry record."
             }
           ]
         }
@@ -270,8 +316,6 @@
         }
       }
     ],
-    "reasoning": "The Firestore structure is designed to support the BoardPrep Pro application, focusing on efficient data retrieval and robust security. It leverages path-based ownership for user-specific data and separates data types into different collections to simplify security rules.\n\n*   `/users/{userId}`: Stores user profiles, now including a `hasPaid` field and `email` to manage access. This path provides a natural way to secure user-specific data, as rules can easily verify that `request.auth.uid == userId`.\n*   `/questions/{questionId}`: Stores all questions. Since questions are global data, they reside in a single collection.\n*   `/quizzes/{quizId}`: Stores quiz definitions, including references to questions.\n*   `/users/{userId}/quizAttempts/{quizAttemptId}`: Stores quiz attempts made by each user, enabling easy retrieval of a user's quiz history. The limit of 10 quiz attempts can be enforced in application code. Path-based ownership ensures only the user can access their own quiz attempts.\n*   `/users/{userId}/attemptedQuestions/{attemptedQuestionId}`: This structure allows tracking of user-attempted questions. Path-based ownership ensures only the user can access their attempt history. This addresses the requirement to avoid repetition of questions.\n\nThis design promotes Authorization Independence by avoiding `get()` calls in security rules. Path-based ownership (`/users/{userId}/...`) inherently provides the authorization context. Segregation of data types (questions, quizzes, users, attempts) into separate collections allows for simpler and more maintainable security rules. The structure efficiently supports the core features of the application."
+    "reasoning": "The Firestore structure is designed to support the BoardPrep Pro application, focusing on efficient data retrieval and robust security. It leverages path-based ownership for user-specific data and separates data types into different collections to simplify security rules.\n\n*   `/users/{userId}`: Stores user profiles, now including a `hasPaid` field and `email` to manage access. This path provides a natural way to secure user-specific data, as rules can easily verify that `request.auth.uid == userId`.\n*   `/users/{userId}/pointHistory/{pointEntryId}`: Stores a log of points earned by the user over time. This allows for a detailed history page and separates the frequently updated point logs from the main user document.\n*   `/questions/{questionId}`: Stores all questions. Since questions are global data, they reside in a single collection.\n*   `/quizzes/{quizId}`: Stores quiz definitions, including references to questions.\n*   `/users/{userId}/quizAttempts/{quizAttemptId}`: Stores quiz attempts made by each user, enabling easy retrieval of a user's quiz history. The limit of 10 quiz attempts can be enforced in application code. Path-based ownership ensures only the user can access their own quiz attempts.\n*   `/users/{userId}/attemptedQuestions/{attemptedQuestionId}`: This structure allows tracking of user-attempted questions. Path-based ownership ensures only the user can access their attempt history. This addresses the requirement to avoid repetition of questions.\n\nThis design promotes Authorization Independence by avoiding `get()` calls in security rules. Path-based ownership (`/users/{userId}/...`) inherently provides the authorization context. Segregation of data types (questions, quizzes, users, attempts) into separate collections allows for simpler and more maintainable security rules. The structure efficiently supports the core features of the application."
   }
 }
-
-    
