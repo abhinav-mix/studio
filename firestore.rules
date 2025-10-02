@@ -1,118 +1,189 @@
 /**
- * @file Firestore Security Rules for BoardPrep Pro
- * @corePhilosophy This ruleset enforces a strict user-ownership model for personal data and allows public read access to questions and quizzes.
- * @dataStructure
- *   - /users/{userId}: Stores user profiles. Accessible only to the user and potentially admins (not yet implemented).
- *   - /questions/{questionId}: Stores questions. Publicly readable.
- *   - /quizzes/{quizId}: Stores quizzes. Publicly readable.
- *   - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts. Accessible only to the user.
- *   - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions. Accessible only to the user.
- * @keySecurityDecisions
- *   - User listing is explicitly denied to prevent unauthorized data access.
- *   - Public read access to questions and quizzes simplifies data retrieval for all users.
- *   - All write operations on user-owned data require authentication and ownership validation.
- * @denormalizationForAuthorization N/A
- * @structuralSegregation Public data (questions, quizzes) are stored in top-level collections, while private user data (profiles, attempts) are stored under /users/{userId}.
+ * @file Firestore Security Rules for BoardPrep Pro.
+ *
+ * @core_philosophy This ruleset enforces a strict user-ownership model for personal data
+ *                  while allowing public read access to shared resources like questions and quizzes.
+ *                  All write operations require authentication, and data validation is limited to
+ *                  authorization-critical fields.
+ *
+ * @data_structure The Firestore data is organized as follows:
+ *                  - /users/{userId}: User profiles, accessible only by the user themselves.
+ *                  - /questions/{questionId}: Publicly accessible question data.
+ *                  - /quizzes/{quizId}: Publicly accessible quiz definitions.
+ *                  - /users/{userId}/quizAttempts/{quizAttemptId}: Quiz attempts, only accessible by the user.
+ *                  - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Attempted questions, only accessible by the user.
+ *
+ * @key_security_decisions
+ *   - User listing is disallowed.
+ *   - Public read access is granted to /questions and /quizzes.
+ *   - All write operations require authentication and proper authorization.
+ *
+ * @denormalization_for_authorization Not applicable in this configuration, as path-based
+ *                                    authorization is used extensively, eliminating the need
+ *                                    for denormalization.
+ *
+ * @structural_segregation Private user data is stored under the /users/{userId} collection,
+ *                           while public data (questions, quizzes) is stored in top-level
+ *                           collections. This segregation simplifies access control.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Secures user profiles, allowing only the user to read and write their own profile.
+     * @description Allows users to read and write their own profile data.
      * @path /users/{userId}
-     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
-     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
-     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
-     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
-     * @deny (create) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't create profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2
-     * @deny (get) An unauthenticated user cannot read any user profiles.
-     * @principle Enforces document ownership for writes.
+     * @allow (create) User with ID 'user123' can create their profile if request.auth.uid == 'user123'.
+     * @allow (get) User with ID 'user123' can read their profile if request.auth.uid == 'user123'.
+     * @allow (update) User with ID 'user123' can update their profile if request.auth.uid == 'user123'.
+     * @allow (delete) User with ID 'user123' can delete their profile if request.auth.uid == 'user123' and the document exists.
+     * @deny (create) User with ID 'user456' cannot create a profile for 'user123'.
+     * @deny (get) User with ID 'user456' cannot read the profile of 'user123'.
+     * @deny (update) User with ID 'user456' cannot update the profile of 'user123'.
+     * @deny (delete) User with ID 'user456' cannot delete the profile of 'user123'.
+     * @principle Enforces document ownership for writes and restricts access to a user's own data tree.
      */
     match /users/{userId} {
-      allow get: if isOwner(userId);
-      allow list: if false; // User listing is denied.
+      // Verify identity
+      function isSignedIn() {
+        return request.auth != null;
+      }
 
-      allow create: if isOwner(userId) && request.resource.data.id == userId;
-      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      // Determine access
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && existsAfter(/databases/$(database)/documents/users/$(userId));
+      }
+
+      // Read permissions
+      allow get: if isOwner(userId);
+      allow list: if false; // User listing is disallowed for privacy.
+
+      // Write permissions
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
       allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Allows public read access to questions.
+     * @description Allows anyone to read question data. Only admin can create, update, or delete questions.
      * @path /questions/{questionId}
      * @allow (get) Any user can read any question.
      * @allow (list) Any user can list questions.
-     * @deny (create) No one can create questions through client.
-     * @deny (update) No one can update questions through client.
-     * @deny (delete) No one can delete questions through client.
-     * @principle Allows public read access with restricted writes.
+     * @deny (create) Non-admin users cannot create questions.
+     * @deny (update) Non-admin users cannot update questions.
+     * @deny (delete) Non-admin users cannot delete questions.
+     * @principle Provides public read access to questions while restricting write access.
      */
     match /questions/{questionId} {
-      allow get, list: if true;
-      allow create, update, delete: if false;
+      // Read permissions
+      allow get: if true;
+      allow list: if true;
+
+      // Write permissions
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
     }
 
     /**
-     * @description Allows public read access to quizzes.
+     * @description Allows anyone to read quiz data. Only admin can create, update, or delete quizzes.
      * @path /quizzes/{quizId}
      * @allow (get) Any user can read any quiz.
      * @allow (list) Any user can list quizzes.
-     * @deny (create) No one can create quizzes through client.
-     * @deny (update) No one can update quizzes through client.
-     * @deny (delete) No one can delete quizzes through client.
-     * @principle Allows public read access with restricted writes.
+     * @deny (create) Non-admin users cannot create quizzes.
+     * @deny (update) Non-admin users cannot update quizzes.
+     * @deny (delete) Non-admin users cannot delete quizzes.
+     * @principle Provides public read access to quizzes while restricting write access.
      */
     match /quizzes/{quizId} {
-      allow get, list: if true;
-      allow create, update, delete: if false;
+      // Read permissions
+      allow get: if true;
+      allow list: if true;
+
+      // Write permissions
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
     }
 
     /**
-     * @description Secures quiz attempts, allowing only the user to read and write their own quiz attempts.
+     * @description Allows users to read and write their own quiz attempts.
      * @path /users/{userId}/quizAttempts/{quizAttemptId}
-     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create quiz attempts under their profile.
-     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their own quiz attempts.
-     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their own quiz attempts.
-     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their own quiz attempts.
-     * @deny (get) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't read xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's quiz attempts.
-     * @principle Enforces document ownership for writes.
+     * @allow (create) User with ID 'user123' can create a quiz attempt if request.auth.uid == 'user123'.
+     * @allow (get) User with ID 'user123' can read their quiz attempt if request.auth.uid == 'user123'.
+     * @allow (update) User with ID 'user123' can update their quiz attempt if request.auth.uid == 'user123'.
+     * @allow (delete) User with ID 'user123' can delete their quiz attempt if request.auth.uid == 'user123' and the document exists.
+     * @deny (create) User with ID 'user456' cannot create a quiz attempt for 'user123'.
+     * @deny (get) User with ID 'user456' cannot read the quiz attempt of 'user123'.
+     * @deny (update) User with ID 'user456' cannot update the quiz attempt of 'user123'.
+     * @deny (delete) User with ID 'user456' cannot delete the quiz attempt of 'user123'.
+     * @principle Enforces document ownership for writes and restricts access to a user's own data.
      */
     match /users/{userId}/quizAttempts/{quizAttemptId} {
-      allow get, list: if isOwner(userId);
-      allow create: if isOwner(userId) && request.resource.data.userId == userId;
-      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+      // Verify identity
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      // Determine access
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+       function isExistingOwner(userId) {
+          return isOwner(userId) && existsAfter(/databases/$(database)/documents/users/$(userId)/quizAttempts/$(quizAttemptId));
+      }
+
+      // Read permissions
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+
+      // Write permissions
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
       allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Secures attempted questions, allowing only the user to read and write their own attempted questions.
+     * @description Allows users to read and write their own attempted questions.
      * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
-     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create attempted questions under their profile.
-     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their own attempted questions.
-     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their own attempted questions.
-     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their own attempted questions.
-     * @deny (get) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't read xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's attempted questions.
-     * @principle Enforces document ownership for writes.
+     * @allow (create) User with ID 'user123' can create an attempted question if request.auth.uid == 'user123'.
+     * @allow (get) User with ID 'user123' can read their attempted question if request.auth.uid == 'user123'.
+     * @allow (update) User with ID 'user123' can update their attempted question if request.auth.uid == 'user123'.
+     * @allow (delete) User with ID 'user123' can delete their attempted question if request.auth.uid == 'user123' and the document exists.
+     * @deny (create) User with ID 'user456' cannot create an attempted question for 'user123'.
+     * @deny (get) User with ID 'user456' cannot read the attempted question of 'user123'.
+     * @deny (update) User with ID 'user456' cannot update the attempted question of 'user123'.
+     * @deny (delete) User with ID 'user456' cannot delete the attempted question of 'user123'.
+     * @principle Enforces document ownership for writes and restricts access to a user's own data.
      */
     match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
-      allow get, list: if isOwner(userId);
-      allow create: if isOwner(userId) && request.resource.data.userId == userId;
-      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+      // Verify identity
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      // Determine access
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+       function isExistingOwner(userId) {
+          return isOwner(userId) && existsAfter(/databases/$(database)/documents/users/$(userId)/attemptedQuestions/$(attemptedQuestionId));
+      }
+
+      // Read permissions
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+
+      // Write permissions
+      allow create: if isSignedIn() && isOwner(userId);
+      allow update: if isExistingOwner(userId);
       allow delete: if isExistingOwner(userId);
     }
-  }
-
-  // Helper functions
-  function isSignedIn() {
-    return request.auth != null;
-  }
-
-  function isOwner(userId) {
-    return isSignedIn() && request.auth.uid == userId;
-  }
-
-  function isExistingOwner(userId) {
-    return isOwner(userId) && resource != null;
   }
 }

@@ -18,7 +18,7 @@ import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth, useUser, useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, collection, query, orderBy } from 'firebase/firestore';
+import { doc, setDoc, collection, query, orderBy, getDocs } from 'firebase/firestore';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 
@@ -49,11 +49,14 @@ export default function AdminPage() {
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserClass, setNewUserClass] = useState('');
-
-  // Temporarily disable user listing to avoid permission errors
-  const users: Member[] = [];
-  const usersLoading = false;
   
+  const usersQuery = useMemoFirebase(() => {
+    if (!firestore || !user || user.email !== 'bhainew124@gmail.com') return null;
+    return query(collection(firestore, 'users'), orderBy('displayName'));
+  }, [firestore, user]);
+
+  const { data: users, isLoading: usersLoading } = useCollection<Member>(usersQuery);
+
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
     if (!isUserLoading && (!user || user.email !== 'bhainew124@gmail.com')) {
@@ -264,8 +267,33 @@ export default function AdminPage() {
                 <CardContent>
                   {usersLoading ? (
                     <p>Loading members...</p>
+                  ) : users && users.length > 0 ? (
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Name</TableHead>
+                          <TableHead>Email</TableHead>
+                          <TableHead>Class</TableHead>
+                          <TableHead>Payment Status</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {users.map((member) => (
+                          <TableRow key={member.id}>
+                            <TableCell>{member.displayName}</TableCell>
+                            <TableCell>{member.email}</TableCell>
+                            <TableCell>{member.userClass}</TableCell>
+                            <TableCell>
+                              <Badge variant={member.hasPaid ? 'default' : 'destructive'}>
+                                {member.hasPaid ? 'Paid' : 'Unpaid'}
+                              </Badge>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
                   ) : (
-                     <p className="text-muted-foreground">The member list is temporarily disabled to resolve a permission error. You can still add new members above.</p>
+                     <p className="text-muted-foreground">No members found.</p>
                   )}
                 </CardContent>
               </Card>
