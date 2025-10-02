@@ -328,8 +328,7 @@
       "options": ["1 A", "2 A", "3 A", "6 A"],
       "correctAnswerIndex": 1,
       "explanation": "The two 4Ω resistors are in parallel. Their equivalent resistance is (4*4)/(4+4) = 16/8 = 2Ω. This is in series with the 1Ω resistor, so the total resistance is 2 + 1 = 3Ω. Using Ohm's law, I = V/R_total = 6V / 3Ω = 2A.",
-      "category": "physics",
-      "imageHint": "circuit diagram"
+      "category": "physics"
     },
     {
       "id": "phy-42",
@@ -338,8 +337,7 @@
       "options": ["At 2F2", "Between F2 and 2F2", "Beyond 2F2", "At F2"],
       "correctAnswerIndex": 2,
       "explanation": "When an object is placed between F1 and 2F1 of a convex lens, a real, inverted, and magnified image is formed beyond 2F2.",
-      "category": "physics",
-      "imageHint": "lens diagram"
+      "category": "physics"
     },
     {
       "id": "phy-43",
@@ -348,8 +346,7 @@
       "options": ["A", "B", "C", "D"],
       "correctAnswerIndex": 1,
       "explanation": "The angle of incidence is the angle between the incident ray and the normal. In the diagram, 'B' represents this angle.",
-      "category": "physics",
-      "imageHint": "reflection diagram"
+      "category": "physics"
     },
     {
       "id": "phy-44",
@@ -358,8 +355,7 @@
       "options": ["P", "Q", "R", "S"],
       "correctAnswerIndex": 3,
       "explanation": "The angle of deviation (S) is the angle between the extended incident ray and the emergent ray. It shows how much the ray of light has deviated from its original path.",
-      "category": "physics",
-      "imageHint": "prism diagram"
+      "category": "physics"
     },
     {
       "id": "phy-45",
@@ -456,8 +452,7 @@
       "options": ["A", "B", "C", "D"],
       "correctAnswerIndex": 0,
       "explanation": "The magnetic field is strongest where the magnetic field lines are closest together. In a bar magnet, this occurs at the poles. Point A is at the pole.",
-      "category": "physics",
-      "imageHint": "magnetic field"
+      "category": "physics"
     },
     {
       "id": "phy-57",
@@ -466,8 +461,7 @@
       "options": ["Concave, converges rays", "Concave, diverges rays", "Convex, converges rays", "Convex, diverges rays"],
       "correctAnswerIndex": 2,
       "explanation": "The diagram shows a convex lens (thicker in the middle). It is also known as a converging lens because it brings parallel rays of light to a single point (the focus).",
-      "category": "physics",
-      "imageHint": "lens diagram"
+      "category": "physics"
     },
     {
       "id": "phy-58",
@@ -476,8 +470,7 @@
       "options": ["Retina", "Optic Nerve", "Cornea", "Lens"],
       "correctAnswerIndex": 1,
       "explanation": "The part labeled 'X' is the optic nerve. It is responsible for transmitting visual information from the retina to the brain.",
-      "category": "physics",
-      "imageHint": "human eye"
+      "category": "physics"
     },
     {
       "id": "phy-59",
@@ -486,8 +479,7 @@
       "options": ["10 Ω", "2.5 Ω", "20 Ω", "5 Ω"],
       "correctAnswerIndex": 1,
       "explanation": "The two 5Ω resistors are in parallel. The equivalent resistance is calculated as 1/R = 1/5 + 1/5 = 2/5. So, R = 5/2 = 2.5 Ω.",
-      "category": "physics",
-      "imageHint": "circuit diagram"
+      "category": "physics"
     },
     {
       "id": "phy-60",
@@ -584,8 +576,7 @@
       "options": ["greater than unity", "less than unity", "equal to unity", "zero"],
       "correctAnswerIndex": 0,
       "explanation": "The ray of light bends towards the normal when it enters medium B from medium A. This indicates that medium B is optically denser than medium A. Therefore, the refractive index of medium B relative to medium A is greater than unity.",
-      "category": "physics",
-      "imageHint": "refraction diagram"
+      "category": "physics"
     },
     {
       "id": "phy-72",
@@ -817,86 +808,6 @@
       "options": ["30°", "60°", "90°", "0°"],
       "correctAnswerIndex": 0,
       "explanation": "According to the first law of reflection, the angle of incidence is equal to the angle of reflection. Therefore, the angle of reflection will also be 30°.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-101",
-      "questionText": "What type of energy conversion occurs in a loudspeaker?",
-      "options": ["Electrical to Sound", "Sound to Electrical", "Mechanical to Sound", "Electrical to Mechanical"],
-      "correctAnswerIndex": 0,
-      "explanation": "A loudspeaker converts electrical signals into sound waves. The varying electrical current causes a diaphragm to vibrate, producing sound.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-102",
-      "questionText": "If the radius of curvature of a spherical mirror is 20 cm, what is its focal length?",
-      "options": ["10 cm", "20 cm", "40 cm", "5 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "The focal length (f) of a spherical mirror is half of its radius of curvature (R). So, f = R/2 = 20 cm / 2 = 10 cm.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-103",
-      "questionText": "Which type of mirror can form a real image?",
-      "options": ["Concave mirror", "Convex mirror", "Plane mirror", "Both convex and plane mirror"],
-      "correctAnswerIndex": 0,
-      "explanation": "Only a concave mirror can form a real image. A real image is formed when light rays actually converge at a point after reflection. Convex and plane mirrors always form virtual images.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-104",
-      "questionText": "The unit of electrical charge is:",
-      "options": ["Ampere", "Volt", "Coulomb", "Ohm"],
-      "correctAnswerIndex": 2,
-      "explanation": "The SI unit of electric charge is the Coulomb (C). One coulomb is the charge transported by a constant current of one ampere in one second.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-105",
-      "questionText": "The working of a rocket is based on the principle of:",
-      "options": ["Conservation of Mass", "Conservation of Energy", "Conservation of Momentum", "Ohm's Law"],
-      "correctAnswerIndex": 2,
-      "explanation": "A rocket works on the principle of conservation of linear momentum, which is an application of Newton's third law of motion. The hot gases are expelled downwards with high momentum, and the rocket gains an equal and opposite momentum upwards.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-106",
-      "questionText": "Which color of light deviates the most when passing through a prism?",
-      "options": ["Red", "Green", "Violet", "Yellow"],
-      "correctAnswerIndex": 2,
-      "explanation": "When white light passes through a prism, it splits into its constituent colors (dispersion). Violet light has the shortest wavelength and is bent (deviates) the most, while red light has the longest wavelength and is bent the least.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-107",
-      "questionText": "What is the primary source of energy for the Earth?",
-      "options": ["Moon", "Stars", "Sun", "Geothermal heat"],
-      "correctAnswerIndex": 2,
-      "explanation": "The Sun is the ultimate source of almost all energy on Earth. It provides solar energy directly and is responsible for wind, rain, and the energy stored in fossil fuels.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-108",
-      "questionText": "If the current flowing through a fixed resistor is halved, the heat produced in it will become:",
-      "options": ["Double", "Half", "One-fourth", "Four times"],
-      "correctAnswerIndex": 2,
-      "explanation": "According to Joule's law of heating, the heat produced (H) is proportional to the square of the current (I^2). If the current is halved (I/2), the heat produced will be (I/2)^2 = I^2/4, which is one-fourth of the original heat.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-109",
-      "questionText": "Which device is used to detect the presence of current in a circuit?",
-      "options": ["Voltmeter", "Ammeter", "Galvanometer", "Motor"],
-      "correctAnswerIndex": 2,
-      "explanation": "A galvanometer is a very sensitive instrument used to detect small electric currents in a circuit. An ammeter is used to measure the magnitude of the current.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-110",
-      "questionText": "The speed of light is maximum in:",
-      "options": ["Water", "Glass", "Diamond", "Vacuum"],
-      "correctAnswerIndex": 3,
-      "explanation": "The speed of light is highest in a vacuum, where it is approximately 3 x 10^8 m/s. It slows down when it travels through any medium like water, glass, or diamond.",
       "category": "physics"
     },
     {
@@ -1214,15 +1125,15 @@
     },
     {
       "id": "chem-22",
-      "questionText": "Which of the following gives a red precipitate with Fehling's solution?",
+      "questionText": "The chips manufacturer usually flushes bags of chips with which gas to prevent the chips from getting oxidized?",
       "options": [
-        "Benzaldehyde",
-        "Acetaldehyde",
-        "Acetone",
-        "Benzoic acid"
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen",
+        "Carbon dioxide"
       ],
       "correctAnswerIndex": 1,
-      "explanation": "Aldehydes, like acetaldehyde, are oxidized by Fehling's solution to give a red precipitate of copper(I) oxide (Cu2O). Ketones and aromatic aldehydes (like benzaldehyde) do not give this test.",
+      "explanation": "Nitrogen is an inert gas and is used to flush bags of chips to prevent the fats and oils from becoming rancid due to oxidation.",
       "category": "chemistry"
     },
     {
@@ -1977,6 +1888,266 @@
       ],
       "correctAnswerIndex": 1,
       "explanation": "John Newlands proposed the Law of Octaves in 1864. He arranged the elements in order of increasing atomic weight and noted that every eighth element had properties similar to the first.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-81",
+      "questionText": "What is the next member of the homologous series of ethene (C2H4)?",
+      "options": [
+        "Methane (CH4)",
+        "Propene (C3H6)",
+        "Butane (C4H10)",
+        "Ethyne (C2H2)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The homologous series of alkenes (with general formula CnH2n) proceeds by adding a -CH2- group. The member after ethene (n=2) is propene (n=3), with the formula C3H6.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-82",
+      "questionText": "What is the chemical nature of a solution of sodium chloride (NaCl) in water?",
+      "options": [
+        "Acidic",
+        "Basic",
+        "Neutral",
+        "Amphoteric"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Sodium chloride (NaCl) is a salt formed from a strong acid (HCl) and a strong base (NaOH). Therefore, its aqueous solution is neutral with a pH of approximately 7.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-83",
+      "questionText": "Which of the following elements has two shells, both of which are completely filled with electrons?",
+      "options": [
+        "Helium (He)",
+        "Neon (Ne)",
+        "Argon (Ar)",
+        "Carbon (C)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Neon (Ne) has an atomic number of 10. Its electronic configuration is 2, 8. The first shell (K) is full with 2 electrons, and the second shell (L) is full with 8 electrons.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-84",
+      "questionText": "The term used to describe the process by which a substance absorbs moisture from the atmosphere until it dissolves in the absorbed water and forms a solution is:",
+      "options": [
+        "Efflorescence",
+        "Deliquescence",
+        "Hygroscopy",
+        "Sublimation"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Deliquescence is the process by which a substance absorbs moisture from the atmosphere and dissolves in it. Sodium hydroxide is an example of a deliquescent substance.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-85",
+      "questionText": "How does the metallic character of elements change as we go down a group in the periodic table?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "First decreases then increases"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "As we move down a group, the atomic size increases and the effective nuclear charge decreases. This makes it easier for the atom to lose electrons, thus increasing the metallic character.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-86",
+      "questionText": "What is the common name of Calcium Sulphate Hemihydrate (CaSO4.1/2H2O)?",
+      "options": [
+        "Gypsum",
+        "Plaster of Paris",
+        "Washing Soda",
+        "Baking Soda"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Calcium Sulphate Hemihydrate (CaSO4.1/2H2O) is commonly known as Plaster of Paris. It is used for making casts and moulds.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-87",
+      "questionText": "Which type of reaction occurs when silver bromide is exposed to sunlight?",
+      "options": [
+        "Combination reaction",
+        "Photochemical decomposition",
+        "Displacement reaction",
+        "Neutralization reaction"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "When silver bromide (AgBr) is exposed to sunlight, it decomposes into silver and bromine. Since this decomposition is caused by light, it is called a photochemical decomposition reaction. 2AgBr(s) -> 2Ag(s) + Br2(g).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-88",
+      "questionText": "An element X forms a chloride with the formula XCl2, which is a solid with a high melting point. X would most likely be in the same group of the Periodic Table as",
+      "options": [
+        "Na (Sodium)",
+        "Mg (Magnesium)",
+        "Al (Aluminum)",
+        "Si (Silicon)"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The formula XCl2 indicates that the element X has a valency of +2. Magnesium (Mg) is in Group 2 and also has a valency of +2, forming MgCl2. Therefore, X is likely in the same group as Mg.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-89",
+      "questionText": "Which of the following is not a characteristic of homologous series?",
+      "options": [
+        "They have the same general formula.",
+        "They differ by a -CH2- group.",
+        "They have different chemical properties.",
+        "They show a gradual change in physical properties."
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A homologous series is a series of compounds with the same functional group and similar chemical properties. They do not have different chemical properties; their properties are very similar.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-90",
+      "questionText": "What is the pH of human blood?",
+      "options": [
+        "6.5",
+        "7.0",
+        "7.4",
+        "8.0"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Human blood is slightly alkaline (basic). Its normal pH range is about 7.35 to 7.45. A pH of 7.4 is considered typical.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-91",
+      "questionText": "The reaction between methane and chlorine in the presence of sunlight is an example of:",
+      "options": [
+        "Addition reaction",
+        "Substitution reaction",
+        "Oxidation reaction",
+        "Elimination reaction"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "In this reaction, one or more hydrogen atoms of methane are replaced by chlorine atoms. This type of reaction, where an atom or group of atoms is replaced by another, is called a substitution reaction.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-92",
+      "questionText": "Which method is suitable for preventing an iron frying pan from rusting?",
+      "options": [
+        "Applying grease",
+        "Applying paint",
+        "Applying a coating of zinc",
+        "All of the above"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "While grease and paint can prevent rust, they are not suitable for a frying pan which is heated. Applying a coating of zinc (galvanization) is a more durable method. Traditionally, pans are also 'seasoned' with oil which forms a protective layer.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-93",
+      "questionText": "The atomic number of three elements X, Y and Z are 3, 11 and 17 respectively. Which two elements have similar chemical properties?",
+      "options": [
+        "X and Y",
+        "Y and Z",
+        "X and Z",
+        "All three"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "X (Lithium) has configuration 2,1. Y (Sodium) has configuration 2,8,1. Z (Chlorine) has configuration 2,8,7. Elements with the same number of valence electrons have similar properties. Both X and Y have 1 valence electron, so they are similar.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-94",
+      "questionText": "What is formed when ethanoic acid reacts with sodium hydroxide?",
+      "options": [
+        "Sodium ethoxide and water",
+        "Sodium acetate and water",
+        "Sodium formate and water",
+        "Methyl acetate and water"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "This is a neutralization reaction between an acid (ethanoic acid) and a base (sodium hydroxide). The products are a salt, sodium acetate (sodium ethanoate), and water. CH3COOH + NaOH -> CH3COONa + H2O.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-95",
+      "questionText": "An element 'E' belongs to period 3 and group 16 of the modern periodic table. What is its valency?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Group 16 elements have 6 valence electrons. To complete their octet, they need to gain 2 electrons. Therefore, the valency of element 'E' (which is Sulfur) is 2.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-96",
+      "questionText": "The structural formula of an ester is H-COO-CH3. What is its IUPAC name?",
+      "options": [
+        "Methyl methanoate",
+        "Ethyl ethanoate",
+        "Methyl ethanoate",
+        "Ethyl methanoate"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The part of the ester from the alcohol is named first (methyl group from methanol). The part from the carboxylic acid is named next (methanoate from methanoic acid). Hence, the name is Methyl methanoate.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-97",
+      "questionText": "Why do ionic compounds have high melting points?",
+      "options": [
+        "Because of weak forces of attraction",
+        "Because of strong intermolecular forces of attraction",
+        "Because they are soluble in water",
+        "Because they are made of crystals"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Ionic compounds are formed by strong electrostatic forces of attraction between positively and negatively charged ions. A considerable amount of energy is required to break these strong intermolecular forces, resulting in high melting points.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-98",
+      "questionText": "Which of the following is a balanced chemical equation?",
+      "options": [
+        "H2 + O2 -> H2O",
+        "2Fe + 3H2O -> Fe2O3 + 3H2",
+        "N2 + H2 -> NH3",
+        "CH4 + 2O2 -> CO2 + 2H2O"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "A balanced equation has an equal number of atoms of each element on both the reactant and product sides. In option 4, there is 1 C, 4 H, and 4 O on both sides.",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-99",
+      "questionText": "The first member of the alkyne homologous series is:",
+      "options": [
+        "Methane",
+        "Ethene",
+        "Ethyne",
+        "Propyne"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Alkynes are hydrocarbons with at least one carbon-carbon triple bond. The simplest alkyne must have at least two carbon atoms to form a triple bond, which is ethyne (C2H2).",
+      "category": "chemistry"
+    },
+    {
+      "id": "chem-100",
+      "questionText": "What happens when a solution of an acid is mixed with a solution of a base in a test tube?",
+      "options": [
+        "The temperature of the solution increases.",
+        "The temperature of the solution decreases.",
+        "The temperature of the solution remains the same.",
+        "Salt formation takes place."
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The neutralization reaction between an acid and a base is an exothermic reaction, which means it releases heat. This causes the temperature of the resulting solution to increase. Salt formation also takes place.",
       "category": "chemistry"
     }
   ]
