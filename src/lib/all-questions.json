@@ -18,6 +18,1021 @@
       "category": "physics"
     },
     {
+      "id": "phy-3",
+      "questionText": "A concave mirror gives real, inverted and same size image if the object is placed at?",
+      "options": ["Focus", "Infinity", "Center of curvature", "Beyond C"],
+      "correctAnswerIndex": 2,
+      "explanation": "When an object is placed at the center of curvature (C) of a concave mirror, it forms a real, inverted image of the same size at C.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-4",
+      "questionText": "The device used for producing electric current is called a/an",
+      "options": ["Generator", "Galvanometer", "Ammeter", "Motor"],
+      "correctAnswerIndex": 0,
+      "explanation": "An electric generator is a device that converts mechanical energy to electrical energy, thus producing an electric current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-5",
+      "questionText": "What is the phenomenon of light responsible for the working of the human eye?",
+      "options": ["Reflection", "Refraction", "Dispersion", "Power of accommodation"],
+      "correctAnswerIndex": 1,
+      "explanation": "The human eye works on the principle of refraction of light. The eye lens refracts the light rays to form a real, inverted image on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-6",
+      "questionText": "The change in focal length of an eye lens is caused by the action of the",
+      "options": ["Pupil", "Retina", "Ciliary muscles", "Iris"],
+      "correctAnswerIndex": 2,
+      "explanation": "The ciliary muscles in the eye are responsible for changing the shape and thereby the focal length of the eye lens, allowing us to focus on objects at different distances.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-7",
+      "questionText": "The magnetic field inside a long straight solenoid carrying current",
+      "options": ["is zero", "decreases as we move towards its end", "increases as we move towards its end", "is the same at all points"],
+      "correctAnswerIndex": 3,
+      "explanation": "Inside a long straight solenoid, the magnetic field lines are nearly parallel and uniformly spaced, indicating that the magnetic field is uniform and the same at all points inside it.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-8",
+      "questionText": "Which of the given is NOT a unit of energy?",
+      "options": ["joule", "newton-meter", "kilowatt", "kilowatt-hour"],
+      "correctAnswerIndex": 2,
+      "explanation": "Kilowatt (kW) is a unit of power, not energy. Kilowatt-hour (kWh), joule, and newton-meter are all units of energy.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-9",
+      "questionText": "The splitting of white light into its component colors is called",
+      "options": ["Reflection", "Refraction", "Dispersion", "Scattering"],
+      "correctAnswerIndex": 2,
+      "explanation": "Dispersion is the phenomenon of splitting of white light into its constituent colors (VIBGYOR) when it passes through a prism.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-10",
+      "questionText": "An object is placed at a distance of 10 cm from a convex mirror of focal length 15 cm. Find the position of the image.",
+      "options": ["+30 cm", "+6 cm", "-6 cm", "-30 cm"],
+      "correctAnswerIndex": 1,
+      "explanation": "Using the mirror formula 1/v + 1/u = 1/f. Given u = -10 cm, f = +15 cm. So, 1/v = 1/15 - 1/(-10) = 1/15 + 1/10 = (2+3)/30 = 5/30 = 1/6. Therefore, v = +6 cm. The image is formed 6 cm behind the mirror.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-11",
+      "questionText": "The resistance of a conductor depends on:",
+      "options": ["Length", "Cross-sectional area", "Nature of the material", "All of the above"],
+      "correctAnswerIndex": 3,
+      "explanation": "The resistance R of a conductor is given by the formula R = ρ(L/A), where ρ is the resistivity (nature of material), L is the length, and A is the cross-sectional area. Thus, it depends on all these factors.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-12",
+      "questionText": "Which of the following correctly describes the magnetic field near a long straight wire?",
+      "options": ["The field consists of straight lines perpendicular to the wire.", "The field consists of straight lines parallel to the wire.", "The field consists of radial lines originating from the wire.", "The field consists of concentric circles centered on the wire."],
+      "correctAnswerIndex": 3,
+      "explanation": "According to the right-hand thumb rule, the magnetic field lines around a long straight current-carrying conductor are in the form of concentric circles.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-13",
+      "questionText": "The least distance of distinct vision for a young adult with normal vision is about:",
+      "options": ["25 m", "2.5 cm", "25 cm", "2.5 m"],
+      "correctAnswerIndex": 2,
+      "explanation": "The near point, or the least distance of distinct vision, for a normal human eye is about 25 cm. This is the closest an object can be and still be in sharp focus.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-14",
+      "questionText": "An electric bulb is rated 220 V and 100 W. When it is operated on 110 V, the power consumed will be:",
+      "options": ["100 W", "75 W", "50 W", "25 W"],
+      "correctAnswerIndex": 3,
+      "explanation": "First, find the resistance of the bulb: R = V^2 / P = (220*220)/100 = 484 Ω. Now, find the new power with V = 110 V: P' = V'^2 / R = (110*110)/484 = 12100/484 = 25 W.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-15",
+      "questionText": "Twinkling of stars is due to atmospheric:",
+      "options": ["dispersion of light by water droplets", "refraction of light by different layers of varying refractive indices", "scattering of light by dust particles", "internal reflection of light by clouds"],
+      "correctAnswerIndex": 1,
+      "explanation": "The twinkling of stars is due to the continuous refraction of starlight as it passes through the Earth's atmosphere, which has different layers of varying temperatures and densities (refractive indices).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-16",
+      "questionText": "Which of the following is not a characteristic of a good source of energy?",
+      "options": ["High calorific value", "Easy to store and transport", "Causes a lot of pollution", "Economical"],
+      "correctAnswerIndex": 2,
+      "explanation": "A good source of energy should be eco-friendly and cause minimal pollution. High pollution is an undesirable characteristic.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-17",
+      "questionText": "A person cannot see distant objects clearly. He is suffering from:",
+      "options": ["Myopia", "Hypermetropia", "Presbyopia", "Astigmatism"],
+      "correctAnswerIndex": 0,
+      "explanation": "Myopia, or near-sightedness, is the eye defect where a person can see nearby objects clearly but has difficulty seeing distant objects. It is corrected using a concave lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-18",
+      "questionText": "What is the equivalent resistance when two resistors of resistance R1 and R2 are connected in series?",
+      "options": ["R1 * R2 / (R1 + R2)", "R1 + R2", "1/R1 + 1/R2", "|R1 - R2|"],
+      "correctAnswerIndex": 1,
+      "explanation": "In a series combination, the total resistance of the circuit is the sum of the individual resistances. So, R_eq = R1 + R2.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-19",
+      "questionText": "The human eye forms the image of an object at its",
+      "options": ["cornea", "iris", "pupil", "retina"],
+      "correctAnswerIndex": 3,
+      "explanation": "The retina acts like a screen at the back of the eye. The eye lens focuses light to form a real, inverted image on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-20",
+      "questionText": "The blue colour of the sky is due to the phenomenon of",
+      "options": ["Reflection of light", "Refraction of light", "Dispersion of light", "Scattering of light"],
+      "correctAnswerIndex": 3,
+      "explanation": "The blue color of the sky is due to the scattering of sunlight by the molecules of the air. Blue light is scattered more than other colors because it travels as shorter, smaller waves.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-21",
+      "questionText": "What is the function of an earth wire?",
+      "options": ["To prevent damage to the appliance", "To provide a path for the current to flow", "To prevent the user from getting an electric shock", "To increase the efficiency of the appliance"],
+      "correctAnswerIndex": 2,
+      "explanation": "The earth wire is a safety feature. If the live wire accidentally touches the metal casing of an appliance, the earth wire provides a low-resistance path for the current to flow to the ground, preventing the user from getting a severe electric shock.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-22",
+      "questionText": "Which type of lens is used to correct hypermetropia (far-sightedness)?",
+      "options": ["Concave lens", "Convex lens", "Bifocal lens", "Cylindrical lens"],
+      "correctAnswerIndex": 1,
+      "explanation": "Hypermetropia is corrected using a convex lens of appropriate power. The convex lens converges the light rays, allowing the image to be formed on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-23",
+      "questionText": "Ohm's law gives a relationship between:",
+      "options": ["Current and resistance", "Resistance and potential difference", "Potential difference and current", "Potential difference and electric charge"],
+      "correctAnswerIndex": 2,
+      "explanation": "Ohm's law states that the potential difference (V) across the ends of a given metallic wire in an electric circuit is directly proportional to the current (I) flowing through it, provided its temperature remains the same. V ∝ I or V = IR.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-24",
+      "questionText": "What will be the color of the sky as seen from the moon?",
+      "options": ["Blue", "Black", "White", "Red"],
+      "correctAnswerIndex": 1,
+      "explanation": "There is no atmosphere on the moon. Therefore, there is no scattering of light. As a result, the sky appears black to an astronaut on the moon.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-25",
+      "questionText": "Which of the following is a renewable source of energy?",
+      "options": ["Coal", "Petroleum", "Natural Gas", "Solar energy"],
+      "correctAnswerIndex": 3,
+      "explanation": "Solar energy is a renewable source of energy as it is derived from the sun and is inexhaustible. Coal, petroleum, and natural gas are fossil fuels and are non-renewable.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-26",
+      "questionText": "The force exerted on a current-carrying conductor placed in a magnetic field is largest when the angle between the conductor and the magnetic field is:",
+      "options": ["45°", "60°", "90°", "180°"],
+      "correctAnswerIndex": 2,
+      "explanation": "The force (F) is given by F = I * L * B * sin(θ), where θ is the angle between the current direction and the magnetic field. The sine function is maximum (sin(90°) = 1) when the angle is 90°, so the force is largest when the conductor is perpendicular to the magnetic field.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-27",
+      "questionText": "The commercial unit of electrical energy is:",
+      "options": ["Joule", "Watt-hour", "Kilowatt-hour", "Volt-ampere"],
+      "correctAnswerIndex": 2,
+      "explanation": "The commercial unit of electrical energy is the kilowatt-hour (kWh), also known as a 'unit'. 1 kWh = 3.6 × 10^6 joules.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-28",
+      "questionText": "A real image, equal in size to the object, can be obtained using a:",
+      "options": ["Concave mirror", "Convex mirror", "Plane mirror", "Any mirror"],
+      "correctAnswerIndex": 0,
+      "explanation": "A concave mirror can form a real image that is equal in size to the object. This happens when the object is placed at the center of curvature (2F). A plane mirror forms a virtual image of the same size.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-29",
+      "questionText": "The essential difference between an AC generator and a DC generator is that:",
+      "options": ["AC generator has an electromagnet while a DC generator has permanent magnet.", "DC generator will generate a higher voltage.", "AC generator has slip rings while the DC generator has a commutator.", "AC generator will generate a lower voltage."],
+      "correctAnswerIndex": 2,
+      "explanation": "The key difference is in how the current is collected from the rotating coil. AC generators use slip rings to maintain the alternating current, while DC generators use a split-ring commutator to reverse the direction of the current every half rotation, producing a direct current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-30",
+      "questionText": "Which phenomenon is responsible for the reddish appearance of the sun at sunrise and sunset?",
+      "options": ["Reflection of light", "Dispersion of light", "Scattering of light", "Total internal reflection"],
+      "correctAnswerIndex": 2,
+      "explanation": "At sunrise and sunset, sunlight has to travel a longer distance through the atmosphere. Most of the blue light and shorter wavelengths are scattered away by the air particles. The light of longer wavelengths (like red and orange) reaches our eyes, making the sun appear reddish.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-31",
+      "questionText": "Power of a lens is -4.0 D. What is its focal length?",
+      "options": ["+25 cm", "-25 cm", "+0.25 m", "-4 m"],
+      "correctAnswerIndex": 1,
+      "explanation": "The formula for the power (P) of a lens is P = 1/f, where f is the focal length in meters. So, f = 1/P = 1/(-4.0) m = -0.25 m. Converting to centimeters: -0.25 m * 100 cm/m = -25 cm. The negative sign indicates it's a concave lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-32",
+      "questionText": "The resistivity of a material is measured in:",
+      "options": ["Ohm", "Ohm / meter", "Ohm-meter", "Ohm-meter^2"],
+      "correctAnswerIndex": 2,
+      "explanation": "From the formula R = ρ(L/A), resistivity ρ = (R * A) / L. The unit is (Ohm * m^2) / m = Ohm-meter (Ω·m).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-33",
+      "questionText": "An electric motor works on the principle of:",
+      "options": ["Electromagnetic induction", "Magnetic effect of electric current", "Heating effect of electric current", "Chemical effect of electric current"],
+      "correctAnswerIndex": 1,
+      "explanation": "An electric motor utilizes the magnetic effect of electric current. It works on the principle that a current-carrying conductor placed in a magnetic field experiences a force, which causes it to rotate.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-34",
+      "questionText": "A ray of light passing through the center of curvature of a concave mirror will:",
+      "options": ["Pass through the focus after reflection", "Become parallel to the principal axis after reflection", "Retrace its path after reflection", "Pass through the pole after reflection"],
+      "correctAnswerIndex": 2,
+      "explanation": "A ray of light passing through the center of curvature of a concave mirror strikes the mirror at a 90-degree angle (along the normal). Therefore, it reflects back along the same path.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-35",
+      "questionText": "The part of the eye which controls the amount of light entering it is the:",
+      "options": ["Cornea", "Iris", "Pupil", "Retina"],
+      "correctAnswerIndex": 1,
+      "explanation": "The iris is a muscular diaphragm that controls the size of the pupil, and thereby regulates the amount of light that enters the eye.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-36",
+      "questionText": "What is the primary cause of the greenhouse effect?",
+      "options": ["Ozone layer depletion", "Trapping of infrared radiation by atmospheric gases", "Scattering of sunlight", "Acid rain"],
+      "correctAnswerIndex": 1,
+      "explanation": "The greenhouse effect is the process by which radiation from a planet's atmosphere warms the planet's surface. Greenhouse gases like carbon dioxide and methane trap infrared radiation (heat), preventing it from escaping into space.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-37",
+      "questionText": "Two resistors of 2 Ω and 4 Ω are connected in parallel. What is the equivalent resistance?",
+      "options": ["6 Ω", "3/4 Ω", "4/3 Ω", "2 Ω"],
+      "correctAnswerIndex": 2,
+      "explanation": "For parallel connection, 1/R_eq = 1/R1 + 1/R2. So, 1/R_eq = 1/2 + 1/4 = (2+1)/4 = 3/4. Therefore, R_eq = 4/3 Ω.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-38",
+      "questionText": "The direction of induced current is given by:",
+      "options": ["Fleming's left-hand rule", "Fleming's right-hand rule", "Right-hand thumb rule", "Maxwell's corkscrew rule"],
+      "correctAnswerIndex": 1,
+      "explanation": "Fleming's right-hand rule is used to determine the direction of the induced current in a conductor moving in a magnetic field or in a stationary conductor in a changing magnetic field (in a generator).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-39",
+      "questionText": "The focal length of a plane mirror is:",
+      "options": ["Zero", "Infinity", "Positive", "Negative"],
+      "correctAnswerIndex": 1,
+      "explanation": "A plane mirror can be considered as a spherical mirror with an infinitely large radius of curvature. Since the focal length is half the radius of curvature, its focal length is also infinity.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-40",
+      "questionText": "Which type of energy is converted into electrical energy in a hydroelectric power plant?",
+      "options": ["Kinetic energy", "Potential energy", "Chemical energy", "Nuclear energy"],
+      "correctAnswerIndex": 1,
+      "explanation": "In a hydroelectric power plant, water is stored at a height in a dam, giving it potential energy. This water is then allowed to fall, converting potential energy into kinetic energy, which turns turbines to generate electricity.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-41",
+      "questionText": "For the circuit shown, what is the value of the current I?",
+      "imageUrl": "https://i.imgur.com/3Z4w3qN.png",
+      "options": ["1 A", "2 A", "3 A", "6 A"],
+      "correctAnswerIndex": 1,
+      "explanation": "The two 4Ω resistors are in parallel. Their equivalent resistance is (4*4)/(4+4) = 16/8 = 2Ω. This is in series with the 1Ω resistor, so the total resistance is 2 + 1 = 3Ω. Using Ohm's law, I = V/R_total = 6V / 3Ω = 2A.",
+      "category": "physics",
+      "imageHint": "circuit diagram"
+    },
+    {
+      "id": "phy-42",
+      "questionText": "An object is placed in front of a convex lens as shown. Where will the image be formed?",
+      "imageUrl": "https://i.imgur.com/eG9Vz3i.png",
+      "options": ["At 2F2", "Between F2 and 2F2", "Beyond 2F2", "At F2"],
+      "correctAnswerIndex": 2,
+      "explanation": "When an object is placed between F1 and 2F1 of a convex lens, a real, inverted, and magnified image is formed beyond 2F2.",
+      "category": "physics",
+      "imageHint": "lens diagram"
+    },
+    {
+      "id": "phy-43",
+      "questionText": "Which letter represents the angle of incidence in the given diagram?",
+      "imageUrl": "https://i.imgur.com/5J3m1bY.png",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswerIndex": 1,
+      "explanation": "The angle of incidence is the angle between the incident ray and the normal. In the diagram, 'B' represents this angle.",
+      "category": "physics",
+      "imageHint": "reflection diagram"
+    },
+    {
+      "id": "phy-44",
+      "questionText": "The diagram shows a ray of light passing through a glass prism. Which angle is the angle of deviation?",
+      "imageUrl": "https://i.imgur.com/Cj3k7L0.png",
+      "options": ["P", "Q", "R", "S"],
+      "correctAnswerIndex": 3,
+      "explanation": "The angle of deviation (S) is the angle between the extended incident ray and the emergent ray. It shows how much the ray of light has deviated from its original path.",
+      "category": "physics",
+      "imageHint": "prism diagram"
+    },
+    {
+      "id": "phy-45",
+      "questionText": "What does the slope of a distance-time graph represent?",
+      "options": ["Acceleration", "Distance", "Speed", "Time"],
+      "correctAnswerIndex": 2,
+      "explanation": "The slope of a distance-time graph is calculated as (change in distance) / (change in time), which is the definition of speed.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-46",
+      "questionText": "1 Horsepower (hp) is equal to approximately:",
+      "options": ["746 Watts", "1000 Watts", "550 Watts", "764 Watts"],
+      "correctAnswerIndex": 0,
+      "explanation": "Horsepower is a unit of power. One mechanical horsepower is standardized as approximately 746 watts.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-47",
+      "questionText": "Which mirror is used as a rear-view mirror in vehicles?",
+      "options": ["Concave mirror", "Plane mirror", "Convex mirror", "Parabolic mirror"],
+      "correctAnswerIndex": 2,
+      "explanation": "Convex mirrors are used as rear-view mirrors because they give an erect, virtual, and diminished image of the objects, providing a wider field of view.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-48",
+      "questionText": "What is the SI unit of magnetic flux?",
+      "options": ["Tesla", "Gauss", "Weber", "Henry"],
+      "correctAnswerIndex": 2,
+      "explanation": "The SI unit of magnetic flux (Φ) is the Weber (Wb). One Weber is the magnetic flux that, linking a circuit of one turn, would produce in it an electromotive force of one volt if it were reduced to zero at a uniform rate in one second.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-49",
+      "questionText": "A fuse wire should have:",
+      "options": ["High resistance and high melting point", "High resistance and low melting point", "Low resistance and high melting point", "Low resistance and low melting point"],
+      "correctAnswerIndex": 1,
+      "explanation": "A fuse wire is designed to protect circuits. It should have high resistance to generate heat (P = I^2*R) and a low melting point so it can melt and break the circuit when an excessive current flows.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-50",
+      "questionText": "The refractive index of diamond is approximately:",
+      "options": ["1.00", "1.33", "1.52", "2.42"],
+      "correctAnswerIndex": 3,
+      "explanation": "Diamond has a very high refractive index of about 2.42. This high value is responsible for its brilliance and sparkle due to total internal reflection.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-51",
+      "questionText": "What is the function of a split-ring commutator in a DC motor?",
+      "options": ["To reverse the direction of current in the coil", "To increase the speed of the motor", "To reduce friction", "To reverse the direction of the magnetic field"],
+      "correctAnswerIndex": 0,
+      "explanation": "The split-ring commutator reverses the direction of current in the armature coil every half rotation. This ensures that the torque on the coil is always in the same direction, causing continuous rotation.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-52",
+      "questionText": "No matter how far you stand from a mirror, your image appears erect. The mirror is likely to be:",
+      "options": ["Plane only", "Concave only", "Convex only", "Either plane or convex"],
+      "correctAnswerIndex": 3,
+      "explanation": "Both plane mirrors and convex mirrors always produce an erect image. A plane mirror produces an erect image of the same size, while a convex mirror produces an erect and diminished image.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-53",
+      "questionText": "What is the main constituent of Biogas?",
+      "options": ["Methane", "Ethane", "Propane", "Butane"],
+      "correctAnswerIndex": 0,
+      "explanation": "Biogas is primarily composed of methane (CH4), typically 50-75%, along with carbon dioxide (CO2) and small amounts of other gases.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-54",
+      "questionText": "Lenz's Law is a consequence of the law of conservation of:",
+      "options": ["Charge", "Momentum", "Mass", "Energy"],
+      "correctAnswerIndex": 3,
+      "explanation": "Lenz's law states that the direction of the induced current is such that it opposes the change that produced it. This opposition is necessary to satisfy the law of conservation of energy.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-55",
+      "questionText": "What happens to the resistance of a wire if its length is doubled?",
+      "options": ["It becomes half", "It is doubled", "It becomes four times", "It remains the same"],
+      "correctAnswerIndex": 1,
+      "explanation": "Resistance (R) is directly proportional to the length (L) of the wire (R ∝ L). Therefore, if the length is doubled, the resistance will also be doubled.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-56",
+      "questionText": "The image shows the magnetic field lines around a bar magnet. At which point is the magnetic field strongest?",
+      "imageUrl": "https://i.imgur.com/9C0D3aG.png",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswerIndex": 0,
+      "explanation": "The magnetic field is strongest where the magnetic field lines are closest together. In a bar magnet, this occurs at the poles. Point A is at the pole.",
+      "category": "physics",
+      "imageHint": "magnetic field"
+    },
+    {
+      "id": "phy-57",
+      "questionText": "Which type of lens is shown in the diagram, and what is its effect on parallel light rays?",
+      "imageUrl": "https://i.imgur.com/kS9wT3O.png",
+      "options": ["Concave, converges rays", "Concave, diverges rays", "Convex, converges rays", "Convex, diverges rays"],
+      "correctAnswerIndex": 2,
+      "explanation": "The diagram shows a convex lens (thicker in the middle). It is also known as a converging lens because it brings parallel rays of light to a single point (the focus).",
+      "category": "physics",
+      "imageHint": "lens diagram"
+    },
+    {
+      "id": "phy-58",
+      "questionText": "In the given diagram of the human eye, what is the part labeled 'X'?",
+      "imageUrl": "https://i.imgur.com/iR3yJ3b.png",
+      "options": ["Retina", "Optic Nerve", "Cornea", "Lens"],
+      "correctAnswerIndex": 1,
+      "explanation": "The part labeled 'X' is the optic nerve. It is responsible for transmitting visual information from the retina to the brain.",
+      "category": "physics",
+      "imageHint": "human eye"
+    },
+    {
+      "id": "phy-59",
+      "questionText": "The equivalent resistance of the given circuit between points A and B is:",
+      "imageUrl": "https://i.imgur.com/tFvXm8W.png",
+      "options": ["10 Ω", "2.5 Ω", "20 Ω", "5 Ω"],
+      "correctAnswerIndex": 1,
+      "explanation": "The two 5Ω resistors are in parallel. The equivalent resistance is calculated as 1/R = 1/5 + 1/5 = 2/5. So, R = 5/2 = 2.5 Ω.",
+      "category": "physics",
+      "imageHint": "circuit diagram"
+    },
+    {
+      "id": "phy-60",
+      "questionText": "The instrument used to measure electric potential difference is:",
+      "options": ["Ammeter", "Galvanometer", "Voltmeter", "Potentiometer"],
+      "correctAnswerIndex": 2,
+      "explanation": "A voltmeter is used to measure the electric potential difference (voltage) between two points in a circuit. It is always connected in parallel across the points.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-61",
+      "questionText": "A wire of resistance R is cut into five equal parts. These parts are then connected in parallel. What is the equivalent resistance of this combination?",
+      "options": ["R/25", "R/5", "5R", "25R"],
+      "correctAnswerIndex": 0,
+      "explanation": "When the wire is cut into 5 parts, each part has a resistance of R/5. When these are connected in parallel, the equivalent resistance R' is given by 1/R' = 1/(R/5) + 1/(R/5) + 1/(R/5) + 1/(R/5) + 1/(R/5) = 5/(R/5) = 25/R. So, R' = R/25.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-62",
+      "questionText": "Which of the following is not a property of magnetic field lines?",
+      "options": ["They originate from the north pole and end at the south pole outside the magnet.", "They form closed continuous loops.", "They can intersect each other.", "The tangent at any point gives the direction of the magnetic field."],
+      "correctAnswerIndex": 2,
+      "explanation": "Magnetic field lines never intersect each other. If they did, it would mean that at the point of intersection, the compass needle would point in two different directions, which is not possible.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-63",
+      "questionText": "A student obtains a sharp image of a distant object on a screen using a concave mirror. To find the focal length, he should measure the distance between:",
+      "options": ["the mirror and the object", "the mirror and the screen", "the object and the screen", "the pole and the center of curvature"],
+      "correctAnswerIndex": 1,
+      "explanation": "For a distant object (at infinity), a concave mirror forms a sharp image at its principal focus. Therefore, the distance between the mirror and the screen (where the image is formed) is the focal length.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-64",
+      "questionText": "The phenomenon of electromagnetic induction is:",
+      "options": ["the process of charging a body.", "the process of generating magnetic field due to a current passing through a coil.", "producing induced current in a coil due to relative motion between a magnet and the coil.", "the process of rotating a coil of an electric motor."],
+      "correctAnswerIndex": 2,
+      "explanation": "Electromagnetic induction is the production of an electromotive force (voltage) across an electrical conductor in a changing magnetic field. This is typically achieved by relative motion between a magnet and a coil.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-65",
+      "questionText": "The defect of vision in which a person can see distant objects clearly but cannot see nearby objects clearly is called:",
+      "options": ["Myopia", "Hypermetropia", "Presbyopia", "Cataract"],
+      "correctAnswerIndex": 1,
+      "explanation": "Hypermetropia, or farsightedness, is the condition where a person can see distant objects clearly but has difficulty focusing on nearby objects. It is corrected with a convex lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-66",
+      "questionText": "The refractive index of a medium is the ratio of the speed of light in vacuum to the speed of light in that medium. If the refractive index of glass is 1.5, what is the speed of light in glass? (Speed of light in vacuum = 3 x 10^8 m/s)",
+      "options": ["1.5 x 10^8 m/s", "2 x 10^8 m/s", "3 x 10^8 m/s", "4.5 x 10^8 m/s"],
+      "correctAnswerIndex": 1,
+      "explanation": "Refractive index (n) = Speed of light in vacuum (c) / Speed of light in medium (v). So, v = c / n = (3 x 10^8 m/s) / 1.5 = 2 x 10^8 m/s.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-67",
+      "questionText": "In an electrical circuit, two resistors of 2 Ω and 4 Ω respectively are connected in series to a 6 V battery. The heat dissipated by the 4 Ω resistor in 5 s will be:",
+      "options": ["5 J", "10 J", "20 J", "30 J"],
+      "correctAnswerIndex": 2,
+      "explanation": "Total resistance R = 2 Ω + 4 Ω = 6 Ω. Current I = V/R = 6V / 6Ω = 1 A. Heat dissipated H = I^2 * R * t = (1 A)^2 * 4 Ω * 5 s = 20 J.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-68",
+      "questionText": "The device used to change the resistance in a circuit is called a:",
+      "options": ["Resistor", "Rheostat", "Capacitor", "Inductor"],
+      "correctAnswerIndex": 1,
+      "explanation": "A rheostat is a variable resistor which is used to control current by changing the resistance in a circuit.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-69",
+      "questionText": "Which part of the solar cooker is responsible for the greenhouse effect?",
+      "options": ["Mirror", "Black coating", "Glass sheet", "Outer box"],
+      "correctAnswerIndex": 2,
+      "explanation": "The glass sheet in a solar cooker allows infrared radiation from the sun to pass through but does not allow the heat radiated by the black inner surface to escape, thus trapping the heat. This is an application of the greenhouse effect.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-70",
+      "questionText": "Under what condition does a concave mirror produce a virtual, erect, and magnified image?",
+      "options": ["When the object is at infinity", "When the object is at the center of curvature", "When the object is between the focus and the center of curvature", "When the object is between the pole and the focus"],
+      "correctAnswerIndex": 3,
+      "explanation": "A concave mirror forms a virtual, erect, and magnified image only when the object is placed between the pole (P) and the principal focus (F). This is the principle used in shaving mirrors.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-71",
+      "questionText": "A light ray enters from medium A to medium B as shown in the figure. The refractive index of medium B relative to medium A will be:",
+      "imageUrl": "https://i.imgur.com/5J3m1bY.png",
+      "options": ["greater than unity", "less than unity", "equal to unity", "zero"],
+      "correctAnswerIndex": 0,
+      "explanation": "The ray of light bends towards the normal when it enters medium B from medium A. This indicates that medium B is optically denser than medium A. Therefore, the refractive index of medium B relative to medium A is greater than unity.",
+      "category": "physics",
+      "imageHint": "refraction diagram"
+    },
+    {
+      "id": "phy-72",
+      "questionText": "The magnification produced by a plane mirror is:",
+      "options": ["-1", "+1", "0", "Less than 1"],
+      "correctAnswerIndex": 1,
+      "explanation": "Magnification (m) is the ratio of image height to object height. For a plane mirror, the image is virtual, erect, and of the same size as the object. Therefore, the magnification is +1. The '+' sign indicates an erect image.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-73",
+      "questionText": "What is the nature of the image formed by a camera?",
+      "options": ["Real, inverted, and diminished", "Virtual, erect, and diminished", "Real, erect, and magnified", "Virtual, inverted, and magnified"],
+      "correctAnswerIndex": 0,
+      "explanation": "A camera uses a convex lens to form a real, inverted, and diminished image of an object on the sensor (or film).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-74",
+      "questionText": "An electric iron consumes energy at a rate of 840 W when heating is at the maximum rate and 360 W when the heating is at the minimum. The voltage is 220 V. What are the current and the resistance in each case?",
+      "options": ["3.82 A, 57.6 Ω and 1.64 A, 134.1 Ω", "1.64 A, 134.1 Ω and 3.82 A, 57.6 Ω", "3.82 A, 134.1 Ω and 1.64 A, 57.6 Ω", "1.64 A, 57.6 Ω and 3.82 A, 134.1 Ω"],
+      "correctAnswerIndex": 0,
+      "explanation": "Case 1 (Max): P = 840W, V=220V. I = P/V = 840/220 ≈ 3.82 A. R = V/I = 220/3.82 ≈ 57.6 Ω. Case 2 (Min): P = 360W, V=220V. I = P/V = 360/220 ≈ 1.64 A. R = V/I = 220/1.64 ≈ 134.1 Ω.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-75",
+      "questionText": "Which of the following materials has the lowest resistivity?",
+      "options": ["Silver", "Copper", "Aluminum", "Glass"],
+      "correctAnswerIndex": 0,
+      "explanation": "Resistivity is a measure of how strongly a material opposes the flow of electric current. Metals are good conductors and have low resistivity. Among the given options, silver has the lowest resistivity, making it the best electrical conductor.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-76",
+      "questionText": "Short-circuiting occurs when:",
+      "options": ["Current in the circuit is very low", "Live wire and neutral wire come in direct contact", "The appliance is switched off", "There is no voltage in the circuit"],
+      "correctAnswerIndex": 1,
+      "explanation": "A short circuit is an abnormal connection between two nodes of an electric circuit intended to be at different voltages. This results when the live wire and the neutral wire come into direct contact, causing the resistance to become very small and a very large current to flow.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-77",
+      "questionText": "Myopia can be corrected by using a:",
+      "options": ["Convex lens", "Concave lens", "Bifocal lens", "Plano-convex lens"],
+      "correctAnswerIndex": 1,
+      "explanation": "Myopia or near-sightedness is a condition where the eye focuses images in front of the retina instead of on the retina. A concave lens is used to diverge the light rays before they enter the eye, allowing the image to be focused correctly on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-78",
+      "questionText": "What is the main advantage of using AC over DC for long-distance power transmission?",
+      "options": ["AC is safer than DC", "AC voltage can be easily stepped up or down", "AC generators are cheaper", "AC causes less pollution"],
+      "correctAnswerIndex": 1,
+      "explanation": "The main advantage of AC for long-distance transmission is that its voltage can be easily and efficiently changed using transformers. Power is transmitted at very high voltages and low currents to minimize power loss (P = I^2*R), and then stepped down for domestic use.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-79",
+      "questionText": "Which of the following is a major component of wind?",
+      "options": ["The uneven heating of the Earth's surface by the sun", "The rotation of the Earth", "The gravitational pull of the moon", "Volcanic activity"],
+      "correctAnswerIndex": 0,
+      "explanation": "Wind is primarily caused by the uneven heating of the Earth's surface by the sun. This creates differences in air pressure, and air moves from areas of high pressure to areas of low pressure, resulting in wind.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-80",
+      "questionText": "The image formed by a concave lens is always:",
+      "options": ["Real and magnified", "Virtual and magnified", "Virtual, erect, and diminished", "Real, inverted, and diminished"],
+      "correctAnswerIndex": 2,
+      "explanation": "A concave lens is a diverging lens. It always forms a virtual, erect, and diminished image, regardless of the object's position.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-81",
+      "questionText": "An object 5 cm in length is held 25 cm away from a converging lens of focal length 10 cm. Find the position, size and the nature of the image formed.",
+      "options": ["16.7 cm, -3.33 cm, Real & Inverted", "20.5 cm, -4.1 cm, Real & Inverted", "15.2 cm, -2.5 cm, Real & Inverted", "18.9 cm, -3.9 cm, Real & Inverted"],
+      "correctAnswerIndex": 0,
+      "explanation": "Using lens formula 1/v - 1/u = 1/f. Given, u = -25 cm, f = +10 cm. 1/v = 1/10 + 1/(-25) = (5-2)/50 = 3/50. v = 50/3 ≈ 16.7 cm. Magnification m = v/u = (16.7)/(-25) ≈ -0.67. Image size = m * object size = -0.67 * 5 cm ≈ -3.33 cm. The image is real and inverted.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-82",
+      "questionText": "Which of the following are primary colours of light?",
+      "options": ["Red, Green, Blue", "Red, Yellow, Blue", "Red, Green, Yellow", "Blue, Green, Yellow"],
+      "correctAnswerIndex": 0,
+      "explanation": "The primary colours of light are Red, Green, and Blue (RGB). They can be mixed in various proportions to produce other colours. This is the additive colour model.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-83",
+      "questionText": "The process of splitting heavy nucleus into two lighter nuclei is called:",
+      "options": ["Nuclear fusion", "Nuclear fission", "Chain reaction", "Radioactive decay"],
+      "correctAnswerIndex": 1,
+      "explanation": "Nuclear fission is a nuclear reaction in which the nucleus of an atom splits into smaller parts (lighter nuclei), often producing free neutrons and photons (in the form of gamma rays), and releasing a very large amount of energy.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-84",
+      "questionText": "Which statement is true for the reflection of light?",
+      "options": ["The angle of incidence is greater than the angle of reflection", "The angle of incidence is smaller than the angle of reflection", "The angle of incidence is equal to the angle of reflection", "The angle of reflection is 90 degrees"],
+      "correctAnswerIndex": 2,
+      "explanation": "According to the laws of reflection, the angle of incidence is always equal to the angle of reflection.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-85",
+      "questionText": "The unit of power is:",
+      "options": ["Joule", "Watt", "Newton", "Pascal"],
+      "correctAnswerIndex": 1,
+      "explanation": "The SI unit of power is the Watt (W), which is defined as one joule per second. Power is the rate at which work is done or energy is transferred.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-86",
+      "questionText": "A concave lens has a focal length of 15 cm. At what distance should an object be placed from the lens so that it forms an image at 10 cm from the lens?",
+      "options": ["-30 cm", "-15 cm", "-10 cm", "-20 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "For a concave lens, f = -15 cm, v = -10 cm. Using the lens formula 1/v - 1/u = 1/f. 1/(-10) - 1/u = 1/(-15). -1/u = -1/15 + 1/10 = (-2+3)/30 = 1/30. So, u = -30 cm.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-87",
+      "questionText": "Find the power of a concave lens of focal length 2 m.",
+      "options": ["-0.5 D", "+0.5 D", "-2 D", "+2 D"],
+      "correctAnswerIndex": 0,
+      "explanation": "Power P = 1/f(in meters). For a concave lens, the focal length is negative, so f = -2 m. P = 1/(-2) = -0.5 Dioptre (D).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-88",
+      "questionText": "Which phenomenon is observed when a beam of sunlight enters a dusty room through a small hole?",
+      "options": ["Dispersion", "Tyndall effect", "Reflection", "Refraction"],
+      "correctAnswerIndex": 1,
+      "explanation": "This is an example of the Tyndall effect, which is the scattering of light by particles in a colloid or a very fine suspension. The dust particles scatter the sunlight, making its path visible.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-89",
+      "questionText": "What is the function of the iris in the human eye?",
+      "options": ["To focus light on the retina", "To control the size of the pupil", "To convert light into electrical signals", "To change the focal length of the lens"],
+      "correctAnswerIndex": 1,
+      "explanation": "The iris is the colored part of the eye. It is a muscular diaphragm that controls the size of the pupil and thus regulates the amount of light entering the eye.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-90",
+      "questionText": "A current of 0.5 A is drawn by a filament of an electric bulb for 10 minutes. Find the amount of electric charge that flows through the circuit.",
+      "options": ["5 C", "50 C", "300 C", "3000 C"],
+      "correctAnswerIndex": 2,
+      "explanation": "Charge (Q) = Current (I) × Time (t). Time t = 10 minutes = 10 * 60 = 600 seconds. Q = 0.5 A * 600 s = 300 Coulombs (C).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-91",
+      "questionText": "How much work is done in moving a charge of 2 C across two points having a potential difference of 12 V?",
+      "options": ["6 J", "14 J", "24 J", "0.16 J"],
+      "correctAnswerIndex": 2,
+      "explanation": "Work Done (W) = Charge (Q) × Potential Difference (V). W = 2 C × 12 V = 24 Joules (J).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-92",
+      "questionText": "An electric heater is rated at 2 kW. Electrical energy costs ₹4 per kWh. What is the cost of using the heater for 3 hours?",
+      "options": ["₹12", "₹24", "₹6", "₹8"],
+      "correctAnswerIndex": 1,
+      "explanation": "Energy consumed = Power × Time = 2 kW × 3 h = 6 kWh. Cost = Energy consumed × Rate = 6 kWh × ₹4/kWh = ₹24.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-93",
+      "questionText": "Which of the following is a property of a virtual image?",
+      "options": ["It can be formed on a screen.", "It is always inverted.", "It cannot be formed on a screen.", "It is always real."],
+      "correctAnswerIndex": 2,
+      "explanation": "A virtual image is an image that cannot be projected or formed on a screen. It is formed where the light rays appear to diverge from.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-94",
+      "questionText": "The danger signals installed at the top of tall buildings are red in colour. These can be easily seen from a distance because among all other colours, the red light:",
+      "options": ["is scattered the most by smoke or fog.", "is scattered the least by smoke or fog.", "is absorbed the most by smoke or fog.", "moves fastest in air."],
+      "correctAnswerIndex": 1,
+      "explanation": "Red light has the longest wavelength among all visible colors. Due to its long wavelength, it is scattered the least by particles like smoke and fog. Therefore, it can travel the longest distance and can be seen clearly from far away.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-95",
+      "questionText": "When a straight conductor is carrying current:",
+      "options": ["There are circular magnetic field lines around it.", "There are magnetic field lines parallel to the conductor.", "There are no magnetic field lines.", "The magnetic field is zero."],
+      "correctAnswerIndex": 0,
+      "explanation": "A current-carrying straight conductor produces a magnetic field around it. The magnetic field lines are in the form of concentric circles with the conductor at the center.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-96",
+      "questionText": "What happens to the current in a circuit if the resistance is doubled?",
+      "options": ["It is doubled.", "It is halved.", "It remains the same.", "It becomes four times."],
+      "correctAnswerIndex": 1,
+      "explanation": "According to Ohm's Law (I = V/R), current is inversely proportional to resistance. If the resistance is doubled, the current will be halved, assuming the voltage remains constant.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-97",
+      "questionText": "The process in which AC voltage is converted to DC voltage is called:",
+      "options": ["Amplification", "Rectification", "Inversion", "Modulation"],
+      "correctAnswerIndex": 1,
+      "explanation": "Rectification is the process of converting an alternating current (AC) into a direct current (DC). A device that does this is called a rectifier.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-98",
+      "questionText": "The focal length of a convex lens is 20 cm. What is its power?",
+      "options": ["+5 D", "+0.05 D", "-5 D", "-0.05 D"],
+      "correctAnswerIndex": 0,
+      "explanation": "Focal length f = 20 cm = 0.2 m. Power P = 1/f = 1/0.2 = +5 Dioptre (D). The power is positive for a convex (converging) lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-99",
+      "questionText": "In a nuclear reactor, which of the following is used as a moderator?",
+      "options": ["Uranium", "Graphite", "Cadmium", "Plutonium"],
+      "correctAnswerIndex": 1,
+      "explanation": "A moderator is a material used in a nuclear reactor to slow down the fast neutrons produced during fission, making them more likely to cause further fission. Heavy water and graphite are common moderators.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-100",
+      "questionText": "A ray of light is incident on a plane mirror at an angle of 30°. What will be the angle of reflection?",
+      "options": ["30°", "60°", "90°", "0°"],
+      "correctAnswerIndex": 0,
+      "explanation": "According to the first law of reflection, the angle of incidence is equal to the angle of reflection. Therefore, the angle of reflection will also be 30°.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-101",
+      "questionText": "What type of energy conversion occurs in a loudspeaker?",
+      "options": ["Electrical to Sound", "Sound to Electrical", "Mechanical to Sound", "Electrical to Mechanical"],
+      "correctAnswerIndex": 0,
+      "explanation": "A loudspeaker converts electrical signals into sound waves. The varying electrical current causes a diaphragm to vibrate, producing sound.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-102",
+      "questionText": "If the radius of curvature of a spherical mirror is 20 cm, what is its focal length?",
+      "options": ["10 cm", "20 cm", "40 cm", "5 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "The focal length (f) of a spherical mirror is half of its radius of curvature (R). So, f = R/2 = 20 cm / 2 = 10 cm.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-103",
+      "questionText": "Which type of mirror can form a real image?",
+      "options": ["Concave mirror", "Convex mirror", "Plane mirror", "Both convex and plane mirror"],
+      "correctAnswerIndex": 0,
+      "explanation": "Only a concave mirror can form a real image. A real image is formed when light rays actually converge at a point after reflection. Convex and plane mirrors always form virtual images.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-104",
+      "questionText": "The unit of electrical charge is:",
+      "options": ["Ampere", "Volt", "Coulomb", "Ohm"],
+      "correctAnswerIndex": 2,
+      "explanation": "The SI unit of electric charge is the Coulomb (C). One coulomb is the charge transported by a constant current of one ampere in one second.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-105",
+      "questionText": "The working of a rocket is based on the principle of:",
+      "options": ["Conservation of Mass", "Conservation of Energy", "Conservation of Momentum", "Ohm's Law"],
+      "correctAnswerIndex": 2,
+      "explanation": "A rocket works on the principle of conservation of linear momentum, which is an application of Newton's third law of motion. The hot gases are expelled downwards with high momentum, and the rocket gains an equal and opposite momentum upwards.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-106",
+      "questionText": "Which color of light deviates the most when passing through a prism?",
+      "options": ["Red", "Green", "Violet", "Yellow"],
+      "correctAnswerIndex": 2,
+      "explanation": "When white light passes through a prism, it splits into its constituent colors (dispersion). Violet light has the shortest wavelength and is bent (deviates) the most, while red light has the longest wavelength and is bent the least.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-107",
+      "questionText": "What is the primary source of energy for the Earth?",
+      "options": ["Moon", "Stars", "Sun", "Geothermal heat"],
+      "correctAnswerIndex": 2,
+      "explanation": "The Sun is the ultimate source of almost all energy on Earth. It provides solar energy directly and is responsible for wind, rain, and the energy stored in fossil fuels.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-108",
+      "questionText": "If the current flowing through a fixed resistor is halved, the heat produced in it will become:",
+      "options": ["Double", "Half", "One-fourth", "Four times"],
+      "correctAnswerIndex": 2,
+      "explanation": "According to Joule's law of heating, the heat produced (H) is proportional to the square of the current (I^2). If the current is halved (I/2), the heat produced will be (I/2)^2 = I^2/4, which is one-fourth of the original heat.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-109",
+      "questionText": "Which device is used to detect the presence of current in a circuit?",
+      "options": ["Voltmeter", "Ammeter", "Galvanometer", "Motor"],
+      "correctAnswerIndex": 2,
+      "explanation": "A galvanometer is a very sensitive instrument used to detect small electric currents in a circuit. An ammeter is used to measure the magnitude of the current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-110",
+      "questionText": "The speed of light is maximum in:",
+      "options": ["Water", "Glass", "Diamond", "Vacuum"],
+      "correctAnswerIndex": 3,
+      "explanation": "The speed of light is highest in a vacuum, where it is approximately 3 x 10^8 m/s. It slows down when it travels through any medium like water, glass, or diamond.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-111",
+      "questionText": "A circuit has a charge of 2C moving through it in 4s. What is the current?",
+      "options": ["8A", "2A", "0.5A", "1A"],
+      "correctAnswerIndex": 2,
+      "explanation": "Current (I) is the rate of flow of charge (Q). I = Q/t = 2C / 4s = 0.5A.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-112",
+      "questionText": "An object of size 7.0 cm is placed at 27 cm in front of a concave mirror of focal length 18 cm. At what distance from the mirror should a screen be placed, so that a sharp focused image can be obtained?",
+      "options": ["-54 cm", "54 cm", "-27 cm", "27 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "Using mirror formula 1/v + 1/u = 1/f. Here, u = -27 cm, f = -18 cm. 1/v = 1/f - 1/u = 1/(-18) - 1/(-27) = -1/18 + 1/27 = (-3+2)/54 = -1/54. So, v = -54 cm. The screen should be placed 54 cm in front of the mirror.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-113",
+      "questionText": "The persistence of vision for the human eye is about:",
+      "options": ["1/10th of a second", "1/16th of a second", "1 second", "1/25th of a second"],
+      "correctAnswerIndex": 1,
+      "explanation": "Persistence of vision is the phenomenon where the eye retains an image for a fraction of a second after the object is removed. For the human eye, this duration is about 1/16th of a second.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-114",
+      "questionText": "A thick glass tumbler cracks when boiling water is poured into it because of:",
+      "options": ["High thermal conductivity of glass", "Low specific heat of glass", "Unequal expansion of inner and outer surfaces", "High boiling point of water"],
+      "correctAnswerIndex": 2,
+      "explanation": "When hot water is poured, the inner surface of the thick glass expands quickly, while the outer surface remains cool and does not expand as much. This unequal expansion creates stress, causing the glass to crack.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-115",
+      "questionText": "The magnetic field is strongest:",
+      "options": ["inside the magnet", "at the north pole", "at the south pole", "at the poles"],
+      "correctAnswerIndex": 3,
+      "explanation": "The magnetic field of a bar magnet is strongest at its poles (both north and south), where the magnetic field lines are most concentrated.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-116",
+      "questionText": "Name the type of current used in household supply.",
+      "options": ["Direct Current (DC)", "Alternating Current (AC)", "Pulsating DC", "Static Current"],
+      "correctAnswerIndex": 1,
+      "explanation": "The electricity supplied to homes is Alternating Current (AC) because its voltage can be easily changed, making it suitable for long-distance transmission with minimal power loss.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-117",
+      "questionText": "What is the frequency of AC used in India?",
+      "options": ["50 Hz", "60 Hz", "100 Hz", "0 Hz"],
+      "correctAnswerIndex": 0,
+      "explanation": "In India, the standard frequency of the alternating current (AC) supply is 50 Hertz (Hz). This means the current reverses its direction 50 times per second.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-118",
+      "questionText": "The principle of working of a transformer is:",
+      "options": ["Self-induction", "Mutual induction", "Magnetic effect of current", "Heating effect of current"],
+      "correctAnswerIndex": 1,
+      "explanation": "A transformer works on the principle of mutual induction, where a changing current in one coil (the primary) induces a changing magnetic flux, which in turn induces a current in a nearby second coil (the secondary).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-119",
+      "questionText": "What kind of energy is stored in a dam?",
+      "options": ["Kinetic Energy", "Potential Energy", "Chemical Energy", "Electrical Energy"],
+      "correctAnswerIndex": 1,
+      "explanation": "Water stored in a dam has gravitational potential energy because of its height above the ground. This potential energy is converted into kinetic energy when the water is released.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-120",
+      "questionText": "Which material is used for the filament of an electric bulb?",
+      "options": ["Copper", "Aluminum", "Nichrome", "Tungsten"],
+      "correctAnswerIndex": 3,
+      "explanation": "Tungsten is used for the filament of electric bulbs because it has a very high melting point (about 3422 °C) and can glow at high temperatures without melting.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-121",
+      "questionText": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. What is the focal length of the lens?",
+      "options": ["-18.18 cm", "+18.18 cm", "-5.5 cm", "+5.5 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "Power P = 1/f. So, f = 1/P = 1/(-5.5) m ≈ -0.1818 m. In cm, f = -0.1818 * 100 = -18.18 cm.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-122",
+      "questionText": "A convex lens forms a real and inverted image of a needle at a distance of 50 cm from it. Where is the needle placed in front of the convex lens if the image is equal to the size of the object?",
+      "options": ["25 cm", "50 cm", "100 cm", "0 cm"],
+      "correctAnswerIndex": 1,
+      "explanation": "A convex lens forms a real, inverted image of the same size as the object when the object is placed at 2F (twice the focal length). In this case, the image is also formed at 2F on the other side. Since image distance v = 50 cm, we have 2f = 50 cm. Therefore, the object distance u is also 50 cm.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-123",
+      "questionText": "What is the far point of a normal human eye?",
+      "options": ["25 cm", "100 cm", "Infinity", "0 cm"],
+      "correctAnswerIndex": 2,
+      "explanation": "The far point of the eye is the maximum distance at which the eye can see objects clearly. For a normal human eye, the far point is at infinity.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-124",
+      "questionText": "Which type of reaction produces energy in the sun?",
+      "options": ["Nuclear Fission", "Chemical Reaction", "Nuclear Fusion", "Combustion"],
+      "correctAnswerIndex": 2,
+      "explanation": "The energy of the sun is produced by nuclear fusion. In this process, light nuclei (like hydrogen) fuse together to form a heavier nucleus (like helium), releasing an enormous amount of energy.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-125",
+      "questionText": "Three resistors of 100 Ω, 50 Ω, and 500 Ω are connected in parallel in a circuit. What is the equivalent resistance?",
+      "options": [
+        "650 Ω",
+        "31.25 Ω",
+        "0.034 Ω",
+        "100 Ω"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "For parallel connection, 1/R_p = 1/R1 + 1/R2 + 1/R3 = 1/100 + 1/50 + 1/500. To add these, find a common denominator, which is 500. 1/R_p = (5/500) + (10/500) + (1/500) = 16/500. Therefore, R_p = 500 / 16 = 31.25 Ω.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-126",
+      "questionText": "The refractive indices of four media A, B, C and D are 1.44, 1.52, 1.65 and 1.36 respectively. When light travelling in air enters these media at equal angles, in which medium will the velocity of light be minimum?",
+      "options": ["A", "B", "C", "D"],
+      "correctAnswerIndex": 2,
+      "explanation": "The speed of light in a medium is inversely proportional to its refractive index (v = c/n). The medium with the highest refractive index will have the minimum speed of light. Here, medium C has the highest refractive index (1.65).",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
