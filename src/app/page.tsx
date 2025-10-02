@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -55,6 +56,10 @@ export default function LoginPage() {
         setError('Please enter an email.');
         return;
       }
+      if (!password) {
+        setError('Please enter a password.');
+        return;
+      }
       if (!name.trim()) {
         setError('Please enter your name.');
         return;
@@ -106,8 +111,16 @@ export default function LoginPage() {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-primary/10 via-background to-background">
-      <Card className="w-full max-w-sm shadow-2xl">
+    <div className="relative flex items-center justify-center min-h-screen bg-background">
+      <Image
+        alt="Successful students celebrating"
+        src="https://images.unsplash.com/photo-1627863240417-c67f70a7a928?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmFkdWF0aW9uJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzU5MzkxMzA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+        fill
+        className="object-cover"
+        data-ai-hint="student success"
+      />
+      <div className="absolute inset-0 bg-black/60" />
+      <Card className="w-full max-w-sm shadow-2xl z-10 bg-background/80 backdrop-blur-sm">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-primary/20 rounded-full">
