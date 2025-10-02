@@ -32,6 +32,7 @@ export default function AdminPage() {
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
   const [isClient, setIsClient] = useState(false);
+  const [adminName, setAdminName] = useState('Admin');
 
   useEffect(() => {
     setIsClient(true);
@@ -41,9 +42,11 @@ export default function AdminPage() {
         router.push('/');
         return;
       }
-      const { authenticated, role } = JSON.parse(session);
+      const { authenticated, role, name } = JSON.parse(session);
       if (!authenticated || role !== 'admin') {
         router.push('/');
+      } else {
+        setAdminName(name);
       }
     } catch (e) {
       router.push('/');
@@ -111,7 +114,10 @@ export default function AdminPage() {
   return (
     <div className="p-4 md:p-8">
       <header className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold font-headline">Admin Panel</h1>
+        <div>
+          <h1 className="text-3xl font-bold font-headline">Admin Panel</h1>
+          <p className="text-muted-foreground">Welcome, {adminName}</p>
+        </div>
         <div>
            <Button variant="ghost" asChild className="mr-4">
               <Link href="/home"><Home className="mr-2"/> Member View</Link>
@@ -219,7 +225,7 @@ export default function AdminPage() {
                     </AccordionContent>
                 </Card>
             </AccordionItem>
-          )
+          );
         })}
       </Accordion>
     </div>

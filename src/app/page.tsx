@@ -40,7 +40,7 @@ export default function LoginPage() {
 
     if (isAuthenticated) {
       try {
-        const session = { authenticated: true, role, name: role === 'member' ? name : 'Admin' };
+        const session = { authenticated: true, role, name: role === 'member' ? name : 'Abhinav Yadav' };
         localStorage.setItem(AUTH_KEY, JSON.stringify(session));
         if (role === 'admin') {
           router.push('/admin');
