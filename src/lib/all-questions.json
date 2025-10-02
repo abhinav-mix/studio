@@ -694,6 +694,326 @@
       "category": "biology"
     },
     {
+      "id": "bio-43",
+      "questionText": "Where does the digestion of protein begin in the human body?",
+      "options": ["Mouth", "Stomach", "Small intestine", "Esophagus"],
+      "correctAnswerIndex": 1,
+      "explanation": "The digestion of proteins begins in the stomach, where the enzyme pepsin breaks down proteins into smaller polypeptides.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-44",
+      "questionText": "What are the tiny, grape-like air sacs in the lungs where gas exchange occurs?",
+      "options": ["Bronchioles", "Trachea", "Alveoli", "Diaphragm"],
+      "correctAnswerIndex": 2,
+      "explanation": "Alveoli are the tiny air sacs at the end of the bronchioles where the lungs and the blood exchange oxygen and carbon dioxide.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-45",
+      "questionText": "Which plant tissue is responsible for transporting water and minerals from the roots to the leaves?",
+      "options": ["Phloem", "Xylem", "Parenchyma", "Sclerenchyma"],
+      "correctAnswerIndex": 1,
+      "explanation": "Xylem is the vascular tissue in plants that conducts water and dissolved nutrients upward from the root and also helps to form the woody element in the stem.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-46",
+      "questionText": "What is the main nitrogenous waste product excreted by humans?",
+      "options": ["Ammonia", "Uric acid", "Creatinine", "Urea"],
+      "correctAnswerIndex": 3,
+      "explanation": "Urea is the main nitrogenous waste product in the urine of mammals. It is formed in the liver from ammonia.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-47",
+      "questionText": "What is the structural and functional unit of the nervous system?",
+      "options": ["Nephron", "Alveolus", "Neuron", "Sarcomere"],
+      "correctAnswerIndex": 2,
+      "explanation": "The neuron, or nerve cell, is the basic structural and functional unit of the nervous system, responsible for transmitting nerve impulses.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-48",
+      "questionText": "Which endocrine gland is often called the 'master gland'?",
+      "options": ["Thyroid gland", "Adrenal gland", "Pancreas", "Pituitary gland"],
+      "correctAnswerIndex": 3,
+      "explanation": "The pituitary gland is called the master gland because it produces hormones that control many functions of other endocrine glands.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-49",
+      "questionText": "Which plant hormone is responsible for the wilting of leaves?",
+      "options": ["Auxin", "Gibberellin", "Abscisic acid", "Cytokinin"],
+      "correctAnswerIndex": 2,
+      "explanation": "Abscisic acid (ABA) is a plant hormone that functions in many plant developmental processes, including stress responses and promoting leaf and fruit abscission (shedding).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-50",
+      "questionText": "Budding is a common method of asexual reproduction in which organism?",
+      "options": ["Amoeba", "Spirogyra", "Hydra", "Plasmodium"],
+      "correctAnswerIndex": 2,
+      "explanation": "Hydra reproduces asexually through budding, where a small outgrowth develops on the parent's body, grows, and then detaches to become a new individual.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-51",
+      "questionText": "The transfer of pollen from the anther to the stigma is called:",
+      "options": ["Fertilization", "Pollination", "Germination", "Dispersal"],
+      "correctAnswerIndex": 1,
+      "explanation": "Pollination is the act of transferring pollen grains from the male anther of a flower to the female stigma.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-52",
+      "questionText": "The site of fertilization in human females is typically the:",
+      "options": ["Uterus", "Ovary", "Vagina", "Fallopian tube (Oviduct)"],
+      "correctAnswerIndex": 3,
+      "explanation": "Fertilization, the fusion of sperm and egg, usually occurs in the ampulla of the fallopian tube.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-53",
+      "questionText": "In a dihybrid cross, the F2 phenotypic ratio is typically:",
+      "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+      "correctAnswerIndex": 2,
+      "explanation": "For a dihybrid cross involving two independent traits, the expected phenotypic ratio in the F2 generation is 9 (dominant, dominant) : 3 (dominant, recessive) : 3 (recessive, dominant) : 1 (recessive, recessive).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-54",
+      "questionText": "An organism that breaks down dead organic matter is called a:",
+      "options": ["Producer", "Primary consumer", "Secondary consumer", "Decomposer"],
+      "correctAnswerIndex": 3,
+      "explanation": "Decomposers, such as bacteria and fungi, break down dead plants and animals, returning essential nutrients to the soil.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-55",
+      "questionText": "The theory of natural selection was proposed by:",
+      "options": ["Gregor Mendel", "Charles Darwin", "Jean-Baptiste Lamarck", "Alfred Russel Wallace"],
+      "correctAnswerIndex": 1,
+      "explanation": "Charles Darwin is credited with the theory of evolution by natural selection, which he detailed in his book 'On the Origin of Species'.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-56",
+      "questionText": "The green pigment in plants that is essential for photosynthesis is:",
+      "options": ["Hemoglobin", "Chlorophyll", "Melanin", "Xanthophyll"],
+      "correctAnswerIndex": 1,
+      "explanation": "Chlorophyll is the green pigment found in the chloroplasts of plants that absorbs light energy for use in photosynthesis.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-57",
+      "questionText": "Reflex actions are controlled by the:",
+      "options": ["Cerebrum", "Cerebellum", "Spinal cord", "Medulla"],
+      "correctAnswerIndex": 2,
+      "explanation": "Reflex actions are rapid, involuntary responses to stimuli. The pathway for these reflexes, known as the reflex arc, primarily involves the spinal cord, allowing for a quick reaction without involving the brain for processing.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-58",
+      "questionText": "Which one of the following is a sexually transmitted disease caused by a virus?",
+      "options": ["Syphilis", "Gonorrhea", "AIDS", "Cholera"],
+      "correctAnswerIndex": 2,
+      "explanation": "AIDS (Acquired Immunodeficiency Syndrome) is caused by the Human Immunodeficiency Virus (HIV). Syphilis and gonorrhea are caused by bacteria.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-59",
+      "questionText": "The remnants or impressions of prehistoric organisms preserved in rock are called:",
+      "options": ["Alleles", "Genes", "Fossils", "Artifacts"],
+      "correctAnswerIndex": 2,
+      "explanation": "Fossils are the preserved remains, or traces of remains, of ancient organisms. They provide critical evidence for evolution.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-60",
+      "questionText": "In a food web, the trophic level with the most energy is the:",
+      "options": ["Producers", "Primary consumers", "Secondary consumers", "Tertiary consumers"],
+      "correctAnswerIndex": 0,
+      "explanation": "The producers (plants) form the first trophic level and have the largest amount of energy. Only about 10% of the energy is transferred from one trophic level to the next.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-61",
+      "questionText": "The enzyme responsible for the digestion of fats in the small intestine is:",
+      "options": ["Amylase", "Trypsin", "Lipase", "Pepsin"],
+      "correctAnswerIndex": 2,
+      "explanation": "Lipase is the enzyme that breaks down fats (lipids) into fatty acids and glycerol. It is primarily active in the small intestine and is secreted by the pancreas.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-62",
+      "questionText": "Which hormone regulates the level of sugar in the blood?",
+      "options": ["Glucagon", "Insulin", "Adrenaline", "Thyroxine"],
+      "correctAnswerIndex": 1,
+      "explanation": "Insulin, a hormone produced by the pancreas, helps regulate blood glucose levels by allowing cells to absorb glucose from the blood for energy.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-63",
+      "questionText": "Which part of the digestive system absorbs most of the water from undigested food?",
+      "options": ["Stomach", "Small intestine", "Large intestine", "Liver"],
+      "correctAnswerIndex": 2,
+      "explanation": "The large intestine's main function is to absorb water and electrolytes from the remaining indigestible food matter and then to pass useless waste material from the body.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-64",
+      "questionText": "The part of the human brain responsible for involuntary actions like blood pressure and vomiting is the:",
+      "options": ["Cerebrum", "Cerebellum", "Medulla", "Pons"],
+      "correctAnswerIndex": 2,
+      "explanation": "The medulla oblongata, part of the brainstem, controls involuntary functions such as heartbeat, breathing, blood pressure, and vomiting.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-65",
+      "questionText": "The reproduction in Plasmodium occurs by:",
+      "options": ["Budding", "Binary fission", "Multiple fission", "Fragmentation"],
+      "correctAnswerIndex": 2,
+      "explanation": "Plasmodium, the malarial parasite, reproduces asexually by multiple fission, where the parent cell divides into many daughter cells simultaneously.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-66",
+      "questionText": "Which of these traits is recessive in pea plants?",
+      "options": ["Round seeds", "Yellow seeds", "Tall stems", "Wrinkled seeds"],
+      "correctAnswerIndex": 3,
+      "explanation": "In Mendel's experiments with pea plants, the trait for wrinkled seeds was found to be recessive to the dominant trait for round seeds.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-67",
+      "questionText": "The flow of energy in an ecosystem is:",
+      "options": ["Cyclic", "Unidirectional", "Bidirectional", "Multidirectional"],
+      "correctAnswerIndex": 1,
+      "explanation": "Energy flows from the sun to producers, then to consumers, and so on. It flows in a single direction and is not recycled. Nutrients, however, are recycled.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-68",
+      "questionText": "The process of transport of food from leaves to other parts of the plant is called:",
+      "options": ["Transpiration", "Translocation", "Respiration", "Photosynthesis"],
+      "correctAnswerIndex": 1,
+      "explanation": "Translocation is the movement of materials, especially sugars made during photosynthesis, from the leaves to other parts of the plant through the phloem.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-69",
+      "questionText": "Deficiency of which hormone leads to dwarfism?",
+      "options": ["Thyroxine", "Adrenaline", "Growth hormone", "Testosterone"],
+      "correctAnswerIndex": 2,
+      "explanation": "Growth hormone, secreted by the pituitary gland, is essential for normal growth. Its deficiency during childhood leads to dwarfism.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-70",
+      "questionText": "Vegetative propagation refers to the formation of new plants from:",
+      "options": ["Stem, roots, and flowers", "Stem, roots, and leaves", "Stem, flowers, and fruits", "Stem, leaves, and flowers"],
+      "correctAnswerIndex": 1,
+      "explanation": "Vegetative propagation is a type of asexual reproduction in plants where new plants arise from vegetative parts like the stem, roots, and leaves, rather than from seeds or spores.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-71",
+      "questionText": "A trait of an organism which is not inherited but develops in response to the environment is called:",
+      "options": ["Acquired trait", "Inherited trait", "Recessive trait", "Dominant trait"],
+      "correctAnswerIndex": 0,
+      "explanation": "Acquired traits are characteristics that an organism develops during its lifetime. They are not controlled by genes and cannot be passed on to the next generation.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-72",
+      "questionText": "An example of an omnivore in a food chain is:",
+      "options": ["Lion", "Cow", "Human", "Grass"],
+      "correctAnswerIndex": 2,
+      "explanation": "Omnivores are animals that eat both plants and animals. Humans are a classic example of omnivores. Lions are carnivores and cows are herbivores.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-73",
+      "questionText": "The arteries and veins are connected by a network of extremely narrow tubes called:",
+      "options": ["Vena cava", "Aorta", "Capillaries", "Septum"],
+      "correctAnswerIndex": 2,
+      "explanation": "Capillaries are the smallest blood vessels in the body, connecting arteries and veins. They are the sites for the exchange of water, oxygen, carbon dioxide, and other nutrients and waste substances between the blood and the surrounding tissues.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-74",
+      "questionText": "The movement of a shoot towards light is an example of:",
+      "options": ["Negative phototropism", "Positive phototropism", "Negative geotropism", "Positive geotropism"],
+      "correctAnswerIndex": 1,
+      "explanation": "Phototropism is the growth of a plant in response to a light stimulus. The shoot grows towards the light, which is called positive phototropism.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-75",
+      "questionText": "The fusion of male and female gametes is called:",
+      "options": ["Pollination", "Fertilization", "Implantation", "Gestation"],
+      "correctAnswerIndex": 1,
+      "explanation": "Fertilization is the process involving the fusion of male and female gametes to form a zygote.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-76",
+      "questionText": "The sex of a child is determined by:",
+      "options": ["The X chromosome in the zygote", "The Y chromosome in the zygote", "The cytoplasm of the egg", "The size of the sperm"],
+      "correctAnswerIndex": 1,
+      "explanation": "The sex of a child is determined by the type of sex chromosome contributed by the male gamete (sperm). If a sperm carrying a Y chromosome fertilizes the egg, the child will be male (XY). If it's an X chromosome, the child will be female (XX).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-77",
+      "questionText": "The 'Ozone hole' refers to:",
+      "options": ["A large hole in the ozone layer", "Thinning of the ozone layer", "A hole in the atmosphere", "Increased concentration of ozone"],
+      "correctAnswerIndex": 1,
+      "explanation": "The 'ozone hole' is not a literal hole but a region of exceptionally depleted ozone in the stratosphere over the Antarctic that happens at the beginning of Southern Hemisphere spring (August–October).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-78",
+      "questionText": "Which enzyme present in saliva breaks down starch?",
+      "options": ["Pepsin", "Trypsin", "Salivary amylase", "Lipase"],
+      "correctAnswerIndex": 2,
+      "explanation": "Saliva contains the enzyme salivary amylase (also called ptyalin), which begins the digestion of carbohydrates by breaking down starch into simpler sugars.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-79",
+      "questionText": "The double circulation system of blood in humans ensures:",
+      "options": ["Complete separation of oxygenated and deoxygenated blood", "Mixing of oxygenated and deoxygenated blood", "Pumping of blood to the lungs only", "Pumping of blood to the body only"],
+      "correctAnswerIndex": 0,
+      "explanation": "Double circulation involves two separate circuits for blood flow. This ensures that oxygenated and deoxygenated blood do not mix, allowing for a more efficient supply of oxygen to the body.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-80",
+      "questionText": "The process of spore formation is a common method of asexual reproduction in:",
+      "options": ["Amoeba", "Yeast", "Rhizopus", "Spirogyra"],
+      "correctAnswerIndex": 2,
+      "explanation": "Rhizopus (bread mould) reproduces asexually by forming spores inside a structure called the sporangium. When the sporangium bursts, the spores are released and can grow into new individuals.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-81",
+      "questionText": "The genetic material of an organism is contained in:",
+      "options": ["Ribosomes", "Mitochondria", "Cytoplasm", "Chromosomes"],
+      "correctAnswerIndex": 3,
+      "explanation": "Chromosomes, located within the nucleus of eukaryotic cells, are thread-like structures made of protein and a single molecule of DNA, which carries the genetic instructions for the development, functioning, growth and reproduction of all known organisms.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-82",
+      "questionText": "What is the 10% law in an ecosystem?",
+      "options": ["Only 10% of plants are eaten by herbivores", "Only 10% of energy is transferred from one trophic level to the next", "Only 10% of sunlight is used for photosynthesis", "Only 10% of species survive in an ecosystem"],
+      "correctAnswerIndex": 1,
+      "explanation": "The 10% law, proposed by Raymond Lindeman, states that during the transfer of energy from one trophic level to the next, only about 10% of the energy is stored as flesh. The rest is lost during transfer or used in respiration.",
+      "category": "biology"
+    },
+    {
       "id": "math-1",
       "questionText": "What is the square root of 144?",
       "options": ["10", "11", "12", "14"],
@@ -2666,166 +2986,8 @@
       "correctAnswerIndex": 0,
       "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
       "category": "chemistry"
-    },
-    {
-      "id": "bio-43",
-      "questionText": "Where does the digestion of protein begin in the human body?",
-      "options": ["Mouth", "Stomach", "Small intestine", "Esophagus"],
-      "correctAnswerIndex": 1,
-      "explanation": "The digestion of proteins begins in the stomach, where the enzyme pepsin breaks down proteins into smaller polypeptides.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-44",
-      "questionText": "What are the tiny, grape-like air sacs in the lungs where gas exchange occurs?",
-      "options": ["Bronchioles", "Trachea", "Alveoli", "Diaphragm"],
-      "correctAnswerIndex": 2,
-      "explanation": "Alveoli are the tiny air sacs at the end of the bronchioles where the lungs and the blood exchange oxygen and carbon dioxide.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-45",
-      "questionText": "Which plant tissue is responsible for transporting water and minerals from the roots to the leaves?",
-      "options": ["Phloem", "Xylem", "Parenchyma", "Sclerenchyma"],
-      "correctAnswerIndex": 1,
-      "explanation": "Xylem is the vascular tissue in plants that conducts water and dissolved nutrients upward from the root and also helps to form the woody element in the stem.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-46",
-      "questionText": "What is the main nitrogenous waste product excreted by humans?",
-      "options": ["Ammonia", "Uric acid", "Creatinine", "Urea"],
-      "correctAnswerIndex": 3,
-      "explanation": "Urea is the main nitrogenous waste product in the urine of mammals. It is formed in the liver from ammonia.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-47",
-      "questionText": "What is the structural and functional unit of the nervous system?",
-      "options": ["Nephron", "Alveolus", "Neuron", "Sarcomere"],
-      "correctAnswerIndex": 2,
-      "explanation": "The neuron, or nerve cell, is the basic structural and functional unit of the nervous system, responsible for transmitting nerve impulses.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-48",
-      "questionText": "Which endocrine gland is often called the 'master gland'?",
-      "options": ["Thyroid gland", "Adrenal gland", "Pancreas", "Pituitary gland"],
-      "correctAnswerIndex": 3,
-      "explanation": "The pituitary gland is called the master gland because it produces hormones that control many functions of other endocrine glands.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-49",
-      "questionText": "Which plant hormone is responsible for the wilting of leaves?",
-      "options": ["Auxin", "Gibberellin", "Abscisic acid", "Cytokinin"],
-      "correctAnswerIndex": 2,
-      "explanation": "Abscisic acid (ABA) is a plant hormone that functions in many plant developmental processes, including stress responses and promoting leaf and fruit abscission (shedding).",
-      "category": "biology"
-    },
-    {
-      "id": "bio-50",
-      "questionText": "Budding is a common method of asexual reproduction in which organism?",
-      "options": ["Amoeba", "Spirogyra", "Hydra", "Plasmodium"],
-      "correctAnswerIndex": 2,
-      "explanation": "Hydra reproduces asexually through budding, where a small outgrowth develops on the parent's body, grows, and then detaches to become a new individual.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-51",
-      "questionText": "The transfer of pollen from the anther to the stigma is called:",
-      "options": ["Fertilization", "Pollination", "Germination", "Dispersal"],
-      "correctAnswerIndex": 1,
-      "explanation": "Pollination is the act of transferring pollen grains from the male anther of a flower to the female stigma.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-52",
-      "questionText": "The site of fertilization in human females is typically the:",
-      "options": ["Uterus", "Ovary", "Vagina", "Fallopian tube (Oviduct)"],
-      "correctAnswerIndex": 3,
-      "explanation": "Fertilization, the fusion of sperm and egg, usually occurs in the ampulla of the fallopian tube.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-53",
-      "questionText": "In a dihybrid cross, the F2 phenotypic ratio is typically:",
-      "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
-      "correctAnswerIndex": 2,
-      "explanation": "For a dihybrid cross involving two independent traits, the expected phenotypic ratio in the F2 generation is 9 (dominant, dominant) : 3 (dominant, recessive) : 3 (recessive, dominant) : 1 (recessive, recessive).",
-      "category": "biology"
-    },
-    {
-      "id": "bio-54",
-      "questionText": "An organism that breaks down dead organic matter is called a:",
-      "options": ["Producer", "Primary consumer", "Secondary consumer", "Decomposer"],
-      "correctAnswerIndex": 3,
-      "explanation": "Decomposers, such as bacteria and fungi, break down dead plants and animals, returning essential nutrients to the soil.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-55",
-      "questionText": "The theory of natural selection was proposed by:",
-      "options": ["Gregor Mendel", "Charles Darwin", "Jean-Baptiste Lamarck", "Alfred Russel Wallace"],
-      "correctAnswerIndex": 1,
-      "explanation": "Charles Darwin is credited with the theory of evolution by natural selection, which he detailed in his book 'On the Origin of Species'.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-56",
-      "questionText": "The green pigment in plants that is essential for photosynthesis is:",
-      "options": ["Hemoglobin", "Chlorophyll", "Melanin", "Xanthophyll"],
-      "correctAnswerIndex": 1,
-      "explanation": "Chlorophyll is the green pigment found in the chloroplasts of plants that absorbs light energy for use in photosynthesis.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-57",
-      "questionText": "Reflex actions are controlled by the:",
-      "options": ["Cerebrum", "Cerebellum", "Spinal cord", "Medulla"],
-      "correctAnswerIndex": 2,
-      "explanation": "Reflex actions are rapid, involuntary responses to stimuli. The pathway for these reflexes, known as the reflex arc, primarily involves the spinal cord, allowing for a quick reaction without involving the brain for processing.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-58",
-      "questionText": "Which one of the following is a sexually transmitted disease caused by a virus?",
-      "options": ["Syphilis", "Gonorrhea", "AIDS", "Cholera"],
-      "correctAnswerIndex": 2,
-      "explanation": "AIDS (Acquired Immunodeficiency Syndrome) is caused by the Human Immunodeficiency Virus (HIV). Syphilis and gonorrhea are caused by bacteria.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-59",
-      "questionText": "The remnants or impressions of prehistoric organisms preserved in rock are called:",
-      "options": ["Alleles", "Genes", "Fossils", "Artifacts"],
-      "correctAnswerIndex": 2,
-      "explanation": "Fossils are the preserved remains, or traces of remains, of ancient organisms. They provide critical evidence for evolution.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-60",
-      "questionText": "In a food web, the trophic level with the most energy is the:",
-      "options": ["Producers", "Primary consumers", "Secondary consumers", "Tertiary consumers"],
-      "correctAnswerIndex": 0,
-      "explanation": "The producers (plants) form the first trophic level and have the largest amount of energy. Only about 10% of the energy is transferred from one trophic level to the next.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-61",
-      "questionText": "The enzyme responsible for the digestion of fats in the small intestine is:",
-      "options": ["Amylase", "Trypsin", "Lipase", "Pepsin"],
-      "correctAnswerIndex": 2,
-      "explanation": "Lipase is the enzyme that breaks down fats (lipids) into fatty acids and glycerol. It is primarily active in the small intestine and is secreted by the pancreas.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-62",
-      "questionText": "Which hormone regulates the level of sugar in the blood?",
-      "options": ["Glucagon", "Insulin", "Adrenaline", "Thyroxine"],
-      "correctAnswerIndex": 1,
-      "explanation": "Insulin, a hormone produced by the pancreas, helps regulate blood glucose levels by allowing cells to absorb glucose from the blood for energy.",
-      "category": "biology"
     }
   ]
 }
+
+    
