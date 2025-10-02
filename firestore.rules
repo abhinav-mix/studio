@@ -3,40 +3,62 @@
  *
  * Core Philosophy:
  * This ruleset enforces a strict user-ownership model for all data stored
- * under `/users/{userId}`. Public read access is granted to the `/questions`
- * and `/quizzes` collections. No user data is listable.
+ * under `/users/{userId}`.  Public read access is granted to the `/questions`
+ * and `/quizzes` collections, as they are intended to be globally accessible.
  *
  * Data Structure:
- * - /users/{userId}: User profiles and settings.
- * - /questions/{questionId}: Questions for the board exam.
- * - /quizzes/{quizId}: Quiz definitions.
- * - /users/{userId}/quizAttempts/{quizAttemptId}: Quiz attempts by users.
- * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: User-attempted questions.
+ * - /users/{userId}:  Stores individual user profiles.
+ * - /questions/{questionId}: Stores the questions themselves.
+ * - /quizzes/{quizId}: Stores quiz definitions.
+ * - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts for each user.
+ * - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions for each user.
  *
  * Key Security Decisions:
- * - Users can only read and write their own data under `/users/{userId}`.
- * - Listing of users is disallowed to prevent data scraping.
- * - Questions and quizzes are publicly readable.
+ * - User listing is denied to prevent information disclosure.
+ * - Public read access is granted to questions and quizzes.
+ * - Strict ownership is enforced for all user-related data.
  *
  * Denormalization for Authorization:
- *  N/A - All authorization is based on path ownership, so denormalization is not required.
+ *  - User ownership is verified by matching `request.auth.uid` against the `userId`
+ *    path parameter in the rules. This avoids costly `get()` calls.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Controls access to user profiles. Users can only read and write their own profile.
+     * @description Checks if the request is made by a signed-in user.
+     * @return {boolean} True if the user is signed in, false otherwise.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * @description Checks if the request is made by the owner of the resource.
+     * @param {string} userId The user ID to check against.
+     * @return {boolean} True if the user is the owner, false otherwise.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * @description Checks if the request is made by the owner of an existing resource.
+     * @param {string} userId The user ID to check against.
+     * @return {boolean} True if the user is the owner and the resource exists, false otherwise.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && resource != null;
+    }
+
+    /**
+     * @description Rules for the /users/{userId} collection.
      * @path /users/{userId}
-     * @allow (create) User with ID 'user123' can create their profile.
-     * @allow (get) User with ID 'user123' can read their profile.
-     * @allow (update) User with ID 'user123' can update their profile.
-     * @allow (delete) User with ID 'user123' can delete their profile.
-     * @deny (create) User with ID 'user123' cannot create a profile with a different ID 'user456'.
-     * @deny (get) User with ID 'user123' cannot read the profile of user 'user456'.
-     * @deny (update) User with ID 'user123' cannot update the profile of user 'user456'.
-     * @deny (delete) User with ID 'user123' cannot delete the profile of user 'user456'.
-     * @principle Enforces user-ownership: only the user with the matching ID can access their profile.
+     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create their own user document.
+     * @allow (get,update,delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can get, update, and delete their own user document.
+     * @deny (create) User abc cannot create a document for user xyz.
+     * @principle Enforces document ownership for writes.  Allows only the owner to read, update, or delete.
      */
     match /users/{userId} {
       allow get: if isOwner(userId);
@@ -47,14 +69,11 @@ service cloud.firestore {
     }
 
     /**
-     * @description Controls access to questions. All users can read questions.
+     * @description Rules for the /questions/{questionId} collection.
      * @path /questions/{questionId}
-     * @allow (get) Any user can read a question.
-     * @allow (list) Any user can list questions.
-     * @deny (create) No one can create questions through the client.
-     * @deny (update) No one can update questions through the client.
-     * @deny (delete) No one can delete questions through the client.
-     * @principle Allows public read access to questions, but restricts write access.
+     * @allow (get,list) Any user can read any question.
+     * @deny (create,update,delete) No user can create, update, or delete a question.
+     * @principle Allows public read access to questions, restricts all write access.
      */
     match /questions/{questionId} {
       allow get, list: if true;
@@ -62,14 +81,11 @@ service cloud.firestore {
     }
 
     /**
-     * @description Controls access to quizzes. All users can read quizzes.
+     * @description Rules for the /quizzes/{quizId} collection.
      * @path /quizzes/{quizId}
-     * @allow (get) Any user can read a quiz.
-     * @allow (list) Any user can list quizzes.
-     * @deny (create) No one can create quizzes through the client.
-     * @deny (update) No one can update quizzes through the client.
-     * @deny (delete) No one can delete quizzes through the client.
-     * @principle Allows public read access to quizzes, but restricts write access.
+     * @allow (get,list) Any user can read any quiz.
+     * @deny (create,update,delete) No user can create, update, or delete a quiz.
+     * @principle Allows public read access to quizzes, restricts all write access.
      */
     match /quizzes/{quizId} {
       allow get, list: if true;
@@ -77,60 +93,33 @@ service cloud.firestore {
     }
 
     /**
-     * @description Controls access to quiz attempts. Users can only read and write their own quiz attempts.
+     * @description Rules for the /users/{userId}/quizAttempts/{quizAttemptId} collection.
      * @path /users/{userId}/quizAttempts/{quizAttemptId}
-     * @allow (create) User with ID 'user123' can create their quiz attempt.
-     * @allow (get) User with ID 'user123' can read their quiz attempt.
-     * @allow (list) User with ID 'user123' can list their quiz attempts.
-     * @allow (update) User with ID 'user123' can update their quiz attempt.
-     * @allow (delete) User with ID 'user123' can delete their quiz attempt.
-     * @deny (create) User with ID 'user123' cannot create a quiz attempt for user 'user456'.
-     * @deny (get) User with ID 'user123' cannot read the quiz attempt of user 'user456'.
-     * @deny (list) User with ID 'user123' cannot list the quiz attempts of user 'user456'.
-     * @deny (update) User with ID 'user123' cannot update the quiz attempt of user 'user456'.
-     * @deny (delete) User with ID 'user123' cannot delete the quiz attempt of user 'user456'.
-     * @principle Enforces user-ownership: only the user with the matching ID can access their quiz attempts.
+     * @allow (create,get,list,update,delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can manage their own quiz attempts.
+     * @deny (create,get,list,update,delete) User abc cannot manage user xyz's quiz attempts.
+     * @principle Enforces document ownership for quiz attempts.
      */
     match /users/{userId}/quizAttempts/{quizAttemptId} {
-      allow get, list: if isOwner(userId);
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
       allow create: if isOwner(userId) && request.resource.data.userId == userId;
       allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
       allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Controls access to attempted questions. Users can only read and write their own attempted questions.
+     * @description Rules for the /users/{userId}/attemptedQuestions/{attemptedQuestionId} collection.
      * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
-     * @allow (create) User with ID 'user123' can create their attempted question.
-     * @allow (get) User with ID 'user123' can read their attempted question.
-     * @allow (list) User with ID 'user123' can list their attempted questions.
-     * @allow (update) User with ID 'user123' can update their attempted question.
-     * @allow (delete) User with ID 'user123' can delete their attempted question.
-     * @deny (create) User with ID 'user123' cannot create an attempted question for user 'user456'.
-     * @deny (get) User with ID 'user123' cannot read the attempted question of user 'user456'.
-     * @deny (list) User with ID 'user123' cannot list the attempted questions of user 'user456'.
-     * @deny (update) User with ID 'user123' cannot update the attempted question of user 'user456'.
-     * @deny (delete) User with ID 'user123' cannot delete the attempted question of user 'user456'.
-     * @principle Enforces user-ownership: only the user with the matching ID can access their attempted questions.
+     * @allow (create,get,list,update,delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can manage their own attempted questions.
+     * @deny (create,get,list,update,delete) User abc cannot manage user xyz's attempted questions.
+     * @principle Enforces document ownership for attempted questions.
      */
     match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
-      allow get, list: if isOwner(userId);
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
       allow create: if isOwner(userId) && request.resource.data.userId == userId;
       allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
       allow delete: if isExistingOwner(userId);
     }
-  }
-
-  // Helper functions
-  function isSignedIn() {
-    return request.auth != null;
-  }
-
-  function isOwner(userId) {
-    return isSignedIn() && request.auth.uid == userId;
-  }
-
-  function isExistingOwner(userId) {
-    return isOwner(userId) && resource != null;
   }
 }
