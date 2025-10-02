@@ -604,6 +604,138 @@
       "category": "physics"
     },
     {
+      "id": "phy-50",
+      "questionText": "A ray of light traveling from a rarer medium to a denser medium bends...",
+      "options": [
+        "Away from the normal",
+        "Towards the normal",
+        "Goes undeviated",
+        "None of these"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "When light enters a denser medium, its speed decreases, and it bends towards the normal.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-51",
+      "questionText": "The diagram shows a defect of the human eye. Which lens is required to correct this defect?",
+      "imageUrl": "https://picsum.photos/seed/myopia/400/200",
+      "options": [
+        "Convex lens",
+        "Concave lens",
+        "Bifocal lens",
+        "Cylindrical lens"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The diagram shows myopia (nearsightedness), where the image is formed in front of the retina. A concave lens is used to diverge the light rays before they enter the eye, allowing the image to form correctly on the retina.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-52",
+      "questionText": "The resistance of a wire is 'R'. If the length of the wire is doubled and its area of cross-section is halved, its new resistance will be:",
+      "options": [
+        "R",
+        "2R",
+        "4R",
+        "R/4"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Resistance R = ρ(L/A). New length L' = 2L. New area A' = A/2. New resistance R' = ρ(L'/A') = ρ(2L / (A/2)) = 4 * ρ(L/A) = 4R.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-53",
+      "questionText": "No force acts on a current-carrying conductor when it is placed...",
+      "options": [
+        "Perpendicular to the magnetic field",
+        "Parallel to the magnetic field",
+        "At 45 degrees to the magnetic field",
+        "Far away from the magnetic field"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The force on a current-carrying conductor in a magnetic field is given by F = I * L * B * sin(θ). When the conductor is parallel to the magnetic field, the angle θ is 0, so sin(0) = 0, and the force is zero.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-54",
+      "questionText": "Which part of sunlight is used in a solar cooker to produce heat?",
+      "options": [
+        "Ultraviolet rays",
+        "Visible light",
+        "Infrared rays",
+        "X-rays"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Infrared radiation from the sun is primarily responsible for the heating effect. A solar cooker is designed with a black surface to absorb these rays efficiently.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-55",
+      "questionText": "The focal length of a concave mirror is 20 cm. An object is placed 30 cm from the mirror. What is the nature of the image formed?",
+      "options": [
+        "Real, inverted, and magnified",
+        "Virtual, erect, and diminished",
+        "Real, inverted, and diminished",
+        "Virtual, erect, and magnified"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "For a concave mirror, f = -20 cm, u = -30 cm. Using the mirror formula 1/v + 1/u = 1/f, we get 1/v = 1/(-20) - 1/(-30) = -1/60. So v = -60 cm. The image is real and inverted. Magnification m = -v/u = -(-60)/(-30) = -2. The image is magnified.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-56",
+      "questionText": "The instrument used to detect the presence of electric current in a circuit is:",
+      "options": [
+        "Voltmeter",
+        "Rheostat",
+        "Galvanometer",
+        "Motor"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A galvanometer is a sensitive instrument used to detect small electric currents in a circuit. It shows a deflection when current flows through it.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-57",
+      "questionText": "What does the slope of a velocity-time graph represent?",
+      "options": [
+        "Distance",
+        "Displacement",
+        "Speed",
+        "Acceleration"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The slope of a velocity-time graph represents acceleration, as it is the rate of change of velocity (change in y-axis / change in x-axis).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-58",
+      "questionText": "Which color of light deviates the most when it passes through a prism?",
+      "imageUrl": "https://picsum.photos/seed/prism/400/200",
+      "options": [
+        "Red",
+        "Green",
+        "Violet",
+        "Yellow"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "When white light passes through a prism, it disperses into a spectrum of colors (VIBGYOR). Violet light has the shortest wavelength and deviates (bends) the most, while red light has the longest wavelength and deviates the least.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-59",
+      "questionText": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. The equivalent resistance of the combination is:",
+      "options": [
+        "11 Ω",
+        "1 Ω",
+        "0.9 Ω",
+        "6 Ω"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "For parallel combination, 1/R_eq = 1/R1 + 1/R2 + 1/R3. So, 1/R_eq = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 = 1. Therefore, R_eq = 1 Ω.",
+      "category": "physics"
+    },
+    {
       "id": "chem-1",
       "questionText": "Which element has the atomic number 1?",
       "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
