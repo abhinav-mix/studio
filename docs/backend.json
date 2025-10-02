@@ -20,10 +20,6 @@
           "type": "string",
           "description": "The display name of the user."
         },
-        "userClass": {
-          "type": "string",
-          "description": "The class of the user."
-        },
         "hasPaid": {
           "type": "boolean",
           "description": "Indicates whether the user has completed the payment."
@@ -33,7 +29,6 @@
         "id",
         "email",
         "displayName",
-        "userClass",
         "hasPaid"
       ]
     },
@@ -47,7 +42,7 @@
           "type": "string",
           "description": "Unique identifier for the question entity."
         },
-        "text": {
+        "questionText": {
           "type": "string",
           "description": "The text of the question."
         },
@@ -66,7 +61,7 @@
       },
       "required": [
         "id",
-        "text",
+        "questionText",
         "correctAnswer",
         "explanation",
         "category"
@@ -266,3 +261,5 @@
     "reasoning": "The Firestore structure is designed to support the BoardPrep Pro application, focusing on efficient data retrieval and robust security. It leverages path-based ownership for user-specific data and separates data types into different collections to simplify security rules.\n\n*   `/users/{userId}`: Stores user profiles, now including a `hasPaid` field and `email` to manage access. This path provides a natural way to secure user-specific data, as rules can easily verify that `request.auth.uid == userId`.\n*   `/questions/{questionId}`: Stores all questions. Since questions are global data, they reside in a single collection.\n*   `/quizzes/{quizId}`: Stores quiz definitions, including references to questions.\n*   `/users/{userId}/quizAttempts/{quizAttemptId}`: Stores quiz attempts made by each user, enabling easy retrieval of a user's quiz history. The limit of 10 quiz attempts can be enforced in application code. Path-based ownership ensures only the user can access their own quiz attempts.\n*   `/users/{userId}/attemptedQuestions/{attemptedQuestionId}`: This structure allows tracking of user-attempted questions. Path-based ownership ensures only the user can access their attempt history. This addresses the requirement to avoid repetition of questions.\n\nThis design promotes Authorization Independence by avoiding `get()` calls in security rules. Path-based ownership (`/users/{userId}/...`) inherently provides the authorization context. Segregation of data types (questions, quizzes, users, attempts) into separate collections allows for simpler and more maintainable security rules. The structure efficiently supports the core features of the application."
   }
 }
+
+    

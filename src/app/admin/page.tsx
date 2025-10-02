@@ -37,7 +37,6 @@ export default function AdminPage() {
   const { toast } = useToast();
   const [questions, setQuestions] = useState<Question[]>(allQuestionsData.questions);
   const [newUserName, setNewUserName] = useState('');
-  const [newUserClass, setNewUserClass] = useState('');
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   
@@ -49,7 +48,7 @@ export default function AdminPage() {
   }, [user, isUserLoading, router]);
 
   const handleAddUser = async () => {
-    if (!newUserEmail || !newUserPassword || !newUserName || !newUserClass) {
+    if (!newUserEmail || !newUserPassword || !newUserName) {
       toast({
         variant: 'destructive',
         title: 'Error',
@@ -82,7 +81,6 @@ export default function AdminPage() {
         id: newUser.uid,
         email: newUserEmail,
         displayName: newUserName,
-        userClass: newUserClass,
         hasPaid: true, // Admin-created users are marked as paid
       });
 
@@ -92,7 +90,6 @@ export default function AdminPage() {
       });
       
       setNewUserName('');
-      setNewUserClass('');
       setNewUserEmail('');
       setNewUserPassword('');
 
@@ -222,15 +219,9 @@ export default function AdminPage() {
                   <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="new-user-name">Member Name</Label>
-                      <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
-                    </div>
-                     <div className="space-y-2">
-                      <Label htmlFor="new-user-class">Member Class</Label>
-                      <Input id="new-user-class" type="text" placeholder="e.g., 10th" value={newUserClass} onChange={(e) => setNewUserClass(e.target.value)} />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="new-user-name">Member Name</Label>
+                    <Input id="new-user-name" type="text" placeholder="Abhinav Yadav" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} />
                   </div>
                    <div className="space-y-2">
                     <Label htmlFor="new-user-email">Member Email</Label>
@@ -346,3 +337,5 @@ export default function AdminPage() {
     </div>
   );
 }
+
+    
