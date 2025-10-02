@@ -2,22 +2,6 @@
 {
   "questions": [
     {
-      "id": "phy-5",
-      "questionText": "What is the phenomenon of light responsible for the working of the human eye?",
-      "options": ["Reflection", "Refraction", "Dispersion", "Power of accommodation"],
-      "correctAnswerIndex": 1,
-      "explanation": "The human eye works on the principle of refraction of light. The eye lens refracts the light rays to form a real, inverted image on the retina.",
-      "category": "physics"
-    },
-    {
-      "id": "phy-6",
-      "questionText": "The change in focal length of an eye lens is caused by the action of the",
-      "options": ["Pupil", "Retina", "Ciliary muscles", "Iris"],
-      "correctAnswerIndex": 2,
-      "explanation": "The ciliary muscles in the eye are responsible for changing the shape and thereby the focal length of the eye lens, allowing us to focus on objects at different distances.",
-      "category": "physics"
-    },
-    {
       "id": "phy-7",
       "questionText": "The magnetic field inside a long straight solenoid carrying current",
       "options": ["is zero", "decreases as we move towards its end", "increases as we move towards its end", "is the same at all points"],
@@ -3156,1168 +3140,407 @@
       "category": "chemistry"
     },
     {
-      "id": "bio-103",
-      "questionText": "Which of the following is not a function of the blood?",
-      "options": [
-        "Transport of oxygen",
-        "Transport of hormones",
-        "Digestion of food",
-        "Regulation of body temperature"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Blood transports oxygen, hormones, and helps regulate body temperature, but the digestion of food occurs in the digestive system, not in the blood.",
-      "category": "biology"
+      "id": "math-52",
+      "questionText": "The roots of the quadratic equation x² - 3x - 10 = 0 are:",
+      "options": ["5, -2", "-5, 2", "5, 2", "-5, -2"],
+      "correctAnswerIndex": 0,
+      "explanation": "We can factor the equation: x² - 5x + 2x - 10 = 0 => x(x-5) + 2(x-5) = 0 => (x+2)(x-5) = 0. The roots are x = 5 and x = -2.",
+      "category": "mathematics"
     },
     {
-      "id": "bio-104",
-      "questionText": "The part of the human eye that contains cells sensitive to light is the:",
-      "options": [
-        "Cornea",
-        "Iris",
-        "Pupil",
-        "Retina"
-      ],
+      "id": "math-53",
+      "questionText": "In an A.P., if d = -4, n = 7, an = 4, then a is:",
+      "options": ["6", "7", "20", "28"],
       "correctAnswerIndex": 3,
-      "explanation": "The retina is the light-sensitive layer at the back of the eye that contains photoreceptor cells (rods and cones) which detect light and initiate neural signals.",
-      "category": "biology"
+      "explanation": "Using the formula an = a + (n-1)d. We have 4 = a + (7-1)(-4) => 4 = a + 6(-4) => 4 = a - 24 => a = 28.",
+      "category": "mathematics"
     },
     {
-      "id": "bio-105",
-      "questionText": "Which process is used by unicellular organisms like Amoeba for reproduction?",
-      "options": [
-        "Budding",
-        "Fragmentation",
-        "Binary fission",
-        "Spore formation"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Amoeba reproduces by binary fission, a method of asexual reproduction where the parent cell divides into two identical daughter cells.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-106",
-      "questionText": "If a round, green seeded pea plant (RRyy) is crossed with a wrinkled, yellow seeded pea plant (rrYY), the seeds produced in the F1 generation will be:",
-      "options": [
-        "Round and yellow",
-        "Round and green",
-        "Wrinkled and yellow",
-        "Wrinkled and green"
-      ],
+      "id": "math-54",
+      "questionText": "The points (–5, 1), (1, p) and (4, –2) are collinear if the value of p is:",
+      "options": ["-1", "1", "2", "-2"],
       "correctAnswerIndex": 0,
-      "explanation": "This is a dihybrid cross. Round (R) is dominant over wrinkled (r), and yellow (Y) is dominant over green (y). The F1 generation will have the genotype RrYy and will express both dominant phenotypes: round and yellow.",
-      "category": "biology"
+      "explanation": "For collinear points, the area of the triangle formed by them is zero. Area = 1/2 [x1(y2-y3) + x2(y3-y1) + x3(y1-y2)] = 0. 1/2 [-5(p - (-2)) + 1(-2 - 1) + 4(1 - p)] = 0. -5(p+2) - 3 + 4 - 4p = 0. -5p - 10 - 3 + 4 - 4p = 0. -9p - 9 = 0. p = -1.",
+      "category": "mathematics"
     },
     {
-      "id": "bio-107",
-      "questionText": "Which of the following is an example of a decomposer?",
-      "options": [
-        "Grass",
-        "Goat",
-        "Lion",
-        "Fungi"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "Decomposers break down dead organic matter. Fungi and bacteria are the primary decomposers in most ecosystems.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-108",
-      "questionText": "Which of the following blood vessels carries deoxygenated blood?",
-      "options": [
-        "Aorta",
-        "Pulmonary artery",
-        "Pulmonary vein",
-        "Coronary artery"
-      ],
+      "id": "math-55",
+      "questionText": "The value of (sin 30° + cos 30°) – (sin 60° + cos 60°) is:",
+      "options": ["-1", "0", "1", "2"],
       "correctAnswerIndex": 1,
-      "explanation": "The pulmonary artery is the only artery that carries deoxygenated blood. It transports it from the right ventricle of the heart to the lungs.",
-      "category": "biology"
+      "explanation": "sin 30° = 1/2, cos 30° = √3/2. sin 60° = √3/2, cos 60° = 1/2. So, (1/2 + √3/2) - (√3/2 + 1/2) = 0.",
+      "category": "mathematics"
     },
     {
-      "id": "bio-109",
-      "questionText": "Which of these is not an endocrine gland?",
-      "options": [
-        "Thyroid",
-        "Pancreas",
-        "Adrenal",
-        "Salivary gland"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "Endocrine glands secrete hormones directly into the bloodstream. The salivary gland is an exocrine gland, as it secretes saliva through a duct into the mouth.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-110",
-      "questionText": "The potato is a modified form of:",
-      "options": [
-        "Root",
-        "Stem",
-        "Leaf",
-        "Fruit"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "A potato is a tuber, which is a modified, swollen underground stem that stores food for the plant. The 'eyes' of the potato are buds.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-111",
-      "questionText": "The phenomenon where an organism is capable of regrowing lost body parts is called:",
-      "options": [
-        "Regeneration",
-        "Budding",
-        "Fragmentation",
-        "Fission"
-      ],
+      "id": "math-56",
+      "questionText": "If a pole 6 m high casts a shadow 2√3 m long on the ground, then the sun’s elevation is:",
+      "options": ["60°", "45°", "30°", "90°"],
       "correctAnswerIndex": 0,
-      "explanation": "Regeneration is the natural process of replacing or restoring damaged or missing cells, tissues, organs, and even entire body parts. Organisms like Planaria and starfish show high regenerative capacity.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-112",
-      "questionText": "A man with blood group A marries a woman with blood group O. What are the possible blood groups of their offspring?",
-      "options": [
-        "A or B",
-        "A or O",
-        "B or O",
-        "Only A"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "The woman (blood group O) has genotype ii. The man (blood group A) can have genotype IAIA or IAi. If he is IAIA, all children will be group A (IAi). If he is IAi, children can be group A (IAi) or group O (ii). So the possible groups are A or O.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-113",
-      "questionText": "Which of the following is a greenhouse gas?",
-      "options": [
-        "Oxygen",
-        "Nitrogen",
-        "Methane",
-        "Argon"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Greenhouse gases trap heat in the atmosphere. Methane (CH4), carbon dioxide (CO2), and water vapor are major greenhouse gases.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-114",
-      "questionText": "The tiny finger-like projections in the small intestine that help in absorption of food are called:",
-      "options": [
-        "Villi",
-        "Alveoli",
-        "Nephrons",
-        "Bronchi"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "Villi are small, finger-like projections that line the inner wall of the small intestine. They vastly increase the surface area for the absorption of digested nutrients.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-115",
-      "questionText": "The movement of water molecules from a region of higher concentration to a region of lower concentration through a semipermeable membrane is called:",
-      "options": [
-        "Diffusion",
-        "Osmosis",
-        "Transpiration",
-        "Active transport"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Osmosis is the specific term for the movement of water across a semipermeable membrane down its concentration gradient.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-116",
-      "questionText": "The part of the flower that contains pollen grains is:",
-      "options": [
-        "Sepal",
-        "Petal",
-        "Stigma",
-        "Anther"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "The anther is part of the stamen (male reproductive organ) and is responsible for producing and containing pollen grains.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-117",
-      "questionText": "Which type of reproduction leads to greater variation in the offspring?",
-      "options": [
-        "Asexual reproduction",
-        "Sexual reproduction",
-        "Binary fission",
-        "Budding"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Sexual reproduction involves the combination of genetic material from two different parents, leading to new combinations of genes and thus greater genetic variation in the offspring.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-118",
-      "questionText": "What does a food web represent?",
-      "options": [
-        "A single food chain",
-        "A network of interconnected food chains",
-        "The flow of water in an ecosystem",
-        "The pyramid of numbers"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "A food web is a more realistic representation of feeding relationships in an ecosystem, showing how multiple food chains are interconnected.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-119",
-      "questionText": "The oxygen-carrying pigment in red blood cells is:",
-      "options": [
-        "Chlorophyll",
-        "Melanin",
-        "Hemoglobin",
-        "Fibrinogen"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Hemoglobin is a protein in red blood cells that binds with oxygen in the lungs and transports it to tissues throughout the body.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-120",
-      "questionText": "The main thinking part of the human brain is the:",
-      "options": [
-        "Cerebellum",
-        "Medulla oblongata",
-        "Cerebrum",
-        "Hypothalamus"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The cerebrum is the largest part of the brain and is the center for higher-order functions like thinking, reasoning, memory, and language.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-121",
-      "questionText": "In which mode of reproduction does an organism split into two identical halves?",
-      "options": [
-        "Budding",
-        "Spore formation",
-        "Binary fission",
-        "Fragmentation"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Binary fission is an asexual reproduction method where a parent cell divides into two genetically identical daughter cells. It is common in prokaryotes like bacteria and protists like Amoeba.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-122",
-      "questionText": "The presence of which of the following is essential for photosynthesis?",
-      "options": [
-        "Nitrogen",
-        "Oxygen",
-        "Sunlight",
-        "Hydrogen"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to create their own food. Sunlight provides the necessary energy for this process.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-123",
-      "questionText": "Which part of the digestive system produces bile?",
-      "options": [
-        "Pancreas",
-        "Stomach",
-        "Liver",
-        "Small intestine"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The liver produces bile, which is then stored in the gallbladder. Bile helps in the digestion and emulsification of fats in the small intestine.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-124",
-      "questionText": "The junction between two neurons is called a:",
-      "options": [
-        "Synapse",
-        "Axon",
-        "Dendrite",
-        "Cell body"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "A synapse is the specialized junction where a nerve impulse is transmitted from one neuron to another neuron, muscle cell, or gland cell.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-125",
-      "questionText": "Which hormone is secreted by the thyroid gland?",
-      "options": [
-        "Insulin",
-        "Adrenaline",
-        "Thyroxine",
-        "Growth hormone"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The thyroid gland produces thyroxine, a hormone that regulates metabolism, growth, and development.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-126",
-      "questionText": "A feature that helps an organism to survive in its habitat is known as:",
-      "options": [
-        "A variation",
-        "An adaptation",
-        "An evolution",
-        "A mutation"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "An adaptation is a physical or behavioral characteristic that has developed to allow an organism to better survive in its environment.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-127",
-      "questionText": "Which of the following is a biotic component of an ecosystem?",
-      "options": [
-        "Soil",
-        "Water",
-        "Bacteria",
-        "Temperature"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Biotic components are the living parts of an ecosystem. Bacteria, plants, and animals are biotic. Soil, water, and temperature are abiotic (non-living) components.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-128",
-      "questionText": "Which blood vessel has valves?",
-      "options": [
-        "Artery",
-        "Vein",
-        "Capillary",
-        "Aorta"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Veins have valves to ensure that blood flows in one direction, towards the heart, and to prevent backflow, especially in the limbs.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-129",
-      "questionText": "The plant hormone that promotes stem elongation and germination is:",
-      "options": [
-        "Auxin",
-        "Gibberellin",
-        "Cytokinin",
-        "Abscisic acid"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Gibberellins are plant hormones that regulate various developmental processes, including stem elongation, germination, dormancy, flowering, and leaf and fruit senescence.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-130",
-      "questionText": "Which part of the flower becomes the seed after fertilization?",
-      "options": [
-        "Ovary",
-        "Ovule",
-        "Petal",
-        "Stigma"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "After fertilization, the ovule develops into a seed, and the ovary develops into a fruit that encloses the seed(s).",
-      "category": "biology"
-    },
-    {
-      "id": "bio-131",
-      "questionText": "Who is known as the father of genetics?",
-      "options": [
-        "Charles Darwin",
-        "Gregor Mendel",
-        "Louis Pasteur",
-        "Robert Hooke"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Gregor Mendel, through his work on pea plants, discovered the fundamental laws of inheritance. He is widely considered the father of modern genetics.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-132",
-      "questionText": "In the food chain: Grass -> Grasshopper -> Frog -> Snake, which organism is the secondary consumer?",
-      "options": [
-        "Grass",
-        "Grasshopper",
-        "Frog",
-        "Snake"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The grass is the producer. The grasshopper is the primary consumer (eats the producer). The frog is the secondary consumer (eats the primary consumer).",
-      "category": "biology"
-    },
-    {
-      "id": "bio-133",
-      "questionText": "The filtration of blood in the kidneys occurs in the:",
-      "options": [
-        "Ureters",
-        "Bladder",
-        "Nephrons",
-        "Urethra"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Nephrons are the microscopic filtering units of the kidneys, where blood is filtered to remove waste products and form urine.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-134",
-      "questionText": "Which part of a neuron receives information?",
-      "options": [
-        "Axon",
-        "Dendrite",
-        "Cell body",
-        "Nucleus"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Dendrites are branched protoplasmic extensions of a nerve cell that propagate the electrochemical stimulation received from other neural cells to the cell body, or soma, from which the dendrites project.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-135",
-      "questionText": "Which part of the flower is brightly colored to attract insects?",
-      "options": [
-        "Sepals",
-        "Petals",
-        "Stamens",
-        "Pistil"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Petals are often the most conspicuous part of a flower, and their bright colors and scents serve to attract pollinators like insects.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-136",
-      "questionText": "The anther contains:",
-      "options": [
-        "Ovules",
-        "Pollen grains",
-        "Sepals",
-        "Stigma"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "The anther is the part of the stamen where pollen is produced. Pollen grains contain the male gametes of the plant.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-137",
-      "questionText": "The alternate forms of a gene are called:",
-      "options": [
-        "Alleles",
-        "Genotypes",
-        "Phenotypes",
-        "Chromosomes"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "An allele is one of two or more alternative forms of a gene that arise by mutation and are found at the same place on a chromosome.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-138",
-      "questionText": "Which of these is responsible for the depletion of the ozone layer?",
-      "options": [
-        "Carbon dioxide",
-        "Chlorofluorocarbons (CFCs)",
-        "Methane",
-        "Sulfur dioxide"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Chlorofluorocarbons (CFCs), which were widely used in refrigerants and aerosols, are the primary cause of ozone layer depletion in the stratosphere.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-139",
-      "questionText": "Which of these is a function of the stomata?",
-      "options": [
-        "Photosynthesis",
-        "Transpiration",
-        "Absorption of water",
-        "Transport of food"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Transpiration, the process of water movement through a plant and its evaporation from aerial parts, such as leaves, stems and flowers, occurs chiefly at the stomata.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-140",
-      "questionText": "Which organ secretes a hormone when the blood sugar level rises?",
-      "options": [
-        "Pancreas",
-        "Liver",
-        "Kidney",
-        "Stomach"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "The pancreas secretes insulin in response to high blood sugar levels. Insulin helps cells absorb glucose from the blood, thus lowering the blood sugar level.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-141",
-      "questionText": "Which of these is an example of vegetative propagation?",
-      "options": [
-        "Growing a plant from a seed",
-        "Growing a potato from a tuber",
-        "Fertilization of a flower",
-        "Pollination"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Vegetative propagation is a form of asexual reproduction. Growing a new potato plant from a tuber (the potato itself) is a classic example.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-142",
-      "questionText": "In a pea plant, a pure tall plant (TT) is crossed with a pure short plant (tt). The ratio of pure tall plants to pure short plants in the F2 generation is:",
-      "options": [
-        "1:1",
-        "3:1",
-        "1:2:1",
-        "2:1"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "The F2 generation will have genotypes TT, Tt, and tt in the ratio 1:2:1. The ratio of pure tall (TT) to pure short (tt) is 1:1.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-143",
-      "questionText": "The organisms at the top of a food chain are called:",
-      "options": [
-        "Producers",
-        "Herbivores",
-        "Apex predators",
-        "Decomposers"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Apex predators are at the top of the food chain and have no natural predators.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-144",
-      "questionText": "Where does the process of aerobic respiration primarily occur in a cell?",
-      "options": [
-        "Nucleus",
-        "Cytoplasm",
-        "Mitochondria",
-        "Ribosome"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "While glycolysis occurs in the cytoplasm, the Krebs cycle and oxidative phosphorylation, which are the main stages of aerobic respiration, take place in the mitochondria.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-145",
-      "questionText": "Which part of the human brain is associated with memory and intelligence?",
-      "options": [
-        "Cerebellum",
-        "Medulla",
-        "Cerebrum",
-        "Pons"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The cerebrum is the largest part of the brain and is the center for higher-order functions such as memory, language, and intelligence.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-146",
-      "questionText": "The unisexual flower contains:",
-      "options": [
-        "Both stamen and pistil",
-        "Only stamen or only pistil",
-        "Only petals",
-        "Only sepals"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "A unisexual flower is one that has either the male reproductive part (stamen) or the female reproductive part (pistil), but not both.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-147",
-      "questionText": "Which of the following is not an inherited trait?",
-      "options": [
-        "Eye color",
-        "Hair texture",
-        "Body size",
-        "Attached earlobe"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "While genetics can influence potential body size, it is heavily influenced by environmental factors like diet and exercise, making it an acquired characteristic to a large extent. Eye color, hair texture, and earlobe attachment are primarily inherited traits.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-148",
-      "questionText": "What is the role of decomposers in the environment?",
-      "options": [
-        "To produce food",
-        "To consume plants",
-        "To break down dead organic matter",
-        "To eat other animals"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Decomposers play a crucial role by breaking down dead organisms and waste products, recycling nutrients back into the ecosystem for producers to use.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-149",
-      "questionText": "Which enzyme helps in the digestion of proteins in the stomach?",
-      "options": [
-        "Amylase",
-        "Lipase",
-        "Trypsin",
-        "Pepsin"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "Pepsin is the primary enzyme in the stomach that begins the digestion of proteins by breaking them down into smaller peptides.",
-      "category": "biology"
-    },
-    {
-      "id": "bio-150",
-      "questionText": "The movement of sunflower towards the sun is an example of:",
-      "options": [
-        "Geotropism",
-        "Hydrotropism",
-        "Phototropism",
-        "Thigmotropism"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "Phototropism is the directional growth of a plant in response to light. The sunflower tracking the sun across the sky is a well-known example of this phenomenon.",
-      "category": "biology"
-    },
-    {
-      "id": "chem-141",
-      "questionText": "Which of the following will give a displacement reaction?",
-      "options": [
-        "NaCl solution and copper metal",
-        "MgCl2 solution and aluminum metal",
-        "FeSO4 solution and silver metal",
-        "AgNO3 solution and copper metal"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "A displacement reaction occurs when a more reactive metal displaces a less reactive metal from its salt solution. Copper is more reactive than silver, so it will displace silver from silver nitrate solution.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-142",
-      "questionText": "The elements of Group 1 are called:",
-      "options": [
-        "Alkali metals",
-        "Alkaline earth metals",
-        "Halogens",
-        "Noble gases"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "The elements in Group 1 of the periodic table, except for hydrogen, are known as the alkali metals because they form alkaline solutions when they react with water.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-143",
-      "questionText": "Which of the following compounds has a double bond?",
-      "options": [
-        "C2H2 (Ethyne)",
-        "C2H4 (Ethene)",
-        "C2H6 (Ethane)",
-        "CH4 (Methane)"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Ethene (C2H4) is an alkene and contains one carbon-carbon double bond. Ethyne has a triple bond, and ethane and methane have only single bonds.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-144",
-      "questionText": "Bauxite is an ore of which metal?",
-      "options": [
-        "Iron",
-        "Aluminum",
-        "Copper",
-        "Zinc"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "Bauxite is the primary ore from which aluminum is extracted.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-145",
-      "questionText": "An aqueous solution with pH = 1 is:",
-      "options": [
-        "Strongly acidic",
-        "Strongly basic",
-        "Neutral",
-        "Weakly acidic"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "The pH scale ranges from 0 to 14. A pH of 1 is very low, indicating a high concentration of H+ ions, which means it is strongly acidic.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-146",
-      "questionText": "Which of the following is a balanced equation for the reaction of barium chloride with aluminum sulfate?",
-      "options": [
-        "BaCl2 + Al2(SO4)3 -> BaSO4 + AlCl3",
-        "3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3",
-        "BaCl2 + AlSO4 -> BaSO4 + AlCl",
-        "2BaCl2 + Al2(SO4)3 -> 2BaSO4 + 2AlCl3"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "To balance the equation, you need 3 Ba atoms, 2 Al atoms, 6 Cl atoms, and 3 SO4 groups on both sides. The equation 3BaCl2 + Al2(SO4)3 -> 3BaSO4 + 2AlCl3 is correctly balanced.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-147",
-      "questionText": "The element with electronic configuration 2, 8, 3 belongs to which period?",
-      "options": [
-        "Period 2",
-        "Period 3",
-        "Period 8",
-        "Period 13"
-      ],
-      "correctAnswerIndex": 1,
-      "explanation": "The electronic configuration shows that electrons are filled in three shells (K, L, M). The number of shells determines the period, so this element (Aluminum) is in Period 3.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-148",
-      "questionText": "Which of the following is used to make waterproof fabrics?",
-      "options": [
-        "Polythene",
-        "Polyvinyl chloride (PVC)",
-        "Bakelite",
-        "Polyester"
-      ],
-      "correctAnswerIndex": 3,
-      "explanation": "Polyester is a category of polymers that are widely used in clothing. Its hydrophobic nature (water-repelling) makes it suitable for making waterproof or water-resistant fabrics.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-149",
-      "questionText": "Which metal is used in the thermite process along with iron oxide?",
-      "options": [
-        "Zinc",
-        "Copper",
-        "Aluminum",
-        "Magnesium"
-      ],
-      "correctAnswerIndex": 2,
-      "explanation": "The thermite process uses a highly reactive metal, typically aluminum, to reduce a less reactive metal oxide, like iron(III) oxide, in a very exothermic reaction.",
-      "category": "chemistry"
-    },
-    {
-      "id": "chem-150",
-      "questionText": "The reaction of an acid with a metal hydrogen carbonate produces:",
-      "options": [
-        "Salt, water and carbon dioxide",
-        "Salt and water only",
-        "Salt and hydrogen gas",
-        "Salt and carbon monoxide"
-      ],
-      "correctAnswerIndex": 0,
-      "explanation": "Acids react with metal carbonates and metal hydrogen carbonates to produce a salt, water, and carbon dioxide gas.",
-      "category": "chemistry"
-    },
-    {
-      "id": "math-1",
-      "questionText": "The decimal expansion of the rational number 14587/1250 will terminate after:",
-      "options": ["One decimal place", "Two decimal places", "Three decimal places", "Four decimal places"],
-      "correctAnswerIndex": 3,
-      "explanation": "To find when the decimal expansion terminates, we look at the prime factorization of the denominator. 1250 = 2 * 625 = 2 * 5^4. The decimal terminates after the highest power of 2 or 5 in the denominator, which is 4. So, it terminates after 4 decimal places.",
+      "explanation": "Let the angle of elevation be θ. tan θ = Height of pole / Length of shadow = 6 / (2√3) = 3/√3 = √3. Since tan 60° = √3, the elevation is 60°.",
       "category": "mathematics"
     },
     {
-      "id": "math-2",
-      "questionText": "If the HCF of 65 and 117 is expressible in the form 65m - 117, then the value of m is:",
-      "options": ["4", "2", "1", "3"],
-      "correctAnswerIndex": 1,
-      "explanation": "First, find the HCF of 65 and 117. 65 = 5 * 13 and 117 = 9 * 13 = 3^2 * 13. The HCF is 13. Now, set 65m - 117 = 13. 65m = 130. m = 130/65 = 2.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-3",
-      "questionText": "If one zero of the quadratic polynomial x² + 3x + k is 2, then the value of k is:",
-      "options": ["10", "-10", "5", "-5"],
-      "correctAnswerIndex": 1,
-      "explanation": "If 2 is a zero of the polynomial, then substituting x=2 should make the polynomial equal to 0. So, (2)² + 3(2) + k = 0. 4 + 6 + k = 0. 10 + k = 0. k = -10.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-4",
-      "questionText": "A quadratic polynomial whose zeroes are -3 and 4 is:",
-      "options": ["x² - x + 12", "x² + x + 12", "x²/2 - x/2 - 6", "2x² + 2x - 24"],
-      "correctAnswerIndex": 2,
-      "explanation": "Sum of zeroes = -3 + 4 = 1. Product of zeroes = -3 * 4 = -12. The polynomial is x² - (sum of zeroes)x + (product of zeroes) = x² - x - 12. Multiplying this by 1/2 gives x²/2 - x/2 - 6, which is also a valid polynomial with the same zeroes.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-5",
-      "questionText": "The pair of equations y = 0 and y = -7 has:",
-      "options": ["One solution", "Two solutions", "Infinitely many solutions", "No solution"],
-      "correctAnswerIndex": 3,
-      "explanation": "The equations represent two parallel lines. y=0 is the x-axis, and y=-7 is a line parallel to the x-axis, 7 units below it. Parallel lines never intersect, so there is no solution.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-6",
-      "questionText": "The values of x and y for the equations x - 2y = 0 and 3x + 4y = 20 are:",
-      "options": ["x=4, y=2", "x=2, y=4", "x=1, y=2", "x=2, y=1"],
-      "correctAnswerIndex": 0,
-      "explanation": "From the first equation, x = 2y. Substitute this into the second equation: 3(2y) + 4y = 20. 6y + 4y = 20. 10y = 20, so y=2. Then x = 2y = 2(2) = 4. The solution is x=4, y=2.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-7",
-      "questionText": "Which of the following is a quadratic equation?",
-      "options": ["x² + 2x + 1 = (4-x)² + 3", " -2x² = (5-x)(2x - 2/5)", "k(x³ + x²) + 7 = 0", "(x-2)² = x² - 4x + 4"],
-      "correctAnswerIndex": 0,
-      "explanation": "Let's simplify option A: x² + 2x + 1 = 16 - 8x + x² + 3. 2x + 1 = 19 - 8x. 10x = 18. This is a linear equation. Let's re-evaluate. Oh wait, the question is which one IS a quadratic. Let's check A again. x² + 2x + 1 = (4-x)² + 3 => x² + 2x + 1 = 16 - 8x + x² + 3 => 2x+1 = 19-8x => 10x - 18 = 0. This is linear. Let's check B. -2x² = 10x - 2 - 2x² + 2x/5 => 0 = 10x - 2 + 2x/5. Linear. The last one is an identity. My first check was wrong. Let's re-check the provided solution. It must be that the question has a typo. Let's assume the question meant `x² + 2x + 1 = (4-x) + 3`. Then x² + 3x - 6 = 0, which is quadratic. Let's assume the question in the options is correct and find the right one. Let's re-verify A. x² + 2x + 1 = (16 - 8x + x²) + 3. The x² terms cancel. So A is not quadratic. Let's re-verify B. -2x² = 10x - 2 - 2x² + (2/5)x. The -2x² terms cancel. Not quadratic. C is cubic. Let's check the identity. (x-2)² = x² - 4x + 4 is true for all x, so it's not a quadratic equation in the sense of finding roots. There seems to be an error in the question's premise or options. Let's choose the most likely intended answer, maybe there is a typo in my reasoning. Let's assume the first option was intended to be quadratic. Let's find a correct quadratic equation. For example: `(x + 1)² = 2(x - 3)`. x² + 2x + 1 = 2x - 6. x² + 7 = 0. This is a quadratic equation. Let's assume the first option is the intended answer despite the simplification. It has x² on both sides. Ah, my first analysis was rushed. Let's re-examine A. x² + 2x + 1 = (4-x)² + 3. x² + 2x + 1 = 16 - 8x + x² + 3. x² - x² + 2x + 8x + 1 - 16 - 3 = 0. 10x - 18 = 0. It is linear. Let me re-write a correct option. Let's make option A `x(x+1)+8 = (x+2)(x-2)`. Then x²+x+8 = x²-4. x+12=0. Linear. How about `(x+2)³ = x³-4`? x³+6x²+12x+8 = x³-4. 6x²+12x+12=0. This is quadratic. I will re-create a proper question and set of options.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-8",
-      "questionText": "The equation 2x² + kx + 3 = 0 has two equal roots, then the value of k is:",
-      "options": ["±√6", "±4", "±3√2", "±2√6"],
-      "correctAnswerIndex": 3,
-      "explanation": "For equal roots, the discriminant (D) must be zero. D = b² - 4ac = 0. Here, a=2, b=k, c=3. So, k² - 4(2)(3) = 0. k² - 24 = 0. k² = 24. k = ±√24 = ±√(4*6) = ±2√6.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-9",
-      "questionText": "The 10th term of the A.P: 2, 7, 12, ... is:",
-      "options": ["47", "52", "42", "57"],
-      "correctAnswerIndex": 0,
-      "explanation": "The first term is a=2. The common difference is d = 7-2 = 5. The nth term is given by an = a + (n-1)d. The 10th term is a10 = 2 + (10-1)5 = 2 + 9*5 = 2 + 45 = 47.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-10",
-      "questionText": "Which term of the A.P: 21, 18, 15, ... is -81?",
-      "options": ["33rd", "34th", "35th", "36th"],
-      "correctAnswerIndex": 2,
-      "explanation": "Here, a=21, d = 18-21 = -3. Let the nth term be -81. an = a + (n-1)d. -81 = 21 + (n-1)(-3). -81 - 21 = -3(n-1). -102 = -3(n-1). n-1 = 102/3 = 34. n = 35. So, the 35th term is -81.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-11",
-      "questionText": "In triangle ABC, DE || BC. If AD = 1.5 cm, DB = 3 cm and AE = 1 cm, then EC is:",
-      "options": ["1.5 cm", "2 cm", "2.5 cm", "3 cm"],
-      "correctAnswerIndex": 1,
-      "explanation": "By Basic Proportionality Theorem (Thales' Theorem), if a line is drawn parallel to one side of a triangle, it divides the other two sides proportionally. So, AD/DB = AE/EC. 1.5/3 = 1/EC. 1/2 = 1/EC. EC = 2 cm.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-12",
-      "questionText": "The distance of the point P (2, 3) from the x-axis is:",
-      "options": ["2", "3", "1", "5"],
-      "correctAnswerIndex": 1,
-      "explanation": "The distance of any point (x, y) from the x-axis is the absolute value of its y-coordinate. So, the distance of P(2, 3) from the x-axis is 3.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-13",
-      "questionText": "The distance between the points A (0, 6) and B (0, -2) is:",
-      "options": ["6", "8", "4", "2"],
-      "correctAnswerIndex": 1,
-      "explanation": "Using the distance formula, √((x2-x1)² + (y2-y1)²). Distance = √((0-0)² + (-2-6)²) = √(0² + (-8)²) = √64 = 8.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-14",
-      "questionText": "If sin A = 3/4, then tan A is:",
-      "options": ["3/√7", "4/3", "3/5", "4/5"],
-      "correctAnswerIndex": 0,
-      "explanation": "sin A = Perpendicular/Hypotenuse = 3/4. By Pythagoras theorem, Base² = Hypotenuse² - Perpendicular² = 4² - 3² = 16 - 9 = 7. So, Base = √7. tan A = Perpendicular/Base = 3/√7.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-15",
-      "questionText": "The value of sin²60° + cos²60° is:",
-      "options": ["1/2", "1", "√3/2", "0"],
-      "correctAnswerIndex": 1,
-      "explanation": "Using the trigonometric identity sin²θ + cos²θ = 1. For any angle θ, the sum of the squares of sine and cosine is 1. So, sin²60° + cos²60° = 1.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-16",
-      "questionText": "The angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of the tower, is 30°. The height of the tower is:",
-      "options": ["30 m", "10√3 m", "30√3 m", "10 m"],
-      "correctAnswerIndex": 1,
-      "explanation": "Let the height be h. tan(30°) = Perpendicular/Base = h/30. We know tan(30°) = 1/√3. So, 1/√3 = h/30. h = 30/√3 = (10 * 3)/√3 = 10√3 m.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-17",
-      "questionText": "If a tangent PA and PB from a point P to a circle with centre O are inclined to each other at angle of 80°, then ∠ POA is equal to:",
-      "options": ["50°", "60°", "70°", "80°"],
-      "correctAnswerIndex": 0,
-      "explanation": "The angle between the tangents is 80°. The line joining the center to the external point bisects the angle between the tangents. So, ∠APO = 80/2 = 40°. In triangle OAP, the tangent is perpendicular to the radius, so ∠OAP = 90°. The sum of angles in a triangle is 180°. So, ∠POA = 180° - 90° - 40° = 50°.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-18",
-      "questionText": "The length of a tangent from an external point on a circle is:",
-      "options": ["Always greater than the radius of the circle", "Always less than the radius of the circle", "May be greater or less than the radius of the circle", "None of these"],
-      "correctAnswerIndex": 2,
-      "explanation": "The length of the tangent depends on the distance of the external point from the center of the circle. It can be greater than, less than, or equal to the radius depending on this distance.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-19",
-      "questionText": "The area of a circle that can be inscribed in a square of side 6 cm is:",
-      "options": ["36π cm²", "18π cm²", "12π cm²", "9π cm²"],
-      "correctAnswerIndex": 3,
-      "explanation": "The diameter of the inscribed circle is equal to the side of the square, which is 6 cm. So, the radius of the circle is 3 cm. Area of the circle = πr² = π(3)² = 9π cm².",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-20",
-      "questionText": "The area of a sector of a circle with radius 6 cm if angle of the sector is 60° is:",
-      "options": ["132/7 cm²", "130/7 cm²", "120/7 cm²", "110/7 cm²"],
-      "correctAnswerIndex": 0,
-      "explanation": "Area of a sector = (θ/360) * πr². Area = (60/360) * (22/7) * 6² = (1/6) * (22/7) * 36 = 6 * 22 / 7 = 132/7 cm².",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-21",
-      "questionText": "A metallic sphere of radius 4.2 cm is melted and recast into the shape of a cylinder of radius 6 cm. The height of the cylinder is:",
-      "options": ["2.74 cm", "3.74 cm", "4.74 cm", "5.74 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "Volume of sphere = Volume of cylinder. (4/3)πr_s³ = πr_c²h. (4/3) * (4.2)³ = 6² * h. (4/3) * 74.088 = 36h. h = (4 * 74.088) / (3 * 36) = 296.352 / 108 = 2.744 cm.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-22",
-      "questionText": "The total surface area of a hemisphere of radius r is:",
-      "options": ["πr²", "2πr²", "3πr²", "4πr²"],
-      "correctAnswerIndex": 2,
-      "explanation": "The total surface area of a hemisphere includes the curved surface area (2πr²) and the area of the circular base (πr²). So, Total Surface Area = 2πr² + πr² = 3πr².",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-23",
-      "questionText": "The class mark of the class interval 10-25 is:",
-      "options": ["10", "15", "17.5", "25"],
-      "correctAnswerIndex": 2,
-      "explanation": "Class mark = (Upper class limit + Lower class limit) / 2. Class mark = (25 + 10) / 2 = 35 / 2 = 17.5.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-24",
-      "questionText": "A card is selected from a deck of 52 cards. The probability of its being a red face card is:",
-      "options": ["3/26", "3/13", "2/13", "1/2"],
-      "correctAnswerIndex": 0,
-      "explanation": "A deck has 52 cards. There are 12 face cards (Jack, Queen, King). Half of them are red (hearts and diamonds). So there are 6 red face cards. Probability = (Number of favorable outcomes) / (Total number of outcomes) = 6/52 = 3/26.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-25",
-      "questionText": "If P(E) = 0.05, what is the probability of ‘not E’?",
-      "options": ["0.95", "0.05", "1", "0"],
-      "correctAnswerIndex": 0,
-      "explanation": "The sum of the probabilities of an event and its complement is 1. P(E) + P(not E) = 1. So, P(not E) = 1 - P(E) = 1 - 0.05 = 0.95.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-26",
-      "questionText": "The roots of the quadratic equation 6x² - x - 2 = 0 are:",
-      "options": ["2/3, -1/2", "-2/3, 1/2", "2/3, 1/2", "-2/3, -1/2"],
-      "correctAnswerIndex": 0,
-      "explanation": "Using the quadratic formula x = [-b ± sqrt(b² - 4ac)] / 2a. Here a=6, b=-1, c=-2. D = (-1)² - 4(6)(-2) = 1 + 48 = 49. x = [1 ± sqrt(49)] / 12 = (1 ± 7)/12. The roots are x = 8/12 = 2/3 and x = -6/12 = -1/2.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-27",
-      "questionText": "The sum of first 100 natural numbers is:",
-      "options": ["5050", "5000", "5500", "5055"],
-      "correctAnswerIndex": 0,
-      "explanation": "The sum of the first n natural numbers is given by the formula S = n(n+1)/2. For n=100, S = 100(101)/2 = 50 * 101 = 5050.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-28",
-      "questionText": "The mid-point of the line segment joining the points A(–2, 8) and B(– 6, – 4) is:",
-      "options": ["(-4, -6)", "(-4, 2)", "(2, 6)", "(4, 2)"],
-      "correctAnswerIndex": 1,
-      "explanation": "The coordinates of the mid-point are ((x1+x2)/2, (y1+y2)/2). Mid-point = ((-2 + (-6))/2, (8 + (-4))/2) = (-8/2, 4/2) = (-4, 2).",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-29",
-      "questionText": "The value of tan 45° is:",
-      "options": ["1", "√3", "1/√3", "0"],
-      "correctAnswerIndex": 0,
-      "explanation": "The value of the tangent of 45 degrees is 1.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-30",
-      "questionText": "The number of tangents that can be drawn from an external point to a circle is:",
+      "id": "math-57",
+      "questionText": "The number of common tangents to two circles touching each other externally is:",
       "options": ["1", "2", "3", "4"],
-      "correctAnswerIndex": 1,
-      "explanation": "Exactly two tangents can be drawn from an external point to a circle, and the lengths of these tangents are equal.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-31",
-      "questionText": "If the perimeter and the area of a circle are numerically equal, then the radius of the circle is:",
-      "options": ["2 units", "π units", "4 units", "7 units"],
-      "correctAnswerIndex": 0,
-      "explanation": "Perimeter (Circumference) = 2πr. Area = πr². Given 2πr = πr². Dividing by πr (since r>0), we get 2 = r. So the radius is 2 units.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-32",
-      "questionText": "The volume of a cone with radius 'r' and height 'h' is:",
-      "options": ["πr²h", "(1/3)πr²h", "(2/3)πr³", "πrh"],
-      "correctAnswerIndex": 1,
-      "explanation": "The formula for the volume of a cone is (1/3)πr²h, where r is the radius of the base and h is the height.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-33",
-      "questionText": "The mode of the data: 2, 3, 4, 5, 0, 1, 3, 3, 4, 3 is:",
-      "options": ["2", "3", "4", "5"],
-      "correctAnswerIndex": 1,
-      "explanation": "The mode is the value that appears most frequently in a data set. In this set, the number 3 appears 4 times, which is more than any other number. So, the mode is 3.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-34",
-      "questionText": "A die is thrown once. The probability of getting a prime number is:",
-      "options": ["1/6", "1/3", "1/2", "2/3"],
       "correctAnswerIndex": 2,
-      "explanation": "The possible outcomes are {1, 2, 3, 4, 5, 6}. The prime numbers are {2, 3, 5}. There are 3 prime numbers. The probability is 3/6 = 1/2.",
+      "explanation": "Two circles touching externally have three common tangents: two direct common tangents and one transverse common tangent at the point of contact.",
       "category": "mathematics"
     },
     {
-      "id": "math-35",
-      "questionText": "The HCF and LCM of two numbers are 9 and 459 respectively. If one of the numbers is 27, then the other number is:",
-      "options": ["153", "150", "459", "1377"],
+      "id": "math-58",
+      "questionText": "The area of the largest triangle that can be inscribed in a semi-circle of radius r is:",
+      "options": ["r²", "2r²", "r²/2", "πr²"],
       "correctAnswerIndex": 0,
-      "explanation": "The product of two numbers is equal to the product of their HCF and LCM. So, 27 * Other Number = 9 * 459. Other Number = (9 * 459) / 27 = 459 / 3 = 153.",
+      "explanation": "The largest triangle will have the diameter of the semi-circle as its base (2r) and the radius as its height (r). Area = 1/2 * base * height = 1/2 * (2r) * r = r².",
       "category": "mathematics"
     },
     {
-      "id": "math-36",
-      "questionText": "If α and β are the zeroes of the polynomial 2x² + 5x - 1, then the value of α + β + αβ is:",
-      "options": ["-2", "-3", "2", "3"],
+      "id": "math-59",
+      "questionText": "If the volumes of two spheres are in the ratio 64:27, the ratio of their surface areas is:",
+      "options": ["3:4", "4:3", "9:16", "16:9"],
+      "correctAnswerIndex": 3,
+      "explanation": "Let the radii be r1 and r2. (4/3)πr1³ / (4/3)πr2³ = 64/27 => (r1/r2)³ = (4/3)³ => r1/r2 = 4/3. The ratio of surface areas is (4πr1²) / (4πr2²) = (r1/r2)² = (4/3)² = 16/9.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-60",
+      "questionText": "The mean of the numbers 1, 2, 3, ..., n is:",
+      "options": ["n/2", "(n+1)/2", "n(n+1)/2", "n"],
       "correctAnswerIndex": 1,
-      "explanation": "For a quadratic ax²+bx+c, sum of zeroes (α+β) = -b/a and product of zeroes (αβ) = c/a. Here, a=2, b=5, c=-1. Sum = -5/2. Product = -1/2. α + β + αβ = -5/2 + (-1/2) = -6/2 = -3.",
+      "explanation": "The sum of the first n natural numbers is n(n+1)/2. The mean is the sum divided by the number of terms, which is n. Mean = [n(n+1)/2] / n = (n+1)/2.",
       "category": "mathematics"
     },
     {
-      "id": "math-37",
-      "questionText": "The pair of linear equations 3x + 4y + 5 = 0 and 12x + 16y + 15 = 0 have:",
-      "options": ["Unique solution", "Many solutions", "No solution", "Exactly two solutions"],
-      "correctAnswerIndex": 2,
-      "explanation": "For the equations a1x+b1y+c1=0 and a2x+b2y+c2=0, we check the ratios of coefficients. a1/a2 = 3/12 = 1/4. b1/b2 = 4/16 = 1/4. c1/c2 = 5/15 = 1/3. Since a1/a2 = b1/b2 ≠ c1/c2, the lines are parallel and have no solution.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-38",
-      "questionText": "If ΔABC ~ ΔPQR, area(ΔABC) = 81 cm² and area(ΔPQR) = 121 cm². If QR = 15.4 cm, then BC is:",
-      "options": ["12.6 cm", "13.2 cm", "14.8 cm", "11.2 cm"],
-      "correctAnswerIndex": 0,
-      "explanation": "The ratio of the areas of two similar triangles is equal to the square of the ratio of their corresponding sides. So, area(ABC)/area(PQR) = (BC/QR)². 81/121 = (BC/15.4)². Taking the square root, 9/11 = BC/15.4. BC = (9 * 15.4) / 11 = 9 * 1.4 = 12.6 cm.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-39",
-      "questionText": "The value of 9 sec²A - 9 tan²A is:",
-      "options": ["1", "9", "8", "0"],
+      "id": "math-61",
+      "questionText": "If two dice are thrown together, the probability of getting an even number on both dice is:",
+      "options": ["1/3", "1/4", "1/2", "1/6"],
       "correctAnswerIndex": 1,
-      "explanation": "We can factor out 9: 9(sec²A - tan²A). Using the identity sec²θ = 1 + tan²θ, we get sec²θ - tan²θ = 1. So, 9 * 1 = 9.",
+      "explanation": "Total outcomes = 6 * 6 = 36. Favorable outcomes are (2,2), (2,4), (2,6), (4,2), (4,4), (4,6), (6,2), (6,4), (6,6). There are 9 favorable outcomes. Probability = 9/36 = 1/4.",
       "category": "mathematics"
     },
     {
-      "id": "math-40",
-      "questionText": "A line intersecting a circle in two points is called a:",
-      "options": ["Tangent", "Secant", "Chord", "Radius"],
-      "correctAnswerIndex": 1,
-      "explanation": "A secant is a line that intersects a circle at two distinct points. A chord is a line segment whose endpoints both lie on the circle.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-41",
-      "questionText": "The circumference of a circle is 44 cm. Its area is:",
-      "options": ["154 cm²", "77 cm²", "308 cm²", "616 cm²"],
-      "correctAnswerIndex": 0,
-      "explanation": "Circumference = 2πr = 44. 2 * (22/7) * r = 44. r = (44 * 7) / (2 * 22) = 7 cm. Area = πr² = (22/7) * 7² = 22 * 7 = 154 cm².",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-42",
-      "questionText": "A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5 mm. Its surface area is:",
-      "options": ["210 mm²", "220 mm²", "230 mm²", "240 mm²"],
-      "correctAnswerIndex": 1,
-      "explanation": "Diameter = 5 mm, so radius r = 2.5 mm. The two hemispheres form a sphere with surface area 4πr². The height of the cylinder part is 14 - (2.5 + 2.5) = 9 mm. Curved surface area of cylinder = 2πrh. Total area = 4πr² + 2πrh = 2πr(2r + h) = 2 * (22/7) * 2.5 * (5 + 9) = (110/7) * 14 = 110 * 2 = 220 mm².",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-43",
-      "questionText": "Which of the following cannot be the probability of an event?",
-      "options": ["2/3", " -1.5", "15%", "0.7"],
-      "correctAnswerIndex": 1,
-      "explanation": "The probability of an event is always a number between 0 and 1 (inclusive). A negative number like -1.5 cannot be a probability.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-44",
-      "questionText": "Euclid's division lemma states that for two positive integers a and b, there exist unique integers q and r such that a = bq + r, where r must satisfy:",
-      "options": ["1 < r < b", "0 < r ≤ b", "0 ≤ r < b", "0 < r < b"],
-      "correctAnswerIndex": 2,
-      "explanation": "According to Euclid's division lemma, the remainder 'r' is always non-negative and less than the divisor 'b'. So, 0 ≤ r < b.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-45",
-      "questionText": "If the sum of the zeroes of the polynomial kx² + 2x - 1 is equal to their product, then k equals:",
-      "options": ["1/3", "-1/3", "2/3", "-2/3"],
-      "correctAnswerIndex": 1,
-      "explanation": "Sum of zeroes = -b/a = -2/k. Product of zeroes = c/a = -1/k. Given, Sum = Product. So, -2/k = -1/k. -2k = -k. If instead, we say  alpha + beta + alphabeta = -3. Then α + β = -2/k , αβ = -1/k. -2/k  - 1/k = -3 . -3/k = -3. k = 1. Let the equation be `k(x²+7x+1) = 0. sum = -7/k. product = 1/k. let their sum be -6 to make it all equal. then the answer would be -6/k. However, this does not appear to be a valid solution. I will fix and give the correct question which has been confusing the LLM model.`",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-46",
-      "questionText": "If the 17th term of an A.P. exceeds its 10th term by 7, the common difference is:",
+      "id": "math-62",
+      "questionText": "The decimal expansion of 7/80 will terminate after how many decimal places?",
       "options": ["1", "2", "3", "4"],
+      "correctAnswerIndex": 3,
+      "explanation": "The denominator is 80 = 16 * 5 = 2^4 * 5^1. The termination occurs after the highest power of 2 or 5, which is 4.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-63",
+      "questionText": "If the pair of linear equations x + 2y = 3 and 2x + 4y = k are coincident, then the value of k is:",
+      "options": ["3", "6", " -3", " -6"],
+      "correctAnswerIndex": 1,
+      "explanation": "For coincident lines, a1/a2 = b1/b2 = c1/c2. Here, a1/a2 = 1/2, b1/b2 = 2/4 = 1/2. So, we need c1/c2 = 1/2. 3/k = 1/2 => k = 6.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-64",
+      "questionText": "The discriminant of the quadratic equation 3x² - 2x + 1/3 = 0 is:",
+      "options": ["0", "1", "2", "3"],
       "correctAnswerIndex": 0,
-      "explanation": "Let the 17th term be a17 and 10th term be a10. a17 = a + 16d. a10 = a + 9d. Given, a17 - a10 = 7. (a + 16d) - (a + 9d) = 7. 7d = 7. d = 1.",
+      "explanation": "The discriminant D = b² - 4ac. Here a=3, b=-2, c=1/3. D = (-2)² - 4(3)(1/3) = 4 - 4 = 0.",
       "category": "mathematics"
     },
     {
-      "id": "math-47",
-      "questionText": "The ratio in which the y-axis divides the line segment joining the points (5, -6) and (-1, -4) is:",
-      "options": ["1:5", "5:1", "1:1", "2:3"],
+      "id": "math-65",
+      "questionText": "The sum of the first 20 odd natural numbers is:",
+      "options": ["100", "210", "400", "420"],
+      "correctAnswerIndex": 2,
+      "explanation": "The sum of the first n odd natural numbers is n². So, for n=20, the sum is 20² = 400.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-66",
+      "questionText": "The lengths of the diagonals of a rhombus are 16 cm and 12 cm. Then, the length of the side of the rhombus is:",
+      "options": ["9 cm", "10 cm", "8 cm", "20 cm"],
       "correctAnswerIndex": 1,
-      "explanation": "Let the ratio be k:1. The point of division on the y-axis will have coordinates (0, y). Using the section formula for the x-coordinate: 0 = (k*(-1) + 1*5) / (k+1). 0 = -k + 5. k = 5. The ratio is 5:1.",
+      "explanation": "The diagonals of a rhombus bisect each other at right angles. So, we get a right-angled triangle with sides half the length of the diagonals, i.e., 8 cm and 6 cm. The side of the rhombus is the hypotenuse. Side² = 8² + 6² = 64 + 36 = 100. Side = 10 cm.",
       "category": "mathematics"
     },
     {
-      "id": "math-48",
-      "questionText": "If cos(α + β) = 0, then sin(α – β) can be reduced to:",
-      "options": ["cos β", "cos 2β", "sin α", "sin 2α"],
-      "correctAnswerIndex": 1,
-      "explanation": "cos(α + β) = 0 implies α + β = 90°. So, α = 90° - β. Then sin(α - β) = sin((90° - β) - β) = sin(90° - 2β). Since sin(90° - θ) = cos θ, sin(90° - 2β) = cos 2β.",
-      "category": "mathematics"
-    },
-    {
-      "id": "math-49",
-      "questionText": "The tangent to a circle is perpendicular to the radius through the point of:",
-      "options": ["Contact", "Origin", "Center", "Intersection"],
+      "id": "math-67",
+      "questionText": "The coordinates of the point which divides the line segment joining the points (4, –3) and (8, 5) in the ratio 3:1 internally are:",
+      "options": ["(7, 3)", "(3, 7)", "(6, 2)", "(2, 6)"],
       "correctAnswerIndex": 0,
-      "explanation": "A fundamental theorem in circle geometry states that the tangent at any point of a circle is perpendicular to the radius through the point of contact.",
+      "explanation": "Using section formula: x = (m1x2+m2x1)/(m1+m2), y = (m1y2+m2y1)/(m1+m2). x = (3*8 + 1*4)/(3+1) = (24+4)/4 = 28/4 = 7. y = (3*5 + 1*(-3))/(3+1) = (15-3)/4 = 12/4 = 3. The point is (7, 3).",
       "category": "mathematics"
     },
     {
-      "id": "math-50",
-      "questionText": "If the sum of the areas of two circles with radii R1 and R2 is equal to the area of a circle of radius R, then:",
-      "options": ["R1 + R2 = R", "R1² + R2² = R²", "R1 + R2 < R", "R1² + R2² < R²"],
+      "id": "math-68",
+      "questionText": "The value of cosec 30° is:",
+      "options": ["1/2", "2", "√3/2", "1/√3"],
       "correctAnswerIndex": 1,
-      "explanation": "Area of first circle = πR1². Area of second circle = πR2². Area of the new circle = πR². Given, πR1² + πR2² = πR². Dividing by π, we get R1² + R2² = R².",
+      "explanation": "cosec θ = 1/sin θ. sin 30° = 1/2. Therefore, cosec 30° = 1 / (1/2) = 2.",
       "category": "mathematics"
     },
     {
-      "id": "math-51",
-      "questionText": "The probability of getting a spade from a well shuffled deck of 52 cards is:",
-      "options": ["1/13", "1/4", "12/52", "3/4"],
+      "id": "math-69",
+      "questionText": "In a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. The length of the arc is:",
+      "options": ["20 cm", "21 cm", "22 cm", "23 cm"],
+      "correctAnswerIndex": 2,
+      "explanation": "Length of arc = (θ/360) * 2πr = (60/360) * 2 * (22/7) * 21 = (1/6) * 2 * 22 * 3 = 22 cm.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-70",
+      "questionText": "A cubical block of side 7 cm is surmounted by a hemisphere. What is the greatest diameter the hemisphere can have?",
+      "options": ["7 cm", "14 cm", "3.5 cm", "8 cm"],
+      "correctAnswerIndex": 0,
+      "explanation": "The hemisphere rests on the top face of the cube. The greatest diameter it can have is equal to the side length of the cube, which is 7 cm.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-71",
+      "questionText": "The median of a given frequency distribution is found graphically with the help of:",
+      "options": ["Histogram", "Frequency curve", "Frequency polygon", "Ogive"],
+      "correctAnswerIndex": 3,
+      "explanation": "The median of grouped data can be found graphically by drawing the less than type and more than type ogives (cumulative frequency curves). The x-coordinate of their point of intersection gives the median.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-72",
+      "questionText": "A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag. What is the probability that the ball drawn is red?",
+      "options": ["3/8", "5/8", "1/2", "3/5"],
+      "correctAnswerIndex": 0,
+      "explanation": "Total number of balls = 3 + 5 = 8. Number of red balls = 3. Probability of drawing a red ball = 3/8.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-73",
+      "questionText": "What is the largest number that divides 70 and 125, leaving remainders 5 and 8, respectively?",
+      "options": ["13", "65", "875", "1750"],
+      "correctAnswerIndex": 0,
+      "explanation": "The required number is the HCF of (70-5) and (125-8), i.e., HCF of 65 and 117. 65 = 5 * 13. 117 = 9 * 13. The HCF is 13.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-74",
+      "questionText": "The zeroes of the quadratic polynomial x²-27 are:",
+      "options": ["±3√3", "±9", "±3", "±√27"],
+      "correctAnswerIndex": 3,
+      "explanation": "Set x² - 27 = 0 => x² = 27 => x = ±√27. This can be simplified to ±√(9*3) = ±3√3. So the option itself is correct before simplification.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-75",
+      "questionText": "If the lines given by 3x + 2ky = 2 and 2x + 5y + 1 = 0 are parallel, then the value of k is:",
+      "options": ["-5/4", "2/5", "15/4", "3/2"],
+      "correctAnswerIndex": 2,
+      "explanation": "For parallel lines, a1/a2 = b1/b2. So, 3/2 = 2k/5. 15 = 4k. k = 15/4.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-76",
+      "questionText": "The nth term of the A.P. a, 3a, 5a, ... is:",
+      "options": ["na", "(2n-1)a", "(2n+1)a", "2na"],
       "correctAnswerIndex": 1,
-      "explanation": "A deck of 52 cards has 4 suits, with 13 cards in each suit. Spades is one of the suits. So there are 13 spades. The probability is 13/52 = 1/4.",
+      "explanation": "The first term is a. The common difference is d = 3a - a = 2a. The nth term an = a + (n-1)d = a + (n-1)2a = a + 2an - 2a = 2an - a = (2n-1)a.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-77",
+      "questionText": "In ΔABC and ΔDEF, ∠B = ∠E, ∠F = ∠C and AB = 3DE. Then, the two triangles are:",
+      "options": ["Congruent but not similar", "Similar but not congruent", "Neither congruent nor similar", "Congruent as well as similar"],
+      "correctAnswerIndex": 1,
+      "explanation": "By AA similarity criterion (since two angles are equal), the triangles are similar. However, since the corresponding sides have a ratio of 1:3 (AB/DE = 3), they are not congruent (which would require a ratio of 1:1).",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-78",
+      "questionText": "The point which lies on the perpendicular bisector of the line segment joining the points A(–2, –5) and B(2, 5) is:",
+      "options": ["(0, 0)", "(0, 2)", "(2, 0)", "(-2, 0)"],
+      "correctAnswerIndex": 0,
+      "explanation": "Any point on the perpendicular bisector is equidistant from A and B. Let's check (0,0). Distance from A = √((-2-0)² + (-5-0)²) = √(4+25) = √29. Distance from B = √((2-0)² + (5-0)²) = √(4+25) = √29. Since the distances are equal, (0,0) lies on the perpendicular bisector.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-79",
+      "questionText": "If x = a cos θ and y = b sin θ, then b²x² + a²y² is equal to:",
+      "options": ["a²b²", "ab", "a⁴b⁴", "a² + b²"],
+      "correctAnswerIndex": 0,
+      "explanation": "b²x² + a²y² = b²(a²cos²θ) + a²(b²sin²θ) = a²b²cos²θ + a²b²sin²θ = a²b²(cos²θ + sin²θ). Since cos²θ + sin²θ = 1, the expression equals a²b².",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-80",
+      "questionText": "The angle between two tangents drawn from an external point to a circle is 110°. The angle subtended by the line-segment joining the points of contact at the centre is:",
+      "options": ["70°", "110°", "90°", "55°"],
+      "correctAnswerIndex": 0,
+      "explanation": "The angle between the tangents and the angle subtended by the points of contact at the center are supplementary (add up to 180°). So, the required angle = 180° - 110° = 70°.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-81",
+      "questionText": "The radii of two concentric circles are 4 cm and 5 cm. The length of each chord of one circle which is tangent to the other circle is:",
+      "options": ["3 cm", "6 cm", "9 cm", "1 cm"],
+      "correctAnswerIndex": 1,
+      "explanation": "The radius of the inner circle (4 cm) is the perpendicular from the center to the chord of the outer circle. The radius of the outer circle (5 cm) is the hypotenuse. Let half the chord length be x. x² + 4² = 5². x² + 16 = 25. x² = 9. x = 3 cm. The length of the chord is 2x = 6 cm.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-82",
+      "questionText": "A solid is in the shape of a cone standing on a hemisphere with both their radii being equal to 1 cm and the height of the cone is equal to its radius. The volume of the solid is:",
+      "options": ["π cm³", "2π cm³", "3π cm³", "4π cm³"],
+      "correctAnswerIndex": 0,
+      "explanation": "r=1, h=1. Volume = Volume of cone + Volume of hemisphere = (1/3)πr²h + (2/3)πr³ = (1/3)π(1)²(1) + (2/3)π(1)³ = (1/3)π + (2/3)π = (3/3)π = π cm³.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-83",
+      "questionText": "A number is selected at random from the numbers 1 to 30. The probability that it is a prime number is:",
+      "options": ["2/3", "1/6", "1/3", "11/30"],
+      "correctAnswerIndex": 2,
+      "explanation": "Prime numbers between 1 and 30 are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. There are 10 prime numbers. Total numbers = 30. Probability = 10/30 = 1/3.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-84",
+      "questionText": "If the sum of n terms of an A.P. is 3n² + 5n, then its 2nd term is:",
+      "options": ["16", "14", "12", "10"],
+      "correctAnswerIndex": 1,
+      "explanation": "Sum of 1 term (S1) = 3(1)² + 5(1) = 8. This is the first term (a1). Sum of 2 terms (S2) = 3(2)² + 5(2) = 12 + 10 = 22. The second term (a2) = S2 - S1 = 22 - 8 = 14.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-85",
+      "questionText": "A ladder 10 m long reaches a window 8 m above the ground. The distance of the foot of the ladder from the base of the wall is:",
+      "options": ["8 m", "2 m", "18 m", "6 m"],
+      "correctAnswerIndex": 3,
+      "explanation": "This forms a right-angled triangle. Hypotenuse = 10 m, one side = 8 m. Let the distance be x. By Pythagoras theorem, x² + 8² = 10². x² + 64 = 100. x² = 36. x = 6 m.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-86",
+      "questionText": "If tan θ = 4/3, then the value of (3sinθ + 2cosθ) / (3sinθ - 2cosθ) is:",
+      "options": ["0.5", " -0.5", "3.0", " -3.0"],
+      "correctAnswerIndex": 2,
+      "explanation": "Divide numerator and denominator by cosθ: (3tanθ + 2) / (3tanθ - 2). Substitute tanθ = 4/3: (3(4/3) + 2) / (3(4/3) - 2) = (4+2) / (4-2) = 6/2 = 3.0.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-87",
+      "questionText": "A wire is in the shape of a circle of radius 28 cm. If it is bent in the form of a square, then the area of the square is:",
+      "options": ["1936 cm²", "1225 cm²", "784 cm²", "44 cm²"],
+      "correctAnswerIndex": 0,
+      "explanation": "Length of wire = Circumference of circle = 2πr = 2 * (22/7) * 28 = 176 cm. This is the perimeter of the square. Side of square = 176 / 4 = 44 cm. Area of square = side² = 44² = 1936 cm².",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-88",
+      "questionText": "Two cubes each of volume 64 cm³ are joined end to end. The surface area of the resulting cuboid is:",
+      "options": ["160 cm²", "200 cm²", "140 cm²", "180 cm²"],
+      "correctAnswerIndex": 0,
+      "explanation": "Volume of cube = a³ = 64, so side a = 4 cm. When joined, the resulting cuboid has dimensions l=8, b=4, h=4. Surface Area = 2(lb + bh + hl) = 2(8*4 + 4*4 + 4*8) = 2(32 + 16 + 32) = 2(80) = 160 cm².",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-89",
+      "questionText": "A letter of English alphabet is chosen at random. What is the probability that it is a letter of the word ‘MATHEMATICS’?",
+      "options": ["11/26", "8/26", "9/26", "10/26"],
+      "correctAnswerIndex": 1,
+      "explanation": "The distinct letters in MATHEMATICS are M, A, T, H, E, I, C, S. There are 8 distinct letters. Total letters in alphabet = 26. Probability = 8/26 = 4/13.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-90",
+      "questionText": "If the pair of equations 2x + 3y = 7 and 2ax + (a+b)y = 28 has infinitely many solutions, then:",
+      "options": ["a = 2b", "b = 2a", "a + 2b = 0", "2a + b = 0"],
+      "correctAnswerIndex": 1,
+      "explanation": "For infinite solutions, a1/a2 = b1/b2 = c1/c2. 2/(2a) = 3/(a+b) = 7/28 = 1/4. From 1/a = 1/4, we get a=4. From 3/(a+b) = 1/4, we get 12 = a+b. Substituting a=4, 12 = 4+b, so b=8. Now check the options. b=8, a=4. So, b=2a.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-91",
+      "questionText": "The perimeter of a triangle with vertices (0, 4), (0, 0) and (3, 0) is:",
+      "options": ["5", "12", "11", "7 + √5"],
+      "correctAnswerIndex": 1,
+      "explanation": "The sides are the distances between the points. Side 1 (0,4) to (0,0) is 4. Side 2 (0,0) to (3,0) is 3. Side 3 (0,4) to (3,0) is √((3-0)²+(0-4)²) = √(9+16) = √25 = 5. Perimeter = 4 + 3 + 5 = 12.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-92",
+      "questionText": "If sin(A-B) = 1/2 and cos(A+B) = 1/2, where 0° < A+B ≤ 90°, A > B, then A and B are:",
+      "options": ["A=45°, B=15°", "A=60°, B=30°", "A=15°, B=45°", "A=30°, B=60°"],
+      "correctAnswerIndex": 0,
+      "explanation": "sin(A-B) = 1/2 => A-B = 30°. cos(A+B) = 1/2 => A+B = 60°. Adding the two equations: 2A = 90° => A = 45°. Substituting in A+B=60°, 45°+B=60° => B = 15°.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-93",
+      "questionText": "The relationship between mean, median and mode is:",
+      "options": ["Mode = 3 Median - 2 Mean", "Mode = 2 Median - 3 Mean", "Median = 3 Mode - 2 Mean", "Mean = 3 Median - 2 Mode"],
+      "correctAnswerIndex": 0,
+      "explanation": "For a moderately skewed distribution, the empirical relationship between mean, median, and mode is given by Mode = 3 Median - 2 Mean.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-94",
+      "questionText": "If a card is drawn from a well-shuffled deck of 52 cards, the probability of getting a king of red colour is:",
+      "options": ["1/13", "1/26", "1/52", "2/13"],
+      "correctAnswerIndex": 1,
+      "explanation": "There are two red kings in a deck of 52 cards (King of Hearts and King of Diamonds). So, the probability is 2/52 = 1/26.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-95",
+      "questionText": "The LCM of two numbers is 182 and their HCF is 13. If one of the numbers is 26, the other number is:",
+      "options": ["31", "71", "91", "182"],
+      "correctAnswerIndex": 2,
+      "explanation": "Product of two numbers = LCM × HCF. 26 × Other Number = 182 × 13. Other Number = (182 × 13) / 26 = 182 / 2 = 91.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-96",
+      "questionText": "If the roots of the equation x² + 2x + k = 0 are real and distinct, then:",
+      "options": ["k < 1", "k > 1", "k ≤ 1", "k ≥ 1"],
+      "correctAnswerIndex": 0,
+      "explanation": "For real and distinct roots, the discriminant D > 0. D = b² - 4ac > 0. (2)² - 4(1)(k) > 0. 4 - 4k > 0. 4 > 4k. 1 > k, or k < 1.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-97",
+      "questionText": "A right circular cylinder of radius r cm and height h cm (h>2r) just encloses a sphere of diameter:",
+      "options": ["r cm", "2r cm", "h cm", "2h cm"],
+      "correctAnswerIndex": 1,
+      "explanation": "For a cylinder to just enclose a sphere, the diameter of the sphere must be equal to the diameter of the cylinder, which is 2r.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-98",
+      "questionText": "If P(A) denotes the probability of an event A, then:",
+      "options": ["P(A) < 0", "P(A) > 1", "0 ≤ P(A) ≤ 1", " -1 ≤ P(A) ≤ 1"],
+      "correctAnswerIndex": 2,
+      "explanation": "The probability of any event must be a value between 0 and 1, inclusive. It cannot be negative or greater than 1.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-99",
+      "questionText": "The sum of the first five multiples of 3 is:",
+      "options": ["45", "55", "65", "75"],
+      "correctAnswerIndex": 0,
+      "explanation": "The first five multiples of 3 are 3, 6, 9, 12, 15. This is an A.P. with a=3, d=3, n=5. Sum = n/2 [2a + (n-1)d] = 5/2 [2*3 + 4*3] = 5/2 [6+12] = 5/2 * 18 = 45.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-100",
+      "questionText": "The value of (sec A + tan A)(1 – sin A) is:",
+      "options": ["sin A", "cos A", "sec A", "cosec A"],
+      "correctAnswerIndex": 1,
+      "explanation": "(1/cos A + sin A/cos A)(1 - sin A) = ((1+sin A)/cos A)(1 - sin A) = (1 - sin²A)/cos A. Since 1 - sin²A = cos²A, the expression becomes cos²A / cos A = cos A.",
+      "category": "mathematics"
+    },
+    {
+      "id": "math-101",
+      "questionText": "How many two-digit numbers are divisible by 3?",
+      "options": ["29", "30", "31", "32"],
+      "correctAnswerIndex": 1,
+      "explanation": "The two-digit numbers divisible by 3 are 12, 15, ..., 99. This is an A.P. with a=12, d=3, an=99. 99 = 12 + (n-1)3 => 87 = (n-1)3 => n-1 = 29 => n = 30.",
       "category": "mathematics"
     }
   ]
 }
+
 
     
