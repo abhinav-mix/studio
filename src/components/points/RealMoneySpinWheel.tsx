@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { DollarSign, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
@@ -151,7 +151,6 @@ export default function RealMoneySpinWheel({ currentPoints, onSpinComplete }: { 
         size="lg"
         className={cn("text-xl px-8 py-6 transition-all duration-300 transform hover:scale-105 bg-yellow-500 hover:bg-yellow-600 text-white", isSpinning && 'cursor-not-allowed animate-pulse')}
       >
-        <DollarSign className="mr-2 h-6 w-6" />
         {isSpinning ? 'Spinning...' : `Spin for ${SPIN_COST} Points`}
       </Button>
       {currentPoints < SPIN_COST && !isSpinning && (
