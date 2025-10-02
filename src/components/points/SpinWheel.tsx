@@ -9,8 +9,8 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 500, label: '500', color: '#9C27B0', textColor: '#fff' }, // Replaced 'Try Again'
-  { value: 100, label: '100', color: '#FFC107', textColor: '#fff' },
+  { value: 500, label: '500', color: '#9C27B0', textColor: '#fff' }, // index 0
+  { value: 100, label: '100', color: '#FFC107', textColor: '#fff' }, // index 1
   { value: 1000, label: '1000', color: '#8BC34A', textColor: '#fff' },
   { value: 0, label: 'iPhone', color: '#F44336', isItem: true, textColor: '#fff' },
   { value: 10000, label: '10k', color: '#4CAF50', textColor: '#fff' },
@@ -37,8 +37,12 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
 
     setIsSpinning(true);
     
-    // Calculate the random spin result
-    const randomIndex = Math.floor(Math.random() * segments.length);
+    // --- Modified Logic ---
+    // Only allow results for index 0 (500 points) or index 1 (100 points)
+    const allowedIndices = [0, 1];
+    const randomIndex = allowedIndices[Math.floor(Math.random() * allowedIndices.length)];
+    // --- End of Modified Logic ---
+
     const resultSegment = segments[randomIndex];
     const { value: prizePoints, label: prizeLabel, isItem = false } = resultSegment;
     const prizeAngle = (360 / segments.length) * randomIndex;
@@ -105,7 +109,6 @@ export default function SpinWheel({ currentPoints, onSpinComplete }: { currentPo
               className="absolute w-1/2 h-1/2 origin-bottom-right"
               style={{
                 transform: `rotate(${index * segmentAngle}deg) scale(1.05)`, // Scale to hide gaps
-                clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%)`,
                 backgroundColor: segment.color,
               }}
             >
