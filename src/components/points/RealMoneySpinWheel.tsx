@@ -9,8 +9,8 @@ import { cn } from '@/lib/utils';
 
 // Prize segments for the wheel
 const segments = [
-  { value: 10000, label: '10000 Points', color: '#4CAF50', isItem: false, textColor: '#fff' }, // Green
-  { value: 0, label: 'Next Time', color: '#F44336', isItem: false, textColor: '#fff' }, // Red
+  { value: 0, label: '₹10000', color: '#FFD700', isItem: true, textColor: '#000' }, // Gold for win
+  { value: 0, label: 'Next Time', color: '#F44336', isItem: false, textColor: '#fff' }, // Red for lose
 ];
 
 const SPIN_COST = 10000;
@@ -72,7 +72,13 @@ export default function RealMoneySpinWheel({ currentPoints, onSpinComplete }: { 
                 <Button variant="ghost" size="icon" className="absolute top-2 right-2 text-white hover:bg-white/20" onClick={() => setPrizeResult(null)}>
                     <X />
                 </Button>
-                {prizeResult.prizePoints > 0 ? (
+                {prizeResult.isItem ? (
+                     <>
+                        <h2 className="text-2xl font-bold mb-2">Congratulations!</h2>
+                        <p className="text-4xl font-headline">You won {prizeResult.prizeLabel}!</p>
+                        <p className="mt-4 text-sm">We will contact you shortly about your prize.</p>
+                     </>
+                ) : prizeResult.prizePoints > 0 ? (
                      <>
                         <h2 className="text-2xl font-bold mb-2">Congratulations!</h2>
                         <p className="text-4xl font-headline">You won {prizeResult.prizePoints} points!</p>

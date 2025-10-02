@@ -56,7 +56,7 @@ export default function PointsClient() {
         // Log the item win
         await addDoc(historyRef, {
             pointsAdded: 0,
-            reason: `Spin Wheel Prize: Won a ${prizeLabel}!`,
+            reason: `Spin Wheel Prize: Won ${prizeLabel}!`,
             timestamp: serverTimestamp(),
         });
     } else if (prizePoints > 0) {
