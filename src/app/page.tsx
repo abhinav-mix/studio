@@ -81,7 +81,7 @@ export default function LoginPage() {
       const userDocRef = doc(firestore, 'users', loggedInUser.uid);
       const userDoc = await getDoc(userDocRef);
 
-      if (!userDoc.exists() || !userDoc.data()?.hasPaid) {
+      if (!userDoc.exists() || userDoc.data()?.hasPaid !== true) {
         await auth.signOut();
         setError('Login failed. Please contact admin for payment confirmation.');
         toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
