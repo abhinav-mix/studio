@@ -1,3 +1,4 @@
+
 {
   "questions": [
     {
@@ -10,26 +11,101 @@
     },
     {
       "id": "phy-2",
-      "questionText": "What is the SI unit of electric current? Sample question 2.",
+      "questionText": "What is the SI unit of electric current?",
       "options": ["Volt", "Ampere", "Ohm", "Watt"],
       "correctAnswerIndex": 1,
       "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
       "category": "physics"
     },
     {
-      "id": "phy-3",
-      "questionText": "What is the SI unit of electric current? Sample question 3.",
-      "options": ["Volt", "Ampere", "Ohm", "Watt"],
+      "id": "phy-5",
+      "questionText": "According to the law of reflection, the angle of incidence is equal to the angle of __________.",
+      "options": [
+        "Refraction",
+        "Reflection",
+        "Diffraction",
+        "Dispersion"
+      ],
       "correctAnswerIndex": 1,
-      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
+      "explanation": "The law of reflection states that the angle of incidence (the angle between the incoming ray and the normal) is equal to the angle of reflection (the angle between the reflected ray and the normal).",
       "category": "physics"
     },
     {
-      "id": "phy-4",
-      "questionText": "What is the SI unit of electric current? Sample question 4.",
-      "options": ["Volt", "Ampere", "Ohm", "Watt"],
+      "id": "phy-6",
+      "questionText": "The bending of light as it passes from one medium to another is called __________.",
+      "options": [
+        "Reflection",
+        "Dispersion",
+        "Diffraction",
+        "Refraction"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Refraction is the change in direction of a wave passing from one medium to another. This is why a straw in a glass of water appears bent.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-7",
+      "questionText": "Which type of mirror is used as a rear-view mirror in vehicles?",
+      "options": [
+        "Concave mirror",
+        "Convex mirror",
+        "Plane mirror",
+        "Parabolic mirror"
+      ],
       "correctAnswerIndex": 1,
-      "explanation": "The SI unit of electric current is the Ampere (A). It is named after André-Marie Ampère, a French mathematician and physicist.",
+      "explanation": "Convex mirrors are used as rear-view mirrors in vehicles because they give a wider field of view, allowing the driver to see more of the traffic behind them. They always form virtual, erect, and diminished images.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-8",
+      "questionText": "What is the SI unit of electrical resistance?",
+      "options": [
+        "Ohm",
+        "Volt",
+        "Ampere",
+        "Watt"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The SI unit of electrical resistance is the Ohm (Ω), named after German physicist Georg Simon Ohm. It measures the opposition to the flow of electric current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-9",
+      "questionText": "A fuse wire is inserted in which wire of a domestic electrical circuit?",
+      "options": [
+        "Live wire",
+        "Neutral wire",
+        "Earth wire",
+        "Any wire"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "A fuse wire is always connected in the live wire of the circuit. Its purpose is to interrupt the circuit by melting if the current exceeds a safe level, thus protecting the appliance.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-10",
+      "questionText": "The magnetic field inside a long straight solenoid carrying current is:",
+      "options": [
+        "Zero",
+        "Decreases as we move towards its end",
+        "Increases as we move towards its end",
+        "Is the same at all points"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "For a long, ideal solenoid, the magnetic field inside is uniform and parallel to the axis, meaning it is the same at all points inside, especially away from the ends.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-11",
+      "questionText": "The splitting of white light into its constituent colors is known as:",
+      "options": [
+        "Reflection",
+        "Refraction",
+        "Dispersion",
+        "Scattering"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Dispersion is the phenomenon of splitting of a beam of white light into its constituent colors. This is famously demonstrated by passing light through a prism.",
       "category": "physics"
     },
     {
