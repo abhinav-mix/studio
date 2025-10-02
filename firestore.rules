@@ -1,137 +1,118 @@
+/**
+ * @file Firestore Security Rules for BoardPrep Pro
+ * @corePhilosophy This ruleset enforces a strict user-ownership model for personal data and allows public read access to questions and quizzes.
+ * @dataStructure
+ *   - /users/{userId}: Stores user profiles. Accessible only to the user and potentially admins (not yet implemented).
+ *   - /questions/{questionId}: Stores questions. Publicly readable.
+ *   - /quizzes/{quizId}: Stores quizzes. Publicly readable.
+ *   - /users/{userId}/quizAttempts/{quizAttemptId}: Stores quiz attempts. Accessible only to the user.
+ *   - /users/{userId}/attemptedQuestions/{attemptedQuestionId}: Stores attempted questions. Accessible only to the user.
+ * @keySecurityDecisions
+ *   - User listing is explicitly denied to prevent unauthorized data access.
+ *   - Public read access to questions and quizzes simplifies data retrieval for all users.
+ *   - All write operations on user-owned data require authentication and ownership validation.
+ * @denormalizationForAuthorization N/A
+ * @structuralSegregation Public data (questions, quizzes) are stored in top-level collections, while private user data (profiles, attempts) are stored under /users/{userId}.
+ */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
     /**
-     * @description Ensures the user is signed in.
-     * @path N/A
-     * @allow N/A
-     * @deny N/A
-     * @principle Authentication required for all user-specific data access.
-     */
-    function isSignedIn() {
-      return request.auth != null;
-    }
-
-    /**
-     * @description Checks if the requesting user is the owner of the resource based on the provided userId.
-     * @path N/A
-     * @allow N/A
-     * @deny N/A
-     * @principle Path-based authorization.
-     */
-    function isOwner(userId) {
-      return request.auth.uid == userId;
-    }
-
-    /**
-     * @description Checks if the requesting user is the owner of the resource and if the resource exists.
-     * @path N/A
-     * @allow N/A
-     * @deny N/A
-     * @principle Authorization and existence check for updates/deletes.
-     */
-    function isExistingOwner(userId) {
-      return isOwner(userId) && exists(resource);
-    }
-
-    /******************** Users Collection ********************/
-
-    /**
-     * @description Manages user profiles, allowing users to read/write their own data.
+     * @description Secures user profiles, allowing only the user to read and write their own profile.
      * @path /users/{userId}
-     * @allow (get, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, update, or delete their own profile.
-     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create their own profile.
-     * @deny (get, update, delete) User anotherUser can't read, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's profile.
-     * @principle Enforces document ownership for writes and path consistency for user-specific data.
+     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
+     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
+     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
+     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2.
+     * @deny (create) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't create profile at /users/xZ2vYcb2S7Mpi2yurWuLSn4rXQf2
+     * @deny (get) An unauthenticated user cannot read any user profiles.
+     * @principle Enforces document ownership for writes.
      */
     match /users/{userId} {
-      // Read rules: Only the user can get their own profile.
       allow get: if isOwner(userId);
+      allow list: if false; // User listing is denied.
 
-      // List rule: No one can list all users.
-      allow list: if false;
-
-      // Write rules: Only the user can create, update, or delete their own profile.
-      allow create: if isSignedIn() && request.auth.uid == userId;
-      allow update: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
       allow delete: if isExistingOwner(userId);
     }
 
-    /******************** Questions Collection ********************/
-
     /**
-     * @description Allows anyone to read questions.  No write access.
+     * @description Allows public read access to questions.
      * @path /questions/{questionId}
-     * @allow (get, list) Any user can read any question.
-     * @deny (create, update, delete) No one can create, update, or delete questions via the rules.
-     * @principle Public read access for question data.
+     * @allow (get) Any user can read any question.
+     * @allow (list) Any user can list questions.
+     * @deny (create) No one can create questions through client.
+     * @deny (update) No one can update questions through client.
+     * @deny (delete) No one can delete questions through client.
+     * @principle Allows public read access with restricted writes.
      */
     match /questions/{questionId} {
-      // Read rules: Anyone can read questions.
       allow get, list: if true;
-
-      // Write rules: No one can create, update, or delete questions.
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow create, update, delete: if false;
     }
 
-    /******************** Quizzes Collection ********************/
-
     /**
-     * @description Allows anyone to read quizzes.  No write access.
+     * @description Allows public read access to quizzes.
      * @path /quizzes/{quizId}
-     * @allow (get, list) Any user can read any quiz.
-     * @deny (create, update, delete) No one can create, update, or delete quizzes.
-     * @principle Public read access for quiz data.
+     * @allow (get) Any user can read any quiz.
+     * @allow (list) Any user can list quizzes.
+     * @deny (create) No one can create quizzes through client.
+     * @deny (update) No one can update quizzes through client.
+     * @deny (delete) No one can delete quizzes through client.
+     * @principle Allows public read access with restricted writes.
      */
     match /quizzes/{quizId} {
-      // Read rules: Anyone can read quizzes.
       allow get, list: if true;
-
-      // Write rules: No one can create, update, or delete quizzes.
-      allow create: if false;
-      allow update: if false;
-      allow delete: if false;
+      allow create, update, delete: if false;
     }
 
-    /******************** QuizAttempts Collection ********************/
-
     /**
-     * @description Manages quiz attempts for each user, allowing only the user to read/write their own attempts.
+     * @description Secures quiz attempts, allowing only the user to read and write their own quiz attempts.
      * @path /users/{userId}/quizAttempts/{quizAttemptId}
-     * @allow (get, list, create, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, list, create, update, and delete their own quiz attempts.
-     * @deny (get, list, create, update, delete) User anotherUser can't read, list, create, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's quiz attempts.
-     * @principle Enforces document ownership for writes and path consistency for user-specific data.
+     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create quiz attempts under their profile.
+     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their own quiz attempts.
+     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their own quiz attempts.
+     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their own quiz attempts.
+     * @deny (get) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't read xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's quiz attempts.
+     * @principle Enforces document ownership for writes.
      */
     match /users/{userId}/quizAttempts/{quizAttemptId} {
-      // Read rules: Only the user can get or list their own quiz attempts.
       allow get, list: if isOwner(userId);
-
-      // Write rules: Only the user can create, update, or delete their own quiz attempts.
-      allow create: if isOwner(userId);
-      allow update: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.userId == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
       allow delete: if isExistingOwner(userId);
     }
-
-    /******************** AttemptedQuestions Collection ********************/
 
     /**
-     * @description Manages attempted questions for each user, allowing only the user to read/write their own attempted questions.
+     * @description Secures attempted questions, allowing only the user to read and write their own attempted questions.
      * @path /users/{userId}/attemptedQuestions/{attemptedQuestionId}
-     * @allow (get, list, create, update, delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read, list, create, update, and delete their own attempted questions.
-     * @deny (get, list, create, update, delete) User anotherUser can't read, list, create, update, or delete user xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's attempted questions.
-     * @principle Enforces document ownership for writes and path consistency for user-specific data.
+     * @allow (create) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can create attempted questions under their profile.
+     * @allow (get) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can read their own attempted questions.
+     * @allow (update) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can update their own attempted questions.
+     * @allow (delete) User xZ2vYcb2S7Mpi2yurWuLSn4rXQf2 can delete their own attempted questions.
+     * @deny (get) User yAbCdEfGhIjKlMnOpQrStUvWxYz can't read xZ2vYcb2S7Mpi2yurWuLSn4rXQf2's attempted questions.
+     * @principle Enforces document ownership for writes.
      */
     match /users/{userId}/attemptedQuestions/{attemptedQuestionId} {
-      // Read rules: Only the user can get or list their own attempted questions.
       allow get, list: if isOwner(userId);
-
-      // Write rules: Only the user can create, update, or delete their own attempted questions.
-      allow create: if isOwner(userId);
-      allow update: if isExistingOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.userId == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
       allow delete: if isExistingOwner(userId);
     }
+  }
+
+  // Helper functions
+  function isSignedIn() {
+    return request.auth != null;
+  }
+
+  function isOwner(userId) {
+    return isSignedIn() && request.auth.uid == userId;
+  }
+
+  function isExistingOwner(userId) {
+    return isOwner(userId) && resource != null;
   }
 }
