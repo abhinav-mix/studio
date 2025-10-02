@@ -882,6 +882,19 @@
     },
     {
       "id": "phy-71",
+      "questionText": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. What is the focal length of the lens required?",
+      "options": [
+        "-18.18 cm",
+        "-5.5 cm",
+        "+18.18 cm",
+        "+5.5 cm"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Power P = 1/f (where f is in meters). So, f = 1/P = 1/(-5.5) m = -0.1818 m. Converting to cm, f = -18.18 cm. The negative sign indicates it is a concave lens, used to correct myopia.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-72",
       "questionText": "The sky appears dark to astronauts in space because:",
       "options": [
         "There is no light in space",
@@ -894,7 +907,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-72",
+      "id": "phy-73",
       "questionText": "In the process of nuclear fission:",
       "options": [
         "A heavy nucleus splits into lighter nuclei",
@@ -907,7 +920,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-73",
+      "id": "phy-74",
       "questionText": "A convex lens of focal length 20 cm can form a magnified virtual image if the object is placed:",
       "options": [
         "At 20 cm",
@@ -920,7 +933,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-74",
+      "id": "phy-75",
       "questionText": "An electric kettle rated at 220V, 2.2kW works for 3 hours. Find the energy consumed and the current drawn.",
       "options": [
         "6.6 kWh, 10 A",
@@ -933,7 +946,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-75",
+      "id": "phy-76",
       "questionText": "The image shows magnetic field lines. At which point (A, B, or C) is the magnetic field strongest?",
       "imageUrl": "https://picsum.photos/seed/field-lines/400/200",
       "options": [
@@ -947,7 +960,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-76",
+      "id": "phy-77",
       "questionText": "Which phenomenon is responsible for the reddish appearance of the sun at sunrise and sunset?",
       "options": [
         "Reflection",
@@ -960,7 +973,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-77",
+      "id": "phy-78",
       "questionText": "The energy source of the Sun is:",
       "options": [
         "Nuclear Fission",
@@ -973,7 +986,7 @@
       "category": "physics"
     },
     {
-      "id": "phy-78",
+      "id": "phy-79",
       "questionText": "If two resistors R1 and R2 are connected in series, the equivalent resistance is:",
       "options": [
         "R1 + R2",
@@ -986,16 +999,251 @@
       "category": "physics"
     },
     {
-      "id": "phy-79",
-      "questionText": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. What is the focal length of the lens required?",
+      "id": "phy-80",
+      "questionText": "When a switch is in the OFF position:",
       "options": [
-        "-18.18 cm",
-        "-5.5 cm",
-        "+18.18 cm",
-        "+5.5 cm"
+        "The circuit is closed",
+        "Current flows through it",
+        "The circuit is open",
+        "It does not affect the circuit"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "When a switch is in the OFF position, it creates a break in the circuit, which is known as an open circuit. No current can flow through an open circuit.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-81",
+      "questionText": "To get a real, inverted and highly enlarged image using a concave mirror, the object must be placed:",
+      "options": [
+        "At the focus (F)",
+        "At the center of curvature (C)",
+        "Between F and C",
+        "Between pole (P) and F"
       ],
       "correctAnswerIndex": 0,
-      "explanation": "Power P = 1/f (where f is in meters). So, f = 1/P = 1/(-5.5) m = -0.1818 m. Converting to cm, f = -18.18 cm. The negative sign indicates it is a concave lens, used to correct myopia.",
+      "explanation": "When an object is placed at the principal focus (F) of a concave mirror, the reflected rays become parallel, forming a real, inverted, and highly enlarged image at infinity.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-82",
+      "questionText": "The relationship between focal length (f) and radius of curvature (R) for a spherical mirror is:",
+      "options": [
+        "R = f",
+        "R = 2f",
+        "R = f/2",
+        "R = 3f"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "For spherical mirrors with small apertures, the radius of curvature is found to be equal to twice the focal length. R = 2f.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-83",
+      "questionText": "An ammeter should always be connected in ____ in a circuit, and a voltmeter should be connected in ____.",
+      "options": [
+        "series, parallel",
+        "parallel, series",
+        "series, series",
+        "parallel, parallel"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "An ammeter has very low resistance and is connected in series to measure the total current flowing. A voltmeter has very high resistance and is connected in parallel to measure the potential difference across a component without drawing significant current.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-84",
+      "questionText": "A person cannot see objects nearer than 50 cm. What is the power of the lens he should use to see objects clearly at 25 cm?",
+      "options": [
+        "+2 D",
+        "-2 D",
+        "+4 D",
+        "-4 D"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "This is hypermetropia. u = -25 cm (normal near point), v = -50 cm (defected near point). Using lens formula 1/f = 1/v - 1/u = 1/(-50) - 1/(-25) = 1/50. So f = +50 cm = +0.5 m. Power P = 1/f = 1/0.5 = +2 D.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-85",
+      "questionText": "The magnetic effect of current was discovered by:",
+      "options": [
+        "Faraday",
+        "Oersted",
+        "Ampere",
+        "Fleming"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Hans Christian Oersted discovered in 1820 that an electric current produces a magnetic field. This was a major breakthrough in understanding the link between electricity and magnetism.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-86",
+      "questionText": "Ozone layer is important because it absorbs:",
+      "options": [
+        "Infrared radiation",
+        "Microwaves",
+        "Ultraviolet (UV) radiation",
+        "Gamma rays"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The ozone layer in the stratosphere absorbs most of the Sun's harmful ultraviolet (UV) radiation, protecting life on Earth from its damaging effects.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-87",
+      "questionText": "Which position of the object will produce a magnified virtual image with a convex lens?",
+      "options": [
+        "At infinity",
+        "At 2F",
+        "Between F and 2F",
+        "Between F and the optical center"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "When an object is placed between the principal focus (F) and the optical center of a convex lens, it forms a virtual, erect, and magnified image on the same side as the object. This is the principle of a magnifying glass.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-88",
+      "questionText": "A wire of resistance R is cut into five equal parts. These parts are then connected in parallel. What is the equivalent resistance of this combination?",
+      "options": [
+        "R/25",
+        "R/5",
+        "5R",
+        "25R"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Each part will have a resistance of R/5. When connected in parallel, the equivalent resistance R_p is given by 1/R_p = 1/(R/5) + 1/(R/5) + ... (5 times) = 5/(R/5) = 25/R. So, R_p = R/25.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-89",
+      "questionText": "Which of the following correctly describes the magnetic field near a long straight wire?",
+      "options": [
+        "The field consists of straight lines parallel to the wire.",
+        "The field consists of straight lines perpendicular to the wire.",
+        "The field consists of radial lines originating from the wire.",
+        "The field consists of concentric circles centered on the wire."
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The magnetic field lines around a long straight current-carrying wire are concentric circles in a plane perpendicular to the wire, with the wire at the center. The direction is given by the right-hand thumb rule.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-90",
+      "questionText": "In an ecosystem, the 10% energy available for transfer from one trophic level to the next is in the form of:",
+      "options": [
+        "Heat energy",
+        "Light energy",
+        "Chemical energy",
+        "Mechanical energy"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "According to the 10% law, only about 10% of the energy is stored as biomass (chemical energy) at one trophic level and is available for the next trophic level. The rest is lost as heat during metabolic processes.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-91",
+      "questionText": "Draw a ray diagram to show the path of the refracted ray in each of the following cases. A ray of light incident on a concave lens is: (i) passing through its optical centre (ii) parallel to its principal axis",
+      "imageUrl": "https://picsum.photos/seed/concave-lens-rays/400/200",
+      "options": [
+        "Both rays will converge at the focus",
+        "Ray (i) goes undeviated, Ray (ii) appears to diverge from the focus",
+        "Ray (i) bends towards the principal axis, Ray (ii) goes undeviated",
+        "Both rays will pass through the focus on the other side"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "(i) A ray of light passing through the optical centre of a concave lens emerges without any deviation. (ii) A ray of light parallel to the principal axis of a concave lens appears to diverge from the principal focus located on the same side of the lens.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-92",
+      "questionText": "Why do we prefer a convex mirror as a rear-view mirror in vehicles?",
+      "options": [
+        "It forms real images",
+        "It forms magnified images",
+        "It has a wider field of view and forms erect, diminished images",
+        "It does not invert the image"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Convex mirrors are preferred because they always give an erect, though diminished, image. Also, they have a wider field of view as they are curved outwards, enabling the driver to view much larger area than would be possible with a plane mirror.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-93",
+      "questionText": "What are the advantages of connecting electrical devices in parallel with the battery instead of connecting them in series?",
+      "options": [
+        "The total resistance is higher.",
+        "If one device fails, the whole circuit breaks.",
+        "Each device gets the same voltage and can be operated independently.",
+        "The total current drawn from the battery is lower."
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "In a parallel connection, each device gets the full voltage of the battery. Also, turning any device on or off does not affect the others, and if one device fails, the rest continue to work.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-94",
+      "questionText": "What is the function of a fuse in a domestic circuit?",
+      "options": [
+        "To increase the current",
+        "To stabilize the voltage",
+        "To protect appliances by stopping the flow of unduly high current",
+        "To act as a switch"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "A fuse is a safety device containing a wire with a low melting point. If the current in the circuit exceeds a safe value (due to short-circuiting or overloading), the fuse wire melts and breaks the circuit, thus protecting the appliances.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-95",
+      "questionText": "What is biomass? What can be done to obtain bio-energy using biomass?",
+      "options": [
+        "It is a type of fossil fuel; it is burned directly.",
+        "It is the material from living or recently living organisms; it can be burned or decomposed to produce biogas.",
+        "It is a synthetic material; it is used in nuclear reactors.",
+        "It is a type of mineral; it is refined to get energy."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Biomass is organic matter derived from living or recently living organisms, such as wood, crop waste, and animal dung. Bio-energy can be obtained by directly burning biomass or by converting it into biogas (like methane) through anaerobic decomposition.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-96",
+      "questionText": "An object of height 4.0 cm is placed at a distance of 30 cm from the optical centre ‘O’ of a convex lens of focal length 20 cm. Find the position and size of the image.",
+      "options": [
+        "v=60cm, h'=-8cm",
+        "v=50cm, h'=-6cm",
+        "v=60cm, h'=-4cm",
+        "v=40cm, h'=-8cm"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Given: u = -30 cm, f = +20 cm, h = +4 cm. Using the lens formula 1/v - 1/u = 1/f, we get 1/v = 1/20 + 1/(-30) = 1/60. So, v = +60 cm. The image is real and formed 60 cm from the lens. Magnification m = v/u = 60/(-30) = -2. Image height h' = m * h = -2 * 4 = -8 cm. The image is inverted and magnified.",
+      "category": "physics"
+    },
+    {
+      "id": "phy-97",
+      "questionText": "Why is a tungsten filament used in electric lamps?",
+      "options": [
+        "It has a low melting point and low resistivity.",
+        "It has a high melting point and high resistivity.",
+        "It is cheap and easily available.",
+        "It emits colorful light."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Tungsten is used for the filaments of incandescent lamps because it has a very high melting point (about 3422 °C) and high resistivity. This allows it to be heated to a very high temperature without melting, at which point it glows brightly (incandescence).",
+      "category": "physics"
+    },
+    {
+      "id": "phy-98",
+      "questionText": "List two properties of magnetic field lines.",
+      "options": [
+        "They intersect each other; they start from the south pole.",
+        "They form closed loops; they never intersect each other.",
+        "They are open loops; they are densest at the center of the magnet.",
+        "They move from south to north inside the magnet; they intersect at the poles."
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Two key properties of magnetic field lines are: 1) They are continuous closed loops (they emerge from the north pole and enter the south pole externally, and move from south to north inside the magnet). 2) Two magnetic field lines can never intersect each other.",
       "category": "physics"
     },
     {
