@@ -12,9 +12,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth, useUser, useFirestore } from '@/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useToast } from '@/hooks/use-toast';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const ADMIN_EMAIL = 'bhainew124@gmail.com';
+
+function getOrCreateDeviceId() {
+  const key = 'boardPrepPro_deviceId';
+  let deviceId = localStorage.getItem(key);
+  if (!deviceId) {
+    deviceId = crypto.randomUUID();
+    localStorage.setItem(key, deviceId);
+  }
+  return deviceId;
+}
 
 export default function LoginPage() {
   const router = useRouter();
@@ -77,6 +87,10 @@ export default function LoginPage() {
         toast({ variant: 'destructive', title: 'Payment Required', description: 'Please contact the administrator to activate your account.' });
         return;
       }
+      
+      // Set active device ID
+      const deviceId = getOrCreateDeviceId();
+      await setDoc(userDocRef, { activeDeviceId: deviceId }, { merge: true });
 
       toast({ title: "Login Successful!", description: "Redirecting..." });
     } catch (e: any) {

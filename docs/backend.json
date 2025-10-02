@@ -20,9 +20,17 @@
           "type": "string",
           "description": "The display name of the user."
         },
+        "userClass": {
+          "type": "string",
+          "description": "The class of the user."
+        },
         "hasPaid": {
           "type": "boolean",
           "description": "Indicates whether the user has completed the payment."
+        },
+        "activeDeviceId": {
+          "type": "string",
+          "description": "The ID of the device from which the user is currently logged in."
         }
       },
       "required": [

@@ -1,10 +1,12 @@
+
 'use client';
 
 import React, { DependencyList, createContext, useContext, ReactNode, useMemo, useState, useEffect } from 'react';
 import { FirebaseApp } from 'firebase/app';
-import { Firestore } from 'firebase/firestore';
+import { Firestore, doc, getDoc } from 'firebase/firestore';
 import { Auth, User, onAuthStateChanged } from 'firebase/auth';
-import { FirebaseErrorListener } from '@/components/FirebaseErrorListener'
+import { FirebaseErrorListener } from '@/components/FirebaseErrorListener';
+import { useToast } from '@/hooks/use-toast';
 
 interface FirebaseProviderProps {
   children: ReactNode;
@@ -52,6 +54,17 @@ export interface UserHookResult { // Renamed from UserAuthHookResult for consist
 // React Context
 export const FirebaseContext = createContext<FirebaseContextState | undefined>(undefined);
 
+function getOrCreateDeviceId() {
+  const key = 'boardPrepPro_deviceId';
+  if (typeof window === 'undefined') return null;
+  let deviceId = localStorage.getItem(key);
+  if (!deviceId) {
+    deviceId = crypto.randomUUID();
+    localStorage.setItem(key, deviceId);
+  }
+  return deviceId;
+}
+
 /**
  * FirebaseProvider manages and provides Firebase services and user authentication state.
  */
@@ -67,6 +80,8 @@ export const FirebaseProvider: React.FC<FirebaseProviderProps> = ({
     userError: null,
   });
 
+  const { toast } = useToast();
+
   // Effect to subscribe to Firebase auth state changes
   useEffect(() => {
     if (!auth) { // If no Auth service instance, cannot determine user state
@@ -78,7 +93,26 @@ export const FirebaseProvider: React.FC<FirebaseProviderProps> = ({
 
     const unsubscribe = onAuthStateChanged(
       auth,
-      (firebaseUser) => { // Auth state determined
+      async (firebaseUser) => { // Auth state determined
+        if (firebaseUser && firebaseUser.email !== 'bhainew124@gmail.com') {
+            const userDocRef = doc(firestore, 'users', firebaseUser.uid);
+            const userDoc = await getDoc(userDocRef);
+            const localDeviceId = getOrCreateDeviceId();
+            
+            if (userDoc.exists()) {
+                const remoteDeviceId = userDoc.data()?.activeDeviceId;
+                if (remoteDeviceId && remoteDeviceId !== localDeviceId) {
+                    await auth.signOut();
+                    setUserAuthState({ user: null, isUserLoading: false, userError: null });
+                    toast({
+                      variant: 'destructive',
+                      title: 'Session Conflict',
+                      description: 'This account has been logged in on another device. You have been logged out.',
+                    });
+                    return;
+                }
+            }
+        }
         setUserAuthState({ user: firebaseUser, isUserLoading: false, userError: null });
       },
       (error) => { // Auth listener error
@@ -87,7 +121,7 @@ export const FirebaseProvider: React.FC<FirebaseProviderProps> = ({
       }
     );
     return () => unsubscribe(); // Cleanup
-  }, [auth]); // Depends on the auth instance
+  }, [auth, firestore, toast]); // Depends on the auth instance
 
   // Memoize the context value
   const contextValue = useMemo((): FirebaseContextState => {
