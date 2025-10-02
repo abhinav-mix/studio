@@ -13,12 +13,14 @@ import { useToast } from '@/hooks/use-toast';
 import { quizCategories } from '@/lib/questions';
 import type { Question } from '@/lib/types';
 import allQuestionsData from '@/lib/all-questions.json';
-import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
+import { PlusCircle, Trash2, LogOut, Home, UserPlus, Users, Edit } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { useAuth, useUser, useFirestore } from '@/firebase';
+import { useAuth, useUser, useFirestore, useCollection, useMemoFirebase } from '@/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc, collection, query, orderBy } from 'firebase/firestore';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
 async function updateQuestions(questions: Question[]) {
@@ -40,6 +42,13 @@ export default function AdminPage() {
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserClass, setNewUserClass] = useState('');
+
+  // Firestore hook to get all users
+  const usersQuery = useMemoFirebase(() => 
+    firestore ? query(collection(firestore, 'users'), orderBy('displayName')) : null, 
+    [firestore]
+  );
+  const { data: users, isLoading: usersLoading } = useCollection<{displayName: string, email: string, userClass: string, hasPaid: boolean}>(usersQuery);
   
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
@@ -213,8 +222,8 @@ export default function AdminPage() {
                 <span>User Management</span>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="px-6 pb-6">
-               <Card className="bg-background/80 w-full max-w-3xl mx-auto">
+            <AccordionContent className="px-6 pb-6 space-y-8">
+               <Card className="bg-background/80 w-full max-w-4xl mx-auto" style={{minWidth: '150px'}}>
                 <CardHeader>
                   <CardTitle>Create New Paid Member</CardTitle>
                 </CardHeader>
@@ -242,6 +251,52 @@ export default function AdminPage() {
                   </div>
                 </CardContent>
                </Card>
+
+              <Card className="bg-background/80 w-full max-w-4xl mx-auto mt-8">
+                <CardHeader>
+                  <CardTitle className="flex items-center"><Users className="mr-2"/> All Members</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {usersLoading ? (
+                    <p>Loading members...</p>
+                  ) : (
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Name</TableHead>
+                          <TableHead>Class</TableHead>
+                          <TableHead>Email</TableHead>
+                          <TableHead>Status</TableHead>
+                          <TableHead className="text-right">Actions</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {users?.map(member => (
+                          <TableRow key={member.id}>
+                            <TableCell className="font-medium">{member.displayName}</TableCell>
+                            <TableCell>{member.userClass}</TableCell>
+                            <TableCell>{member.email}</TableCell>
+                            <TableCell>
+                              <Badge variant={member.hasPaid ? "default" : "secondary"}>
+                                {member.hasPaid ? "Paid" : "Not Paid"}
+                              </Badge>
+                            </TableCell>
+                            <TableCell className="text-right">
+                              <Button variant="ghost" size="icon" disabled>
+                                  <Edit className="h-4 w-4"/>
+                              </Button>
+                               <Button variant="ghost" size="icon" disabled>
+                                  <Trash2 className="h-4 w-4"/>
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  )}
+                </CardContent>
+              </Card>
+
             </AccordionContent>
           </Card>
         </AccordionItem>
@@ -345,3 +400,5 @@ export default function AdminPage() {
     </div>
   );
 }
+
+    
