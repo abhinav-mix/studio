@@ -1014,6 +1014,266 @@
       "category": "biology"
     },
     {
+      "id": "bio-83",
+      "questionText": "The oxygenated blood from the lungs is brought to the heart by which blood vessel?",
+      "options": [
+        "Aorta",
+        "Pulmonary artery",
+        "Pulmonary vein",
+        "Vena cava"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The pulmonary vein is responsible for carrying oxygenated blood from the lungs back to the left atrium of the heart.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-84",
+      "questionText": "Which part of the nervous system controls reflex arcs?",
+      "options": [
+        "Brain",
+        "Spinal cord",
+        "Cerebellum",
+        "Nerves"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The spinal cord is the primary center for controlling reflex actions, allowing for rapid responses without direct involvement of the brain.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-85",
+      "questionText": "Which of the following is an example of asexual reproduction by budding?",
+      "options": [
+        "Amoeba",
+        "Yeast",
+        "Spirogyra",
+        "Planaria"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Yeast is a unicellular fungus that commonly reproduces asexually by budding, where a small bud grows off the parent cell.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-86",
+      "questionText": "The characters which are transmitted from parents to offspring are present in:",
+      "options": [
+        "Cytoplasm",
+        "Ribosome",
+        "Golgi apparatus",
+        "Genes"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Genes are the units of heredity which are transferred from a parent to offspring and are held to determine some characteristic of the offspring.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-87",
+      "questionText": "Which of the following constitutes a food chain?",
+      "options": [
+        "Grass, wheat and mango",
+        "Grass, goat and human",
+        "Goat, cow and elephant",
+        "Grass, fish and goat"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A food chain shows how energy is transferred from one living organism to another. In this case, grass (producer) is eaten by a goat (primary consumer), which is then eaten by a human (secondary consumer).",
+      "category": "biology"
+    },
+    {
+      "id": "bio-88",
+      "questionText": "The watery fluid that fills the space between the lens and the cornea of the human eye is called:",
+      "options": [
+        "Aqueous humour",
+        "Vitreous humour",
+        "Plasma",
+        "Lymph"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "The aqueous humour is a transparent, watery fluid that fills the anterior and posterior chambers of the eye, providing nutrients and maintaining pressure.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-89",
+      "questionText": "A sudden action in response to something in the environment is called:",
+      "options": [
+        "Voluntary action",
+        "Reflex action",
+        "Involuntary action",
+        "Hormonal action"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "A reflex action is an immediate and involuntary response to a stimulus, which is a survival mechanism that allows the body to react quickly to potential harm.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-90",
+      "questionText": "The part of the flower that develops into a fruit after fertilization is the:",
+      "options": [
+        "Ovary",
+        "Ovule",
+        "Stigma",
+        "Petal"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "After fertilization, the ovary of the flower swells and develops into a fruit, while the ovules inside the ovary develop into seeds.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-91",
+      "questionText": "The process of removal of toxic wastes from the body of an organism is called:",
+      "options": [
+        "Transportation",
+        "Respiration",
+        "Excretion",
+        "Nutrition"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "Excretion is the biological process involved in the removal of harmful metabolic wastes from the body.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-92",
+      "questionText": "Which plant tissue is responsible for the transport of food and nutrients?",
+      "options": [
+        "Xylem",
+        "Phloem",
+        "Parenchyma",
+        "Collenchyma"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Phloem is the vascular tissue in plants that conducts sugars and other metabolic products downwards from the leaves.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-93",
+      "questionText": "Lack of oxygen in muscles often leads to cramps due to the accumulation of:",
+      "options": [
+        "Ethanol",
+        "Carbon dioxide",
+        "Lactic acid",
+        "Water"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "During strenuous exercise, anaerobic respiration takes place in the muscles, leading to the accumulation of lactic acid, which causes muscle cramps.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-94",
+      "questionText": "The involuntary actions in the body are controlled by the:",
+      "options": [
+        "Fore-brain",
+        "Mid-brain",
+        "Hind-brain",
+        "Mid-brain and Hind-brain"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "Many involuntary actions like blood pressure, salivation, and vomiting are controlled by the medulla in the hind-brain. Other involuntary actions are controlled by the mid-brain as well.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-95",
+      "questionText": "The process of growing new plants from the leaves, stem, or roots is called:",
+      "options": [
+        "Sexual reproduction",
+        "Vegetative propagation",
+        "Spore formation",
+        "Budding"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Vegetative propagation is a type of asexual reproduction in which new plants grow from a fragment of the parent plant or a specialized reproductive structure.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-96",
+      "questionText": "The exchange of genetic material takes place in which type of reproduction?",
+      "options": [
+        "Asexual reproduction",
+        "Sexual reproduction",
+        "Budding",
+        "Vegetative propagation"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Sexual reproduction involves the fusion of gametes from two parents, leading to the exchange and recombination of genetic material, which results in genetic variation in the offspring.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-97",
+      "questionText": "Which hormone is responsible for the development of secondary sexual characters in females?",
+      "options": [
+        "Testosterone",
+        "Estrogen",
+        "Adrenaline",
+        "Growth hormone"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "Estrogen is the primary female sex hormone responsible for the development and regulation of the female reproductive system and secondary sex characteristics.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-98",
+      "questionText": "What are the decomposers in an ecosystem?",
+      "options": [
+        "Organisms that feed on dead organic matter",
+        "Organisms that produce their own food",
+        "Organisms that feed on plants",
+        "Organisms that feed on other animals"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Decomposers, like bacteria and fungi, break down dead and decaying organic matter, returning essential nutrients to the ecosystem.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-99",
+      "questionText": "The opening and closing of the stomatal pore is controlled by the:",
+      "options": [
+        "Epidermal cells",
+        "Guard cells",
+        "Xylem",
+        "Phloem"
+      ],
+      "correctAnswerIndex": 1,
+      "explanation": "The guard cells are specialized cells surrounding each stoma that control its opening and closing by changing their turgor pressure.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-100",
+      "questionText": "The main function of the large intestine is:",
+      "options": [
+        "Digestion of carbohydrates",
+        "Digestion of fats",
+        "Absorption of digested food",
+        "Absorption of water"
+      ],
+      "correctAnswerIndex": 3,
+      "explanation": "The primary function of the large intestine is to absorb water and electrolytes from the remaining indigestible food matter before it is excreted.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-101",
+      "questionText": "Which of these is an example of an inherited trait in humans?",
+      "options": [
+        "Hair color",
+        "A scar on the skin",
+        "Knowledge of a language",
+        "Body weight"
+      ],
+      "correctAnswerIndex": 0,
+      "explanation": "Inherited traits are passed down from parents to offspring through genes. Hair color is a classic example of an inherited trait, while scars, knowledge, and body weight are acquired traits.",
+      "category": "biology"
+    },
+    {
+      "id": "bio-102",
+      "questionText": "In which part of the alimentary canal is food finally digested?",
+      "options": [
+        "Stomach",
+        "Mouth",
+        "Small intestine",
+        "Large intestine"
+      ],
+      "correctAnswerIndex": 2,
+      "explanation": "The small intestine is the site where the final digestion of carbohydrates, fats, and proteins occurs, and where the absorption of these nutrients into the bloodstream takes place.",
+      "category": "biology"
+    },
+    {
       "id": "math-1",
       "questionText": "What is the square root of 144?",
       "options": ["10", "11", "12", "14"],
@@ -2989,5 +3249,3 @@
     }
   ]
 }
-
-    
