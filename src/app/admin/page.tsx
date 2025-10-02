@@ -13,14 +13,12 @@ import { useToast } from '@/hooks/use-toast';
 import { quizCategories } from '@/lib/questions';
 import type { Question } from '@/lib/types';
 import allQuestionsData from '@/lib/all-questions.json';
-import { PlusCircle, Trash2, LogOut, Home, UserPlus, Users, Edit } from 'lucide-react';
+import { PlusCircle, Trash2, LogOut, Home, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { useAuth, useUser, useFirestore, useCollection, useMemoFirebase } from '@/firebase';
+import { useAuth, useUser, useFirestore } from '@/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, collection, query, orderBy, getDocs } from 'firebase/firestore';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
+import { doc, setDoc } from 'firebase/firestore';
 
 // This is a placeholder for a real API call. In a real app, this would be a server action.
 async function updateQuestions(questions: Question[]) {
@@ -28,14 +26,6 @@ async function updateQuestions(questions: Question[]) {
   // In a real scenario, you'd make a POST request to a server-side endpoint.
   // For this example, we'll just log it. A more advanced version could write back to the filesystem (requires server-side code).
   alert("This is a demo. Question persistence is not implemented. Changes will be lost on refresh.");
-}
-
-interface Member {
-    id: string;
-    displayName: string;
-    email: string;
-    userClass: string;
-    hasPaid: boolean;
 }
 
 export default function AdminPage() {
@@ -49,13 +39,6 @@ export default function AdminPage() {
   const [newUserEmail, setNewUserEmail] = useState('');
   const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserClass, setNewUserClass] = useState('');
-  
-  const usersQuery = useMemoFirebase(() => {
-    if (!firestore || !user || user.email !== 'bhainew124@gmail.com') return null;
-    return query(collection(firestore, 'users'), orderBy('displayName'));
-  }, [firestore, user]);
-
-  const { data: users, isLoading: usersLoading } = useCollection<Member>(usersQuery);
 
   useEffect(() => {
     // Admin check logic will be updated later to be more robust
@@ -259,45 +242,6 @@ export default function AdminPage() {
                   </div>
                 </CardContent>
                </Card>
-
-              <Card className="bg-background/80 w-full max-w-4xl mx-auto mt-8">
-                <CardHeader>
-                  <CardTitle className="flex items-center"><Users className="mr-2"/> All Members</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {usersLoading ? (
-                    <p>Loading members...</p>
-                  ) : users && users.length > 0 ? (
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Name</TableHead>
-                          <TableHead>Email</TableHead>
-                          <TableHead>Class</TableHead>
-                          <TableHead>Payment Status</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {users.map((member) => (
-                          <TableRow key={member.id}>
-                            <TableCell>{member.displayName}</TableCell>
-                            <TableCell>{member.email}</TableCell>
-                            <TableCell>{member.userClass}</TableCell>
-                            <TableCell>
-                              <Badge variant={member.hasPaid ? 'default' : 'destructive'}>
-                                {member.hasPaid ? 'Paid' : 'Unpaid'}
-                              </Badge>
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  ) : (
-                     <p className="text-muted-foreground">No members found.</p>
-                  )}
-                </CardContent>
-              </Card>
-
             </AccordionContent>
           </Card>
         </AccordionItem>
@@ -401,5 +345,3 @@ export default function AdminPage() {
     </div>
   );
 }
-
-    
